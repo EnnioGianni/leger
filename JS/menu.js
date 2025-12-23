@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   /* --- Liens centralisés (édite seulement ici) --- */
   const MENU_LINKS = [
-    { label: "Accueil", href: "/index.html" },
+    { label: "Accueil", href: "./index.html" },
     { label: "Cote des lettres anciennes", href: "./lettresAnciennes.html" },
     { label: "Proposition", href: "./proposition/index.html" },
     { label: "Villes_A", href: "./sommaireA.html" },
