@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const MENU_LINKS = [
     { label: "Accueil", href: "./index.html" },
-    { label: "Villes A", href: "../../Ville_A/sommaireVilleA.html" },
-    { label: "Villes B", href: "../../Villes_B/sommaireB.html" },
-    { label: "Villes C", href: "../../Ville_C/sommaireC.html" }
+    { label: "Villes_A", href: "./Ville_A/sommaireVilleA.html" },
+    { label: "Villes_B", href: "./Villes_B/sommaireB.html" },
+    { label: "Villes_C", href: "./Ville_C/sommaireC.html" }
   ];
 
   /* Injection menu */
