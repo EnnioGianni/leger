@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Le Postillon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../CSS/app.css">
+    <link rel="stylesheet" href="../../CSS/menu.css">
+    <link rel="stylesheet" href="../../CSS/recherchesVille.css">
+    <link rel="stylesheet" href="../../CSS/bouttonHautDePage.css">
+
+    <script defer src="../../JS/script_global.js"></script>
+    <script defer src="../../JS/menu.js"></script>
+    <script defer src="../../JS/bouttonHautDePage.js"></script>
+    <script defer src="../../JS/rechercheVille.js"></script>
+    <script defer src="../../JS/largeurImages.js"></script>
+    <script defer src="../../JS/totalTable.js"></script>
+    <script defer src="../../JS/mainsQuiBouge.js"></script>
+    <script defer src="../../JS/liensUtiles.js"></script>
+    <link rel="icon" type="image/png" href="/Resource/books_library_1768.ico">
+
+    <style>
+      p::first-letter {
+        color: red;
+        font-size: 130%;
+      }
+    </style>
+</head>
+
+
+<body id="scrollable"
+  style="
+    min-height:100vh;
+    margin:0;
+    background:url('/Resource/carrosseAvecPhoto.jpg')
+               center center / cover no-repeat fixed;
+  ">
+  
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="header-left">
+    <a href="/index.html" class="logo-link" aria-label="Accueil Le Postillon">
+      <img src="/Resource/books_library_1768.ico" alt="Logo Le Postillon" class="site-logo">
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" data-menu-open>☰</button>
+  </div>
+  <h1 class="titre-principal">Le Postillon</h1>
+</header>
+
+<!-- ===== MAIN ===== -->
+<main>
+    <h2 id="h12">
+        <a href="https://fr.wikipedia.org/wiki/Billom" class="title-tip" style="font-size: 25px;" title="lien vers wikipedia">
+            Billom - Auvergne (62)
+        </a>
+    </h2>
+        <p>Bureau ouvert le 1<sup>er</sup> avril 1766<br>Service postal secondaire antérieur,dépendant d’un bureau voisin,<br>sans établissement officiel avant 1766.</p>
+
+<!-- ===== PAGINATION ===== -->
+<nav class="pager">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link title-tip" href="../sommaireB.html" title="Sommaire B">&laquo;&laquo;</a>
+    </li>
+
+<!--Precedente-->
+    <li class="page-item">
+      <a class="page-link title-tip" href="../../Villes_B/Beziers/beziers.html" title="Beziers">&laquo;</a>
+    </li>
+
+<!--Recherches-->
+    <li class="page-item">
+      <div class="dropdown">
+        <input type="text" id="villeInput" placeholder="Tapez le nom d'une ville">
+        <div class="dropdown-content" id="dropdownContent"></div>
+      </div>
+    </li>
+
+<!--Suivante-->
+    <li class="page-item">
+      <a class="page-link title-tip" href="../Binche/binche.html" title="Binche">&raquo;</a>
+    </li>
+    
+<!--Accueil-->
+    <li class="page-item">
+      <a class="page-link title-tip" href="../../index.html" title="Accueil">&raquo;&raquo;</a>
+    </li>  
+  </ul>
+</nav>
+
+<!-- ===== TABLE ===== -->
+<table class="exemple">
+  <thead>
+    <tr>
+      <th>Marque</th>
+      <th>N°</th>
+      <th>Port</th>
+      <th>Dimensions</th>
+      <th>Date</th>
+      <th>Couleurs</th>
+      <th>Indice</th>
+      <th>Cote en euro</th>
+    </tr>
+  </thead>
+        
+<!--Marque 1-->          
+        <tr>
+            <td>
+                <a href="../Billom/Images/1.png">
+                    <img src="../Billom/Images/1.png" alt="Billom" data-width-mm="35">
+                </a>
+            </td>
+            <td class="border3">1</td>
+            <td>port dû</td>
+            <td>35mm</td>
+            <td>1766</td>
+            <td>noir</td>
+            <td>I-28</td>
+            <td class="prixProduit" data-id="28">00.00</td>
+        </tr>                                                                                                                                 
+ <!--Marque 2-->                                                                                                                                           
+        <tr>
+            <td>
+                <a href="../Billom/Images/2.png">
+                    <img src="../Billom/Images/2.png" alt="Billom" data-width-mm="21">
+                </a>
+            </td>
+            <td class="border3">2</td>
+            <td>port dû</td>
+            <td>21mm</td>
+            <td>1761-1791</td>
+            <td>noir</td>
+            <td>I-14</td>
+            <td class="prixProduit" data-id="14">00.00</td>
+        </tr>                                                                                                                                 
+ <!--Marque 2A-->                                                                                                                                           
+        <tr>
+            <td>
+                <a href="../Billom/Images/2A.png">
+                    <img src="../Billom/Images/2A.png" alt="Billom" data-width-mm="25">
+                </a>
+            </td>
+            <td class="border3">2A</td>
+            <td>port dû</td>
+            <td>21mm</td>
+            <td>1773-1780</td>
+            <td>sec</td>
+            <td>I-14</td>
+            <td class="prixProduit" data-id="14">00.00</td>
+        </tr>                                                                                                                           
+ <!--Marque 3-->                                                                                                                                           
+        <tr>
+            <td>
+                <a href="../Billom/Images/3.png">
+                    <img src="../Billom/Images/3.png" alt="Billom" data-width-mm="30">
+                </a>
+            </td>
+            <td class="border3">3</td>
+            <td>franc</td>
+            <td><img src="../../Resource/plumeDeture.png" alt="Billom" data-width-mm="10"></td>
+            <td>1774-1780</td>
+            <td>manuscrit</td>
+            <td>I-19</td>
+            <td class="prixProduit" data-id="19">00.00</td>
+        </tr>                                                                                                                                 
+<!--Liens Utile-->
+    <tr>
+      <th colspan="8" id="table-liens">Liens utiles</th>
+    </tr>
+<!--Commentaire-->
+<tr>
+      <th colspan="8" style="text-align: center;"></th>
+</tr>
+ 
+</table>
+
+    <!-- ===== BOUTON HAUT DE PAGE ===== -->
+<button id="scrollToTopButton" title="Haut de page"></button>
+</main>
+
+<!-- ==========================
+     POPUP NOTE – OBLIGATOIRE
+========================== -->
+<div class="popup-overlay" id="popupNote">
+  <div class="popup-box">
+    <div class="popup-close" id="closePopup">&times;</div>
+    <div id="popupContent"></div>
+  </div>
+</div>
+
+<!-- ===== FOOTER FIXE ===== -->
+<footer class="News-footer">
+  <div class="news">
+    <span id="news-head">COTE</span>
+  </div>
+
+  <div class="N-text">
+    <div class="ticker">
+      <div class="ticker__track">
+        <span>• Celles-ci s'entendent pour de belles frappes.</span>
+        <span>• Pour les lettres en port payé :</span>
+        <span>• Cote du PP sans plus-value si la marque de port (dû) qui l'accompagne est d'un indice inférieur à 16.</span>
+        <span>• Si la marque de port (dû) est d'un indice supérieur à 16, majorer de 2 indices la cote du port payé.</span>
+        <span>• © Copyright Tout droit réservé.</span>
+
+        <!-- Duplique le contenu pour un défilement continu -->
+        <span>• Celles-ci s'entendent pour de belles frappes.</span>
+        <span>• Pour les lettres en port payé :</span>
+        <span>• Cote du PP sans plus-value si la marque de port (dû) qui l'accompagne est d'un indice inférieur à 16.</span>
+        <span>• Si la marque de port (dû) est d'un indice supérieur à 16, majorer de 2 indices la cote du port payé.</span>
+        <span>• © Copyright Tout droit réservé.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+ <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>   
+ <script src="/JS/app.js"></script>   
+
+</body>
+</html>

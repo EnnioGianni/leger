@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Le Postillon – Lettres anciennes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/CSS/app.css">
+  <link rel="stylesheet" href="/CSS/lettresanciennes.css">
+  <link rel="stylesheet" href="/CSS/menu.css">
+  <link rel="stylesheet" href="/CSS/bouttonHautDePage.css">
+
+  <!-- Scripts -->
+  <script defer src="/JS/lettresanciennes.js"></script>
+  <script defer src="/JS/menu.js"></script>
+  <script defer src="../JS/script_global.js"></script>
+  <script defer src="../../JS/bouttonHautDePage.js"></script>
+
+
+  <link rel="icon" type="image/x-icon" href="/icones/books_library_1768.ico">
+</head>
+
+
+<body id="scrollable"
+  style="
+    min-height:100vh;
+    margin:0;
+    background:url('/Resource/carrosseAvecPhoto.jpg')
+               center center / cover no-repeat fixed;
+  ">
+
+  <!-- ===== MENU LATÉRAL ===== -->
+  <div class="menu-root" data-menu-root>
+    <div class="menu-overlay" data-menu-overlay></div>
+
+    <nav class="menu-panel"
+         id="menu-panel"
+         role="dialog"
+         aria-modal="true"
+         aria-label="Menu principal"
+         data-menu-panel>
+      <div class="menu-header">
+        <h2 class="menu-title">Navigation</h2>
+        <button class="menu-close" type="button" aria-label="Fermer le menu" data-menu-close>×</button>
+      </div>
+
+      <ul class="menu-list">
+        <li class="menu-item"><a class="menu-link" href="./index.html" aria-current="page">Accueil</a></li>
+        <li class="menu-item"><a class="menu-link" href="./lettresAnciennes.html">Cote des lettres anciennes</a></li>
+        <li class="menu-item"><a class="menu-link" href="./proposition/index.html">Proposition</a></li>
+
+        <li class="menu-item"><a class="menu-link" href="./laPosteDeLancienneFrance/Villes_A/sommaireVilleA.html">Villes A</a></li>
+        <li class="menu-item"><a class="menu-link" href="./laPosteDeLancienneFrance/Villes_B/B_sommaire.html">Villes B</a></li>
+      </ul>
+    </nav>
+  </div>
+  <!-- ===== FIN MENU ===== -->
+
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" data-menu-open>☰</button>
+    <a href="/index.html" class="logo-link" aria-label="Accueil Le Postillon">  </a>
+  <h1 class="titre-principal">Le Postillon</h1>
+</header>
+
+  <!-- ===== MAIN ===== -->
+  <main class="container">
+    <section class="intro-block">
+      <h2 id="h12">
+        <span>Lettres anciennes</span>
+      </h2>
+      <p class="intro">(Cote des lettres anciennes sans marques)</p>
+      <div class="separator">***************************</div>
+    </section>
+
+    <!-- Table scrollable (mobile friendly) -->
+    <div class="table-wrap">
+      <table class="exemple">
+        <thead>
+          <tr>
+            <th class="col-1">N°</th>
+            <th class="col-4">Date</th>
+            <th class="col-5">Indications</th>
+            <th class="col-1">Indice</th>
+            <th class="col-1">Prix</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Marque 1 -->
+          <tr>
+            <td>1</td>
+            <td>Lettre sans indication de port</td>
+            <td>Souvent en parchemin XIV<sup>e</sup></td>
+            <td>In-31</td>
+            <td class="prixProduit" data-id="31">00.00</td>
+          </tr>
+          <!-- Marque 2 -->
+          <tr>
+            <td>2</td>
+            <td>Lettre sans indication de port</td>
+            <td>Généralement en papier XV<sup>e</sup></td>
+            <td>In-28</td>
+            <td class="prixProduit" data-id="28">00.00</td>
+          </tr>
+          <!-- Marque 3 -->
+          <tr>
+            <td>3</td>
+            <td>XVI<sup>e</sup> jusqu'en 1576</td>
+            <td>Lettre sans indication de port</td>
+            <td>In-25</td>
+            <td class="prixProduit" data-id="25">00.00</td>
+          </tr>
+          <!-- Marque 4 -->
+          <tr>
+            <td>4</td>
+            <td>10/1576 à 1600</td>
+            <td>Lettre sans indication de port</td>
+            <td>In-22</td>
+            <td class="prixProduit" data-id="22">00.00</td>
+          </tr>
+          <!-- Marque 4A -->
+          <tr>
+            <td>4A</td>
+            <td>10/1576 à 1600</td>
+            <td>Lettre avec mention de port par l’expéditeur</td>
+            <td>In-29</td>
+            <td class="prixProduit" data-id="29">00.00</td>
+          </tr>
+          <!-- Marque 5 -->
+          <tr>
+            <td>5</td>
+            <td>1601 à 1627</td>
+            <td>Lettre sans indication de port</td>
+            <td>In-20</td>
+            <td class="prixProduit" data-id="20">00.00</td>
+          </tr>
+          <!-- Marque 5A -->
+          <tr>
+            <td>5A</td>
+            <td>1601 à 1627</td>
+            <td>Lettre avec mention de port par l’expéditeur</td>
+            <td>In-26</td>
+            <td class="prixProduit" data-id="26">00.00</td>
+          </tr>
+          <!-- Marque 6 -->
+          <tr>
+            <td>6</td>
+            <td>16/10/1627 à 09/04/1644</td>
+            <td>Lettre sans indication de port</td>
+            <td>In-18</td>
+            <td class="prixProduit" data-id="18">00.00</td>
+          </tr>
+          <!-- Marque 6A -->
+          <tr>
+            <td>6A</td>
+            <td>16/10/1627 à 09/04/1644</td>
+            <td>Lettre avec mention de port par l’expéditeur</td>
+            <td>In-23</td>
+            <td class="prixProduit" data-id="23">00.00</td>
+          </tr>
+          <!-- Marque 7 -->
+          <tr>
+            <td>7</td>
+            <td>09/04/1644 à 1650</td>
+            <td>Lettre sans indication de port</td>
+            <td>In-16</td>
+            <td class="prixProduit" data-id="16">00.00</td>
+          </tr>
+          <!-- Marque 7A -->
+          <tr>
+            <td>7A</td>
+            <td>09/04/1644 à 1650</td>
+            <td>Lettre avec mention de port par l’expéditeur</td>
+            <td>In-20</td>
+            <td class="prixProduit" data-id="20">00.00</td>
+          </tr>
+          <!-- Marque 7B -->
+          <tr>
+            <td>7B</td>
+            <td>09/04/1644 à 1650</td>
+            <td>En port payé</td>
+            <td>In-22</td>
+            <td class="prixProduit" data-id="22">00.00</td>
+          </tr>
+          <!-- Marque 8 -->
+          <tr>
+            <td>8</td>
+            <td>1650 à 1676</td>
+            <td>Lettre sans taxe</td>
+            <td>In-15</td>
+            <td class="prixProduit" data-id="15">00.00</td>
+          </tr>
+          <!-- Marque 8A -->
+          <tr>
+            <td>8A</td>
+            <td>1650 à 1676</td>
+            <td>Lettre taxée en port dû</td>
+            <td>In-19</td>
+            <td class="prixProduit" data-id="19">00.00</td>
+          </tr>
+          <!-- Marque 8B -->
+          <tr>
+            <td>8B</td>
+            <td>1650 à 1676</td>
+            <td>Lettre taxée en port payé</td>
+            <td>In-21</td>
+            <td class="prixProduit" data-id="21">00.00</td>
+          </tr>
+
+          <!-- Sous-titre -->
+          <tr class="subhead">
+            <th colspan="5">À partir du 11 avril 1676 — lettres taxées en port dû</th>
+          </tr>
+
+          <!-- Marque 9 -->
+          <tr>
+            <td>9</td>
+            <td>(—)</td>
+            <td>Grande ville en port dû</td>
+            <td>In-11</td>
+            <td class="prixProduit" data-id="11">00.00</td>
+          </tr>
+          <!-- Marque 9A -->
+          <tr>
+            <td>9A</td>
+            <td>(—)</td>
+            <td>Moyenne ville en port dû</td>
+            <td>In-13</td>
+            <td class="prixProduit" data-id="13">00.00</td>
+          </tr>
+          <!-- Marque 9B -->
+          <tr>
+            <td>9B</td>
+            <td>(—)</td>
+            <td>Petite ville en port dû</td>
+            <td>In-16</td>
+            <td class="prixProduit" data-id="16">00.00</td>
+          </tr>
+
+          <!-- Sous-titre -->
+          <tr class="subhead">
+            <th colspan="5">À partir du 1<sup>er</sup> janvier 1701 — lettres taxées en port dû (sans mention “DE Provence”)</th>
+          </tr>
+
+          <!-- Marque 10 -->
+          <tr>
+            <td>10</td>
+            <td>(—)</td>
+            <td>Grande ville en port dû</td>
+            <td>In-10</td>
+            <td class="prixProduit" data-id="10">00.00</td>
+          </tr>
+          <!-- Marque 10A -->
+          <tr>
+            <td>10A</td>
+            <td>(—)</td>
+            <td>Moyenne ville en port dû</td>
+            <td>In-12</td>
+            <td class="prixProduit" data-id="12">00.00</td>
+          </tr>
+          <!-- Marque 10B -->
+          <tr>
+            <td>10B</td>
+            <td>(—)</td>
+            <td>Petite ville en port dû</td>
+            <td>In-15</td>
+            <td class="prixProduit" data-id="15">00.00</td>
+          </tr>
+
+          <tr class="separator-row">
+            <th colspan="5">***************************</th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Bouton haut de page -->
+<button id="scrollToTopButton" title="Haut de page"></button>
+  </main>
+
+<!-- ===== FOOTER FIXE ===== -->
+<footer class="News-footer">
+  <div class="news">
+    <span id="news-head">COTE</span>
+  </div>
+
+  <div class="N-text">
+    <div class="ticker">
+      <div class="ticker__track">
+        <span>• Celles-ci s'entendent pour de belles frappes.</span>
+        <span>• Pour les lettres en port payé :</span>
+        <span>• Cote du PP sans plus-value si la marque de port (dû) qui l'accompagne est d'un indice inférieur à 16.</span>
+        <span>• Si la marque de port (dû) est d'un indice supérieur à 16, majorer de 2 indices la cote du port payé.</span>
+        <span>• © Copyright Tout droit réservé.</span>
+
+        <!-- Duplique le contenu pour un défilement continu -->
+        <span>• Celles-ci s'entendent pour de belles frappes.</span>
+        <span>• Pour les lettres en port payé :</span>
+        <span>• Cote du PP sans plus-value si la marque de port (dû) qui l'accompagne est d'un indice inférieur à 16.</span>
+        <span>• Si la marque de port (dû) est d'un indice supérieur à 16, majorer de 2 indices la cote du port payé.</span>
+        <span>• © Copyright Tout droit réservé.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+ <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>   
+
+</body>
+</html>

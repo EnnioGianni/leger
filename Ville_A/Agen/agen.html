@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Le Postillon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../CSS/app.css">
+    <link rel="stylesheet" href="../../CSS/menu.css">
+    <link rel="stylesheet" href="../../CSS/recherchesVille.css">
+    <link rel="stylesheet" href="../../CSS/bouttonHautDePage.css">
+
+    <script defer src="../../JS/script_global.js"></script>
+    <script defer src="../../JS/menu.js"></script>
+    <script defer src="../../JS/bouttonHautDePage.js"></script>
+    <script defer src="../../JS/rechercheVille.js"></script>
+    <script defer src="../../JS/largeurImages.js"></script>
+    <script defer src="../../JS/totalTable.js"></script>
+    <script defer src="../../JS/mainsQuiBouge.js"></script>
+    <script defer src="../../JS/liensUtiles.js"></script>
+    <link rel="icon" type="image/png" href="/Resource/books_library_1768.ico">
+
+    <style>
+      p::first-letter {
+        color: red;
+        font-size: 130%;
+      }
+    </style>
+</head>
+
+
+<body id="scrollable"
+  style="
+    min-height:100vh;
+    margin:0;
+    background:url('/Resource/carrosseAvecPhoto.jpg')
+               center center / cover no-repeat fixed;
+  ">
+  
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="header-left">
+    <a href="/index.html" class="logo-link" aria-label="Accueil Le Postillon">
+      <img src="/Resource/books_library_1768.ico" alt="Logo Le Postillon" class="site-logo">
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" data-menu-open>☰</button>
+  </div>
+  <h1 class="titre-principal">Le Postillon</h1>
+</header>
+
+<!-- ===== MAIN ===== -->
+  <main>
+    <h2 id="h12">
+      <a href="https://fr.wikipedia.org/wiki/Abriès" class="title-tip" title="Lien vers Wikipédia">
+        Agen - Guyenne (45)
+      </a>
+    </h2>
+      <p><strong>Bureau ouvert au XVII<sup>e</sup> siécle</strong></p>
+
+<!-- ===== PAGINATION ===== -->
+<nav class="pager">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link title-tip" href="../sommaireA.html" title="Sommaire A">&laquo;&laquo;</a>
+    </li>
+
+    <li class="page-item">
+      <a class="page-link title-tip" href="../Agde/agde.html" title="Agde">&laquo;</a>
+    </li>
+
+    <li class="page-item">
+      <div class="dropdown">
+        <input type="text" id="villeInput" placeholder="Tapez le nom d'une ville">
+        <div class="dropdown-content" id="dropdownContent"></div>
+      </div>
+    </li>
+
+    <li class="page-item">
+      <a class="page-link title-tip" href="../Ahun/ahun.html" title="Ahun">&raquo;</a>
+    </li>
+
+    <li class="page-item">
+      <a class="page-link title-tip" href="../../index.html" title="Accueil">&raquo;&raquo;</a>
+    </li>  
+  </ul>
+</nav>
+
+<!-- ===== TABLE ===== -->
+<table class="exemple">
+  <thead>
+    <tr>
+      <th>Marque</th>
+      <th>N°</th>
+      <th>Port</th>
+      <th>Dimensions</th>
+      <th>Date</th>
+      <th>Couleurs</th>
+      <th>Indice</th>
+      <th>Cote en euro</th>
+    </tr>
+  </thead>
+
+<!--Marque 1-->          
+        <tr>
+            <td>
+                <a href="../Agen/Images/1.png">
+                    <img src="../Agen/Images/1.png" alt="Agen" data-width-mm="17">
+                </a> 
+            </td>
+            <td>1</td>
+            <td>port dû</td>
+            <td>17mm</td>
+            <td>1710-1748</td>
+            <td>noir</td>
+            <td>I-12</td>
+            <td class="prixProduit" data-id="12">00.00</td>
+        </tr>                                
+<!--Marque 1A-->          
+        <tr>
+            <td>
+                <a href="../Agen/Images/1A.png">
+                    <img src="../Agen/Images/1A.png" alt="Agen" data-width-mm="17">
+                </a> 
+            </td>
+            <td>1A</td>
+            <td>port dû</td>
+            <td>17mm</td>
+            <td>1711</td>
+            <td>sec</td>
+            <td>I-14</td>
+            <td class="prixProduit" data-id="14">00.00</td>
+        </tr>                                                              
+<!--Marque 2-->          
+        <tr>
+            <td>
+                <a href="../Agen/Images/2.png">
+                    <img src="../Agen/Images/2.png" alt="Agen" data-width-mm="20">
+                </a> 
+            </td>
+            <td>2</td>
+            <td>port dû</td>
+            <td>20mm</td>
+            <td>1752-1762</td>
+            <td>noir</td>
+            <td>I-12</td>
+            <td class="prixProduit" data-id="12">00.00</td>
+        </tr>                                
+<!--Marque 3-->          
+        <tr>
+            <td>
+                <a href="../Agen/Images/3.png">
+                    <img src="../Agen/Images/3.png" alt="Agen" data-width-mm="20">
+                </a> 
+            </td>
+            <td>3</td>
+            <td>port dû</td>
+            <td>20mm</td>
+            <td>1764-1770</td>
+            <td>noir</td>
+            <td>I-10</td>
+            <td class="prixProduit" data-id="10">00.00</td>
+        </tr>                                
+<!--Marque 4-->          
+        <tr>
+            <td>
+                <a href="../Agen/Images/4.png">
+                    <img src="../Agen/Images/4.png" alt="Agen" data-width-mm="18">
+                </a> 
+            </td>
+            <td>4</td>
+            <td>port dû</td>
+            <td>18mm</td>
+            <td>1771-1787</td>
+            <td>noir</td>
+            <td>I-10</td>
+            <td class="prixProduit" data-id="10">00.00</td>
+        </tr>                                
+<!--Marque 5-->          
+        <tr>
+            <td>
+                <a href="../Agen/Images/5.png">
+                    <img src="../Agen/Images/5.png" alt="Agen" data-width-mm="21">
+                </a> 
+            </td>
+            <td>5</td>
+            <td>port dû</td>
+            <td>21mm</td>
+            <td>1787-1791</td>
+            <td>noir</td>
+            <td>I-10</td>
+            <td class="prixProduit" data-id="10">00.00</td>
+        </tr>                                
+<!--Marque 6-->          
+        <tr>
+            <td>
+                <a href="../Agen/Images/6.jpg">
+                    <img src="../Agen/Images/6.jpg" alt="Agen" data-width-mm="30">
+                </a> 
+            </td>
+            <td>6</td>
+            <td>franc</td>
+            <td><img src="../../Resource/plumeDeture.png" alt="Agen" data-width-mm="10"></td>
+            <td>1731-1791</td>
+            <td>manuscrit</td>
+            <td>I-17</td>
+            <td class="prixProduit" data-id="17">00.00</td>
+        </tr>                                
+<!--Marque 7-->          
+        <tr>
+            <td>
+                <a href="../Agen/Images/7.png">
+                    <img src="../Agen/Images/7.png" alt="Agen" data-width-mm="13">
+                </a> 
+            </td>
+            <td>7</td>
+            <td>port dû</td>
+            <td>13mm</td>
+            <td>1788-1790</td>
+            <td>noir</td>
+            <td>I-24</td>
+            <td class="prixProduit" data-id="24">00.00</td>
+        </tr>           
+<!--Marque 8-->          
+        <tr>
+            <td>
+                <a href="../Agen/Images/8.png">
+                    <img src="../Agen/Images/8.png" alt="Agen" data-width-mm="30">
+                </a>  
+            </td>
+            <td>8</td>
+            <td>déboursé</td>
+            <td><img src="../../Resource/plumeDeture.png" alt="Agen" data-width-mm="10"></td>
+            <td>1774-1791</td>
+            <td>manuscrit</td>
+            <td>I-17</td>
+            <td class="prixProduit" data-id="17">00.00</td>
+        </tr>           
+<!--Marque 9-->          
+        <tr>
+            <td>
+                <a href="../Agen/Images/9.jpg">
+                    <img src="../Agen/Images/9.jpg" alt="Agen" data-width-mm="40">
+                </a>  
+            </td>
+            <td>9</td>
+            <td>chargé</td>
+            <td><img src="../../Resource/plumeDeture.png" alt="Agen" data-width-mm="10"></td>
+            <td>1790-1791</td>
+            <td>manuscrit</td>
+            <td>I-16</td>
+            <td class="prixProduit" data-id="16">00.00</td>
+        </tr>           
+<!--Marque 10-->          
+        <tr>
+            <td>
+                <a href="../Agen/Images/10.jpg">
+                    <img src="../Agen/Images/10.jpg" alt="Agen" data-width-mm="40">
+                </a>  
+            </td>
+            <td>10</td>
+            <td>port dû</td>
+            <td><img src="../../Resource/plumeDeture.png" alt="Agen" data-width-mm="10"></td>
+            <td>1704-1764</td>
+            <td>manuscrit</td>
+            <td>I-19</td>
+            <td class="prixProduit" data-id="19">00.00</td>
+        </tr>           
+<!--Marque 10A-->          
+        <tr>
+            <td>
+                <a href="../../../proposition/index.html">
+                    <img src="../Agen/Images/10a.png" alt="active" data-width-mm="50">
+                </a> 
+            </td>
+            <td>10A</td>
+            <td>port dû</td>
+            <td><img src="../../Resource/plumeDeture.png" alt="Agen" data-width-mm="10"></td>
+            <td>1681</td>
+            <td>manuscrit</td>
+            <td>I-22</td>
+            <td class="prixProduit" data-id="22">00.00</td>
+        </tr>                  
+<!--Liens Utile-->
+    <tr>
+      <th colspan="8" id="table-liens">Liens utiles</th>
+    </tr>
+    <tr>
+      <th colspan="8" style="color: black;"></th>
+    </tr>
+</table>
+
+    <!-- ===== BOUTON HAUT DE PAGE ===== -->
+<button id="scrollToTopButton" title="Haut de page"></button>
+</main>
+<!-- ===== FOOTER FIXE ===== -->
+<footer class="News-footer">
+  <div class="news">
+    <span id="news-head">COTE</span>
+  </div>
+
+  <div class="N-text">
+    <div class="ticker">
+      <div class="ticker__track">
+        <span>• Celles-ci s'entendent pour de belles frappes.</span>
+        <span>• Pour les lettres en port payé :</span>
+        <span>• Cote du PP sans plus-value si la marque de port (dû) qui l'accompagne est d'un indice inférieur à 16.</span>
+        <span>• Si la marque de port (dû) est d'un indice supérieur à 16, majorer de 2 indices la cote du port payé.</span>
+        <span>• © Copyright Tout droit réservé.</span>
+
+        <!-- Duplique le contenu pour un défilement continu -->
+        <span>• Celles-ci s'entendent pour de belles frappes.</span>
+        <span>• Pour les lettres en port payé :</span>
+        <span>• Cote du PP sans plus-value si la marque de port (dû) qui l'accompagne est d'un indice inférieur à 16.</span>
+        <span>• Si la marque de port (dû) est d'un indice supérieur à 16, majorer de 2 indices la cote du port payé.</span>
+        <span>• © Copyright Tout droit réservé.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+ <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>   
+
+</body>
+</html>

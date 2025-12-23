@@ -1,0 +1,175 @@
+/* =========================
+   Le Postillon — postillon.css
+   ========================= */
+
+/* --- Base --- */
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: url("/Resource/carrosseAvecPhoto.jpg") center/cover no-repeat fixed;
+  color: #222;
+  line-height: 1.5;
+}
+
+/* --- Texture de page globale (optionnelle, douce) --- */
+body::before{
+  content:"";
+  position: fixed;
+  inset: 0;
+  background: url("../images/parchemin.jpg") center/cover no-repeat fixed;
+  opacity: .12;                /* très léger pour ne pas gêner */
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* --- Lettrine --- */
+p::first-letter { color: red; font-size: 130%; }
+
+/* --- Header --- */
+.header{
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 8px 16px; background: #efe7da; border-bottom: 1px solid #d9cfbf;
+  position: sticky; top: 0; z-index: 100; position: relative;
+}
+.logo-link{ position: absolute; left: 16px; top: 50%; transform: translateY(-50%); }
+.logo-link img{ width: 38px; height: 38px; }
+.titre-principal{ margin: 0; font-size: 15px; letter-spacing: .5px; color: #3b2c1a; text-align: center; }
+
+/* --- Sous-titre --- */
+.letters-title{
+  text-align:center; margin: 20px 0 12px; font-weight: 600; font-size: 16px;
+}
+
+/* --- Section lettres + image de fond avec effets vintage --- */
+.table-letters{
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto 60px;
+  z-index: 1;
+  --bgY: 0px;                   /* utilisé pour la parallaxe */
+}
+
+/* Image principale derrière la grille */
+.table-letters::before{
+  content:"";
+  position:absolute; inset:0;
+  background: url("../images/fond-lettres.jpg") center calc(50% + var(--bgY)) / cover no-repeat;
+  opacity:.28;
+  border-radius: 12px;
+  filter: saturate(0.9) contrast(1.02);
+  z-index: 0;
+  will-change: background-position;
+}
+
+/* Lueur vintage (lumière douce qui balaye) */
+.table-letters::after{
+  content:"";
+  position:absolute; inset:-2% -2%;
+  background:
+    radial-gradient(150% 100% at var(--glowX, 10%) 0%, rgba(255,240,200,.16), rgba(255,255,255,0) 60%),
+    radial-gradient(100% 120% at 90% 20%, rgba(255,230,180,.08), rgba(255,255,255,0) 60%);
+  pointer-events:none;
+  z-index: 0;
+  animation: vintageGlow 14s linear infinite;
+  mix-blend-mode: overlay;
+}
+@keyframes vintageGlow{
+  0%   { --glowX: 0%;   opacity:.60; }
+  50%  { --glowX: 80%;  opacity:.30; }
+  100% { --glowX: 0%;   opacity:.60; }
+}
+
+/* Grille A → Z */
+.letters-grid{
+  position: relative; z-index: 1; /* au-dessus du fond */
+  display:grid; gap:12px; grid-template-columns: repeat(4, minmax(0,1fr));
+  max-width: 820px; margin-inline: auto;
+}
+
+/* Cartes */
+.letter-card{
+  display:flex; align-items:center; justify-content:center;
+  padding:14px 10px;
+  color:#333; text-decoration:none; font-weight:600; font-size:20px;
+  background: rgba(255,253,248,.92);
+  border:1px solid #cbbba0; border-radius:10px;
+  box-shadow: 0 1px 0 rgba(0,0,0,.04), inset 0 0 0 1px rgba(255,255,255,.4);
+  transition: transform .08s ease, background .2s ease, box-shadow .2s ease;
+  backdrop-filter: blur(0.5px); /* subtil, si supporté */
+}
+.letter-card:hover{ background:#f0e7d8; transform: translateY(-1px); }
+.letter-card:focus-visible{ outline: 3px solid #1e90ff; outline-offset: 2px; }
+
+/* --- Responsive --- */
+@media (max-width: 820px){ .letters-grid{ grid-template-columns: repeat(3,1fr);} }
+@media (max-width: 640px){
+  .letters-grid{ grid-template-columns: repeat(2,1fr); }
+  .letter-card{ font-size:18px; padding:12px; }
+  .titre-principal{ font-size:14px; }
+}
+
+/* --- Modale d’accueil --- */
+.modalDialog{
+  position: fixed; inset: 0;
+  display: none; align-items: center; justify-content: center;
+  background: rgba(0,0,0,.45); z-index: 9999;
+}
+.modalDialog.is-open{ display:flex; }
+.modalDialog__panel{
+  max-width: 800px; width: min(92vw, 800px); max-height: 85vh; overflow:auto;
+  background:#fffdf8; color:#222; border:1px solid #d9cfbf; border-radius:12px;
+  padding:24px; box-shadow:0 10px 40px rgba(0,0,0,.35);
+}
+.modalDialog .close{
+  display:inline-block; margin-top:16px; padding:8px 12px;
+  border:1px solid #cbbba0; border-radius:8px; background:#fffdf8;
+  text-decoration:none; color:#333;
+}
+.modalDialog .close:hover{ background:#f0e7d8; }
+
+/* Animation fermeture modale */
+.modalDialog.closing .modalDialog__panel{ animation: modalClose .6s forwards ease; }
+@keyframes modalClose{
+  0%{ transform: scale(1) translateY(0); opacity: 1; }
+  100%{ transform: scale(.7) translateY(-50px); opacity: 0; }
+}
+
+/* Empêche le scroll du fond quand modale ouverte */
+.prevent-background-scroll { overflow: hidden; }
+
+/* --- Fade-in du site après la modale --- */
+.page-fade{ opacity: 0; transition: opacity .5s ease; }
+.page-fade.is-visible{ opacity: 1; }
+
+/* --- Footer compact unique --- */
+.News-footer{
+  position: fixed; bottom: 0; left: 0; width: 100%;
+  display:flex; align-items:center; justify-content:center; gap:10px;
+  padding:4px 10px; line-height:1.2; font-size:13px;
+  background:#efe7da; border-top:1px solid #d9cfbf;
+  box-shadow: 0 -2px 6px rgba(0,0,0,.1);
+  z-index: 1000;
+}
+.separator{ opacity:.6; }
+
+/* --- Bouton “haut de page” --- */
+#scrollToTopButton{
+  position: fixed; bottom: 48px; right: 16px;
+  width: 34px; height: 34px; font-size: 17px; line-height: 32px;
+  background:#fffdf8; border:1px solid #cbbba0; border-radius:8px;
+  cursor: pointer; box-shadow:0 4px 10px rgba(0,0,0,.1);
+  display:none; transition: transform .2s ease, background .2s ease;
+}
+#scrollToTopButton:hover{ background:#f0e7d8; transform: translateY(-2px); }
+
+/* --- Clignotant “Proposition” --- */
+.blink{ animation: blink-animation 1s steps(2,start) infinite; color:brown; text-decoration:none; }
+@keyframes blink-animation{ from{opacity:1} to{opacity:0} }
+
+/* --- Accessibilité : réduit les animations si demandé --- */
+@media (prefers-reduced-motion: reduce){
+  .table-letters::after{ animation: none; }
+  .page-fade{ transition: none; opacity: 1 !important; }
+}

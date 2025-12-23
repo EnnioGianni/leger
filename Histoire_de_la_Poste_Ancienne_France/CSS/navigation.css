@@ -1,0 +1,126 @@
+/* ===========================
+   MENU HAMBURGER COULISSANT
+=========================== */
+
+/* CACHÉ PAR DÉFAUT */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -260px; /* caché */
+    width: 240px;
+    height: 100%;
+    background: #e8dac5;
+    padding: 20px;
+    overflow-y: auto;
+    border-right: 2px solid #c3b299;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+/* OUVERTURE */
+.side-menu.open {
+    left: 0;
+}
+
+/* TITRE DU MENU */
+.side-menu h2 {
+    margin-top: 0;
+}
+
+/* LISTE */
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* ===========================
+   COULEURS PAR DÉFAUT
+   (TOUT LE MONDE EN NOIR)
+=========================== */
+
+/* Titres principaux (La Poste avant 1791, La Lettre...) */
+.group > span {
+    color: #000000;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 8px 0;
+    display: block;
+    transition: color 0.2s ease;
+}
+
+/* Chapitres (1. Avant la Poste, 2. Naissance...) */
+.chapter > span {
+    color: #000000;
+    cursor: pointer;
+    padding: 6px 0;
+    display: block;
+    transition: color 0.2s ease;
+}
+
+/* Articles (Rome, Moyen Âge, etc.) */
+.side-menu a {
+    text-decoration: none;
+    color: #000000;
+    padding: 4px 0;
+    display: block;
+    transition: color 0.2s ease;
+}
+
+/* ===========================
+   COULEURS ACTIVÉES (CLIC)
+=========================== */
+
+/* TITRE PRINCIPAL ACTIF */
+.group.active-title > span {
+    color: #7a1e00;    /* marron foncé */
+    font-weight: bold;
+}
+
+/* CHAPITRE ACTIF */
+.chapter.active-title > span {
+    color: #b03a00;    /* orange foncé */
+    font-weight: bold;
+}
+
+/* ARTICLE ACTIF */
+.side-menu a.active-article {
+    color: #d00000 !important;   /* rouge */
+    font-weight: bold;
+}
+
+/* ===========================
+   HOVER (SURVOL)
+   NE CHANGE PAS LA COULEUR DES ACTIFS
+=========================== */
+
+/* Hover sur TITRES PRINCIPAUX non actifs */
+.group:not(.active-title) > span:hover {
+    color: green;
+}
+
+/* Hover sur CHAPITRES non actifs */
+.chapter:not(.active-title) > span:hover {
+    color: green;
+}
+
+/* Hover sur ARTICLES non actifs */
+.side-menu a:not(.active-article):hover {
+    color: green;
+}
+
+/* ===========================
+   SOUS-MENUS
+=========================== */
+.sub {
+    display: none;     /* fermés par défaut */
+    margin-left: 15px;
+}
+
+/* Petit chevron indicatif (▾) */
+.has-sub > span::after {
+    content: " ▾";
+    font-size: 12px;
+    float: right;
+    opacity: 0.6;
+}

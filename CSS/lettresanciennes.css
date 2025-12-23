@@ -1,0 +1,120 @@
+/* ===== Lettres anciennes — Styles page ===== */
+
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  line-height: 1.5;
+  color: #222;
+  background: #f7f4ef;
+}
+
+/* --- Header (même rendu partout) --- */
+.header {
+  position: sticky; top: 0; z-index: 1200;
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 8px 16px;
+  background: #efe7da; border-bottom: 1px solid #d9cfbf;
+}
+.logo-link img { width: 38px; height: 38px; }
+.titre-principal { margin: 0; font-size: 30px; color: #3b2c1a; text-align: center; }
+.menu-toggle {
+  position: absolute; left: 12px; z-index: 1600;
+  border: 1px solid #cbbba0; border-radius: 8px;
+  background: #fffdf8; padding: 6px 10px; cursor: pointer; font-size: 18px;
+}
+.menu-toggle:hover { background: #f0e7d8; }
+
+/* NB: le tiroir latéral est stylé par /CSS/menu.css (ne pas redéfinir ici) */
+
+/* --- Contenu principal --- */
+.container {
+  max-width: 1100px;
+  margin: 0 auto 96px;    /* espace pour footer fixe */
+  padding: 0 12px;
+}
+
+/* Titre/intro */
+#h12 { text-align: center; margin: 18px auto 4px; }
+#h12 span {
+  font-size: 28px; font-weight: 600; color: #3b2c1a;
+  border-bottom: 1px dotted #a38f70;
+}
+.intro { text-align: center; color: #3b2c1a; margin: 4px 0 8px; }
+.separator { text-align: center; letter-spacing: 3px; opacity: .8; margin-bottom: 12px; }
+
+/* Table responsive scrollable */
+.table-wrap {
+  overflow-x: auto;
+  background: #fffbf2;
+  border: 1px solid #d9cfbf;
+  border-radius: 12px;
+}
+.exemple {
+  width: 100%;
+  min-width: 720px;               /* évite la casse des colonnes */
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.exemple thead th {
+  background: #e8decc;
+  padding: 10px;
+  font-weight: 600;
+  border-bottom: 1px solid #d2c6b3;
+  text-align: left;
+}
+.exemple td, .exemple th {
+  padding: 10px;
+  vertical-align: middle;
+  text-align: left;
+  border-bottom: 1px solid #eee2cf;
+}
+.exemple tbody tr:nth-child(odd) td { background: #fffdf7; }
+
+.exemple .subhead th {
+  background: #f0e7d8;
+  color: #3b2c1a;
+  text-align: center;
+  font-weight: 700;
+  border-bottom: 1px solid #d9cfbf;
+}
+.separator-row th { text-align: center; color: #6b5b45; }
+
+.col-1 { width: 90px; }
+.col-4 { width: 220px; }
+.col-5 { width: 380px; }
+.prixProduit { text-align: right; font-variant-numeric: tabular-nums; }
+
+/* Bouton haut de page */
+#scrollToTopButton {
+  position: fixed; bottom: 60px; right: 18px;
+  width: 42px; height: 42px;
+  border: 1px solid #cbbba0; border-radius: 10px; background: #fffdf8;
+  cursor: pointer; font-size: 20px; line-height: 40px; text-align: center;
+  box-shadow: 0 6px 16px rgba(0,0,0,.12);
+  display: none;
+}
+#scrollToTopButton:hover { background: #f0e7d8; transform: translateY(-2px); }
+
+/* Footer fixe (même classes que tes autres pages) */
+.News-footer {
+  position: fixed; bottom: 0; left: 0; width: 100%;
+  background: #efe7da; border-top: 1px solid #d9cfbf;
+  padding: 6px 0 4px; text-align: center;
+  box-shadow: 0 -2px 6px rgba(0,0,0,.1);
+  z-index: 1000;
+}
+.news { display: flex; justify-content: center; margin-bottom: 4px; }
+#news-head {
+  display: inline-block; padding: 3px 10px;
+  border: 1px solid #cbbba0; border-radius: 999px;
+  background: #fffdf8; font-weight: 600; font-size: 14px; letter-spacing: .5px;
+}
+.N-text { margin: 0; padding: 0 8px 4px; font-size: 13px; white-space: nowrap; overflow: hidden; }
+
+/* Responsive */
+@media (max-width: 640px) {
+  .titre-principal { font-size: 26px; }
+  .container { margin-bottom: 100px; }
+}

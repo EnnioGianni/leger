@@ -1,0 +1,217 @@
+<!-- =========================================
+# File: ../Ville_A/sommaireVilleA.html
+# HTML complet incluant la barre de recherche + liens CSS/JS
+========================================= -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Le Postillon – Sommaire B</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/CSS/sommaire.css">
+  <link rel="stylesheet" href="/CSS/menu.css">
+  <!-- + Nouveau CSS recherche -->
+  <link rel="stylesheet" href="/CSS/recherches.css">
+
+  <!-- Scripts (defer) -->
+  <script defer src="/JS/menu.js"></script>
+  <script defer src="/JS/sommaire.js"></script>
+  <!-- + Nouveau JS recherche -->
+  <script defer src="/JS/recherches.js"></script>
+
+  <link rel="icon" type="image/x-icon" href="/icones/books_library_1768.ico">
+</head>
+
+<body id="scrollable"
+  style="
+    min-height:100vh;
+    margin:0;
+    background:url('/Resource/carrosseAvecPhoto.jpg')
+               center center / cover no-repeat fixed;
+  ">
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" data-menu-open>☰</button>
+    <a href="/index.html" class="logo-link" aria-label="Accueil Le Postillon"></a>
+  <h1 class="titre-principal">Le Postillon</h1>
+</header>
+
+
+  <!-- ===== MAIN ===== -->
+  <main style="max-width:1100px; margin:0 auto 80px;">
+    <!-- Titre (même style index) -->
+
+    <!-- ===== Barre de recherche (NOUVEAU) ===== -->
+    <section class="search-wrap" aria-label="Recherche de ville">
+        <h2 id="h12">
+          Sommaire — Lettre <strong><span>B</span></strong>
+      </h2>
+
+      <div class="search-box">
+        <input
+          id="ville-search"
+          class="search-input"
+          type="search"
+          inputmode="search"
+          placeholder="Rechercher une ville… (ex.: Aix, Arles, Ajaccio)"
+          autocomplete="off"
+          aria-label="Rechercher une ville"
+       >
+        <button id="ville-search-btn" class="search-btn" type="button" aria-label="Lancer la recherche" title="Rechercher">
+          <!-- Icône loupe SVG -->
+          <svg class="search-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M10.5 3a7.5 7.5 0 0 1 5.964 12.117l4.21 4.21-1.414 1.414-4.21-4.21A7.5 7.5 0 1 1 10.5 3Zm0 2a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11Z"/>
+          </svg>
+        </button>
+        <button id="ville-clear-btn" class="clear-btn" type="button" aria-label="Effacer la recherche" title="Effacer">×</button>
+      </div>
+      <p id="search-count" class="search-count" aria-live="polite"></p>
+    </section>
+
+    <!-- Grille de villes (même look que l’index) -->
+    <div class="table-letters">
+      
+      <div class="letters-grid" id="letters-grid">
+        <!-- Colle ici la liste des villes A (extrait de ton index) -->
+        <a class="letter-card" href="../Ville_A/Abbeville/abbeville.html">Abbeville</a>
+        <a class="letter-card" href="../Ville_A/Abries/abries.html">Abries</a>
+        <a class="letter-card" href="../Ville_A/Agde/agde.html">Agde</a>
+        <a class="letter-card" href="../Ville_A/Agen/agen.html">Agen</a>
+        <a class="letter-card" href="../Ville_A/Ahun/ahun.html">Ahun</a>
+        <a class="letter-card" href="../Ville_A/L-Aigle/lAigle.html">L-Aigle</a>
+        <a class="letter-card" href="../Ville_A/Aignay-Le-Duc/aignayLeDuc.html">Aignay-Le-Duc</a>
+        <a class="letter-card" href="../Ville_A/AIGRE/aigre.html">AIGRE</a>
+        <a class="letter-card" href="../Ville_A/Aigueperse/aigueperse.html">Aigueperse</a>
+        <a class="letter-card" href="../Ville_A/aiguesMorte/aigueMorte.html">Aigue Morte</a>
+        <a class="letter-card" href="../Ville_A/Aiguillon/aiguiollon.html">Aiguillon</a>
+        <a class="letter-card" href="../Ville_A/AireEnArtois/aireEnArtoi.html">Aire en Artois</a>
+        <a class="letter-card" href="../Ville_A/AireEnGascogne/aireEnGascogne.html">Aire en Gascogne</a>
+        <a class="letter-card" href="../Ville_A/Airvaut/airvault.html">Airvault</a>
+
+        <a class="letter-card" href="../Ville_A/Aix/aix.html">Aix</a>
+        <a class="letter-card" href="../Ville_A/Les-Aix-D-angillon/lesAixDangillon.html">Les-Aix-d'Angillon</a>
+        <a class="letter-card" href="../Ville_A/Ajaccio/ajaccio.html">Ajaccio</a>
+        <a class="letter-card" href="../Ville_A/Alais/alais.html">Alais</a>
+        <a class="letter-card" href="../Ville_A/Albert/albert.html">Albert</a>
+        <a class="letter-card" href="../Ville_A/Albi/albi.html">Albi</a>
+        <a class="letter-card" href="../Ville_A/Alencon/alencon.html">Alençon</a>
+        <a class="letter-card" href="../Ville_A/Alet/alet.html">Alet</a>
+        <a class="letter-card" href="../Ville_A/Altkirch/altkirck.html">Altkirch</a>
+        <a class="letter-card" href="../Ville_A/Alzonne/alzonne.html">Alzone</a>
+        <a class="letter-card" href="../Ville_A/Amberieu-En-Bugey/amberieuEnBugey.html">Ambérieu en Bugey</a>
+        <a class="letter-card" href="../Ville_A/Ambert/ambert.html">Ambert</a>
+        <a class="letter-card" href="../Ville_A/Amboise/amboise.html">Amboise</a>
+        <a class="letter-card" href="../Ville_A/Amiens/amiens.html">Amiens</a>
+
+        <a class="letter-card" href="../Ville_A/Ancenis/ancenis.html">Ancenis</a>
+        <a class="letter-card" href="../Ville_A/Ancy-Le-Franc/AncyLeFranc.html">Ancy le Franc</a>
+        <a class="letter-card" href="../Ville_A/Les_Andelys/lesAndelys.html">Les-Andelys</a>
+        <a class="letter-card" href="../Ville_A/Andresy/Andresy.html">Andresy</a>
+        <a class="letter-card" href="../Ville_A/Anduse/anduse.html">Anduse</a>
+        <a class="letter-card" href="../Ville_A/Angers/angers.html">Angers</a>
+        <a class="letter-card" href="../Ville_A/Angerville/angerville.html">Angerville</a>
+        <a class="letter-card" href="../Ville_A/Angles/angles.html">Angles</a>
+        <a class="letter-card" href="../Ville_A/Angouleme/angoulemes.html">Angouleme</a>
+        <a class="letter-card" href="../Ville_A/Annonay/annonay.html">Annonay</a>
+        <a class="letter-card" href="../Ville_A/Anse/anse.html">Anse</a>
+        <a class="letter-card" href="../Ville_A/Antibes/antibes.html">Antibes</a>
+        <a class="letter-card" href="../Ville_A/Antony/antony.html">Antony</a>
+        <a class="letter-card" href="../Ville_A/Antrain/antrain.html">Antrain</a>
+
+        <a class="letter-card" href="../Ville_A/Apt/apt.html">Apt</a>
+        <a class="letter-card" href="../Ville_A/Arbois/arbois.html">Arbois</a>
+        <a class="letter-card" href="../Ville_A/L-Arbresle/Larbresle.html">L'Arbresle</a>
+        <a class="letter-card" href="../Ville_A/Arcis-Sur-Aube/arcisSurAube.html">Arcis-Sur-Aube</a>
+        <a class="letter-card" href="../Ville_A/Ardes/ardes.html">Ardes</a>
+        <a class="letter-card" href="../Ville_A/Ardres/ardres.html">Ardres</a>
+        <a class="letter-card" href="../Ville_A/Argeles/argeles.html">Argeles</a>
+        <a class="letter-card" href="../Ville_A/Argent/argent.html">Argent</a>
+        <a class="letter-card" href="../Ville_A/Argentan/argentan.html">Argentan</a>
+        <a class="letter-card" href="../Ville_A/Argentat/argentat.html">Argentat</a>
+        <a class="letter-card" href="../Ville_A/Argenteuil/argenteuil.html">Argenteuil</a>
+        <a class="letter-card" href="../Ville_A/Argenton/argenton.html">Argenton</a>
+        <a class="letter-card" href="../Ville_A/Argenton-Le-Chateau/argentonLeChateau.html">Argenton le Chateau</a>
+        <a class="letter-card" href="../Ville_A/Arles/arles.html">Arles</a>
+
+        <a class="letter-card" href="../Ville_A/Arles-En-Roussillon/arlesEnRoussillon.html">Arles en Roussillon</a>
+        <a class="letter-card" href="../Ville_A/Armentieres/armentieres.html">Armentières</a>
+        <a class="letter-card" href="../Ville_A/Arnac/arnac.html">Arnac</a>
+        <a class="letter-card" href="../Ville_A/Arnay-Le-Duc/arnayLeDuc.html">Arnay le Duc</a>
+        <a class="letter-card" href="../Ville_A/Arnouville/arnouville.html">Arnouville</a>
+        <a class="letter-card" href="../Ville_A/Arpajon/arpajon.html">Arpajon</a>
+        <a class="letter-card" href="../Ville_A/Arras/arras.html">Arras</a>
+        <a class="letter-card" href="../Ville_A/Arreau/arreau.html">Arreau</a>
+        <a class="letter-card" href="../Ville_A/Ars-En-Re/arsEnRe.html">Ars en Ré</a>
+        <a class="letter-card" href="../Ville_A/Arsac/arsac.html">Arsac</a>
+        <a class="letter-card" href="../Ville_A/Artenay/artenay.html">Artenay</a>
+        <a class="letter-card" href="../Ville_A/Astaffort/astaffort.html">Astaffort</a>
+        <a class="letter-card" href="../Ville_A/Ath/ath.html">Ath</a>
+        <a class="letter-card" href="../Ville_A/Attigny/attigny.html">Attigny</a>
+
+        <a class="letter-card" href="../Ville_A/Aubagne/aubagne.html">Aubagne</a>
+        <a class="letter-card" href="../Ville_A/Aubenas/aubenas.html">Aubenas</a>
+        <a class="letter-card" href="../Ville_A/Aubenton/aubenton.html">Aubenton</a>
+        <a class="letter-card" href="../Ville_A/Aubigny/aubigny.html">Aubigny</a>
+        <a class="letter-card" href="../Ville_A/Aubusson/aubusson.html">Aubusson</a>
+        <a class="letter-card" href="../Ville_A/Auch/auch.html">Auch</a>
+        <a class="letter-card" href="../Ville_A/Audenarde/audenarde.html">Audenarde</a>
+        <a class="letter-card" href="../Ville_A/Aulnay/aulnay.html">Aulnay</a>
+        <a class="letter-card" href="../Ville_A/Aulnay16/aulnay16.html">Aulnay16</a>
+        <a class="letter-card" href="../Ville_A/Aumale/aumale.html">Aumale</a>
+        <a class="letter-card" href="../Ville_A/Aups/aups.html">Aups</a>
+        <a class="letter-card" href="../Ville_A/Auray/auray.html">Auray</a>
+        <a class="letter-card" href="../Ville_A/Aurillac/aurillac.html">Aurillac</a>
+        <a class="letter-card" href="../Ville_A/Auterive/Auterive.html">Auterive</a>
+
+        <a class="letter-card" href="../Ville_A/Autun/autun.html">Autun</a>
+        <a class="letter-card" href="../Ville_A/Auxerre/auxerre.html">Auxerre</a>
+        <a class="letter-card" href="../Ville_A/Auxonne/auxonne.html">Auxonne</a>
+        <a class="letter-card" href="../Ville_A/Auxy-Le-Chateau/auxyLeChateau.html">Auxy-le-Château</a>
+        <a class="letter-card" href="../Ville_A/Auzance/auzance.html">Auzance</a>
+        <a class="letter-card" href="../Ville_A/Avallon/avallon.html">Avallon</a>
+        <a class="letter-card" href="../Ville_A/Avesnes/avesnes.html">Avesnes</a>
+        <a class="letter-card" href="../Ville_A/Avenay/avenay.html">Avenay</a>
+        <a class="letter-card" href="../Ville_A/Avignon/avignon.html">Avignon</a>
+        <a class="letter-card" href="../Ville_A/Avranches/avranches.html">Avranches</a>
+        <a class="letter-card" href="../Ville_A/Ay/Ay.html">Ay</a>
+        <a class="letter-card" href="../Ville_A/Azille/azille.html">Azille</a>
+      </div>
+
+      <!-- Message aucun résultat -->
+      <div id="no-results" class="no-results" hidden>Aucune ville ne correspond à votre recherche.</div>
+    </div>
+  </main>
+    <!-- Bouton haut de page -->
+    <button id="scrollToTopButton" title="Haut de page">↑</button>
+
+
+<!-- ===== FOOTER FIXE ===== -->
+<footer class="News-footer">
+  <div class="news">
+    <span id="news-head">COTE</span>
+  </div>
+
+  <div class="N-text">
+    <div class="ticker">
+      <div class="ticker__track">
+        <span>• Celles-ci s'entendent pour de belles frappes.</span>
+        <span>• Pour les lettres en port payé :</span>
+        <span>• Cote du PP sans plus-value si la marque de port (dû) qui l'accompagne est d'un indice inférieur à 16.</span>
+        <span>• Si la marque de port (dû) est d'un indice supérieur à 16, majorer de 2 indices la cote du port payé.</span>
+        <span>• © Copyright Tout droit réservé.</span>
+
+        <!-- Duplique le contenu pour un défilement continu -->
+        <span>• Celles-ci s'entendent pour de belles frappes.</span>
+        <span>• Pour les lettres en port payé :</span>
+        <span>• Cote du PP sans plus-value si la marque de port (dû) qui l'accompagne est d'un indice inférieur à 16.</span>
+        <span>• Si la marque de port (dû) est d'un indice supérieur à 16, majorer de 2 indices la cote du port payé.</span>
+        <span>• © Copyright Tout droit réservé.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

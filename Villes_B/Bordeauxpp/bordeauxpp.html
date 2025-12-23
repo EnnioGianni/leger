@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Le Postillon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../CSS/app.css">
+    <link rel="stylesheet" href="../../CSS/menu.css">
+    <link rel="stylesheet" href="../../CSS/recherchesVille.css">
+    <link rel="stylesheet" href="../../CSS/bouttonHautDePage.css">
+
+    <script defer src="../../JS/script_global.js"></script>
+    <script defer src="../../JS/menu.js"></script>
+    <script defer src="../../JS/bouttonHautDePage.js"></script>
+    <script defer src="../../JS/rechercheVille.js"></script>
+    <script defer src="../../JS/largeurImages.js"></script>
+    <script defer src="../../JS/totalTable.js"></script>
+    <script defer src="../../JS/mainsQuiBouge.js"></script>
+    <script defer src="../../JS/liensUtiles.js"></script>
+    <link rel="icon" type="image/png" href="/Resource/books_library_1768.ico">
+
+    <style>
+      p::first-letter {
+        color: red;
+        font-size: 130%;
+      }
+    </style>
+</head>
+
+
+<body id="scrollable"
+  style="
+    min-height:100vh;
+    margin:0;
+    background:url('/Resource/carrosseAvecPhoto.jpg')
+               center center / cover no-repeat fixed;
+  ">
+  
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="header-left">
+    <a href="/index.html" class="logo-link" aria-label="Accueil Le Postillon">
+      <img src="/Resource/books_library_1768.ico" alt="Logo Le Postillon" class="site-logo">
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" data-menu-open>☰</button>
+  </div>
+  <h1 class="titre-principal">Le Postillon</h1>
+</header>
+
+<!-- ===== MAIN ===== -->
+<main>
+    <h2 id="h12">
+        <a href="./petiteposte.html" class="title-tip" style="font-size: 25px;" title="lien vers L'article la petite poste de Bordeaux">
+        Petite poste de Bordeaux - Guyenne (32)
+        </a>
+    </h2>
+    <p>Bureau ouvert en 1603</p>
+
+<!-- ===== PAGINATION ===== -->
+<nav class="pager">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link title-tip" href="../sommaireB.html" title="Sommaire B">&laquo;&laquo;</a>
+    </li>
+
+<!--Precedente-->
+    <li class="page-item">
+      <a class="page-link title-tip" href="../../Villes_B/Bordeaux/bordeaux.html" title="Bordeaux">&laquo;</a>
+    </li>
+
+<!--Recherches-->
+    <li class="page-item">
+      <div class="dropdown">
+        <input type="text" id="villeInput" placeholder="Tapez le nom d'une ville">
+        <div class="dropdown-content" id="dropdownContent"></div>
+      </div>
+    </li>
+
+<!--Suivante-->
+    <li class="page-item">
+      <a class="page-link title-tip" href="../Bort/bort.html" title="Bort">&raquo;</a>
+    </li>
+    
+<!--Accueil-->
+    <li class="page-item">
+      <a class="page-link title-tip" href="../../index.html" title="Accueil">&raquo;&raquo;</a>
+    </li>  
+  </ul>
+</nav>
+
+<!-- ===== TABLE ===== -->
+<table class="exemple">
+  <thead>
+    <tr>
+      <th>Marque</th>
+      <th>N°</th>
+      <th>Port</th>
+      <th>Dimensions</th>
+      <th>Date</th>
+      <th>Couleurs</th>
+      <th>Indice</th>
+      <th>Cote en euro</th>
+    </tr>
+  </thead>
+           
+    <tr>             
+        <th colspan="8" style="font-size: 17px;">Il y a au moins deux types de marques des bureaux A et B et deux types de la marque de port dû, 
+            leur rareté est sensiblement égale. L'encre noire a été employée surtout entre 1766 et 1769, très rarement ensuite.
+            <a href="petiteposte.html">Vers l'Histoire de la Petit Poste</a>
+        </th>                                                                                   
+    <tr>             
+        <th colspan="4" style="font-size: 17px;">
+            <a href="../Bordeauxpp/Images/-1.png">
+                <img src="../Bordeauxpp/Images/-1.png" alt="Bordeaux" data-width-mm="40">
+            </a>
+        </th>
+        <th colspan="4" style="font-size: 17px;">
+            <a href="../Bordeauxpp/Images/-2.png">
+                <img src="../Bordeauxpp/Images/-2.png" alt="Bordeaux" data-width-mm="40">
+            </a>
+        </th>
+    </tr> 
+<!--Commentaire-->
+    <tr>             
+        <th colspan="8" style="font-size: 25px; text-align: center;">Bureau - A</th>         
+    </tr>                                                                           
+<!--Marque 1-->         
+        <tr>
+            <td>
+                <a href="../Bordeauxpp/Images/1.png">
+                    <img src="../Bordeauxpp/Images/1.png" alt="Bordeaux petite poste" data-width-mm="40">
+                </a>
+            </td>
+            <td class="border3">1</td>
+            <td colspan="3">Bureau - <B>A</B> -Lettre en port <B>payé</B> pour la ville</td>
+            <td>noir</td>
+            <td>I-21</td>
+            <td class="prixProduit" data-id="21">00.00</td>
+        </tr>                                                                                                         
+<!--Marque 1A-->         
+        <tr>
+            <td>
+                <a href="../Bordeauxpp/Images/1A.png">
+                    <img src="../Bordeauxpp/Images/1A.png" alt="Bordeaux petite poste" data-width-mm="40">
+                </a>
+            </td>
+            <td class="border3">1A</td>
+            <td colspan="3">Bureau - <B>A</B> -Lettre en port <B>payé</B> pour la ville</td>
+            <td class="border1 text-danger">rouge</td>
+            <td>I-21</td>
+            <td class="prixProduit" data-id="21">00.00</td>
+        </tr>                                                                                                    
+<!--Marque 2-->         
+        <tr>
+            <td>
+                <a href="../Bordeauxpp/Images/2.png">
+                    <img src="../Bordeauxpp/Images/2.png" alt="Bordeaux petite poste" data-width-mm="40">
+                </a>
+            </td>
+            <td class="border3">2</td>
+            <td colspan="3">Bureau - <B>A</B> -Lettre en port <B>dû</B> pour la ville et lettre en provenance des colonies jusqu'en 1772</td>
+            <td>noir</td>
+            <td>I-21</td>
+            <td class="prixProduit" data-id="21">00.00</td>
+        </tr>                                                                                                       
+<!--Marque 2A-->         
+        <tr>
+            <td>
+                <a href="../Bordeauxpp/Images/2A.png">
+                    <img src="../Bordeauxpp/Images/2A.png" alt="Bordeaux petite poste" data-width-mm="40">
+                </a>
+            </td>
+            <td class="border3">2A</td>
+            <td colspan="3">Bureau - <B>A</B> -Lettre en port <B>dû</B> pour la ville et lettre en provenance des colonies jusqu'en 1772</td>
+            <td class="border1 text-danger">rouge</td>
+            <td>I-21</td>
+            <td class="prixProduit" data-id="21">00.00</td>
+        </tr>                                                                                         
+<!--Marque 3-->         
+        <tr>
+            <td>
+                <a href="../Bordeauxpp/Images/3.png">
+                    <img src="../Bordeauxpp/Images/3.png" alt="Bordeaux petite poste" data-width-mm="40">
+                </a>
+            </td>
+            <td class="border3">3</td>
+            <td colspan="3">Bureau - <B>A</B> -Lettre en port <B>payé</B> pour les des colonies</td>
+            <td>noir</td>
+            <td>I-22</td>
+            <td class="prixProduit" data-id="22">00.00</td>
+        </tr>                                                                                 
+<!--Marque 3A-->         
+        <tr>
+            <td>
+                <a href="../Bordeauxpp/Images/3A.png">
+                    <img src="../Bordeauxpp/Images/3A.png" alt="Bordeaux petite poste" data-width-mm="40">
+                </a>
+            </td>
+            <td class="border3">3A</td>
+            <td colspan="3">Bureau - <B>A</B> -Lettre en port <B>payé</B> pour les des colonies</td>
+            <td class="border1 text-danger">rouge</td>
+            <td>I-22</td>
+            <td class="prixProduit" data-id="22">00.00</td>
+        </tr>                                                                                                 
+<!--Marque 4-->
+        <tr>
+            <td>
+                <a href="../Bordeauxpp/Images/4.png">
+                    <img src="../Bordeauxpp/Images/4.png" alt="Bordeaux petite poste" data-width-mm="40">
+                </a>
+            </td>
+            <td class="border3">4</td>
+            <td colspan="3">Bureau - <B>A</B> -Lettre en port <B>dû</B> en provenance des colonies à partir de 1772</td>
+            <td class="border1 text-danger">rouge</td>
+            <td>I-20</td>
+            <td class="prixProduit" data-id="20">00.00</td>
+        </tr>                                                                                                 
+<!--Marque 5-->
+        <tr>
+            <td>
+                <a href="../Bordeauxpp/Images/5.png">
+                    <img src="../Bordeauxpp/Images/5.png" alt="Bordeaux petite poste" data-width-mm="40">
+                </a>
+            </td>
+            <td class="border3">5</td>
+            <td colspan="3">Bureau - <B>A</B> -Lettre de banlieue en port <B>payé</B></td>
+            <td class="border1 text-danger">rouge</td>
+            <td>I-23</td>
+            <td class="prixProduit" data-id="23">00.00</td>
+        </tr>                                                                                                       
+<!--Marque 6-->
+        <tr>
+            <td>
+                <a href="../Bordeauxpp/Images/6.png">
+                    <img src="../Bordeauxpp/Images/6.png" alt="Bordeaux petite poste" data-width-mm="40">
+                </a>
+            </td>
+            <td class="border3">6</td>
+            <td colspan="3">Bureau - <B>A</B> -Lettre de banlieue en port <B>dû</B></td>
+            <td class="border1 text-danger">rouge</td>
+            <td>I-22</td>
+            <td class="prixProduit" data-id="22">00.00</td>
+        </tr>                                                                                                     
+<!--Marque 7-->
+        <tr>
+            <td>
+                <a href="../Bordeauxpp/Images/7.png">
+                    <img src="../Bordeauxpp/Images/7.png" alt="Bordeaux petite poste" data-width-mm="40">
+                </a>
+            </td>
+            <td class="border3">7</td>
+            <td colspan="3">Bureau - <B>A</B> -Lettre de banlieue en port <B>dû,</B> la marque de port <B>dû</B> est manuscrite (1770)</td>
+            <td class="border1 text-danger">rouge</td>
+            <td>I-22</td>
+            <td class="prixProduit" data-id="22">00.00</td>
+        </tr>                                                                                                    
+<!--Marque 8-->
+        <tr>
+            <td>
+                <a href="../Bordeauxpp/Images/8.png">
+                    <img src="../Bordeauxpp/Images/8.png" alt="Bordeaux petite poste" data-width-mm="40">
+                </a>
+            </td>
+            <td class="border3">8</td>
+            <td colspan="3">Bureau - <B>A</B> -Lettre de banlieue en port <B>payé</B> remise à un boîtier (1770)</td>
+            <td>noir</td>
+            <td>I-22</td>
+            <td class="prixProduit" data-id="22">00.00</td>
+        </tr>                                          
+<!--Commentaire-->
+        <tr>             
+            <th colspan="8" style="font-size: 25px;">Bureau - B </th>         
+        </tr>
+<!--Marque 9-->
+        <tr>
+            <td>
+                <a href="../Bordeauxpp/Images/9.png">
+                    <img src="../Bordeauxpp/Images/9.png" alt="Bordeaux petite poste" data-width-mm="40">
+                </a>
+            </td>
+            <td class="border3">9</td>
+            <td colspan="3">Bureau - <B>B</B> -Lettre en port <B>payé</B> pour la ville</td>
+            <td>noir</td>
+            <td>I-21</td>
+            <td class="prixProduit" data-id="21">00.00</td>
+        </tr>    
+<!--Marque 9A-->
+        <tr>
+            <td>
+                <a href="../Bordeauxpp/Images/9A.png">
+                    <img src="../Bordeauxpp/Images/9A.png" alt="Bordeaux petite poste" data-width-mm="40">
+                </a>
+            </td>
+            <td class="border3">9A</td>
+            <td colspan="3">Bureau - <B>B</B> -Lettre en port <B>payé</B> pour la ville</td>
+            <td class="border1 text-danger">rouge</td>
+            <td>I-21</td>
+            <td class="prixProduit" data-id="21">00.00</td>
+        </tr>    
+<!--Marque 10-->
+        <tr>
+            <td>
+                <a href="../Bordeauxpp/Images/10.png">
+                    <img src="../Bordeauxpp/Images/10.png" alt="Bordeaux petite poste" data-width-mm="40">
+                </a>
+            </td>
+            <td class="border3">10</td>
+            <td colspan="3">Bureau - <B>B</B> -Lettre en port <B>dû</B> pour la ville et en provenance des colonies jusqu'en 1772</td>
+            <td>noir</td>
+            <td>I-21</td>
+            <td class="prixProduit" data-id="21">00.00</td>
+        </tr>    
+<!--Marque 10A-->
+        <tr>
+            <td>
+                <a href="../Bordeauxpp/Images/10A.png">
+                    <img src="../Bordeauxpp/Images/10A.png" alt="Bordeaux petite poste" data-width-mm="40">
+                </a>
+            </td>
+            <td class="border3">10A</td>
+            <td colspan="3">Bureau - <B>B</B> -Lettre en port <B>dû</B> pour la ville et en provenance des colonies jusqu'en 1772</td>
+            <td class="border1 text-danger">rouge</td>
+            <td>I-20</td>
+            <td class="prixProduit" data-id="20">00.00</td>
+        </tr>    
+<!--Marque 11-->
+        <tr>
+            <td>
+                <a href="../Bordeauxpp/Images/11.png">
+                    <img src="../Bordeauxpp/Images/11.png" alt="Bordeaux petite poste" data-width-mm="40">
+                </a>
+            </td>
+            <td class="border3">11</td>
+            <td colspan="3">Bureau - <B>B</B> -Lettre en port <B>payé</B> pour les colonies</td>
+            <td>noir</td>
+            <td>I-21</td>
+            <td class="prixProduit" data-id="21">00.00</td>
+        </tr>    
+<!--Marque 11A-->
+        <tr>
+            <td>
+                <a href="../Bordeauxpp/Images/11A.png">
+                    <img src="../Bordeauxpp/Images/11A.png" alt="Bordeaux petite poste" data-width-mm="40">
+                </a>
+            </td>
+            <td class="border3">11A</td>
+            <td colspan="3">Bureau - <B>B</B> -Lettre en port <B>payé</B> pour les colonies</td>
+            <td class="border1 text-danger">rouge</td>
+            <td>I-21</td>
+            <td class="prixProduit" data-id="21">00.00</td>
+        </tr>    
+<!--Marque 12-->
+        <tr>
+            <td>
+                <a href="../Bordeauxpp/Images/12.png">
+                    <img src="../Bordeauxpp/Images/12.png" alt="Bordeaux petite poste" data-width-mm="40">
+                </a>
+            </td>
+            <td class="border3">12</td>
+            <td colspan="3">Bureau - <B>B</B> -Lettre en provenance des colonies à partir de 1772</td>
+            <td class="border1 text-danger">rouge</td>
+            <td>I-20</td>
+            <td class="prixProduit" data-id="20">00.00</td>
+        </tr>    
+<!--Marque 13-->
+        <tr>
+            <td>
+                <a href="../Bordeauxpp/Images/13.png">
+                    <img src="../Bordeauxpp/Images/13.png" alt="Bordeaux petite poste" data-width-mm="40">
+                </a>
+            </td>
+            <td class="border3">13</td>
+            <td colspan="3">Bureau - <B>B</B> -Lettre en port <B>dû</B> de banlieue</td>
+            <td class="border1 text-danger">rouge</td>
+            <td>I-22</td>
+            <td class="prixProduit" data-id="22">00.00</td>
+        </tr>    
+<!--Marque 13A-->
+        <tr>
+            <td>
+                <a href="../Bordeauxpp/Images/13A.png">
+                    <img src="../Bordeauxpp/Images/13A.png" alt="Bordeaux petite poste" data-width-mm="40">
+                </a>
+            </td>
+            <td class="border3">13A</td>
+            <td colspan="3">Bureau - <B>B</B> -Lettre en port <B>dû</B> de banlieue</td>
+            <td>noir</td>
+            <td>I-22</td>
+            <td class="prixProduit" data-id="22">00.00</td>
+        </tr> 
+<!--Commentaire-->
+        <tr>             
+            <th colspan="8" style="text-align: center;">Marques doubles Grande et Petite Poste</th>         
+        </tr>  
+<!--Marque 14-->
+        <tr>
+            <td>
+                <a href="../Bordeauxpp/Images/14.png">
+                    <img src="../Bordeauxpp/Images/14.png" alt="Bordeaux petite poste" data-width-mm="40">
+                </a>
+            </td>
+            <td class="border3">14</td>
+            <td colspan="3">Bureau - <B>B</B> et Grande Poste 1772 </td>
+            <td class="border1 text-danger">rouge</td>
+            <td>I-25</td>
+            <td class="prixProduit" data-id="25">00.00</td>
+        </tr>    
+<!--Marque 15-->
+        <tr>
+            <td>
+                <a href="../Bordeauxpp/Images/14.png">
+                    <img src="../Bordeauxpp/Images/14.png" alt="Bordeaux petite poste" data-width-mm="40">
+                </a>
+            </td>
+            <td class="border3">15</td>
+            <td colspan="3">Bureau - <B>B</B> et Grande Poste 1767 </td>
+            <td class="border1 text-danger">rouge</td>
+            <td>I-25</td>
+            <td class="prixProduit" data-id="25">00.00</td>
+        </tr>
+<!--Commentaire-->
+        <tr>             
+            <th colspan="8">
+                <p>Lettre retirée à la Grande Poste de Bordeaux et remise à la Petite Poste pour faire suivre en banlieue. <br>Nous avons vu le même cas avec la marque 
+                    LECTOURE (1772).</p>
+                <p>Nous n'avons pas encore rencontré de lettres remises par la Petite Poste à la Grande Poste et portant les marques des deux offices.<br> Ces lettres 
+                    étaient peut-être acheminées sans être timbrées par la Petite Poste.</p>
+            </th>         
+        </tr>
+<!--Liens Utile-->
+    <tr>
+      <th colspan="8" id="table-liens">Liens utiles</th>
+    </tr>
+<!--Commentaire-->
+<tr>
+      <th colspan="8" style="text-align: center;"></th>
+</tr>
+ 
+</table>
+
+    <!-- ===== BOUTON HAUT DE PAGE ===== -->
+<button id="scrollToTopButton" title="Haut de page"></button>
+</main>
+
+<!-- ==========================
+     POPUP NOTE – OBLIGATOIRE
+========================== -->
+<div class="popup-overlay" id="popupNote">
+  <div class="popup-box">
+    <div class="popup-close" id="closePopup">&times;</div>
+    <div id="popupContent"></div>
+  </div>
+</div>
+
+<!-- ===== FOOTER FIXE ===== -->
+<footer class="News-footer">
+  <div class="news">
+    <span id="news-head">COTE</span>
+  </div>
+
+  <div class="N-text">
+    <div class="ticker">
+      <div class="ticker__track">
+        <span>• Celles-ci s'entendent pour de belles frappes.</span>
+        <span>• Pour les lettres en port payé :</span>
+        <span>• Cote du PP sans plus-value si la marque de port (dû) qui l'accompagne est d'un indice inférieur à 16.</span>
+        <span>• Si la marque de port (dû) est d'un indice supérieur à 16, majorer de 2 indices la cote du port payé.</span>
+        <span>• © Copyright Tout droit réservé.</span>
+
+        <!-- Duplique le contenu pour un défilement continu -->
+        <span>• Celles-ci s'entendent pour de belles frappes.</span>
+        <span>• Pour les lettres en port payé :</span>
+        <span>• Cote du PP sans plus-value si la marque de port (dû) qui l'accompagne est d'un indice inférieur à 16.</span>
+        <span>• Si la marque de port (dû) est d'un indice supérieur à 16, majorer de 2 indices la cote du port payé.</span>
+        <span>• © Copyright Tout droit réservé.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+ <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>   
+ <script src="/JS/app.js"></script>   
+
+</body>
+</html>

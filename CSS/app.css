@@ -1,0 +1,900 @@
+/* =============== Le Postillon — CSS unique =============== */ /* Titre du fichier CSS */
+
+/* Reset minimal et base typographique */ /* Section de base */
+* { box-sizing: border-box; } /* Inclut bordures/paddings dans les dimensions */
+html, body { /* Cible la racine et le corps */
+  margin: 0; /* Supprime les marges par défaut */
+  padding: 0; /* Supprime les paddings par défaut */
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif; /* Police moderne avec fallbacks */
+  line-height: 1.5; /* Hauteur de ligne lisible */
+  color: #222; /* Couleur texte principale */
+  background: #f7f4ef; /* léger ton parchemin */ /* Couleur de fond */
+}
+
+/* Titres */ /* Styles des titres globaux */
+.titre-principal { /* Titre H1 du header */
+  font-size: 30px; /* Taille du titre principale */
+  margin: -10px 100px -10px 0; /* Marge droite très large (pousse le titre) */
+  text-align: center; /* Centre le texte horizontalement */
+  letter-spacing: 0.5px; /* Espacement des lettres */
+  flex: 1;
+  color: #030303;
+}
+p {
+  text-align: center;   /* centre le texte horizontalement */
+  margin-top: 0;        /* optionnel : rapproche du titre */
+  margin-bottom: 20px;  /* espace après le texte */
+}
+th {
+  text-align: center;   /* centre le texte horizontalement */
+}
+
+
+/* Header sans Bootstrap */ /* En-tête personnalisé */
+.header { /* Conteneur du header */
+  display: flex; /* Active le flexbox */
+  align-items: center; /* Aligne verticalement */
+  justify-content: space-between; /* Espace entre logo et titre */
+  gap: 16px; /* Espace entre éléments enfants */
+  padding: 16px 24px; /* Espacement interne (haut/bas, gauche/droite) */
+  background: #efe7da; /* Fond beige */
+  border-bottom: 1px solid #d9cfbf; /* Ligne de séparation basse */
+  position: sticky; /* Header collant au scroll */
+  top: 0; /* Collé en haut de la fenêtre */
+  z-index: 100; /* Au-dessus du contenu */
+}
+
+.logo-link img { /* Logo dans le header */
+  width: 48px; /* Largeur du logo */
+  height: 48px; /* Hauteur du logo */
+}
+
+/* Pagination (remplace .pagination Bootstrap) */ /* Navigation entre pages */
+.pager { /* Conteneur de pagination */
+  margin: 12px auto 20px; /* Marges externes (haut, horizontal auto, bas) */
+  padding: 0 12px; /* Padding horizontal */
+  max-width: 1100px; /* Largeur maximale */
+}
+.pagination { /* Liste des items de pagination */
+  list-style: none; /* Retire les puces de liste */
+  display: flex; /* Affiche en flex (horizontale) */
+  align-items: center; /* Aligne les items */
+  justify-content: center; /* Centre la pagination */
+  gap: 8px; /* Espacement entre items */
+  padding: 0; /* Retire padding par défaut */
+  margin: 0; /* Retire marge par défaut */
+  flex-wrap: wrap; /* Retour à la ligne si nécessaire */
+}
+.page-item { display: inline-flex; } /* Chaque item est en inline-flex */
+.page-link { /* Lien de pagination */
+  display: inline-block; /* Boîte cliquable */
+  min-width: 40px; /* Largeur minimale du bouton */
+  text-align: center; /* Texte centré */
+  padding: 8px 12px; /* Padding interne */
+  border: 1px solid #cbbba0; /* Bordure beige */
+  border-radius: 8px; /* Coins arrondis */
+  background: #fffdf8; /* Fond clair */
+  text-decoration: none; /* Retire le soulignement */
+  color: #333; /* Couleur du texte */
+  transition: transform .08s ease, background .2s ease; /* Animations au survol */
+}
+.page-link:hover { background: #f0e7d8; transform: translateY(-1px); } /* Effet hover */
+
+/* Dropdown de recherche */ /* Zone de recherche des villes */
+.dropdown { /* Conteneur de dropdown */
+  position: relative; /* Positionnement du menu déroulant */
+  display: inline-block; /* S’aligne en ligne */
+}
+#villeInput { /* Champ de saisie */
+  width: 260px; /* Largeur de l’input */
+  padding: 8px 10px; /* Padding interne */
+  border: 1px solid #cbbba0; /* Bordure */
+  border-radius: 8px; /* Coins arrondis */
+  outline: none; /* Retire le contour focus par défaut */
+  background: #fffdf8; /* Fond clair */
+}
+.dropdown-content { /* Panneau déroulant des résultats */
+  position: absolute; /* Positionné sous l’input */
+  left: 0; /* Aligné à gauche du parent */
+  top: calc(100% + 6px); /* Sous l’input avec un espace de 6px */
+  width: 100%; /* Même largeur que l’input */
+  max-height: 260px; /* Hauteur maximale */
+  overflow: auto; /* Scroll si contenu long */
+  background: #fffefb; /* Fond */
+  border: 1px solid #cbbba0; /* Bordure */
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0 6px 18px rgba(0,0,0,.08); /* Ombre portée */
+  display: none; /* JS bascule en flex */ /* Caché par défaut */
+  flex-direction: column; /* Items en colonne */
+  z-index: 20; /* Au-dessus du contenu */
+}
+.dropdown-content.show { display: flex; } /* Affiche la liste quand .show */
+.dropdown-item { /* Chaque résultat dans la liste */
+  padding: 8px 10px; /* Espacement interne */
+  cursor: pointer; /* Main au survol */
+  border-bottom: 1px dashed #eadfcf; /* Séparateur pointillé */
+}
+.dropdown-item:last-child { border-bottom: none; } /* Pas de trait après le dernier */
+.dropdown-item:hover { background: #f7efe2; } /* Surlignage au survol */
+
+/* Table */ /* Tableau principal */
+table.exemple { /* Table avec classe .exemple */
+  width: min(1100px, 96vw); /* Largeur max 1100px, sinon 96% view width */
+  margin: 0 auto 28px; /* Centré avec marge basse */
+  border-collapse: separate; /* Séparation des cellules (pour radius) */
+  border-spacing: 0; /* Pas d’espacement entre cellules */
+  background: #fffbf2; /* Fond de table */
+  border: 1px solid #d9cfbf; /* Bordure extérieure */
+  border-radius: 12px; /* Coins arrondis du tableau */
+  overflow: hidden; /* Cache débordements (utile pour radius) */
+}
+table.exemple thead th { /* Entête de table */
+  background: #e8decc; /* Fond de l’entête */
+  padding: 10px; /* Espacement interne */
+  font-weight: 600; /* Texte en semi-gras */
+  border-bottom: 1px solid #d2c6b3; /* Trait séparateur bas */
+}
+table.exemple td, table.exemple th { /* Cellules du tableau */
+  padding: 10px; /* Padding interne */
+  vertical-align: middle; /* Alignement vertical central */
+  text-align: left; /* Alignement gauche */
+}
+.border2 { border-right: 1px solid #e8ddcc; } /* Bordure droite claire */
+.border3 { border-right: 1px solid #baa98d; } /* Bordure droite plus marquée */
+.col-1 { width: 80px; } /* Largeur indicative col-1 */
+.col-2 { width: 150px; } /* Largeur indicative col-2 */
+.prixProduit { text-align: right; font-variant-numeric: tabular-nums; } /* Prix aligné droit et chiffres tabulaires */
+
+table.exemple tbody tr:nth-child(odd) td { /* Zébrage lignes impaires */
+  background: #fffdf7; /* Fond légèrement différent */
+}
+table.exemple img { /* Images dans la table */
+  max-width: 100%; /* Ne dépasse pas la cellule */
+  height: auto; /* Conserve les proportions */
+}
+
+/* Bouton Haut de page */ /* Scroll-to-top */
+.scrollTop { /* Bouton flottant */
+  position: fixed; /* Fixé à l’écran */
+  right: 18px; /* Décalage à droite */
+  bottom: 18px; /* Décalage bas */
+  width: 42px; /* Taille du bouton */
+  height: 42px; /* Hauteur du bouton */
+  border: 1px solid #cbbba0; /* Bordure */
+  border-radius: 10px; /* Coins arrondis */
+  background: #fffdf8; /* Fond clair */
+  cursor: pointer; /* Curseur pointeur */
+  font-size: 20px; /* Taille de la flèche/texte */
+  line-height: 40px; /* Aligne verticalement le contenu */
+  text-align: center; /* Centre horizontalement */
+  box-shadow: 0 6px 16px rgba(0,0,0,.12); /* Ombre du bouton */
+  display: none; /* montré par JS au scroll */ /* Caché par défaut */
+}
+.scrollTop:hover { background: #f0e7d8; } /* Effet survol bouton */
+
+/* Popups */ /* Fenêtres modales */
+.popup-container { /* Arrière-plan de la popup */
+  position: fixed; /* Recouvre l’écran */
+  inset: 0; /* Top/Right/Bottom/Left = 0 */
+  background: rgba(0,0,0,.3); /* Voile semi-transparent */
+  display: none; /* JS: .show */ /* Caché par défaut */
+  align-items: center; /* Centre verticalement le contenu */
+  justify-content: center; /* Centre horizontalement le contenu */
+  padding: 20px; /* Espacement autour */
+  z-index: 200; /* Au-dessus de tout */
+}
+.popup-container.show { display: flex; } /* Affiche la popup quand .show */
+.popup-content { /* Boîte de contenu de la popup */
+  width: min(560px, 92vw); /* Largeur max 560px ou 92% viewport */
+  background: #fffdf8; /* Fond de la popup */
+  border: 1px solid #d9cfbf; /* Bordure */
+  border-radius: 12px; /* Coins arrondis */
+  padding: 18px 16px; /* Padding interne */
+  position: relative; /* Pour positionner la croix */
+}
+.popup-content .close { /* Bouton de fermeture (croix) */
+  position: absolute; /* Positionné dans la popup */
+  top: 6px; /* Décalage haut */
+  right: 10px; /* Décalage droite */
+  text-decoration: none; /* Pas de soulignement */
+  font-size: 24px; /* Taille de la croix */
+  color: #333; /* Couleur de la croix */
+}
+
+/* Tooltips (hooks classes existantes) */ /* Style d’info-bulle simple */
+/*.title-tip { text-decoration: none; border-bottom: 1px dotted #a38f70; }*/ /* Soulignement pointillé */
+
+/* /styles/footer.css */
+/* Pourquoi: variables = réglages centralisés (hauteur, vitesse, espaces) */
+:root{
+  --footer-h: 36px;
+  --gap: 12px;
+  --pad-x: 10px;
+  --speed: 35s; /* ↑ = plus lent */
+  --bg: #efe7da;
+  --border: #d9cfbf;
+  --chip-bg: #fffdf8;
+  --text: #3b3b3b;
+}
+
+/* ======= FOOTER FIXE EN BAS ======= */
+.News-footer{
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 1000;
+  display: flex; align-items: center; gap: var(--gap);
+  height: calc(var(--footer-h) + 8px);
+  padding: 4px var(--pad-x);
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -2px 6px rgba(0,0,0,.1);
+  color: var(--text);
+  font: 500 14px/1 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* Badge “COTE” */
+.news{
+  flex: 0 0 auto;
+  display: flex; align-items: center; justify-content: center;
+  white-space: nowrap;
+  margin: 0;
+}
+#news-head{
+  display: inline-block;
+  height: var(--footer-h);
+  line-height: var(--footer-h);
+  padding: 0 12px;
+  border: 1px solid #cbbba0; border-radius: 999px;
+  background: var(--chip-bg);
+  font-weight: 600; letter-spacing: .5px;
+}
+
+/* Zone ticker */
+.N-text{
+  flex: 1 1 auto; min-width: 0; padding: 0;
+}
+.ticker{
+  position: relative;
+  height: var(--footer-h);
+  overflow: hidden;
+  white-space: nowrap;
+}
+.ticker__track{
+  display: inline-block;
+  white-space: nowrap;
+  will-change: transform;
+  animation: ticker-move var(--speed) linear infinite;
+}
+.ticker__track span{
+  display: inline-block;
+  margin-right: 28px;
+  line-height: var(--footer-h);
+}
+
+/* Pause au survol et focus clavier (accessibilité) */
+.News-footer:hover .ticker__track,
+.News-footer:focus-within .ticker__track{
+  animation-play-state: paused; /* Pourquoi: évite la lecture forcée lors d’une interaction */
+}
+
+/* Animation continue (nécessite duplication du contenu) */
+@keyframes ticker-move{
+  from{ transform: translateX(0); }
+  to  { transform: translateX(-50%); }
+}
+
+/* Respect de la préférence utilisateur */
+@media (prefers-reduced-motion: reduce){
+  .ticker__track{ animation: none; transform: none; }
+}
+
+/* Mobile */
+@media (max-width: 480px){
+  :root{ --footer-h: 32px; --gap: 8px; --pad-x: 8px; }
+  .News-footer{ font-size: 13px; }
+}
+
+
+
+
+
+
+
+
+
+/* ======= BOUTON HAUT DE PAGE ======= */
+#scrollToTopButton {
+  position: fixed;
+  bottom: 60px;          /* au-dessus du footer fixe */
+  right: 18px;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #cbbba0;
+  border-radius: 10px;
+  background: #fffdf8;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 40px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0,0,0,.12);
+  display: none;         /* affiché au scroll */
+  transition: opacity .3s ease;
+}
+#scrollToTopButton:hover {
+  background: #f0e7d8;
+  transform: translateY(-2px);
+}
+
+
+/* Petits écrans */ /* Premier bloc responsive */
+@media (max-width: 640px) { /* Règles pour <= 640px */
+  .titre-principal { font-size: 36px; } /* Titre principal plus grand (ici) */
+  #villeInput { width: 200px; } /* Champ ville un peu plus étroit */
+  .page-link { min-width: 36px; padding: 6px 10px; } /* Boutons compacts */
+}
+
+/* =========================
+   MOBILE : tout en colonne
+   ========================= */ /* Deuxième bloc responsive (empilage) */
+@media (max-width: 640px) { /* Règles pour <= 640px */
+  /* Header en colonne */
+  .header { /* Ajuste le header */
+    flex-direction: column; /* Aligne verticalement */
+    align-items: center; /* Centre les éléments */
+    gap: 10px; /* Espace entre éléments */
+  }
+  .titre-principal { /* Titre principal */
+    font-size: 32px; /* Taille réduite sur mobile */
+    text-align: center; /* Centré */
+  }
+
+  /* Pagination 100% largeur, un item par ligne */
+  .pagination { /* Liste de pagination */
+    flex-direction: column; /* En colonne */
+    align-items: stretch;   /* prend toute la largeur */
+    gap: 6px; /* Espacements verticaux */
+  }
+  .page-item { width: 100%; } /* Chaque item prend toute la largeur */
+  .page-link { /* Bouton de page */
+    width: 100%; /* Pleine largeur */
+    min-width: 0; /* Annule la min-width globale */
+    display: block; /* S’étire sur la ligne */
+    padding: 10px 12px; /* Padding confortable */
+  }
+
+  /* Champ de recherche pleine largeur */
+  .dropdown,
+  #villeInput,
+  #dropdownContent {
+    width: 100% !important; /* Forcé à 100% */
+    max-width: 100% !important; /* Forcé à 100% */
+  }
+  .dropdown-content { /* Liste résultats */
+    position: static;     /* colle sous l’input */
+    display: none;        /* sera .show au besoin */
+    margin-top: 6px; /* Petit espace haut */
+  }
+  .dropdown-content.show { display: flex; } /* Affichage quand active */
+
+  /* Bouton Haut de page : OK natif */ /* Rien à changer ici */
+
+  /* ===== TABLE — Choisis UNE option ===== */ /* Instructions dev */
+
+  /* OPTION A (simple) : table scrollable horizontalement (aucun remaniement) */
+  /* Décommente pour garder la table intacte mais scrollable : */
+  /*
+  table.exemple {
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+  }
+  */
+
+  /* OPTION B (empilage façon “cartes”) : chaque ligne devient un bloc vertical
+     => Nécessite d’ajouter data-label sur chaque <td> (voir explications) */
+  table.exemple { border: none; border-radius: 0; } /* Table sans bord/radius pour cartes */
+  table.exemple thead { display: none; }        /* cache l’en-tête */ /* Cache l’en-tête sur mobile */
+  table.exemple,
+  table.exemple tbody,
+  table.exemple tr,
+  table.exemple td,
+  table.exemple th {
+    display: block; /* Chaque élément prend toute la largeur */
+    width: 100%; /* Pleine largeur */
+  }
+  table.exemple tr { /* Chaque ligne devient une carte */
+    margin: 12px 0; /* Espacement vertical entre cartes */
+    padding: 12px; /* Padding interne de la carte */
+    border: 1px solid #d9cfbf; /* Bordure de carte */
+    border-radius: 10px; /* Coins arrondis */
+    background: #fffdf7; /* Fond clair */
+  }
+  table.exemple td,
+  table.exemple th {
+    border: none !important; /* Retire les bordures internes */
+    padding: 6px 0; /* Espacement vertical de chaque ligne de champ */
+  }
+  /* Affiche le libellé avant la valeur, récupéré depuis data-label */
+  table.exemple td::before {
+    content: attr(data-label) " : "; /* Injecte le libellé (ex: "Port :") */
+    font-weight: 600; /* Met en valeur le libellé */
+    display: inline-block; /* Affichage en ligne */
+    width: auto; /* Largeur automatique */
+    margin-right: 6px; /* Espace après le libellé */
+    color: #6b5b45; /* Couleur du libellé */
+  }
+  /* Colonne image : pas besoin de label */
+  table.exemple td:first-child::before { content: ""; } /* Supprime le libellé de la première cellule (image) */
+}
+@media (max-width: 640px) { /* Troisième bloc responsive (affinage visuel) */
+  /* Espacement un peu plus aéré entre les cartes */
+  table.exemple tr { margin: 14px 0; } /* Cartes légèrement plus espacées */
+
+  /* Légère ombre pour distinguer chaque carte */
+  table.exemple tr { box-shadow: 0 6px 14px rgba(0,0,0,.06); } /* Ombre douce */
+
+  /* Libellés un poil plus lisibles */
+  table.exemple td::before { font-weight: 700; opacity: .9; } /* Libellés plus contrastés */
+}
+/* === Quadrillage pour toutes les lignes du tableau === */
+table.exemple, 
+table.exemple th, 
+table.exemple td {
+  border: 1px solid #080808; /* couleur douce, cohérente avec ton style */
+  border-collapse: collapse; /* assure que les bordures se fusionnent bien */
+}
+
+/* Renforcement du contour principal */
+table.exemple {
+  border: 2px solid #cbbba0; /* cadre plus visible */
+}
+
+/* Ajustement visuel des têtes et lignes */
+table.exemple thead th {
+  background: #e8decc;
+  border: 1px solid #cbbba0; /* même ton pour cohérence */
+}
+table.exemple tbody tr:nth-child(odd) td {
+  background: #f8eece; /* alternance légère */
+}
+table.exemple tbody tr:nth-child(even) td {
+  background: #fffbf2; /* contraste léger pour quadrillage clair */
+}
+
+/* Quadrillage conservé même en mode mobile (cartes) */
+@media (max-width: 640px) {
+  table.exemple td,
+  table.exemple th {
+    border: 1px solid #d9cfbf !important; /* garde les cadres même empilés */
+    border-radius: 4px;
+    background: #fffdf8;
+    padding: 6px 8px;
+  }
+  table.exemple tr {
+    border: 1px solid #cbbba0;
+    box-shadow: none; /* supprime l’ombre pour effet “grille” */
+  }
+}
+/* ======= Centrage du titre de ville et du sous-titre ======= */
+#h12, 
+#h12 a, 
+main > p:first-of-type {
+  display: block;          /* garantit le centrage correct */
+  text-align: center;      /* centre le texte horizontalement */
+  margin-left: auto;       /* centre horizontalement le bloc */
+  margin-right: auto;      /* idem */
+  width: 100%;             /* occupe toute la largeur disponible */
+}
+/* === Centrage spécifique du texte "Bureau ouvert en 1791" === */
+#h12 {
+  text-align: center;       /* centre le titre principal */
+  margin-top: 25px;         /* petit espace au-dessus */
+  margin-bottom: 6px;       /* espace sous le titre */
+  font-weight: bold;        /* met le texte en gras */
+}
+
+#h12 a {
+  display: inline-block;    /* empêche tout décalage horizontal */
+  text-align: center;       /* centre le texte du lien */
+}
+
+main > p:first-of-type {
+  display: block;           /* s’assure que le paragraphe prenne toute la ligne */
+  text-align: center;       /* centre le texte horizontalement */
+  margin: 0 auto 20px;      /* centre le bloc et ajoute un léger espace dessous */
+  font-size: 20px;          /* taille lisible */
+  color: #020202;           /* ton cohérent avec le style ancien */
+  font-weight: bold;        /* met le texte en gras */
+}
+/* === Taille fixe et cohérente des images, même sur mobile === */
+table.exemple img {
+  width: 120px;          /* largeur fixe adaptée à ton format */
+  height: auto;          /* conserve les proportions */
+  max-width: 120px;      /* empêche d’être plus grande */
+  display: block;        /* évite les débordements inline */
+  margin: 0 auto;        /* centre l’image dans la cellule */
+}
+
+/* Sur très petit écran, on garde la même taille */
+@media (max-width: 640px) {
+  table.exemple img {
+    width: 250px !important;  /* force la même taille */
+    max-width: 250px !important;
+  }
+}
+
+
+
+
+/* ===============================================
+   Alignement et centrage des images du tableau
+   =============================================== */
+table.exemple td {
+  vertical-align: middle;     /* centre verticalement dans la cellule */
+  text-align: center;         /* centre horizontalement le contenu */
+}
+
+table.exemple img {
+  display: block;             /* évite les espaces sous l’image */
+  margin: 0 auto;             /* centre horizontalement */
+  height: auto;               /* garde les proportions naturelles */
+  border-radius: 4px;         /* arrondit légèrement les coins */
+}
+/* ===== Laisse de la place en bas du contenu ===== */
+main {
+  padding-bottom: 120px; /* 🔹 Espace pour le footer fixe */
+}
+
+/* ===== Pagination sur une ligne + même hauteur ===== */
+.pager { margin: 12px auto 20px; padding: 0 12px; max-width: 1100px; }
+
+.pagination {
+  display: flex;
+  align-items: stretch;     /* étire tous les enfants à la même hauteur */
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  flex-wrap: nowrap;        /* reste sur une ligne */
+}
+
+/* Chaque cellule */
+.page-item {
+  display: flex;            /* permet d’étirer le contenu en hauteur */
+  align-items: stretch;
+}
+
+/* Boutons « << », « < », « > », « >> » */
+.page-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;         /* hauteur uniforme */
+  padding: 0px;
+  border: 1px solid #cbbba0;
+  border-radius: 8px;
+  background: #fffdf8;
+  text-decoration: none;
+  color: #333;
+  white-space: nowrap;
+  margin: 0 -4px;
+}
+
+/* Le bloc de recherche occupe la même hauteur que les autres */
+.dropdown {
+  display: flex;
+  align-items: stretch;
+}
+
+#villeInput {
+  height: 44px;             /* même hauteur que .page-link */
+  padding: 0 2px;
+  border: 1px solid #cbbba0;
+  border-radius: 8px;
+  background: #fffdf8;
+  outline: none;
+  
+}
+
+/* Le menu déroulant ne perturbe pas la hauteur */
+.dropdown-content {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+}
+
+/* Sur petits écrans : défilement horizontal si ça ne rentre pas */
+@media (max-width: 560px) {
+  .pagination {
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+}
+
+/* Mobile : garder la taille exacte définie en JS */
+@media (max-width: 640px) {
+  table.exemple img[data-width-mm] {
+    max-width: none !important;   /* ne pas forcer à 100% */
+    width: auto;                  /* la largeur posée en inline par JS gagne */
+    height: auto !important;      /* garde les proportions */
+    display: block;               /* évite le petit espace bas */
+    margin: 0 auto;               /* centre si nécessaire */
+  }
+}
+/* Les plumes à animer */
+.hand-anim {
+  will-change: transform;
+  display: inline-block; /* pour que le translate n’affecte pas la ligne entière */
+}
+/* ===== Ligne horizontale de logos ===== */
+.liens-utiles-logos {
+  display: flex;
+  justify-content: center;     /* centre toute la ligne */
+  align-items: center;
+  flex-wrap: nowrap;           /* 🔹 reste sur une seule ligne */
+  gap: 14px;                   /* petit espace régulier entre les logos */
+  overflow-x: auto;            /* 🔹 si ça dépasse, on peut scroller horizontalement */
+  padding: 10px 0;
+  margin-top: 8px;
+  white-space: nowrap;
+}
+
+/* Logos */
+.liens-utiles-logos img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+  vertical-align: middle;
+}
+
+.liens-utiles-logos img:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.3));
+}
+
+/* Sur mobile : défilement horizontal doux */
+.liens-utiles-logos::-webkit-scrollbar {
+  height: 6px;
+}
+.liens-utiles-logos::-webkit-scrollbar-thumb {
+  background-color: #cbbba0;
+  border-radius: 3px;
+}
+/* ===== Titre "Liens utiles" dans le tableau ===== */
+#table-liens {
+  text-align: center;            /* Centre le texte horizontalement */
+  font-weight: bold;             /* En gras */
+  font-size: 1.2rem;             /* Taille légèrement agrandie */
+  color: #5a4229;                /* Brun doux style parchemin */
+  letter-spacing: 1px;           /* Légère respiration entre lettres */
+  background: rgba(255, 253, 248, 0.6); /* Fond clair parchemin */
+  border-radius: 6px;
+  padding: 6px 0;                /* Un peu d’espace vertical */
+}
+
+ 
+.table-histo {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: "Times New Roman", serif;
+}
+
+/* --- cellules --- */
+.table-histo td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 8px;
+  font-size: 0.644444rem;
+  position: relative;
+  cursor: default;
+}
+
+/* --- survol de la ligne entière --- */
+.table-histo tr:hover {
+  background-color: #f0f0f0;
+  transition: background-color 0.3s ease;
+}
+
+/* --- tooltip stylisé sur cellule --- */
+.table-histo td:hover::after {
+  content: attr(title);
+  position: absolute;
+  left: 50%;
+  top: -36px;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+  font-size: 0.72rem;
+  pointer-events: none;
+  z-index: 10;
+  opacity: 0;
+  animation: fadeInHisto 0.2s forwards;
+}
+
+/* --- flèche du tooltip --- */
+.table-histo td:hover::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -8px;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.85);
+  z-index: 9;
+  opacity: 0;
+  animation: fadeInHisto 0.2s forwards;
+}
+
+/* --- animation douce --- */
+@keyframes fadeInHisto {
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* Modale plein écran centrée et au-dessus de tout */
+.modalDialog{
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(12px, 3vw, 28px);       /* espace aux bords sur mobile */
+  background: rgba(0,0,0,.45);           /* voile */
+  z-index: 9999;                         /* au-dessus du header/menu */
+}
+
+/* Panneau de contenu, scrollable si trop haut */
+.modalDialog__panel{
+  background: #fff;
+  width: min(920px, 94vw);
+  max-height: min(88vh, 100%);
+  overflow: auto;                        /* défilement interne du contenu */
+  border-radius: 14px;
+  box-shadow: 0 10px 40px rgba(0,0,0,.25);
+  padding: clamp(16px, 2.5vw, 28px);
+}
+
+/* Petites améliorations d’ergonomie */
+.modalDialog__panel h2{ 
+  margin-top: 0;
+}
+.modalDialog__panel a.close{
+  display: inline-block;
+  margin-top: 16px;
+}
+
+/* Si tu masques/affiches la modale via JS, tu peux utiliser [hidden] */
+.modalDialog[hidden]{ display: none !important; }
+
+/* Optionnel : éviter que l’arrière-plan ne scrolle quand la modale est ouverte */
+body.modal-open{
+  overflow: hidden;
+  touch-action: none;
+  overscroll-behavior: contain;
+}
+
+
+.site-logo {
+  width: 50px;
+  height: 50px;
+  margin: -10px 0 -10px 30px; /* haut, droite, bas, gauche → ici 20px à gauche */
+  position: relative;
+  z-index: 10;        /* reste visible au-dessus du menu */
+}
+
+
+/* ================================
+   POPUP – FOND DERRIÈRE (OVERLAY)
+   ================================ */
+.popup-overlay {
+  position: fixed;
+  inset: 0; /* top:0 left:0 right:0 bottom:0 */
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(4px);
+  display: none; /* caché au départ */
+  align-items: center;
+  justify-content: center;
+  z-index: 9998;
+}
+
+/* ================================
+   POPUP – BOITE CENTRALE
+   ================================ */
+.popup-box {
+  background: #fff9ed; /* beige parchemin léger */
+  border-radius: 14px;
+  padding: 28px 32px;
+  max-width: 520px;
+  width: 92%;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.25);
+  animation: popupAppear 0.35s ease forwards;
+  position: relative;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Animation d’apparition */
+@keyframes popupAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.85) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* ================================
+   BOUTON FERMER
+   ================================ */
+.popup-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 26px;
+  cursor: pointer;
+  color: #444;
+  transition: 0.2s;
+}
+
+.popup-close:hover {
+  color: #000;
+  transform: scale(1.15);
+}
+
+/* ================================
+   STYLE DU TABLEAU – NUMÉROS (1)
+   ================================ */
+.numNote {
+  cursor: pointer;
+  color: #0066cc;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.numNote:hover {
+  color: #003366;
+}
+
+/* ================================
+   LIGNE CLIQUABLE (SI VOULU)
+   ================================ */
+.ligne-note {
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.ligne-note:hover {
+  background: rgba(255,230,140,0.25);
+}
+td.border3 {
+  border: 3px solid #000;   /* bordure noire épaisse */
+  padding: 6px 10px;        /* espace interne */
+  text-align: center;       /* centre le texte */
+  font-weight: bold;        /* texte en gras */
+  color: red;
+  font-size: 20px;   /* 🔥 taille augmentée */
+}
+
+.hovered {
+  background-color: #d8eaff;
+}
+
+.dimension-noire {
+  color: #000;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.mot-note {
+  color: #1a5fb4; /* bleu lisible */
+  font-weight: normal;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+

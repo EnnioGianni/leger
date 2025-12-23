@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Le Postillon — Bonneval</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+/* ================= RESET ================= */
+*{box-sizing:border-box;margin:0;padding:0}
+
+/* ================= BASE ================= */
+body{
+  font-family:Georgia,serif;
+  line-height:1.7;
+  min-height:100vh;
+  background:url('/Resource/carrosseAvecPhoto.jpg') center/cover no-repeat fixed;
+  color:#2b1e12;
+}
+
+/* ================= HEADER ================= */
+header{
+  position:sticky;
+  top:0;
+  background:rgba(255,250,240,.95);
+  border-bottom:2px solid #8b5a2b;
+  padding:10px 20px;
+  display:flex;
+  align-items:center;
+  gap:15px;
+  z-index:1000;
+}
+
+.site-logo{height:40px}
+
+.titre-principal{
+  flex:1;
+  text-align:center;
+  font-size:26px;
+}
+
+/* ================= NAV RETOUR ================= */
+.nav-retour{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:6px 12px;
+  text-decoration:none;
+  color:#2b1e12;
+  font-weight:600;
+  background:rgba(255,255,255,.85);
+  border:1px solid rgba(0,0,0,.15);
+  border-radius:8px;
+  box-shadow:0 4px 10px rgba(0,0,0,.15);
+  transition:.25s;
+}
+
+.nav-retour img{height:45px}
+
+.nav-retour:hover{
+  background:#8b5a2b;
+  color:#fff;
+}
+
+.nav-retour:hover img{
+  filter:brightness(0) invert(1);
+}
+
+/* ================= MAIN ================= */
+main{
+  max-width:1100px;
+  margin:30px auto;
+  background:rgba(255,248,235,.94);
+  padding:35px;
+  border-radius:14px;
+  box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+/* ================= ARTICLE ================= */
+article h1{
+  text-align:center;
+  margin-bottom:25px;
+  text-decoration:underline;
+  color:maroon;
+}
+
+article p{
+  margin-bottom:15px;
+  text-align:justify;
+}
+
+article p::first-letter{
+  color:darkred;
+  font-size:140%;
+  font-weight:bold;
+}
+
+/* ================= BOUTON HAUT ================= */
+#btnTop{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  padding:10px 14px;
+  font-size:18px;
+  border-radius:50%;
+  border:none;
+  cursor:pointer;
+  background:#8b5a2b;
+  color:#fff;
+  display:none;
+}
+
+/* ================= FOOTER ================= */
+footer{
+  text-align:center;
+  margin:40px 0 20px;
+  font-size:14px;
+  color:#3b2a1a;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <a href="/index.html" aria-label="Accueil">
+    <img src="/Resource/books_library_1768.ico" alt="Logo Le Postillon" class="site-logo">
+  </a>
+
+  <h1 class="titre-principal">Le Postillon</h1>
+
+  <a href="../Bordeauxpp/bordeauxpp.html" class="nav-retour">
+    <img src="/Resource/precedent.png" alt="Retour">
+    <span>Retour</span>
+  </a>
+</header>
+
+<!-- ================= MAIN ================= -->
+<main>
+
+<article class="article-historique">
+
+  <h2 style="text-decoration: underline maroon; text-align: center;">
+    Petite Poste de Bordeaux
+  </h2>
+
+  <p>
+    Par privilège accordé à Jean-Pierre Loliot, secrétaire général de la cavalerie,
+    le 29 mars 1766, une Petite Poste est établie à Bordeaux le
+    <strong>1<sup>er</sup> octobre 1766</strong>.
+    Les lettres patentes accordent ce privilège pour une durée de
+    <strong>quinze années</strong>, selon les documents conservés dans les
+    archives de l’Intendance de Bordeaux.
+  </p>
+
+  <p>
+    Le port de la lettre simple est fixé à <strong>2 sols</strong>,
+    <strong>3 sols pour la banlieue</strong>.
+    Les lettres destinées à être remises à la Grande Poste acquittent
+    <strong>un sol d’avance</strong>.
+  </p>
+
+  <p><em>
+    « Voici le fonctionnement d’après l’
+    <strong>Avis au public</strong> publié par Loliot
+    lors de l’ouverture de ses deux bureaux :
+  </em></p>
+
+  <p>
+    « Le premier bureau, qui en même temps sera le Bureau de Régie,
+    Porte de Tourny au coin de la rue de la Corderie, timbré (<strong>A</strong>),
+    comprend dans son district cette partie de la ville qui s’étend de la Porte
+    de Tourny jusqu’à celle d’Albret et, le long de la rivière jusqu’à celle du
+    Caillau, remontant par la place du Palais, les rues Poitevine, du Mu,
+    des Torts-Canards et du Peugue qui en seront la séparation.
+    Il fera le service du Château-Trompette, du faubourg Saint-Seurin,
+    de celui des Chartrons, du Bacalan et du port de Lormont.
+  </p>
+
+  <p>
+    Dans la banlieue, il ira au Bouscat, à Bruges, au Vigen,
+    à Eysines, à Blanquefort, Caudéran, Mérignac, Pessac, Talence,
+    aux endroits et maisons qui en sont à portée et sur la route.
+  </p>
+
+  <p>
+    Le second bureau, rue Leyteire, près la rue Saint-François,
+    timbré (<strong>B</strong>), fera le service de l’autre partie de la ville,
+    à prendre des portes d’Albret et du Caillau jusqu’au chemin du Guy.
+    Il servira les faubourgs Sainte-Croix, Saint-Julien et Sainte-Eulalie.
+    De l’autre côté de la rivière, il ira à la Bastide, à Créon, Branne,
+    Moulon, Grézillac, Ambarès et Carbon-Blanc,
+    ainsi qu’aux maisons voisines et situées sur la route.
+  </p>
+
+  <p>
+    Il sera établi soixante boîtes particulières dans la ville,
+    les faubourgs et la banlieue, lesquelles ressortiront de chaque bureau
+    selon leur département.
+    Les buralistes timbreront les lettres et paquets du timbre de leur boîte,
+    composé de la lettre du chef de département et d’un chiffre,
+    sans cercle autour, puis les déposeront immédiatement dans leur boîte.
+  </p>
+
+  <p>
+    Ils ne recevront que les lettres dont le port sera payé,
+    sauf si elles sont contresignées par l’expéditeur ou si les buralistes
+    en reconnaissent le cachet et l’écriture, se portant alors garants du port.
+    Dans ce cas, ils inscriront la mention
+    <strong>« dû »</strong> au dos de la lettre,
+    afin qu’elle soit timbrée d’un <strong>(D)</strong>
+    au bureau de distribution.
+  </p>
+
+  <p>
+    L’ensemble de cette organisation est calqué sur celle de la
+    Petite Poste de Paris et repose sur le principe du
+    <strong>port payé obligatoire</strong>.
+    Toutefois, les sources montrent que le règlement est moins rigoureusement
+    appliqué à Bordeaux : les marques de boîtiers y sont
+    extrêmement rares, et aucune marque de facteur bordelais
+    n’a encore été recensée avec certitude.
+  </p>
+
+  <p>
+    En 1766, les facteurs effectuent quatre levées et quatre distributions
+    quotidiennes en ville.
+    À partir de mars 1767, le service est renforcé avec
+    huit tournées en été et sept en hiver.
+    Certaines pièces administratives indiquent cependant,
+    pour une période donnée, un service limité à
+    <strong>deux distributions quotidiennes</strong>,
+    ce qui suggère une application progressive ou variable
+    des dispositions annoncées.
+  </p>
+
+  <p>
+    Le service de banlieue est assuré une fois par jour.
+    Des agents de liaison transportent le courrier depuis le Bureau général
+    et le remettent en cours de route à des piétons chargés
+    de la distribution locale.
+  </p>
+
+  <p>
+    Le bureau A compte 23 boîtes urbaines numérotées de 1 à 23.
+    Le bureau B en possède d’abord 20, puis également 23.
+    Après la fusion des deux bureaux en 1771,
+    la ville dispose de 54 boîtes urbaines.
+    En banlieue, on recense environ trente receveurs
+    pour cinq tournées distinctes.
+  </p>
+
+  <p>
+    Les archives de l’Intendance indiquent qu’à l’origine,
+    l’établissement emploie environ
+    <strong>9 facteurs de ville</strong>,
+    <strong>7 surnuméraires ou leveurs de boîtes</strong>,
+    et <strong>11 facteurs de banlieue</strong>.
+    L’exploitation est strictement encadrée :
+    états d’appointements, journaux de recettes,
+    comptes d’intérêts, frais d’impression
+    et comptes généraux sont soumis au visa de l’intendant.
+  </p>
+
+  <p>
+    Le bureau A quitte rapidement la Porte de Tourny
+    pour s’installer cours du Chapeau-Rouge en février 1769.
+    Le bureau B l’y rejoint le 30 juin 1771.
+    Malgré la réunion administrative, les lettres continuent
+    à être timbrées des marques <strong>A</strong> et <strong>B</strong>.
+  </p>
+
+  <p>
+    La Petite Poste assure également la distribution,
+    en ville et en banlieue, des lettres en provenance des colonies,
+    remises par les capitaines de navires.
+    Ces lettres portent les marques habituelles de port dû.
+    Les lettres destinées aux colonies sont transmises aux navires
+    contre paiement d’un sol.
+    Cette activité s’inscrit dans le cadre plus large
+    du développement de la poste maritime bordelaise
+    au XVIII<sup>e</sup> siècle.
+  </p>
+
+  <p>
+    Ce service précède une organisation plus étendue,
+    pour laquelle Loliot obtient une nouvelle autorisation
+    le 14 août 1777.
+    Toutefois, l’arrêt du 29 juin 1780 suspend le privilège initial.
+    La Ferme Générale reprend alors l’exploitation
+    et concède à Loliot un bail de trois ans
+    en qualité de sous-fermier de la Petite Poste de Bordeaux.
+  </p>
+
+  <p>
+    Loliot obtient simultanément le bail de la Petite Poste de Nantes,
+    en remplacement de Mangin.
+    Un chassé-croisé administratif s’opère entre les deux hommes :
+    Loliot conserve Mangin comme directeur à Nantes
+    tout en continuant à administrer Bordeaux.
+    À la mort de Loliot, survenue à Paris le 2 juillet 1787,
+    le fermier général J.-B. Poinsignon fait opposition à la succession,
+    Loliot étant débiteur envers la Compagnie
+    au titre de la poste maritime
+    et des petites postes de Bordeaux et de Nantes.
+  </p>
+
+  <p>
+    Ce n’est qu’après ce décès que Mangin devient titulaire
+    des deux baux.
+    La transition est difficile :
+    en 1790, l’Administration réclame à Mangin
+    les arriérés des baux,
+    dus respectivement depuis 1784 et 1783.
+  </p>
+
+  <p>
+    La date du rattachement définitif de la Petite Poste de Bordeaux
+    à la Grande Poste demeure discutée.
+    Certains auteurs avancent l’année 1798,
+    tandis que d’autres estiment plus vraisemblable
+    une intégration dès 1795,
+    en application de la loi de la Convention
+    du 27 nivôse an III.
+  </p>
+
+  <hr>
+
+  <h2>Compléments documentaires et sources</h2>
+
+  <p>
+    Les principaux éléments complémentaires proviennent
+    des archives de l’Intendance de Bordeaux
+    (séries C.2553 et C.2554),
+    qui conservent les projets initiaux,
+    les mémoires d’opposition des jurats,
+    les lettres patentes, les comptes d’exploitation,
+    les états du personnel et les correspondances administratives.
+  </p>
+
+  <p>
+    Ces sources sont complétées par les travaux de
+    H. Charriaut, les almanachs régionaux du XVIII<sup>e</sup> siècle,
+    des études publiées dans les Annales du Midi,
+    ainsi que par des communications de l’Académie de philatélie
+    consacrées à la Petite Poste de Bordeaux.
+  </p>
+
+</article>
+
+</main>
+
+<!-- ================= BOUTON HAUT ================= -->
+<button id="btnTop" aria-label="Haut de page">↑</button>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  &copy; Le Postillon — Tous droits réservés
+</footer>
+
+<script>
+const btnTop=document.getElementById("btnTop");
+window.addEventListener("scroll",()=>{btnTop.style.display=window.scrollY>300?"block":"none"});
+btnTop.addEventListener("click",()=>{window.scrollTo({top:0,behavior:"smooth"})});
+</script>
+
+</body>
+</html>

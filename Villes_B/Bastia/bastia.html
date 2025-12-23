@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Le Postillon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../CSS/app.css">
+    <link rel="stylesheet" href="../../CSS/menu.css">
+    <link rel="stylesheet" href="../../CSS/recherchesVille.css">
+    <link rel="stylesheet" href="../../CSS/bouttonHautDePage.css">
+
+    <script defer src="../../JS/script_global.js"></script>
+    <script defer src="../../JS/menu.js"></script>
+    <script defer src="../../JS/bouttonHautDePage.js"></script>
+    <script defer src="../../JS/rechercheVille.js"></script>
+    <script defer src="../../JS/largeurImages.js"></script>
+    <script defer src="../../JS/totalTable.js"></script>
+    <script defer src="../../JS/mainsQuiBouge.js"></script>
+    <script defer src="../../JS/liensUtiles.js"></script>
+    <link rel="icon" type="image/png" href="/Resource/books_library_1768.ico">
+
+    <style>
+      p::first-letter {
+        color: red;
+        font-size: 130%;
+      }
+    </style>
+</head>
+
+
+<body id="scrollable"
+  style="
+    min-height:100vh;
+    margin:0;
+    background:url('/Resource/carrosseAvecPhoto.jpg')
+               center center / cover no-repeat fixed;
+  ">
+  
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="header-left">
+    <a href="/index.html" class="logo-link" aria-label="Accueil Le Postillon">
+      <img src="/Resource/books_library_1768.ico" alt="Logo Le Postillon" class="site-logo">
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" data-menu-open>☰</button>
+  </div>
+  <h1 class="titre-principal">Le Postillon</h1>
+</header>
+
+<!-- ===== MAIN ===== -->
+<main>
+    <h2 id="h12">
+        <a href="https://fr.wikipedia.org/wiki/Bastia" class="title-tip" style="font-size: 25px;" title="lien vers wikipedia">
+            Bastia - Corse (19)
+        </a>
+    </h2>
+        <p>Bureau mis en service lors de l'annexion, en 1768</p>
+
+<!-- ===== PAGINATION ===== -->
+<nav class="pager">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link title-tip" href="../sommaireB.html" title="Sommaire B">&laquo;&laquo;</a>
+    </li>
+
+<!--Precedente-->
+    <li class="page-item">
+      <a class="page-link title-tip" href="../../Villes_B/Bassou/bassou.html" title="Bassou">&laquo;</a>
+    </li>
+
+<!--Recherches-->
+    <li class="page-item">
+      <div class="dropdown">
+        <input type="text" id="villeInput" placeholder="Tapez le nom d'une ville">
+        <div class="dropdown-content" id="dropdownContent"></div>
+      </div>
+    </li>
+
+<!--Suivante-->
+    <li class="page-item">
+      <a class="page-link title-tip" href="../Bauge/bauge.html" title="Bauge">&raquo;</a>
+    </li>
+    
+<!--Accueil-->
+    <li class="page-item">
+      <a class="page-link title-tip" href="../../index.html" title="Accueil">&raquo;&raquo;</a>
+    </li>  
+  </ul>
+</nav>
+
+<!-- ===== TABLE ===== -->
+<table class="exemple">
+  <thead>
+    <tr>
+      <th>Marque</th>
+      <th>N°</th>
+      <th>Port</th>
+      <th>Dimensions</th>
+      <th>Date</th>
+      <th>Couleurs</th>
+      <th>Indice</th>
+      <th>Cote en euro</th>
+    </tr>
+  </thead>
+          
+    <tr>             
+        <th colspan="8">
+            <p style="color: black; text-align: justify;">La Corse est réunie à la France par le traité de Versailles du 15 mai 1768, 
+                La pacification se poursuit jusqu'en 1769 et l'implantation du réseau postal, commencée en 1768, ne sera définitive qu'en 1770. 
+                Il y a alors un bureau principal à Bastia, qui reçoit et distribue aux autres bureaux de l'ile le courrier venant ou à destination de la France. 
+                Les autres Directions mises en service à cette époque sont : Ajaccio , Bonifacio, Calvi, Cervionne, Corté, Saint-Florent, Sartène, Vescovato et Vico (14).
+                Pendant la période de la conquête il y eut un bureau militaire à Bastia lors de la première expédition militaire , 1738-41, et de la quatrième, 1765-68.
+            </p>
+        </th>  
+    </tr>
+    <tr>             
+        <th colspan="8" style="text-align: center;">Marques des bureaux militaires</th>  
+    </tr>
+<!--Marque 1-->          
+        <tr>
+            <td>
+                <a href="../Bastia/Images/1.png">
+                    <img src="../Bastia/Images/1.png" alt="Bastia" data-width-mm="18">
+                </a>
+            </td>
+            <td class="border3">1</td>
+            <td>port dû</td>
+            <td>18mm</td>
+            <td>1738-1740</td>
+            <td>noir</td>
+            <td>I-22</td>
+            <td class="prixProduit" data-id="22">00.00</td>
+        </tr>                                                                                                                                                                                                                                             
+<!--Marque 2-->          
+        <tr>
+            <td>
+                <a href="../Bastia/Images/2.png">
+                    <img src="../Bastia/Images/2.png" alt="Bastia" data-width-mm="19">
+                </a>
+            </td>
+            <td class="border3">2</td>
+            <td>port dû</td>
+            <td>19mm</td>
+            <td>1741</td>
+            <td>noir</td>
+            <td>I-23</td>
+            <td class="prixProduit" data-id="23">00.00</td>
+        </tr>                                                                                                                                                                                                                                             
+<!--Marque 3-->          
+        <tr>
+            <td>
+                <a href="../Bastia/Images/3.png">
+                    <img src="../Bastia/Images/3.png" alt="Bastia" data-width-mm="30">
+                </a>
+            </td>
+            <td class="border3">3</td>
+            <td>port dû</td>
+            <td><img src="../../Resource/plumeDeture.png" alt="Bastia" data-width-mm="10"></td>
+            <td>1739</td>
+            <td>manuscrit</td>
+            <td>I-20</td>
+            <td class="prixProduit" data-id="20">00.00</td>
+        </tr>                                                                                                                                                   
+<!--Marque 4-->
+        <tr class="ligne-note"
+            data-note="Cette marque a été utilisée ensuite, jusqu'en 1771, comme marque de départ du bureau civil. Elle a servi aussi à CALVI de 1756 à 1759, voir à ce bureau.">
+            
+            <td>
+                <a href="../Bastia/Images/4.png">
+                    <img src="../Bastia/Images/4.png" alt="Bastia" data-width-mm="35">
+                </a>
+            </td>
+            <td>4</td>
+<!-- Numéro de note -->
+            <td class="numNote" data-num="1">(Lire la note)</td>
+            <td></td>
+            <td>1765-1800</td>
+            <td>noir</td>
+            <td>I-22</td>
+            <td class="prixProduit" data-id="22">00.00</td>
+        </tr>
+
+<!--titre-->  
+        <tr>             
+            <th colspan="8" style="text-align: center;">Marques du bureau civil</th>    
+        </tr> 
+
+<!--Marque 5-->          
+        <tr>
+            <td>
+                <a href="../Bastia/Images/5.png">
+                    <img src="../Bastia/Images/5.png" alt="Bastia" data-width-mm="25">
+                </a>
+            </td>
+            <td class="border3">5</td>
+            <td>port dû</td>
+            <td>25mm</td>
+            <td>1770-1788</td>
+            <td>noir</td>
+            <td>I-13</td>
+            <td class="prixProduit" data-id="13">00.00</td>
+        </tr>                                                                                                                                                   
+<!--Marque 6-->          
+        <tr>
+            <td>
+                <a href="../Bastia/Images/6.png">
+                    <img src="../Bastia/Images/6.png" alt="Bastia" data-width-mm="23">
+                </a>
+            </td>
+            <td class="border3">6</td>
+            <td>port dû</td>
+            <td>23mm</td>
+            <td>1786-1790</td>
+            <td>noir</td>
+            <td>I-15</td>
+            <td class="prixProduit" data-id="15">00.00</td>
+        </tr>                                                                                                                                                   
+<!--Marque 6A-->          
+        <tr>
+            <td>
+                <a href="../Bastia/Images/6A.png">
+                    <img src="../Bastia/Images/6A.png" alt="Bastia" data-width-mm="23">
+                </a>
+            </td>
+            <td class="border3">6A</td>
+            <td>port dû</td>
+            <td>23mm</td>
+            <td>1787</td>
+            <td>sec</td>
+            <td>I-15</td>
+            <td class="prixProduit" data-id="15">00.00</td>
+        </tr>                                                                                                                                                   
+<!--Marque 7-->          
+        <tr>
+            <td>
+                <a href="../Bastia/Images/7.png">
+                    <img src="../Bastia/Images/7.png" alt="Bastia" data-width-mm="27">
+                </a>
+            </td>
+            <td class="border3">7</td>
+            <td>port dû</td>
+            <td>27mm</td>
+            <td>1790-1796</td>
+            <td>noir</td>
+            <td>I-18</td>
+            <td class="prixProduit" data-id="18">00.00</td>
+        </tr>                                                                                                                                                   
+<!--Marque 8-->          
+        <tr>
+            <td>
+                <a href="../../Proposition/index.html">
+                    <img src="../Bastia/Images/8.png" alt="Bastia" data-width-mm="40">
+                </a>
+            </td>
+            <td class="border3">8</td>
+            <td>franc</td>
+            <td><img src="../../Resource/plumeDeture.png" alt="Bastia" data-width-mm="10"></td>
+            <td>1769-1782</td>
+            <td>manuscrit</td>
+            <td>I-20</td>
+            <td class="prixProduit" data-id="20">00.00</td>
+        </tr>                                                                                                                                                   
+<!--Marque 9-->          
+        <tr>
+            <td>
+                <a href="../Bastia/Images/9.png">
+                    <img src="../Bastia/Images/9.png" alt="Bastia" data-width-mm="35">
+                </a>
+            </td>
+            <td class="border3">9</td>
+            <td>port payé</td>
+            <td>35mm</td>
+            <td>1786-1790</td>
+            <td>noir</td>
+            <td>I-26</td>
+            <td class="prixProduit" data-id="26">00.00</td>
+        </tr>                                                                                                                                                   
+<!--Marque 10-->          
+        <tr>
+            <td>
+                <a href="../Bastia/Images/10.png">
+                    <img src="../Bastia/Images/10.png" alt="Bastia" data-width-mm="40">
+                </a>
+            </td>
+            <td class="border3">10</td>
+            <td>déboursé</td>
+            <td><img src="../../Resource/plumeDeture.png" alt="Bastia" data-width-mm="10"></td>
+            <td>1771-1774</td>
+            <td>manuscrit</td>
+            <td>I-20</td>
+            <td class="prixProduit" data-id="20">00.00</td>
+        </tr>                                                                                                                                                   
+<!--Marque 11-->          
+        <tr>
+            <td>
+                <a href="../Bastia/Images/11.png">
+                    <img src="../Bastia/Images/11.png" alt="Bastia" data-width-mm="49">
+                </a>
+            </td>
+            <td class="border3">11</td>
+            <td>déboursé</td>
+            <td>49mm</td>
+            <td>1781-1801</td>
+            <td>noir</td>
+            <td>I-24</td>
+            <td class="prixProduit" data-id="24">00.00</td>
+        </tr> 
+<!--Liens Utile-->
+    <tr>
+      <th colspan="8" id="table-liens">Liens utiles</th>
+    </tr>
+    <tr>
+      <th colspan="8" style="color: black;"></th>
+    </tr>
+</table>
+
+    <!-- ===== BOUTON HAUT DE PAGE ===== -->
+<button id="scrollToTopButton" title="Haut de page"></button>
+</main>
+
+<!-- ==========================
+     POPUP NOTE – OBLIGATOIRE
+========================== -->
+<div class="popup-overlay" id="popupNote">
+  <div class="popup-box">
+    <div class="popup-close" id="closePopup">&times;</div>
+    <div id="popupContent"></div>
+  </div>
+</div>
+
+<!-- ===== FOOTER FIXE ===== -->
+<footer class="News-footer">
+  <div class="news">
+    <span id="news-head">COTE</span>
+  </div>
+
+  <div class="N-text">
+    <div class="ticker">
+      <div class="ticker__track">
+        <span>• Celles-ci s'entendent pour de belles frappes.</span>
+        <span>• Pour les lettres en port payé :</span>
+        <span>• Cote du PP sans plus-value si la marque de port (dû) qui l'accompagne est d'un indice inférieur à 16.</span>
+        <span>• Si la marque de port (dû) est d'un indice supérieur à 16, majorer de 2 indices la cote du port payé.</span>
+        <span>• © Copyright Tout droit réservé.</span>
+
+        <!-- Duplique le contenu pour un défilement continu -->
+        <span>• Celles-ci s'entendent pour de belles frappes.</span>
+        <span>• Pour les lettres en port payé :</span>
+        <span>• Cote du PP sans plus-value si la marque de port (dû) qui l'accompagne est d'un indice inférieur à 16.</span>
+        <span>• Si la marque de port (dû) est d'un indice supérieur à 16, majorer de 2 indices la cote du port payé.</span>
+        <span>• © Copyright Tout droit réservé.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+ <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>   
+ <script src="/JS/app.js"></script>   
+
+</body>
+</html>

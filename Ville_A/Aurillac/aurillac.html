@@ -1,0 +1,361 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Le Postillon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../CSS/app.css">
+    <link rel="stylesheet" href="../../CSS/menu.css">
+    <link rel="stylesheet" href="../../CSS/recherchesVille.css">
+    <link rel="stylesheet" href="../../CSS/bouttonHautDePage.css">
+
+    <script defer src="../../JS/script_global.js"></script>
+    <script defer src="../../JS/menu.js"></script>
+    <script defer src="../../JS/bouttonHautDePage.js"></script>
+    <script defer src="../../JS/rechercheVille.js"></script>
+    <script defer src="../../JS/largeurImages.js"></script>
+    <script defer src="../../JS/totalTable.js"></script>
+    <script defer src="../../JS/mainsQuiBouge.js"></script>
+    <script defer src="../../JS/liensUtiles.js"></script>
+    <link rel="icon" type="image/png" href="/Resource/books_library_1768.ico">
+
+    <style>
+      p::first-letter {
+        color: red;
+        font-size: 130%;
+      }
+    </style>
+</head>
+
+
+<body id="scrollable"
+  style="
+    min-height:100vh;
+    margin:0;
+    background:url('/Resource/carrosseAvecPhoto.jpg')
+               center center / cover no-repeat fixed;
+  ">
+  
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="header-left">
+    <a href="/index.html" class="logo-link" aria-label="Accueil Le Postillon">
+      <img src="/Resource/books_library_1768.ico" alt="Logo Le Postillon" class="site-logo">
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" data-menu-open>☰</button>
+  </div>
+  <h1 class="titre-principal">Le Postillon</h1>
+</header>
+
+<!-- ===== MAIN ===== -->
+<main>
+    <h2 id="h12">
+        <a href="https://fr.wikipedia.org/wiki/Aurillac" class="title-tip" style="font-size: 25px;" title="lien vers wikipedia">
+            Aurillac - Auvergne (14)
+        </a>
+    </h2>
+        <p>Bureau ouvert au XVII<sup>e</sup> siècle</p>
+
+<!-- ===== PAGINATION ===== -->
+<nav class="pager">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link title-tip" href="../sommaireA.html" title="Sommaire A">&laquo;&laquo;</a>
+    </li>
+
+<!--Precedente-->
+    <li class="page-item">
+      <a class="page-link title-tip" href="../Auray/auray.html" title="Auray">&laquo;</a>
+    </li>
+
+<!--Recherches-->
+    <li class="page-item">
+      <div class="dropdown">
+        <input type="text" id="villeInput" placeholder="Tapez le nom d'une ville">
+        <div class="dropdown-content" id="dropdownContent"></div>
+      </div>
+    </li>
+
+<!--Suivante-->
+    <li class="page-item">
+      <a class="page-link title-tip" href="../Auterive/Auterive.html" title="Auterive">&raquo;</a>
+    </li>
+    
+<!--Accueil-->
+    <li class="page-item">
+      <a class="page-link title-tip" href="../../index.html" title="Accueil">&raquo;&raquo;</a>
+    </li>  
+  </ul>
+</nav>
+
+<!-- ===== TABLE ===== -->
+<table class="exemple">
+  <thead>
+    <tr>
+      <th>Marque</th>
+      <th>N°</th>
+      <th>Port</th>
+      <th>Dimensions</th>
+      <th>Date</th>
+      <th>Couleurs</th>
+      <th>Indice</th>
+      <th>Cote en euro</th>
+    </tr>
+  </thead>
+        
+<!--Marque 1-->          
+        <tr>
+            <td>
+                <a href="../Aurillac/Images/1.png">
+                    <img src="../Aurillac/Images/1.png" alt="Aurillac" data-width-mm="30">
+                </a>
+            </td>
+            <td class="border3">1</td>
+            <td>port dû</td>
+            <td><img src="../../Resource/plumeDeture.png" alt="Aurillac" data-width-mm="10"></td>
+            <td>1699-1700</td>
+            <td>manuscrit</td>
+            <td>I-22</td>
+            <td class="prixProduit" data-id="22">00.00</td>
+        </tr>
+<!--Marque 1A-->          
+        <tr>
+            <td>
+                <a href="../Aurillac/Images/1A.png">
+                    <img src="../Aurillac/Images/1A.png" alt="Aurillac" data-width-mm="40">
+                </a>
+            </td>
+            <td class="border3">1A</td>
+            <td>port dû</td>
+            <td><img src="../../Resource/plumeDeture.png" alt="Aurillac" data-width-mm="10"></td>
+            <td>1701-1766</td>
+            <td>manus</td>
+            <td>I-11</td>
+            <td class="prixProduit" data-id="11">00.00</td>
+        </tr>
+<!--Marque 2-->          
+        <tr>
+            <td>
+                <a href="../Aurillac/Images/2.png">
+                    <img src="../Aurillac/Images/2.png" alt="Aurillac" data-width-mm="36">
+                </a>
+            </td>
+            <td class="border3">2</td>
+            <td>port dû encadré</td>
+            <td>36mm</td>
+            <td>1739-1743</td>
+            <td>noir</td>
+            <td>I-23</td>
+            <td class="prixProduit" data-id="23">00.00</td>
+        </tr>
+<!--Marque 3-->          
+        <tr>
+            <td>
+                <a href="../Aurillac/Images/3.png">
+                    <img src="../Aurillac/Images/3.png" alt="Aurillac" data-width-mm="36">
+                </a>
+            </td>
+            <td class="border3">3</td>
+            <td>port dû</td>
+            <td>36x4mm</td>
+            <td>1767-1779</td>
+            <td>noir</td>
+            <td>I-9</td>
+            <td class="prixProduit" data-id="9">00.00</td>
+        </tr>
+<!--Marque 4-->          
+        <tr>
+            <td>
+                <a href="../Aurillac/Images/4.png">
+                    <img src="../Aurillac/Images/4.png" alt="Aurillac" data-width-mm="32">
+                </a>
+            </td>
+            <td class="border3">4</td>
+            <td>port dû</td>
+            <td>32x3,5mm</td>
+            <td>1779-1790</td>
+            <td>noir</td>
+            <td>I-9</td>
+            <td class="prixProduit" data-id="9">00.00</td>
+        </tr>
+<!--Marque 4A-->          
+        <tr style="color: red;">
+            <td>
+                <a href="../Aurillac/Images/4A.png">
+                    <img src="../Aurillac/Images/4A.png" alt="Aurillac" data-width-mm="32">
+                </a>
+            </td>
+            <td class="border3">4A</td>
+            <td class="border1">port dû</td>
+            <td class="border1">32x3,5mm</td>
+            <td class="border1">1786-1791</td>
+            <td class="border1">rouge</td>
+            <td>I-9</td>
+            <td class="prixProduit" data-id="9">00.00</td>
+        </tr>
+<!--Marque 5-->          
+        <tr>
+            <td>
+                <a href="../Aurillac/Images/5.png">
+                    <img src="../Aurillac/Images/5.png" alt="Aurillac" data-width-mm="30">
+                </a>
+            </td>
+            <td class="border3">5</td>
+            <td class="border1">franc</td>
+            <td><img src="../../Resource/plumeDeture.png" alt="Aurillac" data-width-mm="10"></td>
+            <td class="border1">1726-1775</td>
+            <td class="border1">manuscrit</td>
+            <td>I-18</td>
+            <td class="prixProduit" data-id="18">00.00</td>
+        </tr>
+<!--Marque 6-->          
+        <tr>
+            <td>
+                <a href="../Aurillac/Images/6.png">
+                    <img src="../Aurillac/Images/6.png" alt="Aurillac" data-width-mm="23">
+                </a>
+            </td>
+            <td class="border3">6</td>
+            <td class="border1">port payé</td>
+            <td class="border1">23x3,5mm</td>
+            <td class="border1">1782</td>
+            <td class="border1">noir</td>
+            <td>I-29</td>
+            <td class="prixProduit" data-id="29">00.00</td>
+        </tr>
+<!--Marque 6A-->          
+        <tr style="color: red;">
+            <td>
+                <a href="../Aurillac/Images/6A.png">
+                    <img src="../Aurillac/Images/6A.png" alt="Aurillac" data-width-mm="23">
+                </a>
+            </td>
+            <td class="border3">6A</td>
+            <td class="border1">port payé</td>
+            <td class="border1">23x3,5mm</td>
+            <td class="border1">1788-1789</td>
+            <td class="border1">rouge</td>
+            <td>I-28</td>
+            <td class="prixProduit" data-id="28">00.00</td>
+        </tr>
+<!--Marque 7-->          
+        <tr>
+            <td>
+                <a href="../Aurillac/Images/7.png">
+                    <img src="../Aurillac/Images/7.png" alt="Aurillac" data-width-mm="30">
+                </a>
+            </td>
+            <td class="border3">7</td>
+            <td class="border1">déboursé</td>
+            <td><img src="../../Resource/plumeDeture.png" alt="Aurillac" data-width-mm="10"></td>
+            <td class="border1">1757-1785</td>
+            <td class="border1">manuscrit</td>
+            <td>I-18</td>
+            <td class="prixProduit" data-id="18">00.00</td>
+        </tr>
+<!--Marque 7A-->          
+        <tr>
+            <td>
+                <a href="../Aurillac/Images/7A.jpg">
+                    <img src="../Aurillac/Images/7A.jpg" alt="Aurillac" data-width-mm="40">
+                </a>
+            </td>
+            <td class="border3">7A</td>
+            <td class="border1">franchise</td>
+            <td><img src="../../Resource/plumeDeture.png" alt="Aurillac" data-width-mm="10"></td>
+            <td class="border1">1757-1785</td>
+            <td class="border1">manuscrit</td>
+            <td>I-18</td>
+            <td class="prixProduit" data-id="18">00.00</td>
+        </tr>
+<!--Marque 8-->          
+        <tr>
+            <td>
+                <a href="../../../proposition/index.html">
+                    <img src="../Aurillac/Images/8.png" alt="Aurillac" data-width-mm="50">
+                </a>
+            </td>
+            <td class="border3">8</td>
+            <td class="border1">chargé</td>
+            <td><img src="../../Resource/plumeDeture.png" alt="Aurillac" data-width-mm="10"></td>
+            <td class="border1">1790-1791</td>
+            <td class="border1">manuscrit</td>
+            <td>I-17</td>
+            <td class="prixProduit" data-id="17">00.00</td>
+        </tr>
+<!--Liens-->
+    <tr > 
+        <th 
+            colspan="8" id="table-liens" style="padding-top: 10px;">Liens utiles 
+        </th>              
+<!-- Le contenu dynamique sera inséré ici -->           
+    </tr> 
+  <!--Espace-->
+    <tr> 
+        <th colspan="8" style="color: black;"></th>
+    </tr>
+       
+  </table> 
+
+<!-- Scroll To Top -->
+    <button onclick="topFunction()" id="scrollToTopButton" title="Haut de page"><i class="fas fa-chevron-up"></i></button>
+
+<!--Calculatrice-->
+    <div class="calculator">
+        <div class="display-wrapper">
+            <input type="text" class="display" id="display">
+            <button id="closeCalculator" class="close-btn" title="Fermer la calculatrice">X</button>
+        </div>
+        <div class="buttons">
+            <button class="operator" onclick="appendToDisplay('+')">+</button>
+            <button class="operator" onclick="appendToDisplay('-')">-</button>
+            <button class="equal" onclick="calculate()">=</button>
+            <button class="clear" onclick="clearDisplay()">C</button>
+            <p>Additionne vos marques</p>
+        </div>
+    </div>
+<button id="showCalculatorBtn" type="button" title="Afficher la calculatrice">Afficher la calculatrice</button>
+
+<!--popup 1--> 
+        <div id="popup1" class="popup-container">
+            <div class="popup-content">
+                <a href="#" class="close">&times;</a>
+                <p></p>
+            </div>
+        </div> 
+
+<!--popup 2-->
+        <div id="popup2" class="popup-container">
+            <div class="popup-content">
+                <a href="#" class="close">&times;</a>
+                <p></p>
+            </div>
+        </div> 
+<!--Fin popup-->
+
+</main> 
+
+<!---Footer défilant-->
+<footer class="News-footer">
+  <div class="news">
+      <span id="news-head">COTE</span>
+  </div>
+  <div class="N-text scroll-text">
+      <div>
+          �?� Celles-ci s'entendent pour de belles frappes. &emsp;
+          �?� Pour les lettres en port payé : &emsp;
+          �?� Cote du PP sans plus-value si la marque de port (dû) qui l'accompagne est d'un indice inférieur à 16. &emsp;
+          �?� Si la marque de port (dû) qui accompagne le port payé est d'un indice supérieur à 16, majorer de 2 indices la cote du port payé. &emsp;
+          �?� © Copyright Tout droit réservé.
+      </div>
+  </div>
+</footer>
+<!---fin Footer défilant-->
+ <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>   
+<script src="../../../JS/img.js"></script>
+
+</body>
+</html>   
+
+

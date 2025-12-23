@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Le Postillon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../CSS/app.css">
+    <link rel="stylesheet" href="../../CSS/menu.css">
+    <link rel="stylesheet" href="../../CSS/recherchesVille.css">
+    <link rel="stylesheet" href="../../CSS/bouttonHautDePage.css">
+
+    <script defer src="../../JS/script_global.js"></script>
+    <script defer src="../../JS/menu.js"></script>
+    <script defer src="../../JS/bouttonHautDePage.js"></script>
+    <script defer src="../../JS/rechercheVille.js"></script>
+    <script defer src="../../JS/largeurImages.js"></script>
+    <script defer src="../../JS/totalTable.js"></script>
+    <script defer src="../../JS/mainsQuiBouge.js"></script>
+    <script defer src="../../JS/liensUtiles.js"></script>
+    <link rel="icon" type="image/png" href="/Resource/books_library_1768.ico">
+
+    <style>
+      p::first-letter {
+        color: red;
+        font-size: 130%;
+      }
+    </style>
+</head>
+
+
+<body id="scrollable"
+  style="
+    min-height:100vh;
+    margin:0;
+    background:url('/Resource/carrosseAvecPhoto.jpg')
+               center center / cover no-repeat fixed;
+  ">
+  
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="header-left">
+    <a href="/index.html" class="logo-link" aria-label="Accueil Le Postillon">
+      <img src="/Resource/books_library_1768.ico" alt="Logo Le Postillon" class="site-logo">
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" data-menu-open>☰</button>
+  </div>
+  <h1 class="titre-principal">Le Postillon</h1>
+</header>
+
+<!-- ===== MAIN ===== -->
+<main>
+    <h2 id="h12">
+        <a href="https://fr.wikipedia.org/wiki/Belle-%C3%8Ele-en-Mer" class="title-tip" style="font-size: 25px;" title="lien vers wikipedia">
+            Belle-Isle-En-Mer - Bretagne (54)
+        </a>
+    </h2>
+        <p>Bureau ouvert le 1<sup>er</sup> janvier 1780<br>Distributions antérieurement (Auray)</p>
+
+<!-- ===== PAGINATION ===== -->
+<nav class="pager">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link title-tip" href="../sommaireB.html" title="Sommaire B">&laquo;&laquo;</a>
+    </li>
+
+<!--Precedente-->
+    <li class="page-item">
+      <a class="page-link title-tip" href="../../Villes_B/Bellac/bellac.html" title="Bellac">&laquo;</a>
+    </li>
+
+<!--Recherches-->
+    <li class="page-item">
+      <div class="dropdown">
+        <input type="text" id="villeInput" placeholder="Tapez le nom d'une ville">
+        <div class="dropdown-content" id="dropdownContent"></div>
+      </div>
+    </li>
+
+<!--Suivante-->
+    <li class="page-item">
+      <a class="page-link title-tip" href="../Belle-Isle-En-Terre/belleIsleEnTerre.html" title="Belle-Isle-En-Terre">&raquo;</a>
+    </li>
+    
+<!--Accueil-->
+    <li class="page-item">
+      <a class="page-link title-tip" href="../../index.html" title="Accueil">&raquo;&raquo;</a>
+    </li>  
+  </ul>
+</nav>
+
+<!-- ===== TABLE ===== -->
+<table class="exemple">
+  <thead>
+    <tr>
+      <th>Marque</th>
+      <th>N°</th>
+      <th>Port</th>
+      <th>Dimensions</th>
+      <th>Date</th>
+      <th>Couleurs</th>
+      <th>Indice</th>
+      <th>Cote en euro</th>
+    </tr>
+  </thead>
+        
+<!--Marque 1-->         
+        <tr>
+            <td>
+                <a href="../Belle-Isle-En-Mer/Images/1.png">
+                    <img src="../Belle-Isle-En-Mer/Images/1.png" alt="Belle-Isle-En-Mer" data-width-mm="30">
+                </a>
+            </td>
+            <td class="border3">1</td>
+            <td>port dû</td>
+            <td><img src="../../Resource/plumeDeture.png" alt="Belle-Isle-En-Mer" data-width-mm="10"></td>
+            <td>1725-1776</td>
+            <td>manuscrit</td>
+            <td>I-16</td>
+            <td class="prixProduit" data-id="16">00.00</td>
+        </tr>                                                                                                                                 
+<!--Marque 2-->         
+        <tr>
+            <td>
+                <a href="../Belle-Isle-En-Mer/Images/2.png">
+                    <img src="../Belle-Isle-En-Mer/Images/2.png" alt="Belle-Isle-En-Mer" data-width-mm="30">
+                </a>
+            </td>
+            <td class="border3">2</td>
+            <td>port dû</td>
+            <td>30mm</td>
+            <td>1778</td>
+            <td>noir</td>
+            <td>I-25</td>
+            <td class="prixProduit" data-id="25">00.00</td>
+        </tr>                                                                                                                                                                                                                                                                
+<!--Marque 3-->         
+        <tr>
+            <td>
+                <a href="../Belle-Isle-En-Mer/Images/3.png">
+                    <img src="../Belle-Isle-En-Mer/Images/3.png" alt="Belle-Isle-En-Mer" data-width-mm="50">
+                </a>
+            </td>
+            <td class="border3">3</td>
+            <td>port dû</td>
+            <td>50mm</td>
+            <td>1780-1791</td>
+            <td>noir</td>
+            <td>I-17</td>
+            <td class="prixProduit" data-id="17">00.00</td>
+        </tr>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+<!--Marque 3A-->         
+        <tr>
+            <td>
+                <a href="../Belle-Isle-En-Mer/Images/3a.png">
+                    <img src="../Belle-Isle-En-Mer/Images/3a.png" alt="Belle-Isle-En-Mer" data-width-mm="50">
+                </a>
+            </td>
+            <td class="border3">3A</td>
+            <td>port dû</td>
+            <td>50mm</td>
+            <td>1782-1786</td>
+            <td>sec</td>
+            <td>I-17</td>
+            <td class="prixProduit" data-id="17">00.00</td>
+        </tr>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+<!--Marque 4-->         
+        <tr>
+            <td>
+                <a href="../Belle-Isle-En-Mer/Images/4.png">
+                    <img src="../Belle-Isle-En-Mer/Images/4.png" alt="Belle-Isle-En-Mer" data-width-mm="50">
+                </a>
+            </td>
+            <td class="border3">4</td>
+            <td>Clonies manuscrit + N°3</td>
+            <td>14mm</td>
+            <td>1783</td>
+            <td>manuscrit</td>
+            <td>I-28</td>
+            <td class="prixProduit" data-id="28">00.00</td>
+        </tr>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+<!--Marque 5-->         
+        <tr>
+            <td>
+                <a href="../Belle-Isle-En-Mer/Images/5.png">
+                    <img src="../Belle-Isle-En-Mer/Images/5.png" alt="Belle-Isle-En-Mer" data-width-mm="30">
+                </a>
+            </td>
+            <td class="border3">5</td>
+            <td>Colonies </td>
+            <td>orné</td>
+            <td>1787</td>
+            <td>noir</td>
+            <td>I-35</td>
+            <td class="prixProduit" data-id="35">00.00</td>
+        </tr>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+<!--Marque 6-->         
+        <tr>
+            <td>
+                <a href="../../Proposition/index.html">
+                    <img src="../Belle-Isle-En-Mer/Images/6.png" alt="Belle-Isle-En-Mer" data-width-mm="50">
+                </a>
+            </td>
+            <td class="border3">6</td>
+            <td>chargé</td>
+            <td><img src="../../Resource/plumeDeture.png" alt="Belle-Isle-En-Mer" data-width-mm="10"></td>
+            <td>1791</td>
+            <td>manuscrit</td>
+            <td>I-18</td>
+            <td class="prixProduit" data-id="18">00.00</td>
+        </tr>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+<!--Marque 7-->         
+        <tr>
+            <td>
+                <a href="../../Proposition/index.html">
+                    <img src="../Belle-Isle-En-Mer/Images/7.png" alt="Belle-Isle-En-Mer" data-width-mm="50">
+                </a>
+            </td>
+            <td class="border3">7</td>
+            <td>port payé</td>
+            <td><img src="../../Resource/plumeDeture.png" alt="Belle-Isle-En-Mer" data-width-mm="10"></td>
+            <td>1766</td>
+            <td>manuscrit</td>
+            <td>I-20</td>
+            <td class="prixProduit" data-id="20">00.00</td>
+        </tr>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+<!--Liens Utile-->
+    <tr>
+      <th colspan="8" id="table-liens">Liens utiles</th>
+    </tr>
+<!--Commentaire-->
+<tr>
+  <th colspan="8" style="text-align: center;">
+    <div class="fiche-belle-isle">
+      <p><strong>Belle-Isle-en-Mer (Morbihan) — Histoire postale avant 1791</strong></p>
+
+      <p><strong>1. Situation postale avant l’ouverture du bureau (avant 1780)</strong></p>
+      <p>
+        Avant qu’un bureau civil ne soit officiellement créé sur Belle-Isle-en-Mer, 
+        le courrier de l’île dépendait entièrement du bureau <a href="../../Ville_A/Auray/auray.html">d’Auray</a> , 
+        qui était alors l’un des bureaux relais les plus actifs du littoral sud de la Bretagne.
+      </p>
+
+      <p><strong>1.1 Dépendance administrative : Auray</strong></p>
+      <p>
+        Auray était chargé de centraliser toutes les dépêches destinées au littoral : 
+        Quiberon, Belle-Isle, Locmariaquer, Carnac, etc. Les lettres pour Belle-Isle 
+        étaient inscrites sur la dépêche d'Auray, puis remises à un intermédiaire 
+        responsable de la traversée maritime.
+      </p>
+
+      <p><strong>1.2 Rôle essentiel de Quiberon</strong></p>
+        <p><strong>Absence de marque postale à Quiberon :</strong> bien que Quiberon ait joué un rôle 
+        essentiel dans l’acheminement vers Belle-Isle, aucune marque postale n’est connue pour cette 
+        localité avant 1791. En effet, Quiberon n’était pas un bureau de poste mais seulement un 
+        point de dépôt rattaché administrativement au bureau d’Auray, ce qui explique l’absence totale 
+        d’empreintes postales locales.</p>
+
+      <p><strong>1.3 Acheminement des lettres vers l’île (avant 1780)</strong></p>
+      <p>
+        Le dispositif reposait sur trois étapes :
+      </p>
+      <p>
+        <strong>Auray → Quiberon :</strong> acheminement par voie terrestre, souvent 
+        quotidien en saison.
+      </p>
+      <p>
+        <strong>Quiberon → Belle-Isle :</strong> traversée maritime (en général vers Le Palais) 
+        dépendant des marées, du vent et de la disponibilité des embarcations. 
+        Cette traversée était parfois réduite à deux rotations par semaine dans les mois d'hiver.
+      </p>
+      <p> <strong>Distribution interne à Belle-Île :</strong> elle était assurée selon un système informel, 
+        généralement par des messagers insulaires ou par des hommes de confiance envoyés depuis 
+        <strong>Le Palais</strong>, avant la mise en place d’un bureau régulier. 
+      </p> 
+      <p> Avant la création d’un bureau officiel, la distribution du courrier à Belle-Île reposait donc sur un dispositif improvisé mais fonctionnel : 
+        les lettres étaient confiées à des porteurs de l’île, souvent des pêcheurs, des journaliers agricoles ou des hommes connus pour leur fiabilité. 
+        Ils assuraient la transmission vers les quatre communes de l’île et leurs hameaux dispersés. 
+      </p> 
+      <p> Ces porteurs partaient presque toujours de <strong>La ville du Palais</strong>, 
+        alors unique centre administratif, militaire et commercial de l’île, et surtout <strong>point d’entrée du courrier maritime</strong> en provenance du continent. 
+        C’est au Palais que débarquaient les sacs postaux arrivant des ports voisins — principalement <em>Port-Maria (Quiberon)</em> — avant d’être redistribués à l’intérieur de Belle-Île. 
+      </p> 
+      <p> Ce système, entièrement basé sur des pratiques locales et la confiance accordée à quelques messagers insulaires, 
+        perdura jusqu’à l’organisation d’un <strong>service postal structuré</strong> et l’établissement d’un bureau régulier, qui permit enfin d’unifier la réception, 
+        la distribution et le départ du courrier. 
+      </p>
+      <p><strong>
+        2. Création du bureau de poste (1er janvier 1780)</strong>
+      </p>
+      <p>
+        Le 1<sup>er</sup> janvier 1780 voit l’officialisation du bureau de Belle-Isle-en-Mer 
+        par l’administration de la Poste aux lettres. Cela répond à plusieurs besoins.
+      </p>
+
+      <p><strong>2.1 Motifs de l’ouverture</strong></p>
+      <p>
+        <strong>Intensification du trafic postal :</strong> Belle-Isle compte alors plusieurs 
+        milliers d’habitants répartis entre quatre paroisses.
+      </p>
+      <p>
+        <strong>Développement administratif et militaire :</strong> l’île est fortifiée depuis Vauban ; 
+        les échanges avec Lorient, Vannes et Paris augmentent.
+      </p>
+      <p>
+        <strong>Nécessité d’un contrôle et d’une sécurisation des dépêches.</strong>
+      </p>
+
+      <p><strong>2.2 Fonctionnement du bureau en 1780</strong></p>
+      <p>
+        Le nouveau bureau reçoit les dépêches depuis Auray et Quiberon, les distribue 
+        localement (Le Palais, Bangor, Locmaria, Sauzon) via des messagers, expédie 
+        les réponses et correspondances privées ou administratives, et tient un 
+        registre d’entrée et de sortie comme tout bureau royal.
+      </p>
+
+      <p><strong>2.3 Marque postale</strong></p>
+      <p>
+        Pour la période 1780–1791, on trouve généralement une marque linéaire 
+        <strong>BELLE-ISLE</strong> ou <strong>BELLE ISLE</strong> (dépendant du matériel fourni). 
+        Les premières empreintes sont souvent rudimentaires, car les petits bureaux 
+        recevaient parfois des types anciens.
+      </p>
+
+      <p><strong>3. Relations postales particulières : Belle-Isle ↔ Quiberon ↔ Auray</strong></p>
+      <p>
+        Auray reste le bureau de rattachement administratif. Quiberon demeure un 
+        poste technique indispensable même après 1780 : dépôt intermédiaire des dépêches, 
+        point d’embarquement officiel pour le courrier maritime, et le commis continue 
+        fréquemment à gérer la logistique de la traversée.
+      </p>
+      <p>
+        Il n’était pas rare qu’en cas de mauvais temps, le courrier soit bloqué plusieurs 
+        jours à Quiberon et que les dépêches fassent l’objet d’un accusé de retard dans les registres.
+      </p>
+
+      <p><strong>4. Autres formes de transport pouvant concerner Belle-Isle</strong></p>
+
+      <p><strong>4.1 La “petite poste”</strong></p>
+      <p>
+        Elle n’existait pas sur Belle-Isle avant 1791. Les petites postes étaient des 
+        réseaux urbains (Paris, Lyon, Nantes exceptionnellement), pas des réseaux insulaires.
+      </p>
+
+      <p><strong>4.2 La poste universitaire</strong></p>
+      <p>
+        Non applicable : la poste universitaire concerne principalement les universités 
+        et collèges parisiens et provinciaux. Aucun établissement de ce type n’existait 
+        à Belle-Isle.
+      </p>
+
+      <p><strong>4.3 Messagers particuliers</strong></p>
+
+      <p>
+        Très courants sur les îles : pêcheurs du Palais et caboteurs reliant Belle-Isle 
+        à Quiberon, Lorient ou Vannes. Ils transportaient souvent des lettres privées, 
+        des billets commerciaux et des paquets urgents. Ces transports sont non officiels, 
+        mais très fréquents avant 1780.
+      </p>
+
+      <p><strong>Résumé</strong></p>
+
+      <p>
+        Avant 1780, Belle-Isle dépend d’Auray et Quiberon sert d’entrepôt des dépêches 
+        et de relais maritime. En 1754, un commis distributeur à Quiberon est expressément 
+        chargé de gérer les dépêches pour l’île. Le 1<sup>er</sup> janvier 1780, la création 
+        du bureau officiel de Belle-Isle-en-Mer structure la distribution insulaire 
+        et améliore la régularité du service postal, malgré une navigation entre 
+        Quiberon et Le Palais parfois irrégulière selon la météo.
+      </p>
+    </div>
+  </th>
+</tr>
+ 
+</table>
+
+    <!-- ===== BOUTON HAUT DE PAGE ===== -->
+<button id="scrollToTopButton" title="Haut de page"></button>
+</main>
+
+<!-- ==========================
+     POPUP NOTE – OBLIGATOIRE
+========================== -->
+<div class="popup-overlay" id="popupNote">
+  <div class="popup-box">
+    <div class="popup-close" id="closePopup">&times;</div>
+    <div id="popupContent"></div>
+  </div>
+</div>
+
+<!-- ===== FOOTER FIXE ===== -->
+<footer class="News-footer">
+  <div class="news">
+    <span id="news-head">COTE</span>
+  </div>
+
+  <div class="N-text">
+    <div class="ticker">
+      <div class="ticker__track">
+        <span>• Celles-ci s'entendent pour de belles frappes.</span>
+        <span>• Pour les lettres en port payé :</span>
+        <span>• Cote du PP sans plus-value si la marque de port (dû) qui l'accompagne est d'un indice inférieur à 16.</span>
+        <span>• Si la marque de port (dû) est d'un indice supérieur à 16, majorer de 2 indices la cote du port payé.</span>
+        <span>• © Copyright Tout droit réservé.</span>
+
+        <!-- Duplique le contenu pour un défilement continu -->
+        <span>• Celles-ci s'entendent pour de belles frappes.</span>
+        <span>• Pour les lettres en port payé :</span>
+        <span>• Cote du PP sans plus-value si la marque de port (dû) qui l'accompagne est d'un indice inférieur à 16.</span>
+        <span>• Si la marque de port (dû) est d'un indice supérieur à 16, majorer de 2 indices la cote du port payé.</span>
+        <span>• © Copyright Tout droit réservé.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+ <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>   
+ <script src="/JS/app.js"></script>   
+
+</body>
+</html>

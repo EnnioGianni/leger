@@ -1,0 +1,553 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Le Postillon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../CSS/app.css">
+    <link rel="stylesheet" href="../../CSS/menu.css">
+    <link rel="stylesheet" href="../../CSS/recherchesVille.css">
+    <link rel="stylesheet" href="../../CSS/bouttonHautDePage.css">
+
+    <script defer src="../../JS/script_global.js"></script>
+    <script defer src="../../JS/menu.js"></script>
+    <script defer src="../../JS/bouttonHautDePage.js"></script>
+    <script defer src="../../JS/rechercheVille.js"></script>
+    <script defer src="../../JS/largeurImages.js"></script>
+    <script defer src="../../JS/totalTable.js"></script>
+    <script defer src="../../JS/mainsQuiBouge.js"></script>
+    <script defer src="../../JS/liensUtiles.js"></script>
+    <link rel="icon" type="image/png" href="/Resource/books_library_1768.ico">
+
+    <style>
+      p::first-letter {
+        color: red;
+        font-size: 130%;
+      }
+    </style>
+</head>
+
+
+<body id="scrollable"
+  style="
+    min-height:100vh;
+    margin:0;
+    background:url('/Resource/carrosseAvecPhoto.jpg')
+               center center / cover no-repeat fixed;
+  ">
+  
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="header-left">
+    <a href="/index.html" class="logo-link" aria-label="Accueil Le Postillon">
+      <img src="/Resource/books_library_1768.ico" alt="Logo Le Postillon" class="site-logo">
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" data-menu-open>☰</button>
+  </div>
+  <h1 class="titre-principal">Le Postillon</h1>
+</header>
+
+<!-- ===== MAIN ===== -->
+  <main>
+    <h2 id="h12">
+        <a href="https://fr.wikipedia.org/wiki/Aix-en-Provence" class="title-tip" style="font-size: 25px;" title="lien vers wikipedia">
+            Aix - Provence (12)
+        </a>
+    </h2>
+        <p>Bureaux ouvert en 1618.</p>
+
+<!-- ===== PAGINATION ===== -->
+<nav class="pager">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link title-tip" href="../sommaireA.html" title="Sommaire A">&laquo;&laquo;</a>
+    </li>
+
+<!--Precedente-->
+    <li class="page-item">
+      <a class="page-link title-tip" href="../Airvault/airvault.html" title="Airvault">&laquo;</a>
+    </li>
+
+<!--Recherches-->
+    <li class="page-item">
+      <div class="dropdown">
+        <input type="text" id="villeInput" placeholder="Tapez le nom d'une ville">
+        <div class="dropdown-content" id="dropdownContent"></div>
+      </div>
+    </li>
+
+<!--Suivante-->
+    <li class="page-item">
+      <a class="page-link title-tip" href="../Ajaccio/ajaccio.html" title="Ajaccio">&raquo;</a>
+    </li>
+    
+<!--Accueil-->
+    <li class="page-item">
+      <a class="page-link title-tip" href="../../index.html" title="Accueil">&raquo;&raquo;</a>
+    </li>  
+  </ul>
+</nav>
+
+<!-- ===== TABLE ===== -->
+<table class="exemple">
+  <thead>
+    <tr>
+      <th>Marque</th>
+      <th>N°</th>
+      <th>Port</th>
+      <th>Dimensions</th>
+      <th>Date</th>
+      <th>Couleurs</th>
+      <th>Indice</th>
+      <th>Cote en euro</th>
+    </tr>
+  </thead>
+<!--Marque 1-->          
+        <tr>
+            <td>
+                <a href="../Aix/images/1.png">
+                    <img src="../Aix/images/1.png" alt="Aix" data-width-mm="34">
+                </a>
+            </td>
+            <td>1</td>
+            <td>port dû</td>
+            <td>34mm</td>
+            <td>1691-1700</td>
+            <td>noir</td>
+            <td>I-23</td>
+            <td class="prixProduit" data-id="23">00.00</td>
+        </tr>
+<!--Marque 1A-->          
+        <tr>
+            <td>
+                <a href="../Aix/images/1.png">
+                    <img src="../Aix/images/1.png" alt="Aix" data-width-mm="34">
+                </a>
+            </td>
+            <td>1A (= DE Provence)</td>
+            <td>port dû</td>
+            <td>34mm</td>
+            <td>1701-1703</td>
+            <td>noir</td>
+            <td>I-21</td>
+            <td class="prixProduit" data-id="21">00.00</td>
+        </tr>
+<!--Marque 2-->          
+        <tr>
+            <td>
+                <a href="../Aix/images/2.png">
+                    <img src="../Aix/images/2.png" alt="Aix" data-width-mm="21">
+                </a>
+            </td>
+            <td>2</td>
+            <td>port dû</td>
+            <td>21mm</td>
+            <td>1702-1707</td>
+            <td>noir</td>
+            <td>I-11</td>
+            <td class="prixProduit" data-id="11">00.00</td>
+        </tr>
+<!--Marque 2A-->          
+        <tr>
+            <td>
+                <a href="../Aix/images/2Etat.png">
+                    <img src="../Aix/images/2Etat.png" alt="Aix" data-width-mm="20">
+                </a>
+            </td>
+            <td>2A état en 1712</td>
+            <td>port dû</td>
+            <td>20mm</td>
+            <td>1712</td>
+            <td>noir</td>
+            <td>I-8</td>
+            <td class="prixProduit" data-id="8">00.00</td>
+        </tr>
+<!--Marque 3-->          
+        <tr>
+            <td>
+                <a href="../Aix/images/3.png">
+                    <img src="../Aix/images/3.png" alt="Aix" data-width-mm="30">
+                </a>
+            </td>
+            <td>3</td>
+            <td>port dû</td>
+            <td><img src="../../Resource/plumeDeture.png" alt="Aix" data-width-mm="10"></td>
+            <td>1691-1700</td>
+            <td>manuscrit (Provence)</td>
+            <td>I-21</td>
+            <td class="prixProduit" data-id="21">00.00</td>
+        </tr>
+<!--Marque 3A-->          
+        <tr>
+            <td>
+                <a href="../Aix/images/3.png">
+                    <img src="../Aix/images/3.png" alt="Aix" data-width-mm="30">
+                </a>
+            </td>
+            <td>3A</td>
+            <td>port dû</td>
+            <td><img src="../../Resource/plumeDeture.png" alt="Aix" data-width-mm="10"></td>
+            <td>1701-1791</td>
+            <td>manuscrit (Aix)</td>
+            <td>I-6</td>
+            <td class="prixProduit" data-id="6">00.00</td>
+        </tr>
+<!--Marque 4-->          
+        <tr>
+            <td>
+                <a href="../Aix/images/4.png">
+                    <img src="../Aix/images/4.png" alt="Aix" data-width-mm="21">
+                </a>
+            </td>
+            <td>4</td>
+            <td>port dû</td>
+            <td>21mm</td>
+            <td>1715-1738</td>
+            <td>noir</td>
+            <td>I-8</td>
+            <td class="prixProduit" data-id="8">00.00</td>
+        </tr>
+<!--Marque 5-->          
+        <tr>
+            <td>
+                <a href="../Aix/images/5.png">
+                    <img src="../Aix/images/5.png" alt="Aix" data-width-mm="21">
+                </a>
+            </td>
+            <td>5</td>
+            <td>port dû</td>
+            <td>21mm</td>
+            <td>1740-1758</td>
+            <td>noir</td>
+            <td>I-7</td>
+            <td class="prixProduit" data-id="7">00.00</td>
+        </tr>
+<!--Marque 5A-->          
+        <tr>
+            <td>
+                <a href="../Aix/images/5Etat.png">
+                    <img src="../Aix/images/5Etat.png" alt="Aix" data-width-mm="21">
+                </a>
+            </td>
+            <td>5A</td>
+            <td>port dû</td>
+            <td>21mm</td>
+            <td>état en 1758</td>
+            <td>noir</td>
+            <td>I-7</td>
+            <td class="prixProduit" data-id="7">00.00</td>
+        </tr>
+<!--Marque 6-->          
+        <tr>
+            <td>
+                <a href="../Aix/images/6.png">
+                    <img src="../Aix/images/6.png" alt="Aix" data-width-mm="21">
+                </a>
+            </td>
+            <td>6</td>
+            <td>port dû</td>
+            <td>21mm</td>
+            <td>1759-1764</td>
+            <td>noir</td>
+            <td>I-8</td>
+            <td class="prixProduit" data-id="8">00.00</td>
+        </tr>
+<!--Marque 6A-->          
+        <tr>
+            <td>
+                <a href="../Aix/images/6Etat.png">
+                    <img src="../Aix/images/6Etat.png" alt="Aix" data-width-mm="21">
+                </a>
+            </td>
+            <td>6A</td>
+            <td>port dû</td>
+            <td>21mm</td>
+            <td>1764</td>
+            <td>noir</td>
+            <td>I-8</td>
+            <td class="prixProduit" data-id="8">00.00</td>
+        </tr>
+<!--Marque 7-->          
+        <tr>
+            <td>
+                <a href="../Aix/images/7.png">
+                    <img src="../Aix/images/7.png" alt="Aix" data-width-mm="23">
+                </a>
+            </td>
+            <td>7</td>
+            <td>port dû</td>
+            <td>23mm</td>
+            <td>1759-1764</td>
+            <td>noir</td>
+            <td>I-8</td>
+            <td class="prixProduit" data-id="8">00.00</td>
+        </tr>
+<!--Marque 8-->          
+        <tr>
+            <td>
+                <a href="../Aix/images/8.png">
+                    <img src="../Aix/images/8.png" alt="Aix" data-width-mm="8">
+                </a>
+            </td>
+            <td>8</td>
+            <td>port dû</td>
+            <td>8mm</td>
+            <td>1764-1785</td>
+            <td>noir</td>
+            <td>I-6</td>
+            <td class="prixProduit" data-id="6">00.00</td>
+        </tr>
+
+<!--Marque 8A-->          
+        <tr>
+            <td>
+                <a href="../Aix/images/8A.png">
+                    <img src="../Aix/images/8A.png" alt="Aix" data-width-mm="8">
+                </a>
+            </td>
+            <td>8A</td>
+            <td>port dû</td>
+            <td>8mm</td>
+            <td>1773</td>
+            <td>sec</td>
+            <td>I-6</td>
+            <td class="prixProduit" data-id="6">00.00</td>
+        </tr>
+<!--Marque 9-->          
+        <tr>
+            <td>
+                <a href="../Aix/images/9.png">
+                    <img src="../Aix/images/9.png" alt="Aix" data-width-mm="8">
+                </a>
+            </td>
+            <td>9</td>
+            <td>port dû</td>
+            <td>8x4mm</td>
+            <td>1774-1783</td>
+            <td>noir</td>
+            <td>I-8</td>
+            <td class="prixProduit" data-id="8">00.00</td>
+        </tr>
+<!--Marque 10-->          
+        <tr>
+            <td>
+                <a href="../Aix/images/10.png">
+                    <img src="../Aix/images/10.png" alt="Aix" data-width-mm="22">
+                </a>
+            </td>
+            <td>10</td>
+            <td>port dû</td>
+            <td>22mm</td>
+            <td>1783</td>
+            <td>noir</td>
+            <td>I-11</td>
+            <td class="prixProduit" data-id="11">00.00</td>
+        </tr>
+<!--Marque 11-->          
+        <tr>
+            <td>
+                <a href="../Aix/images/11.png">
+                    <img src="../Aix/images/11.png" alt="Aix" data-width-mm="12">
+                </a>
+            </td>
+            <td>11</td>
+            <td>port dû</td>
+            <td>12mm</td>
+            <td>1783-1785</td>
+            <td>noir</td>
+            <td>I-9</td>
+            <td class="prixProduit" data-id="9">00.00</td>
+        </tr>
+<!--Marque 11A-->          
+        <tr>
+            <td>
+                <a href="../Aix/images/11A.png">
+                    <img src="../Aix/images/11A.png" alt="Aix" data-width-mm="12">
+                </a>
+            </td>
+            <td>11A</td>
+            <td>port dû</td>
+            <td>12mm</td>
+            <td>1784</td>
+            <td>sec</td>
+            <td>I-9</td>
+            <td class="prixProduit" data-id="9">00.00</td>
+        </tr>
+<!--Marque 12-->          
+        <tr>
+            <td>
+                <a href="../Aix/images/12.png">
+                    <img src="../Aix/images/12.png" alt="Aix" data-width-mm="19">
+                </a>
+            </td>
+            <td>12</td>
+            <td>port dû</td>
+            <td>19mm</td>
+            <td>1785-1791</td>
+            <td>noir</td>
+            <td>6</td>
+            <td class="prixProduit" data-id="6">00.00</td>
+        </tr>
+<!--Marque 13-->          
+        <tr>
+            <td>
+                <a href="../Aix/images/13.png">
+                    <img src="../Aix/images/13.png" alt="Aix" data-width-mm="25">
+                </a>
+            </td>
+            <td>13</td>
+            <td>franc</td>
+            <td><img src="../../Resource/plumeDeture.png" alt="Aix" data-width-mm="10"></td>
+            <td>1716-1791</td>
+            <td>manuscrit</td>
+            <td>I-14</td>
+            <td class="prixProduit" data-id="14">00.00</td>
+        </tr>
+<!--Marque 14-->          
+        <tr>
+            <td>
+                <a href="../Aix/images/14.png">
+                    <img src="../Aix/images/14.png" alt="Aix" data-width-mm="30">
+                </a>
+            </td>
+            <td>14</td>
+            <td>déboursé</td>
+            <td><img src="../../Resource/plumeDeture.png" alt="Aix" data-width-mm="10"></td>
+            <td>1742-1784</td>
+            <td>manuscrit</td>
+            <td>I-13</td>
+            <td class="prixProduit" data-id="13">00.00</td>
+        </tr>
+<!--Marque 15-->          
+        <tr>
+            <td>
+                <a href="../Aix/images/15.png">
+                    <img src="../Aix/images/15.png" alt="Aix" data-width-mm="39">
+                </a>
+            </td>
+            <td>15</td>
+            <td>déboursé</td>
+            <td>39mm</td>
+            <td>1763-1791</td>
+            <td>noir</td>
+            <td>I-14</td>
+            <td class="prixProduit" data-id="14">00.00</td>
+        </tr>
+<!--Marque 15A-->          
+        <tr style="color: red;">
+            <td>
+                <a href="../Aix/images/15A.png">
+                    <img src="../Aix/images/15A.png" alt="Aix" data-width-mm="39">
+                </a>
+            </td>
+            <td>15A</td>
+            <td>déboursé</td>
+            <td>39mm</td>
+            <td>1795</td>
+            <td>rouge</td>
+            <td>I-19</td>
+            <td class="prixProduit" data-id="19">00.00</td>
+        </tr>
+<!--Marque 15B-->          
+        <tr>
+            <td>
+                <a href="../Aix/images/15.png">
+                    <img src="../Aix/images/15.png" alt="Aix" data-width-mm="39">
+                </a>
+            </td>
+            <td>15B</td>
+            <td>déboursé</td>
+            <td>39mm</td>
+            <td>1792-1808</td>
+            <td>noir</td>
+            <td>I-13</td>
+            <td class="prixProduit" data-id="13">00.00</td>
+        </tr>
+<!--Marque 16-->
+        <tr class="ligne-note"
+            data-note="Cette marque, frappée au verso, était utilisée pour une tournée de messager en Haute-Provence.">
+            
+            <td>
+                <a href="../Aix/images/16.png">
+                    <img src="../Aix/images/16.png" alt="Aix" data-width-mm="20">
+                </a>
+            </td>
+            <td>16</td>
+<!-- Numéro de note -->
+            <td class="numNote" data-num="1">(Lire la note)</td>
+
+            <td>20mm</td>
+            <td>1765-1800</td>
+            <td>noir</td>
+            <td>I-18</td>
+            <td class="prixProduit" data-id="18">00.00</td>
+        </tr>
+<!--Marque 17-->          
+        <tr>
+            <td>
+                <a href="../Aix/images/17.png">
+                    <img src="../Aix/images/17.png" alt="Aix" data-width-mm="50">
+                </a>
+            </td>
+            <td>17</td>
+            <td>route manuscrit</td>
+            <td><img src="../../Resource/plumeDeture.png" alt="Aix" data-width-mm="10"></td>
+            <td>1781</td>
+            <td>manuscrit</td>
+            <td>I-19</td>
+            <td class="prixProduit" data-id="19">00.00</td>
+        </tr>
+<!--Liens Utile-->
+    <tr>
+      <th colspan="8" id="table-liens">Liens utiles</th>
+    </tr>
+    <tr>
+      <th colspan="8" style="color: black;"></th>
+    </tr>
+</table>
+
+    <!-- ===== BOUTON HAUT DE PAGE ===== -->
+<button id="scrollToTopButton" title="Haut de page"></button>
+</main>
+
+<!-- ==========================
+     POPUP NOTE – OBLIGATOIRE
+========================== -->
+<div class="popup-overlay" id="popupNote">
+  <div class="popup-box">
+    <div class="popup-close" id="closePopup">&times;</div>
+    <div id="popupContent"></div>
+  </div>
+</div>
+
+<!-- ===== FOOTER FIXE ===== -->
+<footer class="News-footer">
+  <div class="news">
+    <span id="news-head">COTE</span>
+  </div>
+
+  <div class="N-text">
+    <div class="ticker">
+      <div class="ticker__track">
+        <span>• Celles-ci s'entendent pour de belles frappes.</span>
+        <span>• Pour les lettres en port payé :</span>
+        <span>• Cote du PP sans plus-value si la marque de port (dû) qui l'accompagne est d'un indice inférieur à 16.</span>
+        <span>• Si la marque de port (dû) est d'un indice supérieur à 16, majorer de 2 indices la cote du port payé.</span>
+        <span>• © Copyright Tout droit réservé.</span>
+
+        <!-- Duplique le contenu pour un défilement continu -->
+        <span>• Celles-ci s'entendent pour de belles frappes.</span>
+        <span>• Pour les lettres en port payé :</span>
+        <span>• Cote du PP sans plus-value si la marque de port (dû) qui l'accompagne est d'un indice inférieur à 16.</span>
+        <span>• Si la marque de port (dû) est d'un indice supérieur à 16, majorer de 2 indices la cote du port payé.</span>
+        <span>• © Copyright Tout droit réservé.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+ <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>   
+ <script src="/JS/app.js"></script>   
+
+</body>
+</html>

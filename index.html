@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Le Postillon — Marques Postales</title>
+
+  <!-- Favicon (.ico) -->
+  <link rel="icon" href="/Resource/books_library_1768.ico" type="image/x-icon">
+
+  <!-- Préchargement des images de fond (perf) -->
+  <link rel="preload" as="image" href="images/fond-lettres.jpg">
+  <link rel="preload" as="image" href="images/parchemin.jpg">
+
+  <link rel="stylesheet" href="CSS/postillon.css">
+</head>
+
+<body id="scrollable">
+  <!-- ===== MODALE D'ACCUEIL ===== -->
+  <div id="welcomeModal"
+       class="modalDialog"
+       role="dialog"
+       aria-modal="true"
+       aria-labelledby="welcomeTitle"
+       aria-describedby="welcomeDesc"
+       aria-hidden="true"
+       tabindex="-1">
+    <div class="modalDialog__panel" role="document">
+      <h2 id="welcomeTitle">Bienvenue sur mon site de Marques Postales</h2>
+      <div id="welcomeDesc">
+        <p>Sur ce site vous trouverez la cotation de toutes les marques postales des origines à 1791.</p>
+        <p><strong>Cotes des marques postales</strong></p>
+        <p>Celles-ci s'entendent pour de belles frappes.</p>
+        <p><strong>Pour les lettres en port payé :</strong></p>
+        <ol type="A">
+          <li>Cote du PP sans plus-value si la marque de port (dû) qui l'accompagne est d'un indice inférieur à 16.</li>
+          <li>Si la marque de port (dû) qui accompagne le (port payé) est d'un indice supérieur à 16, majorer de 2 indices la cote du port payé.</li>
+          <li>Pour les marques plus anciennes sans marque, allez sur le lien
+            <a href="./lettresAnciennes.html">Lettres Anciennes</a>
+          </li>
+          <li>Sur cette page d'accueil, cliquez sur une lettre pour vous rendre au sommaire de toutes les Villes commençant par cette lettre.</li>
+        </ol>
+        <p>Si vous possédez des marques mentionnées et cotées sur ce site mais qu'elles ne sont pas répertoriées,
+          vous pouvez les proposer ici :
+          <a class="blink" style="font-size:25px" href="./proposition/index.html"><b>Proposition</b></a>
+        </p>
+      </div>
+      <a href="#" class="close modal-close" id="enterSite" title="Fermer la fenêtre d’information">Accéder au site</a>
+    </div>
+  </div>
+  <!-- ===== FIN MODALE D'ACCUEIL ===== -->
+
+  <!-- ===== ENTÊTE ===== -->
+  <header class="header page-fade">
+    <a href="/" class="logo-link" aria-label="Accueil">
+      <img src="/Resource/books_library_1768.ico" alt="Logo du site" width="38" height="38" loading="lazy">
+    </a>
+    <h1 class="titre-principal">Le Postillon — Marques Postales</h1>
+  </header>
+
+  <!-- ===== CONTENU PRINCIPAL ===== -->
+  <main class="table-letters page-fade">
+    <h2 class="letters-title">Liste des Villes — A&nbsp;→&nbsp;Z</h2>
+
+    <div class="letters-grid" role="navigation" aria-label="Sommaire par lettres">
+      <a href="/Ville_A/sommaireA.html" class="letter-card" aria-label="Lettre A">A</a>
+      <a href="./B.html" class="letter-card" aria-label="Lettre B">B</a>
+      <a href="./C.html" class="letter-card" aria-label="Lettre C">C</a>
+      <a href="./D.html" class="letter-card" aria-label="Lettre D">D</a>
+      <a href="./E.html" class="letter-card" aria-label="Lettre E">E</a>
+      <a href="./F.html" class="letter-card" aria-label="Lettre F">F</a>
+      <a href="./G.html" class="letter-card" aria-label="Lettre G">G</a>
+      <a href="./H.html" class="letter-card" aria-label="Lettre H">H</a>
+      <a href="./I.html" class="letter-card" aria-label="Lettre I">I</a>
+      <a href="./J.html" class="letter-card" aria-label="Lettre J">J</a>
+      <a href="./K.html" class="letter-card" aria-label="Lettre K">K</a>
+      <a href="./L.html" class="letter-card" aria-label="Lettre L">L</a>
+      <a href="./M.html" class="letter-card" aria-label="Lettre M">M</a>
+      <a href="./N.html" class="letter-card" aria-label="Lettre N">N</a>
+      <a href="./O.html" class="letter-card" aria-label="Lettre O">O</a>
+      <a href="./P.html" class="letter-card" aria-label="Lettre P">P</a>
+      <a href="./Q.html" class="letter-card" aria-label="Lettre Q">Q</a>
+      <a href="./R.html" class="letter-card" aria-label="Lettre R">R</a>
+      <a href="./S.html" class="letter-card" aria-label="Lettre S">S</a>
+      <a href="./T.html" class="letter-card" aria-label="Lettre T">T</a>
+      <a href="./U.html" class="letter-card" aria-label="Lettre U">U</a>
+      <a href="./V.html" class="letter-card" aria-label="Lettre V">V</a>
+      <a href="./W.html" class="letter-card" aria-label="Lettre W">W</a>
+      <a href="./X.html" class="letter-card" aria-label="Lettre X">X</a>
+      <a href="./Y.html" class="letter-card" aria-label="Lettre Y">Y</a>
+      <a href="./Z.html" class="letter-card" aria-label="Lettre Z">Z</a>
+    </div>
+  </main>
+
+  <!-- ===== PIED DE PAGE UNIQUE ===== -->
+  <footer class="News-footer page-fade">
+    <span id="news-head">Dernières mises à jour</span>
+    <span class="separator" aria-hidden="true">•</span>
+    <span class="N-text">Ajouts réguliers de nouvelles marques et cotes mises à jour.</span>
+  </footer>
+
+  <!-- ===== BOUTON HAUT DE PAGE ===== -->
+  <button id="scrollToTopButton" title="Remonter en haut" aria-label="Remonter en haut">↑</button>
+
+  <script src="JS/postillon.js"></script>
+</body>
+</html>

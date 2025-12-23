@@ -1,0 +1,46 @@
+/* ===========================================================
+   Style du bouton "Haut de page" (effet moderne)
+   =========================================================== */
+
+#scrollToTopButton {
+  display: none;                /* caché au départ */
+  position: fixed;
+  bottom: 80px;                /* 🔹 un peu plus haut que le footer */
+  right: 25px;
+  width: 52px;
+  height: 52px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0044cc, #f0c63d);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  z-index: 9999;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+/* Flèche stylisée (CSS pur) */
+#scrollToTopButton::before {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-left: 3px solid #fa0202;
+  border-bottom: 3px solid #fc0202;
+  transform: rotate(135deg);
+  position: relative;
+  top: 2px;
+}
+
+/* Effet au survol */
+#scrollToTopButton:hover {
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.1);
+}
+
+/* Effet clic */
+#scrollToTopButton:active {
+  transform: scale(0.95);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}

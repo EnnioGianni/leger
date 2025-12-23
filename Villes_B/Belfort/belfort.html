@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Le Postillon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../CSS/app.css">
+    <link rel="stylesheet" href="../../CSS/menu.css">
+    <link rel="stylesheet" href="../../CSS/recherchesVille.css">
+    <link rel="stylesheet" href="../../CSS/bouttonHautDePage.css">
+
+    <script defer src="../../JS/script_global.js"></script>
+    <script defer src="../../JS/menu.js"></script>
+    <script defer src="../../JS/bouttonHautDePage.js"></script>
+    <script defer src="../../JS/rechercheVille.js"></script>
+    <script defer src="../../JS/largeurImages.js"></script>
+    <script defer src="../../JS/totalTable.js"></script>
+    <script defer src="../../JS/mainsQuiBouge.js"></script>
+    <script defer src="../../JS/liensUtiles.js"></script>
+    <link rel="icon" type="image/png" href="/Resource/books_library_1768.ico">
+
+    <style>
+      p::first-letter {
+        color: red;
+        font-size: 130%;
+      }
+    </style>
+</head>
+
+
+<body id="scrollable"
+  style="
+    min-height:100vh;
+    margin:0;
+    background:url('/Resource/carrosseAvecPhoto.jpg')
+               center center / cover no-repeat fixed;
+  ">
+  
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="header-left">
+    <a href="/index.html" class="logo-link" aria-label="Accueil Le Postillon">
+      <img src="/Resource/books_library_1768.ico" alt="Logo Le Postillon" class="site-logo">
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" data-menu-open>☰</button>
+  </div>
+  <h1 class="titre-principal">Le Postillon</h1>
+</header>
+
+<!-- ===== MAIN ===== -->
+<main>
+    <h2 id="h12">
+        <a href="https://fr.wikipedia.org/wiki/Belfort" class="title-tip" style="font-size: 25px;" title="lien vers wikipedia">
+            Belfort- Alsace (66)
+        </a>
+    </h2>
+        <p>Bureau en service lors de l'annexion, en 1648</p>
+
+<!-- ===== PAGINATION ===== -->
+<nav class="pager">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link title-tip" href="../sommaireB.html" title="Sommaire B">&laquo;&laquo;</a>
+    </li>
+
+<!--Precedente-->
+    <li class="page-item">
+      <a class="page-link title-tip" href="../../Villes_B/Bedarieux/bedarieux.html" title="Bedarieux">&laquo;</a>
+    </li>
+
+<!--Recherches-->
+    <li class="page-item">
+      <div class="dropdown">
+        <input type="text" id="villeInput" placeholder="Tapez le nom d'une ville">
+        <div class="dropdown-content" id="dropdownContent"></div>
+      </div>
+    </li>
+
+<!--Suivante-->
+    <li class="page-item">
+      <a class="page-link title-tip" href="../Bellac/bellac.html" title="Bellac">&raquo;</a>
+    </li>
+    
+<!--Accueil-->
+    <li class="page-item">
+      <a class="page-link title-tip" href="../../index.html" title="Accueil">&raquo;&raquo;</a>
+    </li>  
+  </ul>
+</nav>
+
+<!-- ===== TABLE ===== -->
+<table class="exemple">
+  <thead>
+    <tr>
+      <th>Marque</th>
+      <th>N°</th>
+      <th>Port</th>
+      <th>Dimensions</th>
+      <th>Date</th>
+      <th>Couleurs</th>
+      <th>Indice</th>
+      <th>Cote en euro</th>
+    </tr>
+  </thead>
+        
+<!--Marque 1-->          
+        <tr>
+            <td>
+                <a href="../Belfort/Images/1.png">
+                    <img src="../Belfort/Images/1.png" alt="Belfort" data-width-mm="30">
+                </a>
+            </td>
+            <td class="border3">1</td>
+            <td>port dû</td>
+            <td><img src="../../Resource/plumeDeture.png" alt="Belfort" data-width-mm="10"></td>
+            <td>1687-1689</td>
+            <td>manuscrit</td>
+            <td>I-22</td>
+            <td class="prixProduit" data-id="22">00.00</td>
+        </tr>                                                                                                                                 
+<!--Marque 1A-->          
+        <tr>
+            <td>
+                <a href="../../Proposition/index.html">
+                    <img src="../Belfort/Images/1a.png" alt="Belfort" data-width-mm="50">
+                </a>
+            </td>
+            <td class="border3">1A</td>
+            <td>port dû</td>
+            <td><img src="../../Resource/plumeDeture.png" alt="Belfort" data-width-mm="10"></td>
+            <td>1713</td>
+            <td>manuscrit</td>
+            <td>I-19</td>
+            <td class="prixProduit" data-id="19">00.00</td>
+        </tr>                                                                                                                                 
+<!--Marque 1B-->          
+        <tr>
+            <td>
+                <a href="../../Proposition/index.html">
+                    <img src="../Belfort/Images/1b.png" alt="Belfort" data-width-mm="50">
+                </a>
+            </td>
+            <td class="border3">1B</td>
+            <td>manuscrit avec (au dos)</td>
+            <td>courriers extraordinaire</td>
+            <td>1709</td>
+            <td>manuscrit</td>
+            <td>I-29</td>
+            <td class="prixProduit" data-id="29">00.00</td>
+        </tr>                                                                                                                                 
+<!--Marque 2-->          
+        <tr>
+            <td>
+                <a href="../Belfort/Images/2.png">
+                    <img src="../Belfort/Images/2.png" alt="Belfort" data-width-mm="14">
+                </a>
+            </td>
+            <td class="border3">2</td>
+            <td>port dû</td>
+            <td>14mm</td>
+            <td>1717-1727</td>
+            <td>sec</td>
+            <td>I-19</td>
+            <td class="prixProduit" data-id="19">00.00</td>
+        </tr>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+<!--Marque 2A-->          
+        <tr>
+            <td>
+                <a href="../Belfort/Images/2A.png">
+                    <img src="../Belfort/Images/2A.png" alt="Belfort" data-width-mm="14">
+                </a>
+            </td>
+            <td class="border3">2</td>
+            <td>port dû</td>
+            <td>14mm</td>
+            <td>1727-1729</td>
+            <td>noir</td>
+            <td>I-21</td>
+            <td class="prixProduit" data-id="21">00.00</td>
+        </tr>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+<!--Marque 3-->          
+        <tr>
+            <td>
+                <a href="../Belfort/Images/3.png">
+                    <img src="../Belfort/Images/3.png" alt="Belfort" data-width-mm="27">
+                </a>
+            </td>
+            <td class="border3">3</td>
+            <td>port dû</td>
+            <td>27mm</td>
+            <td>1729-1767</td>
+            <td>noir</td>
+            <td>I-12</td>
+            <td class="prixProduit" data-id="12">00.00</td>
+        </tr>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+<!--Marque 3A-->          
+        <tr>
+            <td>
+                <a href="../Belfort/Images/3A.png">
+                    <img src="../Belfort/Images/3A.png" alt="Belfort" data-width-mm="27">
+                </a>
+            </td>
+            <td class="border3">3A</td>
+            <td>port dû</td>
+            <td>27mm</td>
+            <td>1730-1755</td>
+            <td>sec</td>
+            <td>I-12</td>
+            <td class="prixProduit" data-id="12">00.00</td>
+        </tr>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+<!--Marque 4-->          
+        <tr>
+            <td>
+                <a href="../Belfort/Images/4.png">
+                    <img src="../Belfort/Images/4.png" alt="Belfort" data-width-mm="20">
+                </a>
+            </td>
+            <td class="border3">4</td>
+            <td>port dû</td>
+            <td>20mm</td>
+            <td>1753-1762</td>
+            <td>noir</td>
+            <td>I-12</td>
+            <td class="prixProduit" data-id="12">00.00</td>
+        </tr>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+<!--Marque 4A-->          
+        <tr>
+            <td>
+                <a href="../Belfort/Images/4A.png">
+                    <img src="../Belfort/Images/4A.png" alt="Belfort" data-width-mm="20">
+                </a>
+            </td>
+            <td class="border3">4</td>
+            <td>port dû</td>
+            <td>20mm</td>
+            <td>1756</td>
+            <td>sec</td>
+            <td>I-12</td>
+            <td class="prixProduit" data-id="12">00.00</td>
+        </tr>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+<!--Marque 5-->          
+        <tr>
+            <td>
+                <a href="../Belfort/Images/5.png">
+                    <img src="../Belfort/Images/5.png" alt="Belfort" data-width-mm="41">
+                </a>
+            </td>
+            <td class="border3">5</td>
+            <td>port dû</td>
+            <td>41mm</td>
+            <td>1767-1787</td>
+            <td>noir</td>
+            <td>I-10</td>
+            <td class="prixProduit" data-id="10">00.00</td>
+        </tr>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+<!--Marque 6-->          
+        <tr>
+            <td>
+                <a href="../Belfort/Images/6.png">
+                    <img src="../Belfort/Images/6.png" alt="Belfort" data-width-mm="30">
+                </a>
+            </td>
+            <td class="border3">6</td>
+            <td>port dû</td>
+            <td>30mm</td>
+            <td>1786-1791</td>
+            <td>noir</td>
+            <td>I-12</td>
+            <td class="prixProduit" data-id="12">00.00</td>
+        </tr>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+<!--Marque 7-->          
+        <tr>
+            <td>
+                <a href="../Belfort/Images/7.png">
+                    <img src="../Belfort/Images/7.png" alt="Belfort" data-width-mm="16">
+                </a>
+            </td>
+            <td class="border3">7</td>
+            <td>port payé</td>
+            <td>16mm</td>
+            <td>1779-1791</td>
+            <td>noir</td>
+            <td>I-24</td>
+            <td class="prixProduit" data-id="24">00.00</td>
+        </tr>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+<!--Marque 7A-->          
+        <tr style="color: red;">
+            <td>
+                <a href="../Belfort/Images/7A.png">
+                    <img src="../Belfort/Images/7A.png" alt="Belfort" data-width-mm="16">
+                </a>
+            </td>
+            <td class="border3">7</td>
+            <td>port payé</td>
+            <td>16mm</td>
+            <td>1798-1799</td>
+            <td>rouge</td>
+            <td>I-23</td>
+            <td class="prixProduit" data-id="23">00.00</td>
+        </tr>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+<!--Marque 8-->          
+        <tr>
+            <td>
+                <a href="../Belfort/Images/5.png">
+                    <img src="../Belfort/Images/5.png" alt="Belfort" data-width-mm="42">
+                </a>
+            </td>
+            <td class="border3">8</td>
+            <td>déboursé</td>
+            <td>42mm</td>
+            <td>1760-1767</td>
+            <td>noir</td>
+            <td>I-25</td>
+            <td class="prixProduit" data-id="25">00.00</td>
+        </tr>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+<!--Marque 9-->          
+        <tr>
+            <td>
+                <a href="../Belfort/Images/9.png">
+                    <img src="../Belfort/Images/9.png" alt="Belfort" data-width-mm="14">
+                </a>
+            </td>
+            <td class="border3">9</td>
+            <td>déboursé</td>
+            <td>14mm</td>
+            <td>1773-1789</td>
+            <td>noir</td>
+            <td>I-22</td>
+            <td class="prixProduit" data-id="22">00.00</td>
+        </tr>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+<!--Marque 10-->          
+        <tr style="color: red;">
+            <td>
+                <a href="../Belfort/Images/10.png">
+                    <img src="../Belfort/Images/10.png" alt="Belfort" data-width-mm="32">
+                </a>
+            </td>
+            <td class="border3">10</td>
+            <td>déboursé</td>
+            <td>32mm</td>
+            <td>1795-1801</td>
+            <td>rouge</td>
+            <td>I-22</td>
+            <td class="prixProduit" data-id="22">00.00</td>
+        </tr>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+<!--Marque 10A-->          
+        <tr>
+            <td>
+                <a href="../Belfort/Images/10A.png">
+                    <img src="../Belfort/Images/10A.png" alt="Belfort" data-width-mm="32">
+                </a>
+            </td>
+            <td class="border3">10A</td>
+            <td>déboursé</td>
+            <td>32mm</td>
+            <td>1806-1808</td>
+            <td>noir</td>
+            <td>I-20</td>
+            <td class="prixProduit" data-id="20">00.00</td>
+        </tr>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+<!--Commentaire-->
+        <tr>             
+            <th colspan="8" style="text-align: center;">L'emploi de cette marque avant 1792 est incertaine.</th>           
+        </tr>
+<!--Marque 11-->          
+        <tr>
+            <td>
+                <a href="../../Proposition/index.html">
+                    <img src="../Belfort/Images/11.png" alt="Belfort" data-width-mm="50">
+                </a>
+            </td>
+            <td>11</td>
+            <td>port payé</td>
+            <td><img src="../../Resource/plumeDeture.png" alt="Belfort" data-width-mm="10"></td>
+            <td>1763</td>
+            <td>manuscrit</td>
+            <td>20</td>
+            <td>500.00€</td>              
+        </tr>                                                                                                                                      
+<!--Liens Utile-->
+    <tr>
+      <th colspan="8" id="table-liens">Liens utiles</th>
+    </tr>
+<!--Commentaire-->
+<tr>
+      <th colspan="8" style="text-align: center;"></th>
+</tr>
+ 
+</table>
+
+    <!-- ===== BOUTON HAUT DE PAGE ===== -->
+<button id="scrollToTopButton" title="Haut de page"></button>
+</main>
+
+<!-- ==========================
+     POPUP NOTE – OBLIGATOIRE
+========================== -->
+<div class="popup-overlay" id="popupNote">
+  <div class="popup-box">
+    <div class="popup-close" id="closePopup">&times;</div>
+    <div id="popupContent"></div>
+  </div>
+</div>
+
+<!-- ===== FOOTER FIXE ===== -->
+<footer class="News-footer">
+  <div class="news">
+    <span id="news-head">COTE</span>
+  </div>
+
+  <div class="N-text">
+    <div class="ticker">
+      <div class="ticker__track">
+        <span>• Celles-ci s'entendent pour de belles frappes.</span>
+        <span>• Pour les lettres en port payé :</span>
+        <span>• Cote du PP sans plus-value si la marque de port (dû) qui l'accompagne est d'un indice inférieur à 16.</span>
+        <span>• Si la marque de port (dû) est d'un indice supérieur à 16, majorer de 2 indices la cote du port payé.</span>
+        <span>• © Copyright Tout droit réservé.</span>
+
+        <!-- Duplique le contenu pour un défilement continu -->
+        <span>• Celles-ci s'entendent pour de belles frappes.</span>
+        <span>• Pour les lettres en port payé :</span>
+        <span>• Cote du PP sans plus-value si la marque de port (dû) qui l'accompagne est d'un indice inférieur à 16.</span>
+        <span>• Si la marque de port (dû) est d'un indice supérieur à 16, majorer de 2 indices la cote du port payé.</span>
+        <span>• © Copyright Tout droit réservé.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+ <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>   
+ <script src="/JS/app.js"></script>   
+
+</body>
+</html>
