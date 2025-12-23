@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { label: "Cote des lettres anciennes", href: "./lettresAnciennes.html" },
     { label: "Proposition", href: "./proposition/index.html" },
     { label: "Villes_A", href: "./sommaireA.html" },
+    { label: "Villes_A", href: "./sommaireA.html" },
     { label: "Villes_B", href: "./sommaireB.html" },
   ];
 
