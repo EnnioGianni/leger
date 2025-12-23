@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
     { label: "Accueil", href: "/index.html" },
     { label: "Cote des lettres anciennes", href: "./lettresAnciennes.html" },
     { label: "Proposition", href: "./proposition/index.html" },
-    { label: "Villes_A", href: "./Ville_A/sommaireA.html" },
-    { label: "Villes_B", href: "./Villes_B/sommaireB.html" },
+    { label: "Villes_A", href: "./sommaireA.html" },
+    { label: "Villes_B", href: "./sommaireB.html" },
   ];
 
   /* --- 1) Injecter le menu s’il n’existe pas --- */
