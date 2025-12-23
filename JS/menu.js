@@ -1,120 +1,128 @@
 /* ===== /JS/menu.js — Menu latéral automatique & idempotent ===== */
 document.addEventListener("DOMContentLoaded", () => {
-  /* --- Liens centralisés (édite seulement ici) --- */
-  const MENU_LINKS = [
-    { label: "Accueil", href: "./index.html" },
-    { label: "Cote des lettres anciennes", href: "./lettresAnciennes.html" },
-    { label: "Proposition", href: "./proposition/index.html" },
-    { label: "Villes_A", href: "./sommaireA.html" },
-    { label: "Villes_A", href: "./sommaireA.html" },
-    { label: "Villes_B", href: "./sommaireB.html" },
-  ];
 
-  /* --- 1) Injecter le menu s’il n’existe pas --- */
+  /* ============================================================
+     1) Détection de la racine du site (compatible GitHub Pages)
+     ============================================================ */
+  const ROOT = location.pathname.includes("/Ville_")
+    ? location.pathname.split("/Ville_")[0] + "/"
+    : "./";
+
+  /* ============================================================
+     2) Liens centralisés (ALIGNÉS AVEC TON ARBORESCENCE)
+     ============================================================ */
+const MENU_LINKS = [
+  { label: "Accueil", href: "/leger/index.html" },
+  { label: "Lettres anciennes", href: "/leger/lettresAnciennes.html" },
+  { label: "Proposition", href: "/leger/Proposition/index.html" },
+  { label: "Villes A", href: "/leger/Ville_A/sommaireA.html" },
+  { label: "Villes B", href: "/leger/Ville_B/sommaireB.html" },
+  { label: "Villes C", href: "/leger/Ville_C/sommaireC.html" }
+];
+
+  /* ============================================================
+     3) Injection du menu s’il n’existe pas
+     ============================================================ */
   let menuRoot = document.querySelector("[data-menu-root]");
   if (!menuRoot) {
-    const html = `
+    document.body.insertAdjacentHTML("beforeend", `
       <div class="menu-root" data-menu-root>
         <div class="menu-overlay" data-menu-overlay></div>
-        <nav class="menu-panel" role="dialog" aria-modal="true" aria-label="Menu principal" data-menu-panel>
+        <nav class="menu-panel" role="dialog" aria-modal="true"
+             aria-label="Menu principal" data-menu-panel>
           <div class="menu-header">
             <h2 class="menu-title">Navigation</h2>
-            <button class="menu-close" type="button" aria-label="Fermer le menu" data-menu-close>×</button>
+            <button class="menu-close" type="button"
+                    aria-label="Fermer le menu" data-menu-close>×</button>
           </div>
           <ul class="menu-list" data-menu-list></ul>
         </nav>
-      </div>`;
-    document.body.insertAdjacentHTML("beforeend", html);
+      </div>
+    `);
     menuRoot = document.querySelector("[data-menu-root]");
   }
   if (!menuRoot) return;
 
-  /* --- 2) Remplir les liens du menu --- */
-  const ul = menuRoot.querySelector("[data-menu-list]") || menuRoot.querySelector(".menu-list");
-  if (!ul) return;
+  /* ============================================================
+     4) Remplissage du menu
+     ============================================================ */
+  const ul = menuRoot.querySelector("[data-menu-list]");
   ul.innerHTML = "";
+
   MENU_LINKS.forEach(({ label, href }) => {
     const li = document.createElement("li");
     li.className = "menu-item";
+
     const a = document.createElement("a");
     a.className = "menu-link";
     a.textContent = label;
-    a.href = href; // chemins absolus ⇒ fonctionnent depuis n'importe quel dossier
+    a.href = href;
+
     li.appendChild(a);
     ul.appendChild(li);
   });
 
-  /* --- 3) Sélecteurs & fonctions open/close --- */
+  /* ============================================================
+     5) Ouverture / fermeture
+     ============================================================ */
   const overlay = menuRoot.querySelector("[data-menu-overlay]");
   const panel   = menuRoot.querySelector("[data-menu-panel]");
   const btnClose= menuRoot.querySelector("[data-menu-close]");
-  // supporte plusieurs boutons d’ouverture dans la page
   let btnOpens  = document.querySelectorAll("[data-menu-open]");
-  // compat rétro si tu utilises encore data-menu-toggle par erreur
-  if (btnOpens.length === 0) btnOpens = document.querySelectorAll("[data-menu-toggle]");
-
-  if (!overlay || !panel || !btnClose) return;
 
   const htmlEl = document.documentElement;
   const bodyEl = document.body;
 
   const openMenu = () => {
-    menuRoot.setAttribute("data-open", "true");
-    const prevY = window.scrollY;
-    htmlEl.dataset.prevScrollY = String(prevY);
+    menuRoot.dataset.open = "true";
     htmlEl.style.overflow = "hidden";
     bodyEl.style.overflow = "hidden";
     (panel.querySelector(".menu-link") || btnClose).focus();
   };
+
   const closeMenu = () => {
-    menuRoot.removeAttribute("data-open");
+    delete menuRoot.dataset.open;
     htmlEl.style.overflow = "";
     bodyEl.style.overflow = "";
-    if (htmlEl.dataset.prevScrollY) {
-      window.scrollTo(0, Number(htmlEl.dataset.prevScrollY));
-      delete htmlEl.dataset.prevScrollY;
-    }
   };
 
   btnOpens.forEach(b => b.addEventListener("click", openMenu));
   btnClose.addEventListener("click", closeMenu);
   overlay.addEventListener("click", closeMenu);
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && menuRoot.getAttribute("data-open") === "true") closeMenu();
-  });
-  panel.addEventListener("click", (e) => {
-    const a = e.target.closest("a.menu-link");
-    if (a) closeMenu();
+
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape" && menuRoot.dataset.open) closeMenu();
   });
 
-  /* --- 4) Surligner la page active --- */
-  const normalize = (p) => {
-    try {
-      let n = new URL(p, location.origin + location.pathname).pathname.replace(/\/+$/, "");
-      if (n.endsWith("/index.html")) n = n.slice(0, -"/index.html".length);
-      return n || "/";
-    } catch { return p; }
-  };
-  const current = normalize(location.pathname);
+  panel.addEventListener("click", e => {
+    if (e.target.closest("a.menu-link")) closeMenu();
+  });
+
+  /* ============================================================
+     6) Surlignage page active
+     ============================================================ */
+  const current = location.pathname.replace(/\/+$/, "");
   menuRoot.querySelectorAll(".menu-link").forEach(a => {
-    const target = normalize(a.getAttribute("href") || "");
-    if (target === current) {
-      a.setAttribute("aria-current", "page");
+    if (a.pathname === current) {
       a.classList.add("active-link");
+      a.setAttribute("aria-current", "page");
     }
   });
 
-  /* --- 5) Bouton fallback si absent (sécurité) --- */
+  /* ============================================================
+     7) Bouton menu fallback si absent
+     ============================================================ */
   if (btnOpens.length === 0) {
     const header = document.querySelector(".header");
     const btn = document.createElement("button");
     btn.type = "button";
     btn.className = "menu-toggle";
-    btn.setAttribute("data-menu-open", "");
+    btn.dataset.menuOpen = "";
     btn.setAttribute("aria-label", "Ouvrir le menu");
     btn.textContent = "☰";
+
     if (header) {
-      header.style.position = header.style.position || "relative";
+      header.style.position ||= "relative";
       btn.style.position = "absolute";
       btn.style.left = "12px";
       btn.style.top = "8px";
@@ -126,6 +134,8 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.style.zIndex = "1600";
       document.body.appendChild(btn);
     }
+
     btn.addEventListener("click", openMenu);
   }
+
 });
