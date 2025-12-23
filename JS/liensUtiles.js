@@ -20,11 +20,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Liste des logos (avec dimensions en data)
     const logos = [
-      { href: "https://www.academiedephilatelie.fr/", title: "Académie De Philatélie", src: "/Resource/academieDePhilatelie.png", "data-width": 50, "data-height": 50 },
-      { href: "https://gallica.bnf.fr/", title: "Gallica", src: "/Resource/gallica.png", "data-width": 50, "data-height": 50 },
-      { href: "https://unionmarcophile.fr/", title: "Union Marcophile", src: "/Resource/unionMarcophile.png", "data-width": 50, "data-height": 50 },
-      { href: "https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal", title: "Wikipédia", src: "/Resource/Wikipedia.png", "data-width": 50, "data-height": 50 },
-      { href: "https://museedelaposte.fr/fr", title: "Musée de la Poste", src: "/Resource/museeDeLaPoste.png", "data-width": 50, "data-height": 50 }
+      { href: "https://www.academiedephilatelie.fr/", title: "Académie De Philatélie", src: "../Resource/academieDePhilatelie.png", "data-width": 50, "data-height": 50 },
+      { href: "https://gallica.bnf.fr/", title: "Gallica", src: "../Resource/gallica.png", "data-width": 50, "data-height": 50 },
+      { href: "https://unionmarcophile.fr/", title: "Union Marcophile", src: "../Resource/unionMarcophile.png", "data-width": 50, "data-height": 50 },
+      { href: "https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal", title: "Wikipédia", src: "../Resource/Wikipedia.png", "data-width": 50, "data-height": 50 },
+      { href: "https://museedelaposte.fr/fr", title: "Musée de la Poste", src: "../Resource/museeDeLaPoste.png", "data-width": 50, "data-height": 50 }
     ];
 
     logos.forEach((logo) => {
