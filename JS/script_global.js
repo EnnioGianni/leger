@@ -79,3 +79,4 @@ function changerPrix(idLigne, nouveauPrix) {
 for (var i = 1; i <= 100000; i++) {
     changerPrix(i, prixParLigneGlobal[i]);
 }
+

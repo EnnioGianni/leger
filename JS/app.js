@@ -294,6 +294,24 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// ==========================================
+// Bouton RETOUR — navigation historique réelle
+// ==========================================
+document.addEventListener("DOMContentLoaded", () => {
+  const btnRetour = document.getElementById("btnRetour");
+
+  if (!btnRetour) return;
+
+  btnRetour.addEventListener("click", () => {
+    // Si une page précédente existe dans l’historique
+    if (window.history.length > 1) {
+      window.history.back();
+    } else {
+      // Fallback sécurisé (accès direct, favori, GitHub Pages)
+      window.location.href = "./index.html";
+    }
+  });
+});
 
 
 
