@@ -1,92 +1,49 @@
-﻿<!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <meta charset="utf-8" />
-            <title>Le Postillon</title>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <link rel="stylesheet" href="../../../css/table.css" />
-            <link rel="stylesheet" href="../../../css/dropdown.css" />
-            <link rel="stylesheet" href="../../../css/modale.css" />
-        <!--<link rel="stylesheet" href="../../../css/publicite.css" />-->
-            <link rel="stylesheet" href="../../../css/bootstrap.min.css" />
-            <script src="../../../JS/script_global.js" defer></script>        
-            <script src="../../../JS/manquantes.js" defer></script>        
-        <!--<script src="../../../JS/publicite.js" defer></script>-->        
-            <script src="../../../JS/script.js" defer></script> 
-            <script src="../../../JS/calculatrice.js" defer></script> 
-            <script src="../../../JS/Liens.js" defer></script>
-            <link rel="stylesheet" href="../../../css/calculatrice.css" />
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.5.0/math.min.js" defer></script>
-<!--Debut pagination--> 
-            <script src="../../../JS/villesA.js" defer></script>        
-            <script src="../../../JS/villesB.js" defer></script>        
-            <script src="../../../JS/villesC.js" defer></script>        
-            <script src="../../../JS/villesD.js" defer></script>        
-            <script src="../../../JS/villesE.js" defer></script>        
-            <script src="../../../JS/villesF.js" defer></script>        
-            <script src="../../../JS/villesG.js" defer></script>        
-            <script src="../../../JS/villesH.js" defer></script>        
-            <script src="../../../JS/villesI.js" defer></script>        
-            <script src="../../../JS/villesJ.js" defer></script>        
-            <script src="../../../JS/villesK.js" defer></script>        
-            <script src="../../../JS/villesL.js" defer></script>        
-            <script src="../../../JS/villesM.js" defer></script>        
-            <script src="../../../JS/villesN.js" defer></script>        
-            <script src="../../../JS/villesO.js" defer></script>        
-            <script src="../../../JS/villesP.js" defer></script>        
-            <script src="../../../JS/villesQ.js" defer></script>        
-            <script src="../../../JS/villesR.js" defer></script>        
-            <script src="../../../JS/villesS.js" defer></script>        
-            <script src="../../../JS/villesT.js" defer></script>        
-            <script src="../../../JS/villesU.js" defer></script>        
-            <script src="../../../JS/villesV.js" defer></script>        
-            <script src="../../../JS/villesW.js" defer></script>        
-            <script src="../../../JS/villesX.js" defer></script>        
-            <script src="../../../JS/villesY.js" defer></script>        
-            <script src="../../../JS/villesZ.js" defer></script>        
-            <script src="../../../JS/accueil.js" defer></script>
-            <script src="../../../JS/cityRedirector.js"></script>
-            <script src="https://kit.fontawesome.com/50786edb2e.js" crossorigin="anonymous" defer></script> 
-<style>
-        p::first-letter {
-                color: red;
-                font-size: 130%;
-            }   
-</style>      
-                      
-    </head> 
+﻿<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Le Postillon – Abries</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<body>
-    <header id="mainHeader" class="d-flex justify-content-between align-items-center py-3 px-5">     
-        <a href="../../../laPosteDeLancienneFrance/Villes P/P_sommaire.html"><img id="logoImg" src="../../Resource/books_library_1768.ico" alt="Logo"></a>                     
-        <h1 class="titre-principal" style="font-size: 50px;">Le Postillon</h1>
-        <a class="a  active" href="../../Villes_A/sommaireVilleA.html">A</a>
-        <a class="a" href="../../Villes B/B_sommaire.html">B</a>
-        <a class="a" href="../../Villes C/C_sommaire.html">C</a>
-        <a class="a" href="../../Villes D/D_sommaire.html">D</a>
-        <a class="a" href="../../Villes E/E_sommaire.html">E</a>
-        <a class="a" href="../../Villes F/F_sommaire.html">F</a>
-        <a class="a" href="../../Villes G/G_sommaire.html">G</a>
-        <a class="a" href="../../Villes H/H_sommaire.html">H</a>
-        <a class="a" href="../../Villes I/I_sommaire.html">I</a>
-        <a class="a" href="../../Villes J/J_sommaire.html">J</a>
-        <a class="a" href="../../Villes K/K_sommaire.html">K</a>
-        <a class="a" href="../../Villes L/L_sommaire.html">L</a>
-        <a class="a" href="../../Villes M/M_sommaire.html">M</a>
-        <a class="a" href="../../Villes N/N_sommaire.html">N</a>
-        <a class="a" href="../../Villes O/O_sommaire.html">O</a>
-        <a class="a" href="../../Villes P/P_sommaire.html">P</a>
-        <a class="a" href="../../Villes Q/Q_sommaire.html">Q</a>
-        <a class="a" href="../../Villes R/R_sommaire.html">R</a>
-        <a class="a" href="../../Villes S/S_sommaire.html">S</a>
-        <a class="a" href="../../Villes T/T_sommaire.html">T</a>
-        <a class="a" href="../../Villes U/U_sommaire.html">U</a>
-        <a class="a" href="../../Villes V/V_sommaire.html">V</a>
-        <a class="a" href="../../Villes W/W_sommaire.html">W</a>
-        <a class="a" href="../../Villes X/X_sommaire.html">X</a>
-        <a class="a" href="../../Villes Y/Y_sommaire.html">Y</a>
-        <a class="a" href="../../Villes Z/Z_sommaire.html">Z</a>            
-    </header> 
+    <link rel="stylesheet" href="../../CSS/app.css">
+    <link rel="stylesheet" href="../../CSS/menu.css">
+    <link rel="stylesheet" href="../../CSS/recherchesVille.css">
+    <link rel="stylesheet" href="../../CSS/bouttonHautDePage.css">
+
+    <script defer src="../../JS/script_global.js"></script>
+    <script defer src="../../JS/menu.js"></script>
+    <script defer src="../../JS/bouttonHautDePage.js"></script>
+    <script defer src="../../JS/rechercheVille.js"></script>
+    <script defer src="../../JS/largeurImages.js"></script>
+    <script defer src="../../JS/totalTable.js"></script>
+    <script defer src="../../JS/mainsQuiBouge.js"></script>
+    <script defer src="../../JS/liensUtiles.js"></script>
+    <link rel="icon" type="image/png" href="../../Resource/books_library_1768.ico">
+
+    <style>
+      p::first-letter {
+        color: red;
+        font-size: 130%;
+      }
+    </style>
+</head>
+
+
+<body id="scrollable"
+  style="
+    min-height:100vh;
+    margin:0;
+    background:url('../../Resource/carrosseAvecPhoto.jpg') center center / cover no-repeat fixed;">
+  
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="header-left">
+    <a href="/index.html" class="logo-link" aria-label="Accueil Le Postillon">
+      <img src="/Resource/books_library_1768.ico" alt="Logo Le Postillon" class="site-logo">
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" data-menu-open>☰</button>
+  </div>
+  <h1 class="titre-principal">Le Postillon</h1>
+</header>
 
 <main>
 <!--Debut pagination--> 
