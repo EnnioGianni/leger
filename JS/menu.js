@@ -1,48 +1,42 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   /* =====================================================
-     CONFIGURATION
+     CONFIGURATION DES LIENS (CHEMINS ABSOLUS)
      ===================================================== */
 
-  const BASE = "/leger";
-
   const MENU_LINKS = [
-    { label: "Accueil",  href: `${BASE}./index.html` },
+    { label: "Accueil", href: "/index.html" },
 
-    // A
-    { label: "Villes A", href: `${BASE}../sommaireA.html` },
-
-    // B (seul dossier au pluriel)
-    { label: "Villes B", href: `${BASE}./Villes_B/sommaireB.html` },
-
-    { label: "Villes C", href: `${BASE}./Ville_C/sommaireC.html` },
-    { label: "Villes D", href: `${BASE}/Ville_D/sommaireD.html` },
-    { label: "Villes E", href: `${BASE}/Ville_E/sommaireE.html` },
-    { label: "Villes F", href: `${BASE}/Ville_F/sommaireF.html` },
-    { label: "Villes G", href: `${BASE}/Ville_G/sommaireG.html` },
-    { label: "Villes H", href: `${BASE}/Ville_H/sommaireH.html` },
-    { label: "Villes I", href: `${BASE}/Ville_I/sommaireI.html` },
-    { label: "Villes J", href: `${BASE}/Ville_J/sommaireJ.html` },
-    { label: "Villes K", href: `${BASE}/Ville_K/sommaireK.html` },
-    { label: "Villes L", href: `${BASE}/Ville_L/sommaireL.html` },
-    { label: "Villes M", href: `${BASE}/Ville_M/sommaireM.html` },
-    { label: "Villes N", href: `${BASE}/Ville_N/sommaireN.html` },
-    { label: "Villes O", href: `${BASE}/Ville_O/sommaireO.html` },
-    { label: "Villes P", href: `${BASE}/Ville_P/sommaireP.html` },
-    { label: "Villes Q", href: `${BASE}/Ville_Q/sommaireQ.html` },
-    { label: "Villes R", href: `${BASE}/Ville_R/sommaireR.html` },
-    { label: "Villes S", href: `${BASE}/Ville_S/sommaireS.html` },
-    { label: "Villes T", href: `${BASE}/Ville_T/sommaireT.html` },
-    { label: "Villes U", href: `${BASE}/Ville_U/sommaireU.html` },
-    { label: "Villes V", href: `${BASE}/Ville_V/sommaireV.html` },
-    { label: "Villes W", href: `${BASE}/Ville_W/sommaireW.html` },
-    { label: "Villes X", href: `${BASE}/Ville_X/sommaireX.html` },
-    { label: "Villes Y", href: `${BASE}/Ville_Y/sommaireY.html` },
-    { label: "Villes Z", href: `${BASE}/Ville_Z/sommaireZ.html` }
+    { label: "Villes A", href: "/Villes_A/sommaireA.html" },
+    { label: "Villes B", href: "/Villes_B/sommaireB.html" },
+    { label: "Villes C", href: "/Villes_C/sommaireC.html" },
+    { label: "Villes D", href: "/Villes_D/sommaireD.html" },
+    { label: "Villes E", href: "/Villes_E/sommaireE.html" },
+    { label: "Villes F", href: "/Villes_F/sommaireF.html" },
+    { label: "Villes G", href: "/Villes_G/sommaireG.html" },
+    { label: "Villes H", href: "/Villes_H/sommaireH.html" },
+    { label: "Villes I", href: "/Villes_I/sommaireI.html" },
+    { label: "Villes J", href: "/Villes_J/sommaireJ.html" },
+    { label: "Villes K", href: "/Villes_K/sommaireK.html" },
+    { label: "Villes L", href: "/Villes_L/sommaireL.html" },
+    { label: "Villes M", href: "/Villes_M/sommaireM.html" },
+    { label: "Villes N", href: "/Villes_N/sommaireN.html" },
+    { label: "Villes O", href: "/Villes_O/sommaireO.html" },
+    { label: "Villes P", href: "/Villes_P/sommaireP.html" },
+    { label: "Villes Q", href: "/Villes_Q/sommaireQ.html" },
+    { label: "Villes R", href: "/Villes_R/sommaireR.html" },
+    { label: "Villes S", href: "/Villes_S/sommaireS.html" },
+    { label: "Villes T", href: "/Villes_T/sommaireT.html" },
+    { label: "Villes U", href: "/Villes_U/sommaireU.html" },
+    { label: "Villes V", href: "/Villes_V/sommaireV.html" },
+    { label: "Villes W", href: "/Villes_W/sommaireW.html" },
+    { label: "Villes X", href: "/Villes_X/sommaireX.html" },
+    { label: "Villes Y", href: "/Villes_Y/sommaireY.html" },
+    { label: "Villes Z", href: "/Villes_Z/sommaireZ.html" }
   ];
 
   /* =====================================================
-     INJECTION DU MENU
+     INJECTION DU MENU DANS LE DOM
      ===================================================== */
 
   document.body.insertAdjacentHTML(
@@ -71,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuList = menuRoot.querySelector("[data-menu-list]");
 
   /* =====================================================
-     INSERTION DES LIENS
+     INSERTION DES LIENS DANS LE MENU
      ===================================================== */
 
   MENU_LINKS.forEach(item => {
@@ -82,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* =====================================================
-     OUVERTURE / FERMETURE
+     OUVERTURE / FERMETURE DU MENU
      ===================================================== */
 
   document.addEventListener("click", (e) => {
@@ -101,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* =====================================================
-     FERMETURE AU CLIC SUR LIEN
+     FERMETURE AUTOMATIQUE AU CLIC SUR UN LIEN
      ===================================================== */
 
   menuRoot.querySelectorAll(".menu-link").forEach(link => {
@@ -111,19 +105,22 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* =====================================================
-     LIEN ACTIF
+     GESTION DU LIEN ACTIF (PAGE COURANTE)
      ===================================================== */
 
   const currentPath = location.pathname.replace(/\/+$/, "");
 
   menuRoot.querySelectorAll(".menu-link").forEach(link => {
-    const linkPath = new URL(link.getAttribute("href"), location.origin)
-      .pathname
-      .replace(/\/+$/, "");
+
+    const linkPath = new URL(
+      link.getAttribute("href"),
+      location.origin
+    ).pathname.replace(/\/+$/, "");
 
     if (linkPath === currentPath) {
       link.classList.add("active-link");
     }
+
   });
 
 });

@@ -3,18 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>Le Postillon — Marques Postales</title>
 
   <!-- Favicon -->
-  <link rel="icon" href="Resource/books_library_1768.ico" type="image/x-icon">
+  <link rel="icon" href="/Resource/books_library_1768.ico" type="image/x-icon">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="CSS/postillon.css">
+  <link rel="stylesheet" href="/CSS/postillon.css">
 
   <!-- Préchargement -->
-  <link rel="preload" as="image" href="Resource/images/fond-lettres.jpg">
-  <link rel="preload" as="image" href="Resource/images/parchemin.jpg">
+  <link rel="preload" as="image" href="/Resource/images/fond-lettres.jpg">
+  <link rel="preload" as="image" href="/Resource/images/parchemin.jpg">
 </head>
 
 <body id="scrollable">
@@ -55,21 +54,17 @@
         <li>
           Pour les lettres plus anciennes sans marque,
           consulter la page
-          <a href="./lettresAnciennes.html">Lettres anciennes</a>.
+          <a href="/lettresAnciennes.html">Lettres anciennes</a>.
         </li>
         <li>
           Depuis cette page d’accueil, cliquez sur une lettre pour accéder
-          au sommaire des Villess correspondantes.
+          au sommaire des villes correspondantes.
         </li>
       </ol>
 
       <p>
-        Si vous possédez une marque non répertoriée sur ce site,
-        vous pouvez la proposer ici :
-      </p>
-
-      <p>
-        <a class="blink" style="font-size:25px" href="./Villes_A/sommaireA.html">
+        <a class="blink" style="font-size:25px"
+           href="/Villes_A/sommaireA.html">
           <strong>Accéder au site</strong>
         </a>
       </p>
@@ -77,9 +72,7 @@
 
     <button id="enterSite"
             class="modal-close"
-            aria-label="Entrer sur le site">
-      
-    </button>
+            aria-label="Entrer sur le site"></button>
 
   </div>
 </div>
@@ -89,10 +82,15 @@
 <!-- ================= EN-TÊTE ================= -->
 <header class="header page-fade">
 
-  <a href="index.html"
+  <!-- Bouton hamburger pour le menu JS -->
+  <button class="menu-toggle" data-menu-open aria-label="Ouvrir le menu">
+    ☰
+  </button>
+
+  <a href="/index.html"
      class="logo-link"
      aria-label="Accueil">
-    <img src="Resource/books_library_1768.ico"
+    <img src="/Resource/books_library_1768.ico"
          alt="Logo du site"
          width="38"
          height="38"
@@ -109,38 +107,38 @@
 <!-- ================= CONTENU PRINCIPAL ================= -->
 <main class="table-letters page-fade">
 
-  <h2 class="letters-title">Liste des Villess — A à Z</h2>
+  <h2 class="letters-title">Liste des villes — A à Z</h2>
 
-<nav class="letters-grid" aria-label="Sommaire alphabétique des Villess">
+  <nav class="letters-grid" aria-label="Sommaire alphabétique des villes">
 
-  <a href="./Villes_A/sommaireA.html" class="letter-card">A</a>
-  <a href="./Villes_B/sommaireB.html" class="letter-card">B</a>
-  <a href="./Villes_C/sommaireC.html" class="letter-card">C</a>
-  <a href="./Villes_D/sommaireD.html" class="letter-card">D</a>
-  <a href="./Villes_E/sommaireE.html" class="letter-card">E</a>
-  <a href="./Villes_F/sommaireF.html" class="letter-card">F</a>
-  <a href="./Villes_G/sommaireG.html" class="letter-card">G</a>
-  <a href="./Villes_H/sommaireH.html" class="letter-card">H</a>
-  <a href="./Villes_I/sommaireI.html" class="letter-card">I</a>
-  <a href="./Villes_J/sommaireJ.html" class="letter-card">J</a>
-  <a href="./Villes_K/sommaireK.html" class="letter-card">K</a>
-  <a href="./Villes_L/sommaireL.html" class="letter-card">L</a>
-  <a href="./Villes_M/sommaireM.html" class="letter-card">M</a>
-  <a href="./Villes_N/sommaireN.html" class="letter-card">N</a>
-  <a href="./Villes_O/sommaireO.html" class="letter-card">O</a>
-  <a href="./Villes_P/sommaireP.html" class="letter-card">P</a>
-  <a href="./Villes_Q/sommaireQ.html" class="letter-card">Q</a>
-  <a href="./Villes_R/sommaireR.html" class="letter-card">R</a>
-  <a href="./Villes_S/sommaireS.html" class="letter-card">S</a>
-  <a href="./Villes_T/sommaireT.html" class="letter-card">T</a>
-  <a href="./Villes_U/sommaireU.html" class="letter-card">U</a>
-  <a href="./Villes_V/sommaireV.html" class="letter-card">V</a>
-  <a href="./Villes_W/sommaireW.html" class="letter-card">W</a>
-  <a href="./Villes_X/sommaireX.html" class="letter-card">X</a>
-  <a href="./Villes_Y/sommaireY.html" class="letter-card">Y</a>
-  <a href="./Villes_Z/sommaireZ.html" class="letter-card">Z</a>
+    <a href="/Villes_A/sommaireA.html" class="letter-card">A</a>
+    <a href="/Villes_B/sommaireB.html" class="letter-card">B</a>
+    <a href="/Villes_C/sommaireC.html" class="letter-card">C</a>
+    <a href="/Villes_D/sommaireD.html" class="letter-card">D</a>
+    <a href="/Villes_E/sommaireE.html" class="letter-card">E</a>
+    <a href="/Villes_F/sommaireF.html" class="letter-card">F</a>
+    <a href="/Villes_G/sommaireG.html" class="letter-card">G</a>
+    <a href="/Villes_H/sommaireH.html" class="letter-card">H</a>
+    <a href="/Villes_I/sommaireI.html" class="letter-card">I</a>
+    <a href="/Villes_J/sommaireJ.html" class="letter-card">J</a>
+    <a href="/Villes_K/sommaireK.html" class="letter-card">K</a>
+    <a href="/Villes_L/sommaireL.html" class="letter-card">L</a>
+    <a href="/Villes_M/sommaireM.html" class="letter-card">M</a>
+    <a href="/Villes_N/sommaireN.html" class="letter-card">N</a>
+    <a href="/Villes_O/sommaireO.html" class="letter-card">O</a>
+    <a href="/Villes_P/sommaireP.html" class="letter-card">P</a>
+    <a href="/Villes_Q/sommaireQ.html" class="letter-card">Q</a>
+    <a href="/Villes_R/sommaireR.html" class="letter-card">R</a>
+    <a href="/Villes_S/sommaireS.html" class="letter-card">S</a>
+    <a href="/Villes_T/sommaireT.html" class="letter-card">T</a>
+    <a href="/Villes_U/sommaireU.html" class="letter-card">U</a>
+    <a href="/Villes_V/sommaireV.html" class="letter-card">V</a>
+    <a href="/Villes_W/sommaireW.html" class="letter-card">W</a>
+    <a href="/Villes_X/sommaireX.html" class="letter-card">X</a>
+    <a href="/Villes_Y/sommaireY.html" class="letter-card">Y</a>
+    <a href="/Villes_Z/sommaireZ.html" class="letter-card">Z</a>
 
-</nav>
+  </nav>
 
 </main>
 
@@ -162,8 +160,9 @@
   ↑
 </button>
 
+
 <!-- ================= SCRIPTS ================= -->
-<script src="JS/postillon.js" defer></script>
+<script src="/JS/postillon.js" defer></script>
 
 </body>
 </html>
