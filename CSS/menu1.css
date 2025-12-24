@@ -1,12 +1,11 @@
 /* =========================================
-   HEADER — Le Postillon (simple et stable)
+   MENU1 — spécifique à cette page
    ========================================= */
 
-/* Header fixe */
+/* Header */
 .lp-header{
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 0; left: 0;
   width: 100%;
   height: 56px;
   background: #efe7da;
@@ -14,25 +13,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 100;
+  z-index: 5000; /* au-dessus de TOUT */
 }
 
-/* Espace sous le header */
+/* Laisse la place au contenu */
 body{
-  margin: 0;
   padding-top: 56px;
 }
 
 /* Logo */
 .lp-header .logo{
   position: absolute;
-  left: 48px;
+  left: 52px;
 }
 
 .lp-header .logo img{
-  width: 36px;
-  height: 36px;
-  display: block;
+  width: 34px;
+  height: 34px;
 }
 
 /* Titre */
@@ -40,11 +37,9 @@ body{
   margin: 0;
   font-size: 22px;
   font-weight: bold;
-  color: #000;
-  text-align: center;
 }
 
-/* Bouton hamburger */
+/* Hamburger */
 .lp-header .hamburger{
   position: absolute;
   left: 12px;
@@ -54,21 +49,18 @@ body{
   cursor: pointer;
 }
 
-/* =========================================
-   MENU LATÉRAL
-   ========================================= */
-
+/* Menu latéral */
 .side-menu{
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 260px;
+  top: 0; left: 0;
+  width: 270px;
   height: 100vh;
   background: #f3ecd7;
   padding: 16px;
+  box-shadow: 6px 0 20px rgba(0,0,0,.3);
   transform: translateX(-100%);
-  transition: transform 0.3s ease;
-  z-index: 200;
+  transition: transform .3s ease;
+  z-index: 6000;
   overflow-y: auto;
 }
 
@@ -76,7 +68,7 @@ body{
   transform: translateX(0);
 }
 
-/* Champ recherche */
+/* Recherche */
 #menu-search{
   width: 100%;
   padding: 8px;
@@ -97,18 +89,22 @@ body{
 }
 
 #menu-list a{
+  display: block;
+  padding: 6px 8px;
   text-decoration: none;
   color: #000;
   font-weight: bold;
+  border-radius: 6px;
 }
 
-/* =========================================
-   OVERLAY
-   ========================================= */
+#menu-list a:hover{
+  background: rgba(0,0,0,.1);
+}
 
+/* Overlay */
 .menu-overlay{
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.4);
-  z-index: 150;
+  background: rgba(0,0,0,.45);
+  z-index: 5500;
 }

@@ -31,12 +31,74 @@
     background:url('../Resource/carrosseAvecPhoto.jpg')
                center center / cover no-repeat fixed;">
 
-<!-- ===== HEADER ===== -->
-<header class="header">
-  <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" data-menu-open>☰</button>
-    <a href="/index.html" class="logo-link" aria-label="Accueil Le Postillon"></a>
+<!-- ================= HEADER ================= -->
+<header class="lp-header">
+
+
+  <!-- Logo cliquable -->
+  <a href="../index.html" class="logo" aria-label="Retour à l’accueil">
+    <img src="../Resource/books_library_1768.ico"
+         alt="Le Postillon — Marques postales anciennes">
+  </a>
+
+  <!-- Titre -->
   <h1 class="titre-principal">Le Postillon</h1>
+
+  <!-- Bouton hamburger -->
+  <button id="hamburger"
+          class="hamburger"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false">
+    ☰
+  </button>
+
+  <!-- ===== MENU LATÉRAL SOMMAIRES ===== -->
+  <nav id="sideMenu" class="side-menu" aria-hidden="true">
+
+
+    <!-- Recherche -->
+    <input type="search"
+           id="menu-search"
+           placeholder="Rechercher un sommaire…"
+           aria-label="Rechercher un sommaire">
+
+    <!-- Liste A → Z -->
+    <ul id="menu-list">
+      <li><a href="../Villes_A/sommaireA.html">Sommaire A</a></li>
+      <li><a href="../Villes_B/sommaireB.html">Sommaire B</a></li>
+      <li><a href="../Villes_C/C_sommaire.html">Sommaire C</a></li>
+      <li><a href="../Villes_D/D_sommaire.html">Sommaire D</a></li>
+      <li><a href="../Villes_E/E_sommaire.html">Sommaire E</a></li>
+      <li><a href="../Villes_F/F_sommaire.html">Sommaire F</a></li>
+      <li><a href="../Villes_G/G_sommaire.html">Sommaire G</a></li>
+      <li><a href="../Villes_H/H_sommaire.html">Sommaire H</a></li>
+      <li><a href="../Villes_I/I_sommaire.html">Sommaire I</a></li>
+      <li><a href="../Villes_J/J_sommaire.html">Sommaire J</a></li>
+      <li><a href="../Villes_K/K_sommaire.html">Sommaire K</a></li>
+      <li><a href="../Villes_L/L_sommaire.html">Sommaire L</a></li>
+      <li><a href="../Villes_M/M_sommaire.html">Sommaire M</a></li>
+      <li><a href="../Villes_N/N_sommaire.html">Sommaire N</a></li>
+      <li><a href="../Villes_O/O_sommaire.html">Sommaire O</a></li>
+      <li><a href="../Villes_P/P_sommaire.html">Sommaire P</a></li>
+      <li><a href="../Villes_Q/Q_sommaire.html">Sommaire Q</a></li>
+      <li><a href="../Villes_R/R_sommaire.html">Sommaire R</a></li>
+      <li><a href="../Villes_S/S_sommaire.html">Sommaire S</a></li>
+      <li><a href="../Villes_T/T_sommaire.html">Sommaire T</a></li>
+      <li><a href="../Villes_U/U_sommaire.html">Sommaire U</a></li>
+      <li><a href="../Villes_V/V_sommaire.html">Sommaire V</a></li>
+      <li><a href="../Villes_W/W_sommaire.html">Sommaire W</a></li>
+      <li><a href="../Villes_X/X_sommaire.html">Sommaire X</a></li>
+      <li><a href="../Villes_Y/Y_sommaire.html">Sommaire Y</a></li>
+      <li><a href="../Villes_Z/Z_sommaire.html">Sommaire Z</a></li>
+    </ul>
+
+  </nav>
+
+  <!-- Overlay -->
+  <div id="menuOverlay" class="menu-overlay" hidden></div>
+
 </header>
+<!-- ================= FIN HEADER ================= -->
 
 
   <!-- ===== MAIN ===== -->
