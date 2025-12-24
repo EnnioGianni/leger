@@ -7,15 +7,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const BASE = "/leger";
 
   const MENU_LINKS = [
-    { label: "Accueil",  href: `${BASE}/index.html` },
+    { label: "Accueil",  href: `${BASE}./index.html` },
 
     // A
-    { label: "Villes A", href: `${BASE}/Ville_A/sommaireA.html` },
+    { label: "Villes A", href: `${BASE}../sommaireA.html` },
 
     // B (seul dossier au pluriel)
-    { label: "Villes B", href: `${BASE}/Villes_B/sommaireB.html` },
+    { label: "Villes B", href: `${BASE}./Villes_B/sommaireB.html` },
 
-    { label: "Villes C", href: `${BASE}/Ville_C/sommaireC.html` },
+    { label: "Villes C", href: `${BASE}./Ville_C/sommaireC.html` },
     { label: "Villes D", href: `${BASE}/Ville_D/sommaireD.html` },
     { label: "Villes E", href: `${BASE}/Ville_E/sommaireE.html` },
     { label: "Villes F", href: `${BASE}/Ville_F/sommaireF.html` },
