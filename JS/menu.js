@@ -5,10 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
      ===================================================== */
 
   const MENU_LINKS = [
-    { label: "Accueil", href: "/index.html" },
+    { label: "Accueil", href: "./index.html" },
 
-    { label: "Villes A", href: "/Villes_A/sommaireA.html" },
-    { label: "Villes B", href: "/Villes_B/sommaireB.html" },
+    { label: "Villes A", href: "./Villes_A/sommaireA.html" },
+    { label: "Villes B", href: "./Villes_B/sommaireB.html" },
     { label: "Villes C", href: "/Villes_C/sommaireC.html" },
     { label: "Villes D", href: "/Villes_D/sommaireD.html" },
     { label: "Villes E", href: "/Villes_E/sommaireE.html" },
