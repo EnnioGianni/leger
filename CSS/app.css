@@ -131,7 +131,7 @@ table.exemple { /* Table avec classe .exemple */
 table.exemple thead th { /* Entête de table */
   background: #e8decc; /* Fond de l’entête */
   padding: 10px; /* Espacement interne */
-  font-weight: 600; /* Texte en semi-gras */
+  font-weight: 500; /* Texte en semi-gras */
   border-bottom: 1px solid #d2c6b3; /* Trait séparateur bas */
   text-align: center;
 }
