@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../../CSS/app.css">
+    <link rel="stylesheet" href="../../CSS/header_actions.css">
     <link rel="stylesheet" href="../../CSS/menu.css">
     <link rel="stylesheet" href="../../CSS/menu1.css">
     <link rel="stylesheet" href="../../CSS/recherchesVille.css">
@@ -13,6 +14,7 @@
 
     <script defer src="../../JS/script_global.js"></script>
     <script defer src="../../JS/menu.js"></script>
+    <script defer src="../../JS/header_actions.js"></script>
     <script defer src="../../JS/menu1.js"></script>
     <script defer src="../../JS/bouttonHautDePage.js"></script>
     <script defer src="../../JS/rechercheVille.js"></script>
@@ -20,7 +22,8 @@
     <script defer src="../../JS/totalTable.js"></script>
     <script defer src="../../JS/mainsQuiBouge.js"></script>
     <script defer src="../../JS/liensUtiles.js"></script>
-    <link rel="icon" type="image/png" href="/Resource/books_library_1768.ico">
+    <script defer src="../../JS/pub_popup.js"></script>
+    <link rel="icon" type="image/png" href="../../Resource/books_library_1768.ico">
 
     <style>
       p::first-letter {
@@ -35,7 +38,7 @@
   style="
     min-height:100vh;
     margin:0;
-    background:url('/Resource/carrosseAvecPhoto.jpg')
+    background:url('../../Resource/carrosseAvecPhoto.jpg')
                center center / cover no-repeat fixed;
   ">
   
@@ -51,15 +54,15 @@
   </button>
 
   <!-- Logo cliquable -->
-  <a href="../index.html"
+  <a href="../../index.html"
      class="logo"
      aria-label="Retour à l’accueil">
     <img src="../../Resource/books_library_1768.ico"
          alt="Le Postillon — Marques postales anciennes">
   </a>
 
-  <!-- Titre -->
-  <h1 class="titre-principal">Le Postillon</h1>
+  <!-- Titre et langues-->
+    <h1 class="titre-principal" data-i18n="titreSite">Le Postillon</h1>
 
   <!-- ===== MENU LATÉRAL ===== -->
   <nav id="sideMenu"
@@ -74,6 +77,8 @@
 
     <!-- Liste A → Z -->
     <ul id="menu-list">
+      <li><a href="../../lettresAnciennes.html">Cote des lettres Anciennes</a></li>
+      <li><a href="../../Proposition/index.html">Proposition</a></li>
       <li><a href="../../Villes_A/sommaireA.html">Sommaire A</a></li>
       <li><a href="../../Villes_B/sommaireB.html">Sommaire B</a></li>
       <li><a href="../../Villes_C/C_sommaire.html">Sommaire C</a></li>
@@ -130,7 +135,7 @@
 
 <!--Precedente-->
     <li class="page-item">
-      <a class="page-link title-tip" href="../../Ville_A/Les_Andelys/lesAndelys.html" title="Les_Andelys">&laquo;</a>
+      <a class="page-link title-tip" href="../../Villes_A/Les-Aix-D-angillon/lesAixDangillon.html" title="Les-Aix-D-angillon">&laquo;</a>
     </li>
 
 <!--Recherches-->
