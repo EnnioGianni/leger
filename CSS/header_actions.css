@@ -61,3 +61,17 @@
 .lp-hidden{
   display: none;
 }
+/* =========================
+   Mobile : icône seule
+   ========================= */
+@media (max-width: 768px) {
+  .lp-rect-btn span {
+    display: none;
+  }
+
+  .lp-rect-btn {
+    padding: 10px;
+    min-width: 44px; /* zone tactile OK */
+    justify-content: center;
+  }
+}

@@ -94,3 +94,23 @@
 
   header.appendChild(actions);
 })();
+/* =========================
+   Tooltips desktop + mobile
+   ========================= */
+(function () {
+  const buttons = document.querySelectorAll(".lp-rect-btn");
+
+  buttons.forEach(btn => {
+    const span = btn.querySelector("span");
+    if (!span) return;
+
+    const label = span.textContent.trim();
+
+    // Tooltip desktop (souris)
+    btn.setAttribute("title", label);
+
+    // Accessibilité + mobile
+    btn.setAttribute("aria-label", label);
+    btn.setAttribute("data-tooltip", label);
+  });
+})();
