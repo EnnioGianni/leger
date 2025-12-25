@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../../CSS/app.css">
+    <link rel="stylesheet" href="../../CSS/header_actions.css">
     <link rel="stylesheet" href="../../CSS/menu.css">
     <link rel="stylesheet" href="../../CSS/menu1.css">
     <link rel="stylesheet" href="../../CSS/recherchesVille.css">
@@ -13,6 +14,7 @@
 
     <script defer src="../../JS/script_global.js"></script>
     <script defer src="../../JS/menu.js"></script>
+    <script defer src="../../JS/header_actions.js"></script>
     <script defer src="../../JS/menu1.js"></script>
     <script defer src="../../JS/bouttonHautDePage.js"></script>
     <script defer src="../../JS/rechercheVille.js"></script>
@@ -20,6 +22,7 @@
     <script defer src="../../JS/totalTable.js"></script>
     <script defer src="../../JS/mainsQuiBouge.js"></script>
     <script defer src="../../JS/liensUtiles.js"></script>
+    <script defer src="../../JS/pub_popup.js"></script>
     <link rel="icon" type="image/png" href="../../Resource/books_library_1768.ico">
 
     <style>
@@ -58,8 +61,8 @@
          alt="Le Postillon — Marques postales anciennes">
   </a>
 
-  <!-- Titre -->
-  <h1 class="titre-principal">Le Postillon</h1>
+  <!-- Titre et langues-->
+    <h1 class="titre-principal" data-i18n="titreSite">Le Postillon</h1>
 
   <!-- ===== MENU LATÉRAL ===== -->
   <nav id="sideMenu"
@@ -75,7 +78,7 @@
     <!-- Liste A → Z -->
     <ul id="menu-list">
       <li><a href="../../lettresAnciennes.html">Cote des lettres Anciennes</a></li>
-      <li><a href="../Proposition/index.html">Proposition</a></li>
+      <li><a href="../../Proposition/index.html">Proposition</a></li>
       <li><a href="../../Villes_A/sommaireA.html">Sommaire A</a></li>
       <li><a href="../../Villes_B/sommaireB.html">Sommaire B</a></li>
       <li><a href="../../Villes_C/C_sommaire.html">Sommaire C</a></li>
@@ -151,23 +154,23 @@
   </ul>
 </nav>
 
-    <!-- ===== TABLE ===== -->
-    <div class="table-scroll">
-      <table class="exemple" aria-describedby="h12">
-        <thead>
-          <tr>
-            <th>Marque</th>
-            <th>N°</th>
-            <th>Port</th>
-            <th>Dimensions</th>
-            <th>Date</th>
-            <th>Couleurs</th>
-            <th>Indice</th>
-            <th>Cote en euro</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Marque 1 -->
+<!-- ===== TABLE ===== -->
+<table class="exemple">
+  <thead>
+    <tr>
+      <th>Marque</th>
+      <th>N°</th>
+      <th>Port</th>
+      <th>Dimensions</th>
+      <th>Date</th>
+      <th>Couleurs</th>
+      <th>Indice</th>
+      <th>Cote en euro</th>
+    </tr>
+  </thead>
+
+<!--Image1-->
+      
           <tr>
             <td>
               <a href="../Abbeville/images/1.png">

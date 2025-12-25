@@ -7,6 +7,7 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="./CSS/app.css">
+  <link rel="stylesheet" href="./CSS/header_actions.css">
   <link rel="stylesheet" href="./CSS/lettresanciennes.css">
   <link rel="stylesheet" href="./CSS/menu.css">
   <link rel="stylesheet" href="./CSS/bouttonHautDePage.css">
@@ -14,6 +15,7 @@
   <!-- Scripts -->
   <script defer src="./JS/lettresanciennes.js"></script>
   <script defer src="./JS/menu.js"></script>
+  <script defer src="./JS/header_actions.js"></script>
   <script defer src="./JS/script_global.js"></script>
   <script defer src="./JS/bouttonHautDePage.js"></script>
 
@@ -60,7 +62,11 @@
 
     <!-- Liste A → Z -->
     <ul id="menu-list">
-      <li><a href="../../lettresAnciennes.html">Cote des lettres Anciennes</a></li>
+<li>
+  <a href="../../lettresAnciennes.html" data-i18n="cote">
+    Cote des lettres Anciennes
+  </a>
+</li>
       <li><a href="../Proposition/index.html">Proposition</a></li>
       <li><a href="../Villes_A/sommaireA.html">Sommaire A</a></li>
       <li><a href="../Villes_B/sommaireB.html">Sommaire B</a></li>
