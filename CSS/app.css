@@ -133,6 +133,7 @@ table.exemple thead th { /* Entête de table */
   padding: 10px; /* Espacement interne */
   font-weight: 600; /* Texte en semi-gras */
   border-bottom: 1px solid #d2c6b3; /* Trait séparateur bas */
+  text-align: center;
 }
 table.exemple td, table.exemple th { /* Cellules du tableau */
   padding: 10px; /* Padding interne */
