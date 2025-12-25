@@ -62,16 +62,16 @@
   display: none;
 }
 /* =========================
-   Mobile : icône seule
+   Mobile + Tablette : icône seule
    ========================= */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .lp-rect-btn span {
     display: none;
   }
 
   .lp-rect-btn {
     padding: 10px;
-    min-width: 44px; /* zone tactile OK */
+    min-width: 44px; /* zone tactile correcte */
     justify-content: center;
   }
 }
