@@ -215,7 +215,7 @@
         { name: 'Bouillon', url: '../../Villes_B/Bouillon/bouillon.html' },
         { name: 'Boulay', url: '../../Villes_B/Boulay/boulay.html' },
         { name: 'Boulogne', url: '../../Villes_B/Boulogne/Boulogne.html' },
-        { name: 'Boulogne sur Mer', url: '../../Villes_B/BoulogneSurMer/boulogneSurMer.html' },
+        { name: 'Boulogne-Sur-Mer', url: '../../Villes_B/Boulogne-Sur-Mer/boulogneSurMer.html' },
         { name: 'Boulou', url: '../../Villes_B/Boulou/boulou.html' },
         { name: 'Bouquenon', url: '../../Villes_B/Bouquenon/bouquenon.html' },
         { name: 'Bourbon L Archambault', url: '../../Villes_B/Bourbon/bourbon.html' },

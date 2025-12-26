@@ -304,19 +304,19 @@ table.exemple {
 
 /* En-têtes */
 table.exemple th {
-  font-size: 10px;
+  font-size: 15px;
   font-weight: 600;
 }
 
 /* Cellules */
 table.exemple td {
-  font-size: 9.5px;
+  font-size: 12px;
   line-height: 1.4;
 }
 
 /* Colonnes prix (optionnel, encore plus discret) */
 table.exemple td.prixProduit {
-  font-size: 9px;
+  font-size: 12px;
 }
 
 
