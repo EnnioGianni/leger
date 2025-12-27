@@ -225,7 +225,7 @@
         { name: 'Bourdeilles', url: '../../Villes_B/Bourdeilles/bourdeilles.html' },
         { name: 'Bourg-Argental', url: '../../Villes_B/Bourg-Argental/bourgArgental.html' },
         { name: 'Bourdon', url: '../../Villes_B/Bourdon/bourdon.html' },
-        { name: 'Bourg-D-Oisan', url: '../../Villes_B/Bourg-D-Oisan/bourgDoisan.html' },
+        { name: 'Bourg-D-Oisans', url: '../../Villes_B/Bourg-D-Oisans/bourgDoisans.html' },
         { name: 'Bourg-En-Bresse', url: '../../Villes_B/Bourg-En-Bresse/bourgEnBresse.html' },
         { name: 'Bourg-En-Guyenne', url: '../../Villes_B/Bourg-En-Guyenne/bourgEnGuyenne.html' },
         { name: 'Bourg-La-Reine', url: '../../Villes_B/Bourg-La-Reine/bourgLaReine.html' },
