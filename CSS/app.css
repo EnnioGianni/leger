@@ -895,8 +895,7 @@ td.border3 {
   padding: 6px 10px;        /* espace interne */
   text-align: center;       /* centre le texte */
   font-weight: bold;        /* texte en gras */
-  color: red;
-  font-size: 20px;   /* 🔥 taille augmentée */
+  color: red;font-size: 20px !important;   /* 🔥 taille augmentée */
 }
 
 .hovered {
