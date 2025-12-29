@@ -173,7 +173,7 @@
     </tr>
   </thead>
   
-<!--Marque 1--->          
+<!--Marque 1-->          
         <tr>
             <td class="border1">Rien vu à ce jour</td>
             <td class="border1">(---)</td>
@@ -184,40 +184,58 @@
             <td class="border1">(---)</td>
             <td class="border1">(---)</td>              
         </tr>                                                                                   
-<!--Commentaire-->       
-<tr>             
-    <th colspan="12"></th>         
-</tr>        
-</table> 
+<!--Liens Utile-->
+    <tr>
+      <th colspan="8" id="table-liens">Liens utiles</th>
+    </tr>
+<!--Commentaire-->
+<tr>
+      <th colspan="8" style="text-align: center;"></th>
+</tr>
+ 
+</table>
 
-<!--Debut popup-->
-<div id="popup1" class="popup-container">
-    <div class="popup-content">
-        <a href="#" class="close">&times;</a>
-        <p>lorem</p>
-    </div>
+    <!-- ===== BOUTON HAUT DE PAGE ===== -->
+<button id="scrollToTopButton" title="Haut de page"></button>
+</main>
+
+<!-- ==========================
+     POPUP NOTE – OBLIGATOIRE
+========================== -->
+<div class="popup-overlay" id="popupNote">
+  <div class="popup-box">
+    <div class="popup-close" id="closePopup">&times;</div>
+    <div id="popupContent"></div>
+  </div>
 </div>
 
-</section>        
-<!---Footer défilant-->
-<div class='News-footer'>
-    <div class='news'>
-        <span id='news-head'><b>COTE</b></span>
-      </div>
-    <p class='N-text'>
-      <marquee direction='left'>
-        Celles-ci s'entendent pour de belles frappes.</a>
-        <span>• Pour les lettrés en port paye:
-        </span>
-        <span>• Cote du PP sans plus value si la marque de port (dû) qui l'accompagne est d'un indice inférieur à 16.
-        </span>
-        <span>• Si la marque de port (dû) qui accompagne le (port payé) est d'un indice supérieur a 16, majorer de 2 indices la cote du port payé
-        </span>
-      </marquee>
-    </p>
+<!-- ===== FOOTER FIXE ===== -->
+<footer class="News-footer">
+  <div class="news">
+    <span id="news-head">COTE</span>
   </div>
-      
-<!---fin Footer défilant-->          
-<script src="../../../JS/glob.js"></script>
+
+  <div class="N-text">
+    <div class="ticker">
+      <div class="ticker__track">
+        <span>• Celles-ci s'entendent pour de belles frappes.</span>
+        <span>• Pour les lettres en port payé :</span>
+        <span>• Cote du PP sans plus-value si la marque de port (dû) qui l'accompagne est d'un indice inférieur à 16.</span>
+        <span>• Si la marque de port (dû) est d'un indice supérieur à 16, majorer de 2 indices la cote du port payé.</span>
+        <span>• © Copyright Tout droit réservé.</span>
+
+        <!-- Duplique le contenu pour un défilement continu -->
+        <span>• Celles-ci s'entendent pour de belles frappes.</span>
+        <span>• Pour les lettres en port payé :</span>
+        <span>• Cote du PP sans plus-value si la marque de port (dû) qui l'accompagne est d'un indice inférieur à 16.</span>
+        <span>• Si la marque de port (dû) est d'un indice supérieur à 16, majorer de 2 indices la cote du port payé.</span>
+        <span>• © Copyright Tout droit réservé.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+ <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>   
+ <script src="/JS/app.js"></script>   
+
 </body>
 </html>
