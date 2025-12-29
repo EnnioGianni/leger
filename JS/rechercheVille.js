@@ -252,7 +252,7 @@
         { name: 'La-Breteche', url: '../../Villes_B/La-Breteche/Labreteche.html' },
         { name: 'Breteuil (26)', url: '../../Villes_B/Breteuil26/breteuil26.html' },
         { name: 'Breteuil (58)', url: '../../Villes_B/Breteuil58/breteuil58.html' },
-        { name: 'Brezolle', url: '../../Villes_B/Brezolle/brezolle.html' },
+        { name: 'Brezolles', url: '../../Villes_B/Brezolles/brezolles.html' },
         { name: 'Briancon', url: '../../Villes_B/Briancon/briancon.html' },
         { name: 'Briare', url: '../../Villes_B/Briare/briare.html' },
         { name: 'Brie-Comte-Robert', url: '../../Villes_B/Brie-Comte-Robert/brieComteRobert.html' },
