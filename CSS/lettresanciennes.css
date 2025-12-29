@@ -41,7 +41,9 @@ html, body {
   font-size: 28px; font-weight: 600; color: #3b2c1a;
   border-bottom: 1px dotted #a38f70;
 }
-.intro { text-align: center; color: #3b2c1a; margin: 4px 0 8px; }
+.intro { text-align: center; 
+  color: #3b2c1a; 
+  margin: 4px 0 8px; }
 .separator { text-align: center; letter-spacing: 3px; opacity: .8; margin-bottom: 12px; }
 
 /* Table responsive scrollable */
