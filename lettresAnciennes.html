@@ -2,51 +2,38 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>Le Postillon – Lettres anciennes</title>
+  <title>Le Postillon – Sommaire B</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="./CSS/app.css">
-  <link rel="stylesheet" href="./CSS/header_actions.css">
-  <link rel="stylesheet" href="./CSS/lettresanciennes.css">
-  <link rel="stylesheet" href="./CSS/menu.css">
-  <link rel="stylesheet" href="./CSS/bouttonHautDePage.css">
+  <link rel="stylesheet" href="../CSS/sommaire.css">
+  <link rel="stylesheet" href="../CSS/menu.css">
+  <!-- + Nouveau CSS recherche -->
+  <link rel="stylesheet" href="../CSS/recherches.css">
 
-  <!-- Scripts -->
-  <script defer src="./JS/lettresanciennes.js"></script>
-  <script defer src="./JS/menu.js"></script>
-  <script defer src="./JS/header_actions.js"></script>
-  <script defer src="./JS/script_global.js"></script>
-  <script defer src="./JS/bouttonHautDePage.js"></script>
+  <!-- Scripts (defer) -->
+  <script defer src="../JS/menu.js"></script>
+  <script defer src="../JS/sommaire.js"></script>
+  <!-- + Nouveau JS recherche -->
+  <script defer src="../JS/recherches.js"></script>
 
-
-  <link rel="icon" type="image/x-icon" href="./Resource/books_library_1768.ico">
- <style>
-.table-wrap {
-  overflow-x: auto;
-}
-
-table.exemple {
-  min-width: 620px;
-}
-  </style>
- 
+  <link rel="icon" type="image/x-icon" href="../icones/books_library_1768.ico">
 </head>
 
 <body id="scrollable"
   style="
     min-height:100vh;
     margin:0;
-    background:url('./Resource/carrosseAvecPhoto.jpg')center center / cover no-repeat fixed;">
+    background:url('../Resource/carrosseAvecPhoto.jpg')
+               center center / cover no-repeat fixed;">
 
-
-    <!-- ================= HEADER ================= -->
+<!-- ================= HEADER ================= -->
 <header class="lp-header">
 
 
   <!-- Logo cliquable -->
   <a href="../index.html" class="logo" aria-label="Retour à l’accueil">
-    <img src="./Resource/books_library_1768.ico"
+    <img src="../Resource/books_library_1768.ico"
          alt="Le Postillon — Marques postales anciennes">
   </a>
 
@@ -73,12 +60,6 @@ table.exemple {
 
     <!-- Liste A → Z -->
     <ul id="menu-list">
-<li>
-  <a href="../../lettresAnciennes.html" data-i18n="cote">
-    Cote des lettres Anciennes
-  </a>
-</li>
-      <li><a href="../Proposition/index.html">Proposition</a></li>
       <li><a href="../Villes_A/sommaireA.html">Sommaire A</a></li>
       <li><a href="../Villes_B/sommaireB.html">Sommaire B</a></li>
       <li><a href="../Villes_C/C_sommaire.html">Sommaire C</a></li>
