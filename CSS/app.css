@@ -915,5 +915,15 @@ td.border3 {
   cursor: pointer;
 }
 
+td.blink {
+  animation: blinkCellSoft 3.5s ease-in-out infinite;
+  color: red;
+  font-weight: bold;
+}
+
+@keyframes blinkCellSoft {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.25; }
+}
 
 

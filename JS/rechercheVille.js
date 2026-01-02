@@ -103,8 +103,7 @@
       { name: 'Ay', url: '../../Villes_A/Ay/Ay.html' },
       { name: 'Azille', url: '../../Villes_A/Azille/azille.html' },
       { name: 'Sommaire Ville A', url: '../../Villes_A/sommaireVilleA.html' },
-    ],
-    B: 
+    ],B: 
     [
         { name: 'Baccarat', url: '../../Villes_B/Baccarat/baccarat.html' },
         { name: 'Bagneres-De-Bigorre', url: '../../Villes_B/Bagneres-De-Bigorre/bagneresDeBigorre.html' },
@@ -277,8 +276,7 @@
         { name: 'La-Buissiere', url: '../../Villes_B/La-Buissiere/laBuissiere.html' },
         { name: 'Buzancais', url: '../../Villes_B/Buzancais/buzancais.html' },
         { name: 'Buzancy', url: '../../Villes_B/Buzancy/buzancy.html' },   
-    ],
-    C: [
+    ],C: [
         { name: 'Cadenet', url: '../../Villes_C/Cadenet/cadenet.html' },
         { name: 'Cadillac', url: '../../Villes_C/Cadillac/cadillac.html' },
         { name: 'Caen', url: '../../Villes_C/Caen/caen.html' },
@@ -305,10 +303,11 @@
         { name: 'Cassel', url: '../../Villes_C/Cassel/cassel.html' },
         { name: 'Cassis', url: '../../Villes_C/Cassis/cassis.html' },
         { name: 'Castelfranc', url: '../../Villes_C/Castelfranc/castelfranc.html' },
+        { name: 'Casteljaloux', url: '../../Villes_C/Casteljaloux/casteljaloux.html' },
         { name: 'Castellane', url: '../../Villes_C/Castellane/castellane.html' },
-        { name: 'Castelnau de Magnoac', url: '../../Villes_C/Castelnau/castelnau.html' },
-        { name: 'Castelnau de Médoc', url: '../../Villes_C/Castelnau32/castelnau32.html' },
-        { name: 'Castelnau de Montratier', url: '../../Villes_C/castelnau44/castelnau44.html' },
+        { name: 'Castelnau-De-Magnoac', url: '../../Villes_C/Castelnau-De-Magnoac/castelnauDeMagnoac.html' },
+        { name: 'Castelnau-De-Medoc', url: '../../Villes_C/Castelnau-De-Medoc/castelnauDeMedoc.html' },
+        { name: 'Castelnau-De-Montratier', url: '../../Villes_C/Castelnau-De-Montratier/castelnauDeMontratier.html' },
         { name: 'Castelnaudary', url: '../../Villes_C/Castelnaudary/castelnaudary.html' },
         { name: 'Castelsarrasin', url: '../../Villes_C/Castelsarrasin/castelsarrasin.html' },
         { name: 'Castillon', url: '../../Villes_C/Castillon/castillon.html' },
