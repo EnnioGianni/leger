@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Le Postillon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../CSS/app.css">
+    <link rel="stylesheet" href="../../CSS/header_actions.css">
+    <link rel="stylesheet" href="../../CSS/menu.css">
+    <link rel="stylesheet" href="../../CSS/menu1.css">
+    <link rel="stylesheet" href="../../CSS/recherchesVille.css">
+    <link rel="stylesheet" href="../../CSS/bouttonHautDePage.css">
+
+    <script defer src="../../JS/script_global.js"></script>
+    <script defer src="../../JS/menu.js"></script>
+    <script defer src="../../JS/header_actions.js"></script>
+    <script defer src="../../JS/menu1.js"></script>
+    <script defer src="../../JS/bouttonHautDePage.js"></script>
+    <script defer src="../../JS/rechercheVille.js"></script>
+    <script defer src="../../JS/largeurImages.js"></script>
+    <script defer src="../../JS/totalTable.js"></script>
+    <script defer src="../../JS/mainsQuiBouge.js"></script>
+    <script defer src="../../JS/liensUtiles.js"></script>
+    <script defer src="../../JS/pub_popup.js"></script>
+    <link rel="icon" type="image/png" href="../../Resource/books_library_1768.ico">
+
+    <style>
+      p::first-letter {
+        color: red;
+        font-size: 130%;
+      }
+    </style>
+</head>
+
+
+<body id="scrollable"
+  style="
+    min-height:100vh;
+    margin:0;
+    background:url('../../Resource/carrosseAvecPhoto.jpg')
+               center center / cover no-repeat fixed;
+  ">
+  
+<!-- ================= HEADER ================= -->
+<header class="lp-header">
+
+  <!-- Bouton hamburger -->
+  <button id="hamburger"
+          class="hamburger"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false">
+    ☰
+  </button>
+
+  <!-- Logo cliquable -->
+  <a href="../../index.html"
+     class="logo"
+     aria-label="Retour à l’accueil">
+    <img src="../../Resource/books_library_1768.ico"
+         alt="Le Postillon — Marques postales anciennes">
+  </a>
+
+  <!-- Titre et langues-->
+    <h1 class="titre-principal" data-i18n="titreSite">Le Postillon</h1>
+
+  <!-- ===== MENU LATÉRAL ===== -->
+  <nav id="sideMenu"
+       class="side-menu"
+       aria-hidden="true">
+
+    <!-- Recherche -->
+    <input type="search"
+           id="menu-search"
+           placeholder="Rechercher un sommaire…"
+           aria-label="Rechercher un sommaire">
+
+    <!-- Liste A → Z -->
+    <ul id="menu-list">
+      <li><a href="../../lettresAnciennes.html">Cote des lettres Anciennes</a></li>
+      <li><a href="../../Proposition/index.html">Proposition</a></li>
+      <li><a href="../../Villes_A/sommaireA.html">Sommaire A</a></li>
+      <li><a href="../../Villes_B/sommaireB.html">Sommaire B</a></li>
+      <li><a href="../../Villes_C/C_sommaire.html">Sommaire C</a></li>
+      <li><a href="../../Villes_D/D_sommaire.html">Sommaire D</a></li>
+      <li><a href="../../Villes_E/E_sommaire.html">Sommaire E</a></li>
+      <li><a href="../../Villes_F/F_sommaire.html">Sommaire F</a></li>
+      <li><a href="../../Villes_G/G_sommaire.html">Sommaire G</a></li>
+      <li><a href="../../Villes_H/H_sommaire.html">Sommaire H</a></li>
+      <li><a href="../../Villes_I/I_sommaire.html">Sommaire I</a></li>
+      <li><a href="../../Villes_J/J_sommaire.html">Sommaire J</a></li>
+      <li><a href="../../Villes_K/K_sommaire.html">Sommaire K</a></li>
+      <li><a href="../../Villes_L/L_sommaire.html">Sommaire L</a></li>
+      <li><a href="../../Villes_M/M_sommaire.html">Sommaire M</a></li>
+      <li><a href="../../Villes_N/N_sommaire.html">Sommaire N</a></li>
+      <li><a href="../../Villes_O/O_sommaire.html">Sommaire O</a></li>
+      <li><a href="../../Villes_P/P_sommaire.html">Sommaire P</a></li>
+      <li><a href="../../Villes_Q/Q_sommaire.html">Sommaire Q</a></li>
+      <li><a href="../../Villes_R/R_sommaire.html">Sommaire R</a></li>
+      <li><a href="../../Villes_S/S_sommaire.html">Sommaire S</a></li>
+      <li><a href="../../Villes_T/T_sommaire.html">Sommaire T</a></li>
+      <li><a href="../../Villes_U/U_sommaire.html">Sommaire U</a></li>
+      <li><a href="../../Villes_V/V_sommaire.html">Sommaire V</a></li>
+      <li><a href="../../Villes_W/W_sommaire.html">Sommaire W</a></li>
+      <li><a href="../../Villes_X/X_sommaire.html">Sommaire X</a></li>
+      <li><a href="../../Villes_Y/Y_sommaire.html">Sommaire Y</a></li>
+      <li><a href="../../Villes_Z/Z_sommaire.html">Sommaire Z</a></li>
+    </ul>
+
+  </nav>
+
+  <!-- Overlay -->
+  <div id="menuOverlay"
+       class="menu-overlay"
+       hidden></div>
+
+</header>
+<!-- ================= FIN HEADER ================= -->
+
+<!-- ===== MAIN ===== -->
+<main>
+    <h2 id="h12"><a href="https://fr.wikipedia.org/wiki/Ch%C3%A2lons-en-Champagne" class="title-tip" style="font-size: 25px;" title="lien vers wikipedia">
+            Chalons-Sur-Marne - Champagne (49)
+        </a>
+    </h2>
+        <p>Bureau ouvert au XVII<sup>e</sup> siècle<br>Existait en 1644</p>
+
+<!-- ===== PAGINATION ===== -->
+<nav class="pager">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link title-tip" href="../C_sommaire.html" title="Sommaire C">&laquo;&laquo;</a>
+    </li>
+
+<!--Precedente-->
+    <li class="page-item">
+      <a class="page-link title-tip" href="../Chalon-Sur-Saone/chalonSurSaone.html" title="Chalon-Sur-Saone">&laquo;</a>
+    </li>
+
+<!--Recherches-->
+    <li class="page-item">
+      <div class="dropdown">
+        <input type="text" id="villeInput" placeholder="Tapez le nom d'une ville">
+        <div class="dropdown-content" id="dropdownContent"></div>
+      </div>
+    </li>
+
+<!--Suivante-->
+    <li class="page-item">
+      <a class="page-link title-tip" href="../Chalus/chalus.html" title="Chalus">&raquo;</a>
+    </li>
+    
+<!--Accueil-->
+    <li class="page-item">
+      <a class="page-link title-tip" href="../../index.html" title="Accueil">&raquo;&raquo;</a>
+    </li>  
+  </ul>
+</nav>
+
+<!-- ===== TABLE ===== -->
+<table class="exemple">
+  <thead>
+    <tr>
+      <th>Marque</th>
+      <th>N°</th>
+      <th>Port</th>
+      <th>Dimensions</th>
+      <th>Date</th>
+      <th>Couleurs</th>
+      <th>Indice</th>
+      <th>Cote en euro</th>
+    </tr>
+  </thead>
+  
+<!--Marque 1-->          
+        <tr>
+            <td>
+                <a href="../Chalons-sur-Marne/Images/1.png">
+                    <img src="../Chalons-sur-Marne/Images/1.png" alt="Chalons-sur-Marne" data-width-mm="30">
+                </a>
+            </td>
+            <td class="border3">1</td>       
+            <td>port dû</td>       
+            <td><img src="../../Resource/plumeDeture.png" alt="Chalons-sur-Marne" data-width-mm="10"></td>
+            <td>1677</td>
+            <td>manuscrit</td>
+            <td>I-22</td>
+            <td class="prixProduit" data-id="22">00.00</td>
+        </tr>                             
+<!--Marque 1A-->          
+        <tr>
+            <td>
+                <a href="../../Proposition/index.html">
+                    <img src="../Chalons-sur-Marne/Images/1a.png" alt="Chalons-sur-Marne" data-width-mm="40">
+                </a>
+            </td>
+            <td class="border3">1A</td>       
+            <td>port dû</td>       
+            <td><img src="../../Resource/plumeDeture.png" alt="Chalons-sur-Marne" data-width-mm="10"></td>
+            <td>1732-1738</td>
+            <td>manuscrit</td>
+            <td>I-16</td>
+            <td class="prixProduit" data-id="16">00.00</td>
+        </tr>                 
+<!--Marque 2-->          
+        <tr>
+            <td>
+                <a href="../Chalons-sur-Marne/Images/2.png">
+                    <img src="../Chalons-sur-Marne/Images/2.png" alt="Chalons-sur-Marne" data-width-mm="25">
+                </a>
+            </td>
+            <td class="border3">2</td>       
+            <td>port dû</td>       
+            <td>25mm</td>       
+            <td>1730-1732</td>
+            <td>noir</td>
+            <td>I-19</td>
+            <td class="prixProduit" data-id="19">00.00</td>
+        </tr>             
+<!--Marque 3-->          
+        <tr>
+            <td>
+                <a href="../Chalons-sur-Marne/Images/3.png">
+                    <img src="../Chalons-sur-Marne/Images/3.png" alt="Chalons-sur-Marne" data-width-mm="26">
+                </a>
+            </td>
+            <td class="border3">3</td>       
+            <td>port dû</td>       
+            <td>26x3,5mm</td>       
+            <td>1743-1753</td>
+            <td>noir</td>
+            <td>I-15</td>
+            <td class="prixProduit" data-id="15">00.00</td>
+        </tr>                 
+<!--Marque 4-->          
+        <tr>
+            <td>
+                <a href="../Chalons-sur-Marne/Images/4.png">
+                    <img src="../Chalons-sur-Marne/Images/4.png" alt="Chalons-sur-Marne" data-width-mm="25.5">
+                </a>
+            </td>
+            <td class="border3">4</td>       
+            <td>port dû</td>       
+            <td>25,5x3,5mm</td>       
+            <td>1764-1777</td>
+            <td>noir</td>
+            <td>I-14</td>
+            <td class="prixProduit" data-id="14">00.00</td>
+        </tr>             
+<!--Marque 4A-->          
+        <tr>
+            <td>
+                <a href="../Chalons-sur-Marne/Images/4A.png">
+                    <img src="../Chalons-sur-Marne/Images/4A.png" alt="Chalons-sur-Marne" data-width-mm="25.5">
+                </a>
+            </td>
+            <td class="border3">4A</td>       
+            <td>port dû</td>       
+            <td>25,5x3,5mm</td>       
+            <td>1764-1777</td>
+            <td>noir - Le S plus petit</td>
+            <td>I-14</td>
+            <td class="prixProduit" data-id="14">00.00</td>
+        </tr>             
+<!--Marque 5-->          
+        <tr>
+            <td>
+                <a href="../Chalons-sur-Marne/Images/5.png">
+                    <img src="../Chalons-sur-Marne/Images/5.png" alt="Chalons-sur-Marne" data-width-mm="25">
+                </a>
+            </td>
+            <td class="border3">5</td>       
+            <td>port dû</td>       
+            <td>25x3mm</td>       
+            <td>1780-1789</td>
+            <td>noir</td>
+            <td>I-9</td>
+            <td class="prixProduit" data-id="9">00.00</td>
+        </tr>               
+<!--Marque 6-->          
+        <tr>
+            <td>
+                <a href="../Chalons-sur-Marne/Images/6.png">
+                    <img src="../Chalons-sur-Marne/Images/6.png" alt="Chalons-sur-Marne" data-width-mm="23.5">
+                </a>
+            </td>
+            <td class="border3">6</td>       
+            <td>port dû</td>       
+            <td>23,5x2,5mm</td>       
+            <td>1781-1789</td>
+            <td>noir</td>
+            <td>I-12</td>
+            <td class="prixProduit" data-id="12">00.00</td>
+        </tr>             
+<!--Marque 7-->          
+        <tr>
+            <td>
+                <a href="../Chalons-sur-Marne/Images/7.png">
+                    <img src="../Chalons-sur-Marne/Images/7.png" alt="Chalons-sur-Marne" data-width-mm="36">
+                </a>
+            </td>
+            <td class="border3">7</td>       
+            <td>port dû</td>       
+            <td>36mm</td>       
+            <td>1773-1791</td>
+            <td>noir</td>
+            <td>I-9</td>
+            <td class="prixProduit" data-id="9">00.00</td>
+        </tr>               
+<!--Marque 8-->          
+        <tr>
+            <td>
+                <a href="../Chalons-sur-Marne/Images/8.png">
+                    <img src="../Chalons-sur-Marne/Images/8.png" alt="Chalons-sur-Marne" data-width-mm="25">
+                </a>
+            </td>
+            <td class="border3">8</td>       
+            <td>port payé</td>       
+            <td>orné</td>       
+            <td>1770-1791</td>
+            <td>noir</td>
+            <td>I-31</td>
+            <td class="prixProduit" data-id="31">00.00</td>
+        </tr>               
+<!--Marque 9-->          
+        <tr>
+            <td>
+                <a href="../Chalons-sur-Marne/Images/9.png">
+                    <img src="../Chalons-sur-Marne/Images/9.png" alt="Chalons-sur-Marne" data-width-mm="40">
+                </a>
+            </td>
+            <td class="border3">9</td>       
+            <td>déboursé</td>       
+            <td><img src="../../Resource/plumeDeture.png" alt="Chalons-sur-Marne" data-width-mm="10"></td>
+            <td>1770-1780</td>
+            <td>manuscrit</td>
+            <td>I-20</td>
+            <td class="prixProduit" data-id="20">00.00</td>
+        </tr>                  
+<!--Marque 10-->          
+        <tr>
+            <td>
+                <a href="../Chalons-sur-Marne/Images/10.png">
+                    <img src="../Chalons-sur-Marne/Images/10.png" alt="Chalons-sur-Marne" data-width-mm="70">
+                </a>
+            </td>
+            <td class="border3">10</td>       
+            <td>déboursé</td>       
+            <td>70mm</td>       
+            <td>1786-1806</td>
+            <td>noir</td>
+            <td>I-18</td>
+            <td class="prixProduit" data-id="18">00.00</td>
+        </tr>                  
+<!--Marque 10A-->          
+        <tr style="color: red;">
+            <td>
+                <a href="../Chalons-sur-Marne/Images/10A.png">
+                    <img src="../Chalons-sur-Marne/Images/10A.png" alt="Chalons-sur-Marne" data-width-mm="70">
+                </a>
+            </td>
+            <td class="border3">10A</td>       
+            <td>déboursé</td>       
+            <td>70mm</td>       
+            <td>1801-1802</td>
+            <td>rouge</td>
+            <td>I-20</td>
+            <td class="prixProduit" data-id="20">00.00</td>
+        </tr>                  
+<!--Marque 10B-->          
+        <tr style="color: mediumpurple;">
+            <td>
+                <a href="../Chalons-sur-Marne/Images/10B.png">
+                    <img src="../Chalons-sur-Marne/Images/10B.png" alt="Chalons-sur-Marne" data-width-mm="70">
+                </a>
+            </td>
+            <td class="border3">10B</td>       
+            <td>déboursé</td>       
+            <td>70mm</td>       
+            <td>1800</td>
+            <td>lilas</td>
+            <td>I-21</td>
+            <td class="prixProduit" data-id="21">00.00</td>
+        </tr>                   
+<!--Marque 11-->          
+        <tr>
+            <td>
+                <a href="../../Proposition/index.html">
+                    <img src="../Chalons-sur-Marne/Images/11.png" alt="Chalons-sur-Marne" data-width-mm="40">
+                </a>
+            </td>
+            <td class="border3">11</td>       
+            <td>chargé</td>       
+            <td><img src="../../Resource/plumeDeture.png" alt="Chalons-sur-Marne" data-width-mm="10"></td>
+            <td>1791</td>
+            <td>manuscrit</td>
+            <td>I-18</td>
+            <td class="prixProduit" data-id="18">00.00</td>
+        </tr> 
+
+<!--Marque 12-->          
+        <tr>
+            <td>
+                <a href="../../Proposition/index.html">
+                    <img src="../Chalons-sur-Marne/Images/12.png" alt="Chalons-sur-Marne" data-width-mm="40">
+                </a>
+            </td>
+            <td class="border3">12</td>       
+            <td>chargé</td>       
+            <td><img src="../../Resource/plumeDeture.png" alt="Chalons-sur-Marne" data-width-mm="10"></td>
+            <td>1791</td>
+            <td class="border2 text-danger">rouge</td>
+            <td>I-18</td>
+            <td class="prixProduit" data-id="18">00.00</td>
+        </tr>                   
+<!--Marque 13-->          
+        <tr>
+            <td>
+                <a href="../../Proposition/index.html">
+                    <img src="../Chalons-sur-Marne/Images/13.png" alt="Chalons-sur-Marne" data-width-mm="40">
+                </a>
+            </td>
+            <td class="border3">13</td>       
+            <td>port payé</td>       
+            <td><img src="../../Resource/plumeDeture.png" alt="Chalons-sur-Marne" data-width-mm="10"></td>
+            <td>1783</td>
+            <td>manuscrit</td>
+            <td>I-20</td>
+            <td class="prixProduit" data-id="20">00.00</td>
+        </tr>     
+<!--Liens Utile-->
+    <tr>
+      <th colspan="8" id="table-liens">Liens utiles</th>
+    </tr>
+<!--Commentaire-->
+<tr>
+      <th colspan="8" style="text-align: center;"></th>
+</tr>
+ 
+</table>
+
+    <!-- ===== BOUTON HAUT DE PAGE ===== -->
+<button id="scrollToTopButton" title="Haut de page"></button>
+</main>
+
+<!-- ==========================
+     POPUP NOTE – OBLIGATOIRE
+========================== -->
+<div class="popup-overlay" id="popupNote">
+  <div class="popup-box">
+    <div class="popup-close" id="closePopup">&times;</div>
+    <div id="popupContent"></div>
+  </div>
+</div>
+
+<!-- ===== FOOTER FIXE ===== -->
+<footer class="News-footer">
+  <div class="news">
+    <span id="news-head">COTE</span>
+  </div>
+
+  <div class="N-text">
+    <div class="ticker">
+      <div class="ticker__track">
+        <span>• Celles-ci s'entendent pour de belles frappes.</span>
+        <span>• Pour les lettres en port payé :</span>
+        <span>• Cote du PP sans plus-value si la marque de port (dû) qui l'accompagne est d'un indice inférieur à 16.</span>
+        <span>• Si la marque de port (dû) est d'un indice supérieur à 16, majorer de 2 indices la cote du port payé.</span>
+        <span>• © Copyright Tout droit réservé.</span>
+
+        <!-- Duplique le contenu pour un défilement continu -->
+        <span>• Celles-ci s'entendent pour de belles frappes.</span>
+        <span>• Pour les lettres en port payé :</span>
+        <span>• Cote du PP sans plus-value si la marque de port (dû) qui l'accompagne est d'un indice inférieur à 16.</span>
+        <span>• Si la marque de port (dû) est d'un indice supérieur à 16, majorer de 2 indices la cote du port payé.</span>
+        <span>• © Copyright Tout droit réservé.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+ <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>   
+ <script src="/JS/app.js"></script>   
+
+</body>
+</html>
