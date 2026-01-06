@@ -28,12 +28,12 @@
   /* ------------------------
    * 2) Normalisation & utils
    * ------------------------ */
-  const normalize = (str) =>
-    (str || "")
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .toLowerCase()
-      .trim();
+const normalize = (str) =>
+  (str || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")   // supprime accents
+    .replace(/[^a-z0-9]/g, "")        // 🔥 supprime espaces, tirets, apostrophes, points
+    .toLowerCase();
 
   const escapeHtml = (s) =>
     s.replace(/[&<>"']/g, (m) => ({

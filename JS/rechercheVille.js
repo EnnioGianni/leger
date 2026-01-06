@@ -6,7 +6,7 @@
 
   /* --------- 0) TA LISTE PAR LETTRE (A et B incluses) --------- */
   const VILLES_BY_LETTER = {
-    A: [
+       A: [
       { name: 'Abbeville', url: '../../Villes_A/Abbeville/abbeville.html' },
       { name: 'Abries', url: '../../Villes_A/Abries/abries.html' },
       { name: 'Agde', url: '../../Villes_A/Agde/agde.html' },
@@ -103,7 +103,7 @@
       { name: 'Ay', url: '../../Villes_A/Ay/Ay.html' },
       { name: 'Azille', url: '../../Villes_A/Azille/azille.html' },
       { name: 'Sommaire Ville A', url: '../../Villes_A/sommaireVilleA.html' },
-    ],B: 
+    ], B: 
     [
         { name: 'Baccarat', url: '../../Villes_B/Baccarat/baccarat.html' },
         { name: 'Bagneres-De-Bigorre', url: '../../Villes_B/Bagneres-De-Bigorre/bagneresDeBigorre.html' },
@@ -276,7 +276,7 @@
         { name: 'La-Buissiere', url: '../../Villes_B/La-Buissiere/laBuissiere.html' },
         { name: 'Buzancais', url: '../../Villes_B/Buzancais/buzancais.html' },
         { name: 'Buzancy', url: '../../Villes_B/Buzancy/buzancy.html' },   
-    ],C: [
+    ], C: [
         { name: 'Cadenet', url: '../../Villes_C/Cadenet/cadenet.html' },
         { name: 'Cadillac', url: '../../Villes_C/Cadillac/cadillac.html' },
         { name: 'Caen', url: '../../Villes_C/Caen/caen.html' },
@@ -389,7 +389,7 @@
         { name: 'Chateauroux', url: '../../Villes_C/Chateauroux/chateauroux.html' },
         { name: 'Chatel-Sur-Moselle', url: '../../Villes_C/Chatel-Sur-Moselle/chatelSurMoselle.html' },
         { name: 'Chatelaudren', url: '../../Villes_C/Chatelaudren/chatelaudren.html' },
-        { name: 'Le-chatelet-En-Brie', url: '../../Villes_C/Le-chatelet-En-Brie/leChateletEnBrie.html' },
+        { name: 'Le-chatelet-En-Brie', url: '../../Villes_C/Le-chatelet-En-BrieleChateletEnBrie.html' },
         { name: 'Chatellerault', url: '../../Villes_C/Chatellerault/chatellerault.html' },
         { name: 'Chatillon-De-Michaille', url: '../../Villes_C/Chatillon-De-Michaille/chatillonDeMichaille.html' },
         { name: 'Chatillon-Les-Dombes', url: '../../Villes_C/Chatillon-Les-Dombes/chatillonLesDombes.html' },
@@ -501,7 +501,7 @@
         { name: 'Crecy-En-Brie', url: '../../Villes_C/Crecy-En-Brie/crecyEnBrie.html' },
         { name: 'Creil', url: '../../Villes_C/Creil/creil.html' },
         { name: 'Cremieu', url: '../../Villes_C/Cremieu/cremieu.html' },
-        { name: 'Crepy-En-Valois', url: '../../Villes_C/Crepy-En-Valois/crepyEnValois.html' },
+        { name: 'Crepy-En-Vallois', url: '../../Villes_C/Crepy-En-Vallois/crepyEnVallois.html' },
         { name: 'Cressensac', url: '../../Villes_C/Cressensac/crenssensac.html' },
         { name: 'Crest', url: '../../Villes_C/Crest/crest.html' },
         { name: 'Crevecoeur', url: '../../Villes_C/Crevecoeur/crevecoeur.html' },
