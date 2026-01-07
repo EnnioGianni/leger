@@ -135,7 +135,7 @@
 
 <!--Precedente-->
     <li class="page-item">
-      <a class="page-link title-tip" href="../Chatelaudren/chatelaudren.html" title="Châtelaudren">&laquo;</a>
+      <a class="page-link title-tip" href="../Chatelaudren/chatelaudren.html" title="Chatelaudren">&laquo;</a>
     </li>
 
 <!--Recherches-->
@@ -181,7 +181,7 @@
                 </a>
             </td>
             <td class="border3">1</td>       
-            <td>port dû</td>       data-width-mm="28">
+            <td>port dû</td>  
             <td><img src="../../Resource/plumeDeture.png" alt="Chatellerault" data-width-mm="10"></td>
             <td>1688</td>
             <td>manuscrit</td>
@@ -367,76 +367,57 @@
             <td>I-18</td>
             <td class="prixProduit" data-id="18">00.00</td>
         </tr>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
-<!--Commentaire-->                    
-        <tr>             
-            <th colspan="12" style="color: #000;"></th>         
-        </tr>         
-<!--Cartes google-->
-
-<tr>
-    <th colspan="3">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d72765.49061652357!2d0.515093937417791!3d46.817649017047444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fda9e6048e4273%3A0xe4283a5cc7da7840!2s86100%20Ch%C3%A2tellerault!5e0!3m2!1sfr!2sfr!4v1713800951538!5m2!1sfr!2sfr" width="700" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </th>         
-
-<!--Blason-->
-<th colspan="1">
-    <a href="https://fr.wikipedia.org/wiki/Ch%C3%A2tellerault#H%C3%A9raldique">
-        <img src="../Chatellerault/Images/Blason.png" alt="Chatellerault" style="width:80%; height: auto;"/>
-        <p>Blason de Chatellerault</p>
-    </a>
-</th>
-<!--Carte Géoportail-->              
-    <th colspan="4">
-        <iframe width="800" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" sandbox="allow-forms allow-scripts allow-same-origin" src="https://www.geoportail.gouv.fr/embed/visu.html?c=0.5648686489569739,46.82189354004433&z=12&l0=ORTHOIMAGERY.ORTHOPHOTOS::GEOPORTAIL:OGC:WMTS(1)&l1=GEOGRAPHICALGRIDSYSTEMS.CASSINI::GEOPORTAIL:OGC:WMTS(1)&permalink=yes" allowfullscreen></iframe>
-    </th>  
-</tr> 
+<!--Liens Utile-->
+    <tr>
+      <th colspan="8" id="table-liens">Liens utiles</th>
+    </tr>
 <!--Commentaire-->
-    <tr> 
-        <th colspan="8" style="color: black;"></th>
-    </tr>   
-    
-<!-- Scroll To Top -->
-    <button onclick="topFunction()" id="scrollToTopButton" title="Haut de page"><i class="fas fa-chevron-up"></i></button>
-<!--popup 1--> 
-    
-</table> 
+<tr>
+      <th colspan="8" style="text-align: center;"></th>
+</tr>
+ 
+</table>
 
-<div id="popup1" class="popup-container">
-    <div class="popup-content">
-        <a href="#" class="close">&times;</a>
-        <p></p>
-    </div>
-</div> 
+    <!-- ===== BOUTON HAUT DE PAGE ===== -->
+<button id="scrollToTopButton" title="Haut de page"></button>
+</main>
 
-<!--popup 2-->
-<div id="popup2" class="popup-container">
-    <div class="popup-content">
-        <a href="#" class="close">&times;</a>
-        <p></p>
-    </div>
-</div> 
-<!--Fin popup-->
-
-</section> 
-
-<!---Footer défilant-->
-<div class='News-footer'>
-    <div class='news'>
-        <span id='news-head'>COTE</span>
-    </div>
-        <p class='N-text'>
-            <marquee direction='left' >
-                <span>Celles-ci s'entendent pour de belles frappes.</span>
-                <span>• Pour les lettre en port paye:</span>
-                <span>• Cote du PP sans plus value si la marque de port (dû) qui l'accompagne est d'un indice inférieur à 16.</span>
-                <span>• Si la marque de port (dû) qui accompagne le (port payé) est d'un indice supérieur a 16, majorer de 2 indices la cote du port payé.</span> 
-                <span>• &copy; Copyright Tout droit réservé.</span>
-            </marquee>
-        </p>
+<!-- ==========================
+     POPUP NOTE – OBLIGATOIRE
+========================== -->
+<div class="popup-overlay" id="popupNote">
+  <div class="popup-box">
+    <div class="popup-close" id="closePopup">&times;</div>
+    <div id="popupContent"></div>
+  </div>
 </div>
-<!---fin Footer défilant--> 
+
+<!-- ===== FOOTER FIXE ===== -->
+<footer class="News-footer">
+  <div class="news">
+    <span id="news-head">COTE</span>
+  </div>
+
+  <div class="N-text">
+    <div class="ticker">
+      <div class="ticker__track">
+        <span>• Celles-ci s'entendent pour de belles frappes.</span>
+        <span>• Pour les lettres en port payé :</span>
+        <span>• Cote du PP sans plus-value si la marque de port (dû) qui l'accompagne est d'un indice inférieur à 16.</span>
+        <span>• Si la marque de port (dû) est d'un indice supérieur à 16, majorer de 2 indices la cote du port payé.</span>
+        <span>• © Copyright Tout droit réservé.</span>
+
+        <!-- Duplique le contenu pour un défilement continu -->
+        <span>• Celles-ci s'entendent pour de belles frappes.</span>
+        <span>• Pour les lettres en port payé :</span>
+        <span>• Cote du PP sans plus-value si la marque de port (dû) qui l'accompagne est d'un indice inférieur à 16.</span>
+        <span>• Si la marque de port (dû) est d'un indice supérieur à 16, majorer de 2 indices la cote du port payé.</span>
+        <span>• © Copyright Tout droit réservé.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+ <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>   
+ <script src="/JS/app.js"></script>   
 </body>
-</html>      
-
-
-
+</html>
