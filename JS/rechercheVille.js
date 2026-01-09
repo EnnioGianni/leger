@@ -448,7 +448,7 @@
         { name: 'Cluny', url: '../../Villes_C/Cluny/cluny.html' },
         { name: 'Cocherel', url: '../../Villes_C/Cocherel/cocherel.html' },
         { name: 'Cognac', url: '../../Villes_C/Cognac/cognac.html' },
-        { name: 'Coillure', url: '../../Villes_C/Coillure/coillure.html' },
+        { name: 'Collioure', url: '../../Villes_C/Collioure/collioure.html' },
         { name: 'Coincy', url: '../../Villes_C/Coincy/coincy.html' },
         { name: 'Collobrieres', url: '../../Villes_C/Collobrieres/collobrieres.html' },
         { name: 'Collonges', url: '../../Villes_C/Collonges/collonges.html' },
