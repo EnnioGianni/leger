@@ -927,4 +927,57 @@ td.blink {
 }
 
 
+/* =========================================================
+   TABLE — CELLULE INFORMATION (VILLE SANS MARQUE CONNUE)
+   Usage : table.exemple > td.info-cell
+   ========================================================= */
+
+/* Cellule principale */
+.info-cell{
+  text-align: center;
+  padding: 30px 35px;
+  line-height: 1.75;
+  background: rgba(255, 255, 255, 0.94);
+  font-size: 18px;
+  color: #2b2b2b;
+}
+
+/* Paragraphes */
+.info-cell p{
+  font-size: 18px;
+  margin: 14px 0;
+}
+
+/* Titre intégré dans la cellule */
+.info-title{
+  margin: 0 0 18px 0;
+  font-size: 22px;
+  font-weight: 600;
+  color: #7a1c1c;
+  letter-spacing: 0.3px;
+}
+
+/* Signature finale */
+.info-signature{
+  margin-top: 22px;
+  font-size: 17px;
+  font-style: italic;
+  color: #444;
+}
+
+/* Optionnel : amélioration lisibilité sur petits écrans */
+@media (max-width: 768px){
+  .info-cell{
+    padding: 22px 18px;
+    font-size: 17px;
+  }
+
+  .info-cell p{
+    font-size: 17px;
+  }
+
+  .info-title{
+    font-size: 20px;
+  }
+}
 
