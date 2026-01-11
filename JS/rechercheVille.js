@@ -475,7 +475,7 @@
         { name: 'Cormoz', url: '../../Villes_C/Cormoz/cormoz.html' },
         { name: 'Corps', url: '../../Villes_C/Corps/corps.html' },
         { name: 'Corse', url: '../../Villes_C/Corse/corse.html' },
-        { name: 'Corte', url: '../../Villes_C/Corte/Ccorte.html' },
+        { name: 'Corte', url: '../../Villes_C/Corte/corte.html' },
         { name: 'Cosne', url: '../../Villes_C/Cosne/cosne.html' },
         { name: 'La-Cote-St-Andre', url: '../../Villes_C/La-Cote-St-Andre/coteStAndre.html' },
         { name: 'Cotignac', url: '../../Villes_C/Cotignac/cotignac.html' },
