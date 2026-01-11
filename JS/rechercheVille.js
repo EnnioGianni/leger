@@ -14,7 +14,7 @@
       { name: 'Ahun', url: '../../Villes_A/Ahun/ahun.html' },
       { name: 'L-Aigle', url: '../../Villes_A/L-Aigle/lAigle.html' },
       { name: 'Aignay-Le-Duc', url: '../../Villes_A/Aignay-Le-Duc/aignayLeDuc.html' },
-      { name: 'Aigre', url: '../../Villes_A/AIGRE/aigre.html' },
+      { name: 'Aigre', url: '../../Villes_A/Aigre/aigre.html' },
       { name: 'Aigueperse', url: '../../Villes_A/Aigueperse/aigueperse.html' },
       { name: 'Aigues-Mortes', url: '../../Villes_A/Aigues-Mortes/aiguesMorte.html' },
       { name: 'Aiguillon', url: '../../Villes_A/Aiguillon/aiguiollon.html' },
@@ -1671,8 +1671,7 @@
       { name: 'Tulle', url: '../../Villes_T/Tulle/tulle.html' },
       { name: 'Tullins', url: '../../Villes_T/Tullins/tullins.html' },
 
-    ], U: [
-        
+    ], U: [      
     ], V: [
         { name: 'La-Valette', url: '../../Villes_V/La-Valette/lavalette.html' },
         { name: 'La-Verpilliere', url: '../../Villes_V/La-Verpilliere/laverpilliere.html' },
