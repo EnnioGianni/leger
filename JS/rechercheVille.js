@@ -483,7 +483,7 @@
         { name: 'Couches', url: '../../Villes_C/Couches/couches.html' },
         { name: 'Couhe', url: '../../Villes_C/Couhe/couhe.html' },
         { name: 'Coulanges-Sur-Yonne', url: '../../Villes_C/Coulanges-Sur-Yonne/coulangesSurYonne.html' },
-        { name: 'Coullomiers', url: '../../Villes_C/Coullomiers/coullomiers.html' },
+        { name: 'Coulommiers', url: '../../Villes_C/Coulommiers/coulommiers.html' },
         { name: 'Courgivaux', url: '../../Villes_C/Courgivaux/courgivaux.html' },
         { name: 'Courson', url: '../../Villes_C/Courson/courson.html' },
         { name: 'Courtanvault-S-Loir', url: '../../Villes_C/Courtanvault-S-Loir/courtanvaultSurLoir.html' },
