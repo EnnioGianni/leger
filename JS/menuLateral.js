@@ -16,7 +16,6 @@
   const menuItems = [
     { label: 'Cote des lettres Anciennes', url: 'lettresAnciennes.html' },
     { label: 'Proposition', url: 'Proposition/index.html' },
-
     { label: 'Sommaire A', url: 'Villes_A/sommaireA.html' },
     { label: 'Sommaire B', url: 'Villes_B/sommaireB.html' },
     { label: 'Sommaire C', url: 'Villes_C/C_sommaire.html' },
