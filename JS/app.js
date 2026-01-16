@@ -419,8 +419,8 @@ const LANGS = {
     style.textContent = `
       #lang-switcher {
         position: fixed !important;
-        top: 70px !important;
-        right: 100px !important;
+        top: 55px !important;
+        right: 90px !important;
         z-index: 99999 !important;
         display: flex;
         align-items: center;
