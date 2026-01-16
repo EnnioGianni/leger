@@ -533,6 +533,7 @@
         { name: 'Dol De Bretagne', url: '../../Villes_D/dolDeBretagne/dolDeBretagne.html' },
         { name: 'Dole', url: '../../Villes_D/Dole/dole.html' },
         { name: 'Domfront', url: '../../Villes_D/Domfront/domfront.html' },
+        { name: 'Dompaire', url: '../../Villes_D/Dompaire/dompaire.html' },
         { name: 'Donchery', url: '../../Villes_D/Donchery/donchery.html' },
         { name: 'Donjon', url: '../../Villes_D/Donjon/donjon.html' },
         { name: 'Donnemarie', url: '../../Villes_D/Donnemarie/donnemarie.html' },
