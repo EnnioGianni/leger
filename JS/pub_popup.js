@@ -68,18 +68,20 @@ image: '/Resource/Timbre_Magazine.png',
      ========================= */
   const popup = document.createElement("div");
   popup.id = "pubPopup";
-  popup.style.cssText = `
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    width:340px;
-    background:#f9a15d;
-    border-radius:10px;
-    box-shadow:0 10px 30px rgba(0,0,0,.35);
-    padding:16px;
-    z-index:9999;
-    display:none;
-  `;
+popup.style.cssText = `
+  position:fixed;
+  bottom:20px;
+  right:80px;
+  width:200px;
+  background:#f9a15d;
+  border-radius:10px;
+  box-shadow:0 10px 30px rgba(0,0,0,.35);
+  padding:16px;
+  z-index:9999;
+  display:none;
+  height:auto;              /* ← hauteur automatique */
+  box-sizing:border-box;
+`;
   document.body.appendChild(popup);
 
   /* Bouton fermer */
@@ -89,7 +91,7 @@ image: '/Resource/Timbre_Magazine.png',
   closeBtn.style.cssText = `
     position:absolute;
     top:6px;
-    right:10px;
+    right:auto;
     font-size:30px;
     cursor:pointer;
     font-weight:bold;
@@ -102,12 +104,22 @@ image: '/Resource/Timbre_Magazine.png',
   });
 
   /* Image */
-  const img = document.createElement("img");
-  img.style.cssText = `
-    width:100%;
-    border-radius:6px;
-    margin-bottom:10px;
-  `;
+/* Image cliquable */
+const imgLink = document.createElement("a");
+imgLink.target = "_blank";
+imgLink.rel = "noopener";
+
+const img = document.createElement("img");
+img.style.cssText = `
+  width:80%;
+  display:block;
+  margin:0 0 10px auto;
+  border-radius:6px;
+  cursor:pointer;
+`;
+
+imgLink.appendChild(img);
+popup.appendChild(imgLink);
   popup.appendChild(img);
 
   /* Textes */
