@@ -3,185 +3,27 @@
    TITRE : Interactions (scrollTop, dropdown villes, popups)
    ========================================================= */
 
-/* ---- Helpers DOM ---- */
-// Récupère un élément par sélecteur
-const $ = (sel, parent = document) => parent.querySelector(sel);
-// Récupère une NodeList par sélecteur
-const $$ = (sel, parent = document) => Array.from(parent.querySelectorAll(sel));
+/* ---- Helpers DOM (ROBUSTES) ---- */
+// Accepte sélecteur, document ou élément
+const $ = (sel, parent = document) =>
+  typeof sel === 'string' ? parent.querySelector(sel) : sel;
 
-/* ---- Bouton Haut de page ---- */
-// Récupération du bouton
-const scrollBtn = $('#scrollToTopButton');
+const $$ = (sel, parent = document) =>
+  typeof sel === 'string'
+    ? Array.from(parent.querySelectorAll(sel))
+    : [];
 
-// Affiche/masque le bouton selon le défilement
-window.addEventListener('scroll', () => {
-  // Si on a défilé de plus de 200px, on montre le bouton
-  if (window.scrollY > 200) {
-    scrollBtn.style.display = 'block';
-  } else {
-    scrollBtn.style.display = 'none';
-  }
-});
-
-// Remonte en haut doucement au clic
-scrollBtn.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
-/* ---- Dropdown de recherche de villes (démo légère) ---- */
-// Champ de saisie
-const villeInput = $('#villeInput');
-// Conteneur des résultats
-const dropdownContent = $('#dropdownContent');
-
-// Jeu de données minimal (tu peux remplacer par tes listes complètes plus tard)
-const VILLES = [
-  { label: 'Abbeville', url: '../Abbeville/abbeville.html' },
-  { label: 'Agde', url: '../Agde/agde.html' },
-  { label: 'Abries (Dauphiné)', url: './abries.html' },
-  { label: 'Aix', url: '../Aix/aix.html' }
-];
-
-// Met à jour la liste selon la saisie
-function renderDropdown(filterText = '') {
-  // Vide le contenu
-  dropdownContent.innerHTML = '';
-  // Filtre les villes (insensible à la casse, contient)
-  const ft = filterText.trim().toLowerCase();
-  const results = VILLES.filter(v => v.label.toLowerCase().includes(ft));
-  // Si aucun résultat, on cache
-  if (results.length === 0) {
-    dropdownContent.classList.remove('show');
-    return;
-  }
-  // Pour chaque résultat, créer un item cliquable
-  results.forEach(v => {
-    const item = document.createElement('div');
-    item.className = 'dropdown-item';
-    item.setAttribute('role', 'option');
-    item.textContent = v.label;
-    // Navigation au clic
-    item.addEventListener('click', () => {
-      window.location.href = v.url;
-    });
-    dropdownContent.appendChild(item);
-  });
-  // Affiche le conteneur
-  dropdownContent.classList.add('show');
-}
-
-// Écoute la saisie
-villeInput.addEventListener('input', (e) => {
-  renderDropdown(e.target.value);
-});
-
-document.addEventListener('click', (e) => {
-
-  if (
-    e.target.closest('.dropdown') ||
-    e.target.closest('#lang-switcher')
-  ) {
-    return;
-  }
-
-  document.querySelectorAll('.dropdown .show')
-    .forEach(el => el.classList.remove('show'));
-});
-
-/* ---- Popups génériques ---- */
-// Fonction pour ouvrir une popup avec contenu texte
-function openPopup(id, htmlContent = '') {
-  const popup = document.getElementById(id);
-  if (!popup) return;
-  // Insère le contenu s'il existe
-  const p = $('p', popup);
-  if (p) p.innerHTML = htmlContent;
-  // Affiche la popup
-  popup.classList.add('show');
-  popup.setAttribute('aria-hidden', 'false');
-}
-
-// Fonction pour fermer une popup
-function closePopup(id) {
-  const popup = document.getElementById(id);
-  if (!popup) return;
-  popup.classList.remove('show');
-  popup.setAttribute('aria-hidden', 'true');
-}
-
-// Gestion des boutons "close"
-$$('.popup-content .close').forEach(btn => {
-  btn.addEventListener('click', (e) => {
-    e.preventDefault(); // Empêche la navigation '#'
-    const id = btn.dataset.close; // data-close="popup1" etc.
-    if (id) closePopup(id);
-  });
-});
-
-// Ferme la popup au clic sur l’arrière-plan
-$$('.popup-container').forEach(layer => {
-  layer.addEventListener('click', (e) => {
-    if (e.target === layer) {
-      layer.classList.remove('show');
-      layer.setAttribute('aria-hidden', 'true');
-    }
-  });
-});
-
-/* ---- Exemples d’utilisation (tu peux supprimer) ---- */
-// Ouvre popup1 après 1,5s pour démonstration (commenter si inutile)
-setTimeout(() => {
-  // openPopup('popup1', 'Exemple d’information dans la popup 1.');
-}, 1500);
-
-/* ---- Accessibilité rapide ---- */
-// Ajoute les rôles ARIA s’ils manquent (header/nav/main/footer)
-(function ensureLandmarks() {
-  const header = document.getElementById('mainHeader');
-  if (header && !header.hasAttribute('role')) header.setAttribute('role', 'banner');
-
-  const navs = $$('nav');
-  navs.forEach(n => { if (!n.hasAttribute('role')) n.setAttribute('role', 'navigation'); });
-
-  const main = $('main');
-  if (main && !main.hasAttribute('role')) main.setAttribute('role', 'main');
-})();
-/* ===============================================
-   Ajustement automatique de la taille des images
-   selon data-width-mm (valeur en millimètres)
-   =============================================== */
-document.addEventListener("DOMContentLoaded", () => {
-  const images = document.querySelectorAll("table.exemple img[data-width-mm]");
-
-  images.forEach(img => {
-    const mm = parseFloat(img.getAttribute("data-width-mm"));
-    if (!isNaN(mm)) {
-      // 1 mm ≈ 3.78 px (conversion standard)
-      const px = mm * 3.78;
-
-      img.style.width = px + "px";
-      img.style.maxWidth = px + "px";
-      img.style.height = "auto";
-      img.style.display = "block";
-      img.style.margin = "0 auto";
-    }
-  });
-});
-
-
+/* =========================================================
+   BOUTON HAUT DE PAGE
+   ========================================================= */
 document.addEventListener('DOMContentLoaded', () => {
-  const scrollBtn = document.getElementById('scrollToTopButton');
-  if (!scrollBtn) return; // évite toute erreur si le bouton n'est pas dans la page
+  const scrollBtn = $('#scrollToTopButton');
+  if (!scrollBtn) return;
 
   const toggleBtn = () => {
-    if (window.scrollY > 200) {
-      scrollBtn.style.display = 'block';
-    } else {
-      scrollBtn.style.display = 'none';
-    }
+    scrollBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
   };
 
-  // état initial + écouteurs
   toggleBtn();
   window.addEventListener('scroll', toggleBtn);
 
@@ -190,133 +32,207 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// ==============================
-//  SYSTEME DE NOTES + POPUP
-// ==============================
+/* =========================================================
+   DROPDOWN RECHERCHE VILLES
+   ========================================================= */
+document.addEventListener('DOMContentLoaded', () => {
 
-// Sélecteurs du popup
-const overlay = document.getElementById('popupNote');
-const popupContent = document.getElementById('popupContent');
-const closeBtn = document.getElementById('closePopup');
+  const villeInput = $('#villeInput');
+  const dropdownContent = $('#dropdownContent');
+  if (!villeInput || !dropdownContent) return;
 
-// --- Fonction pour ouvrir le popup ---
-function ouvrirPopup(texteNote) {
-    popupContent.innerHTML = texteNote;
-    overlay.style.display = 'flex';
-}
+  const VILLES = [
+    { label: 'Abbeville', url: '../Abbeville/abbeville.html' },
+    { label: 'Agde', url: '../Agde/agde.html' },
+    { label: 'Abries (Dauphiné)', url: './abries.html' },
+    { label: 'Aix', url: '../Aix/aix.html' }
+  ];
 
-// --- Fonction pour fermer le popup ---
-function fermerPopup() {
-    overlay.style.display = 'none';
-}
+  function renderDropdown(filterText = '') {
+    dropdownContent.innerHTML = '';
+    const ft = filterText.trim().toLowerCase();
 
-// --- Clic sur la croix ---
-closeBtn.addEventListener('click', fermerPopup);
+    const results = VILLES.filter(v =>
+      v.label.toLowerCase().includes(ft)
+    );
 
-// --- Clic sur l'overlay (extérieur) ---
-overlay.addEventListener('click', function (e) {
-    if (e.target === overlay) {
-        fermerPopup();
+    if (!results.length) {
+      dropdownContent.classList.remove('show');
+      return;
     }
-});
 
-// ==============================
-//  NOTES DANS LES LIGNES
-// ==============================
-
-// Chaque ligne cliquable
-document.querySelectorAll('.ligne-note').forEach(ligne => {
-
-    // Clic sur la ligne entière
-    ligne.addEventListener('click', function (e) {
-
-        // Empêche de déclencher le lien <a> dans la cellule IMG
-        if (e.target.tagName === 'A' || e.target.tagName === 'IMG') return;
-
-        const texteNote = this.dataset.note;
-        ouvrirPopup(texteNote);
-    });
-
-});
-
-// ==============================
-//  NUMÉROS DE NOTE (1), (2), ...
-// ==============================
-
-// Si tu veux que (1) (2) (3) déclenchent aussi le popup :
-document.querySelectorAll('.numNote').forEach(num => {
-
-    num.addEventListener('click', function (e) {
-        e.stopPropagation(); // évite conflit avec clic sur la ligne
-
-        const ligne = this.closest('.ligne-note');
-        const texteNote = ligne.dataset.note;
-
-        ouvrirPopup(texteNote);
-    });
-
-});
-
-
-
-
-
-// ==============================
-// SURVOL DES LIGNES DU TABLEAU .exemple
-// ==============================
-
-document.addEventListener("DOMContentLoaded", () => {
-
-  // On prend toutes les lignes du tableau .exemple
-  const lignes = document.querySelectorAll("table.exemple tr");
-
-  lignes.forEach(ligne => {
-    const cellules = ligne.querySelectorAll("th, td");
-
-    // Survol : on fonce la couleur de toute la ligne
-    ligne.addEventListener("mouseenter", () => {
-      cellules.forEach(cell => {
-        cell.dataset.oldBg = getComputedStyle(cell).backgroundColor;
-        cell.dataset.oldColor = getComputedStyle(cell).color;
-
-        cell.style.setProperty("background-color", "#c59f55", "important"); // doré foncé
-        cell.style.setProperty("color", "#000000", "important");             // texte noir lisible
+    results.forEach(v => {
+      const item = document.createElement('div');
+      item.className = 'dropdown-item';
+      item.textContent = v.label;
+      item.addEventListener('click', () => {
+        window.location.href = v.url;
       });
+      dropdownContent.appendChild(item);
     });
 
-    // Sortie : on remet les couleurs d'origine
-    ligne.addEventListener("mouseleave", () => {
-      cellules.forEach(cell => {
-        const oldBg = cell.dataset.oldBg || "transparent";
-        const oldColor = cell.dataset.oldColor || "";
+    dropdownContent.classList.add('show');
+  }
 
-        cell.style.setProperty("background-color", oldBg, "important");
-        cell.style.setProperty("color", oldColor, "important");
-      });
-    });
+  villeInput.addEventListener('input', e => {
+    renderDropdown(e.target.value);
+  });
 
+});
+
+/* =========================================================
+   FERMETURE DES DROPDOWNS (clic extérieur)
+   ========================================================= */
+document.addEventListener('click', (e) => {
+  if (
+    e.target.closest('.dropdown') ||
+    e.target.closest('#lang-switcher')
+  ) return;
+
+  document
+    .querySelectorAll('.dropdown .show')
+    .forEach(el => el.classList.remove('show'));
+});
+
+/* =========================================================
+   POPUPS GÉNÉRIQUES
+   ========================================================= */
+function openPopup(id, htmlContent = '') {
+  const popup = document.getElementById(id);
+  if (!popup) return;
+
+  const p = $('p', popup);
+  if (p) p.innerHTML = htmlContent;
+
+  popup.classList.add('show');
+  popup.setAttribute('aria-hidden', 'false');
+}
+
+function closePopup(id) {
+  const popup = document.getElementById(id);
+  if (!popup) return;
+
+  popup.classList.remove('show');
+  popup.setAttribute('aria-hidden', 'true');
+}
+
+$$('.popup-content .close').forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.preventDefault();
+    const id = btn.dataset.close;
+    if (id) closePopup(id);
   });
 });
 
+$$('.popup-container').forEach(layer => {
+  layer.addEventListener('click', e => {
+    if (e.target === layer) {
+      layer.classList.remove('show');
+      layer.setAttribute('aria-hidden', 'true');
+    }
+  });
+});
 
-// ==========================================
-// Bouton RETOUR — navigation historique réelle
-// ==========================================
-document.addEventListener("DOMContentLoaded", () => {
-  const btnRetour = document.getElementById("btnRetour");
+/* =========================================================
+   SYSTÈME DE NOTES (ISOLÉ — PAS DE CONFLIT GLOBAL)
+   ========================================================= */
+(() => {
 
+  const overlayNote = document.getElementById('popupNote');
+  const popupContent = document.getElementById('popupContent');
+  const closeBtn = document.getElementById('closePopup');
+
+  if (!overlayNote || !popupContent || !closeBtn) return;
+
+  function ouvrirPopup(texte) {
+    popupContent.innerHTML = texte;
+    overlayNote.style.display = 'flex';
+  }
+
+  function fermerPopup() {
+    overlayNote.style.display = 'none';
+  }
+
+  closeBtn.addEventListener('click', fermerPopup);
+
+  overlayNote.addEventListener('click', e => {
+    if (e.target === overlayNote) fermerPopup();
+  });
+
+  document.querySelectorAll('.ligne-note').forEach(ligne => {
+    ligne.addEventListener('click', e => {
+      if (e.target.tagName === 'A' || e.target.tagName === 'IMG') return;
+      ouvrirPopup(ligne.dataset.note);
+    });
+  });
+
+  document.querySelectorAll('.numNote').forEach(num => {
+    num.addEventListener('click', e => {
+      e.stopPropagation();
+      const ligne = num.closest('.ligne-note');
+      if (ligne) ouvrirPopup(ligne.dataset.note);
+    });
+  });
+
+})();
+
+/* =========================================================
+   AJUSTEMENT DES IMAGES (mm → px)
+   ========================================================= */
+document.addEventListener('DOMContentLoaded', () => {
+  document
+    .querySelectorAll('table.exemple img[data-width-mm]')
+    .forEach(img => {
+      const mm = parseFloat(img.dataset.widthMm);
+      if (!isNaN(mm)) {
+        const px = mm * 3.78;
+        img.style.width = px + 'px';
+        img.style.maxWidth = px + 'px';
+        img.style.height = 'auto';
+        img.style.display = 'block';
+        img.style.margin = '0 auto';
+      }
+    });
+});
+
+/* =========================================================
+   SURVOL DES LIGNES DU TABLEAU
+   ========================================================= */
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('table.exemple tr').forEach(ligne => {
+    const cells = ligne.querySelectorAll('th, td');
+
+    ligne.addEventListener('mouseenter', () => {
+      cells.forEach(c => {
+        c.dataset.oldBg = c.style.backgroundColor;
+        c.dataset.oldColor = c.style.color;
+        c.style.setProperty('background-color', '#c59f55', 'important');
+        c.style.setProperty('color', '#000', 'important');
+      });
+    });
+
+    ligne.addEventListener('mouseleave', () => {
+      cells.forEach(c => {
+        c.style.backgroundColor = c.dataset.oldBg || '';
+        c.style.color = c.dataset.oldColor || '';
+      });
+    });
+  });
+});
+
+/* =========================================================
+   BOUTON RETOUR
+   ========================================================= */
+document.addEventListener('DOMContentLoaded', () => {
+  const btnRetour = document.getElementById('btnRetour');
   if (!btnRetour) return;
 
-  btnRetour.addEventListener("click", () => {
-    // Si une page précédente existe dans l’historique
-    if (window.history.length > 1) {
-      window.history.back();
-    } else {
-      // Fallback sécurisé (accès direct, favori, GitHub Pages)
-      window.location.href = "./index.html";
-    }
+  btnRetour.addEventListener('click', () => {
+    if (history.length > 1) history.back();
+    else window.location.href = './index.html';
   });
 });
+
 
 
 
@@ -330,19 +246,12 @@ document.addEventListener("DOMContentLoaded", () => {
    app.js — Script principal
    - Gestion dropdowns (clic extérieur)
    - Sélecteur de langue 🌍 (JS uniquement)
-   ============================================================ */
-
-/* ============================================================
-   app.js — Script principal (VERSION STABLE)
-   - Gestion dropdowns (clic extérieur)
-   - Sélecteur de langue 🌍 (JS uniquement)
    - Traduction déclenchée UNIQUEMENT au chargement
      ou au changement volontaire de langue
    ============================================================ */
 
-
 /* ============================================================
-   1) GESTION DES DROPDOWNS
+   1) GESTION DES DROPDOWNS (clic extérieur)
    ============================================================ */
 
 document.addEventListener('click', (e) => {
@@ -370,18 +279,18 @@ document.addEventListener('click', (e) => {
 
   /* ---------------- CONFIGURATION ---------------- */
 
-const LANGS = {
-  fr: "Français",
-  en: "Anglais",
-  it: "Italien",
-  es: "Espagnol",
-  de: "Allemand",
-  pt: "Portugais",
-  nl: "Néerlandais",
-  pl: "Polonais",
-  ar: "Arabe",
-  zh: "Chinois"
-};
+  const LANGS = {
+    fr: "Français",
+    en: "Anglais",
+    it: "Italien",
+    es: "Espagnol",
+    de: "Allemand",
+    pt: "Portugais",
+    nl: "Néerlandais",
+    pl: "Polonais",
+    ar: "Arabe",
+    zh: "Chinois"
+  };
 
   const STORAGE_KEY = "site_lang";
   const API = "https://translate.googleapis.com/translate_a/single";
@@ -421,7 +330,7 @@ const LANGS = {
         position: fixed !important;
         top: 55px !important;
         right: 90px !important;
-        z-index: 99999 !important;
+        z-index: 2147483647 !important;
         display: flex;
         align-items: center;
         gap: 6px;
@@ -470,6 +379,7 @@ const LANGS = {
   }
 
   function mountUI(ui) {
+    if (document.getElementById('lang-switcher')) return;
     document.body.appendChild(ui.box);
   }
 
@@ -539,7 +449,7 @@ const LANGS = {
   async function applyTranslation(lang) {
     if (!LANGS[lang]) return;
 
-    // 🔒 Empêche toute retraduction inutile
+    // Empêche toute retraduction inutile
     if (lang === document.documentElement.lang) return;
 
     busy = true;
@@ -574,8 +484,6 @@ const LANGS = {
 
   /* ---------------- OBSERVER (SÉCURISÉ) ---------------- */
 
-  // ➜ Observe uniquement les NOUVEAUX nœuds
-  // ➜ AUCUNE retraduction globale
   const observer = new MutationObserver(mutations => {
     if (busy) return;
 
@@ -624,8 +532,4 @@ const LANGS = {
   });
 
 })();
-
-
-
-
 

@@ -11,7 +11,7 @@
      ========================= */
   const ads = [
     {
-      image: '../../../La Poste/Images/in_34.jpg',
+image: '/Resource/Timbre_Magazine.png',
       title: 'Vente à prix nets !',
       d1: "📅 Vente à prix net – Paris",
       d2: "Collection exceptionnelle de lettres anciennes et timbres.",
@@ -19,7 +19,7 @@
       link: 'https://www.letimbreclassique.com/ltc-parcourir-lots/vpn-2024/vpn-2024/'
     },
     {
-      image: '../../../La Poste/Images/IvertTellier.png',
+image: '/Resource/Timbre_Magazine.png',
       title: 'Yvert & Tellier',
       d1: "Le site officiel de référence",
       d2: "Catalogues, timbres, monnaies",
@@ -27,7 +27,7 @@
       link: 'https://www.yvert.com/'
     },
     {
-      image: '../../../La Poste/Images/L_EchoPhil.png',
+image: '/Resource/Timbre_Magazine.png',
       title: "L'Écho de la Timbrologie",
       d1: "Le journal philatélique de référence",
       d2: "Actualités, interviews, analyses",
@@ -35,7 +35,7 @@
       link: 'http://www.echo-de-la-timbrologie.com/store/'
     },
     {
-      image: '../../../La Poste/Images/feteDuTimbre2025.jpg',
+image: '/Resource/Timbre_Magazine.png',
       title: 'Fête du Timbre 2025',
       d1: "📅 8–9 mars 2025",
       d2: "📍 Montpellier – Salle Nougaret",
@@ -43,7 +43,7 @@
       link: 'https://www.asso-philatelique-montpellier.fr/evenement/fete-du-timbre/8/'
     },
     {
-      image: '../../../La Poste/Images/Decembre2024.jpg',
+image: '/Resource/Timbre_Magazine.png',
       title: 'Timbres Magazine',
       d1: "Mensuel philatélique français",
       d2: "Actualités & études",

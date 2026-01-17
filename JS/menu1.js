@@ -1,48 +1,53 @@
 // =========================================
 // MENU1 — spécifique à cette page
+// VERSION ISOLÉE (sans conflit global)
 // =========================================
 
-document.addEventListener("DOMContentLoaded", () => {
+(() => {
 
-  const hamburger = document.getElementById("hamburger");
-  const menu = document.getElementById("sideMenu");
-  const overlay = document.getElementById("menuOverlay");
-  const search = document.getElementById("menu-search");
-  const items = document.querySelectorAll("#menu-list li");
+  document.addEventListener("DOMContentLoaded", () => {
 
-  if (!hamburger || !menu || !overlay) {
-    console.warn("menu1.js : éléments manquants");
-    return;
-  }
+    const hamburger = document.getElementById("hamburger");
+    const menu      = document.getElementById("sideMenu");
+    const overlay   = document.getElementById("menuOverlay");
+    const search    = document.getElementById("menu-search");
+    const items     = document.querySelectorAll("#menu-list li");
 
-  function openMenu(){
-    menu.classList.add("open");
-    overlay.hidden = false;
-  }
+    if (!hamburger || !menu || !overlay) {
+      console.warn("menu1.js : éléments manquants");
+      return;
+    }
 
-  function closeMenu(){
-    menu.classList.remove("open");
-    overlay.hidden = true;
-  }
+    function openMenu() {
+      menu.classList.add("open");
+      overlay.hidden = false;
+    }
 
-  hamburger.addEventListener("click", openMenu);
-  overlay.addEventListener("click", closeMenu);
+    function closeMenu() {
+      menu.classList.remove("open");
+      overlay.hidden = true;
+    }
 
-  // Ferme quand on clique sur un lien
-  menu.addEventListener("click", e => {
-    if (e.target.tagName === "A") closeMenu();
+    hamburger.addEventListener("click", openMenu);
+    overlay.addEventListener("click", closeMenu);
+
+    // Ferme quand on clique sur un lien
+    menu.addEventListener("click", e => {
+      if (e.target.tagName === "A") closeMenu();
+    });
+
+    // Recherche simple
+    if (search) {
+      search.addEventListener("input", () => {
+        const v = search.value.toLowerCase();
+        items.forEach(li => {
+          li.style.display = li.textContent.toLowerCase().includes(v)
+            ? ""
+            : "none";
+        });
+      });
+    }
+
   });
 
-  // Recherche simple
-  if (search) {
-    search.addEventListener("input", () => {
-      const v = search.value.toLowerCase();
-      items.forEach(li => {
-        li.style.display = li.textContent.toLowerCase().includes(v)
-          ? ""
-          : "none";
-      });
-    });
-  }
-
-});
+})();
