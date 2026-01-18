@@ -584,7 +584,7 @@
         { name: 'Essonnes', url: '../../Villes_E/Essonnes/essonnes.html' },
         { name: 'Estagel', url: '../../Villes_E/Estagel/estagel.html' },
         { name: 'Estaires', url: '../../Villes_E/Estaires/estaires.html' },
-        { name: 'Estissac', url: '../../Villes_E/Estissac/estissac.html' },
+        { name: 'Etissac', url: '../../Villes_E/Etissac/etissac.html' },
         { name: 'Etain', url: '../../Villes_E/Etain/etain.html' },
         { name: 'Etampes', url: '../../Villes_E/Etampes/etampes.html' },
         { name: 'Etoges', url: '../../Villes_E/Etoges/etoges.html' },
