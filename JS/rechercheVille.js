@@ -605,7 +605,7 @@
         { name: 'Faremoutiers', url: '../../Villes_F/Faremoutiers/faremoutiers.html' },
         { name: 'Faucogney', url: '../../Villes_F/Faucogney/faucogney.html' },
         { name: 'Fauville', url: '../../Villes_F/Fauville/fauville.html' },
-        { name: 'Favernay', url: '../../Villes_F/Faverney/favernay.html' },
+        { name: 'Faverney', url: '../../Villes_F/Faverney/favernay.html' },
         { name: 'FaylBillot', url: '../../Villes_F/FaylBillot/leFaylBillot.html' },
         { name: 'Fecamp', url: '../../Villes_F/Fecamp/fecamp.html' },
         { name: 'Felletin', url: '../../Villes_F/Felletin/felletin.html' },
