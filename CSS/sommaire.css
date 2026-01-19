@@ -175,6 +175,38 @@ html, body {
   white-space: nowrap;
 }
 
+/* =========================================================
+   Sommaire — Lettre (mise en valeur sans classe)
+   Ciblage strict : uniquement le span du h2#h12
+   ========================================================= */
+
+#h12 {
+  text-align: center;
+  margin: 22px auto 8px;
+}
+
+/* Lettre encadrée */
+#h12 strong > span {
+  display: inline-block;          /* indispensable pour le cadre */
+  padding: 4px 12px;              /* espace intérieur du cadre */
+  margin-left: 6px;               /* respiration après "Lettre" */
+  font-size: 1.6em;               /* mise en valeur de la lettre */
+  font-weight: 700;               /* renforce le contraste */
+  line-height: 1;                 /* cadre bien ajusté */
+  color:#313130;               /* couleur principale */
+  background: var(--hl-bg);       /* fond léger */
+  border: 2px solid var(--hl);    /* cadre */
+  border-radius: 999px;           /* pilule élégante */
+  white-space: nowrap;            /* sécurité typographique */
+}
+
+/* Option : léger effet au survol (facultatif) */
+#h12 strong > span:hover {
+  background: var(--hl);
+  color: #fff;
+}
+
+
 /* Bloc COTE fixe à droite */
 .news {
   flex-shrink: 0;
