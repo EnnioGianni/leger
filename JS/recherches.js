@@ -1,14 +1,19 @@
 /* ============================================================
  * File: /JS/recherches.js
- * Recherche avancée : multi-mots, fuzzy, highlight, sans accents
- * + Navigation clavier (↑ ↓ Entrée Échap)
+ * Recherche avancée :
+ * - multi-mots
+ * - fuzzy (tolérance fautes)
+ * - insensible aux accents
+ * - insensible à la casse (MAJ/min)
+ * - highlight intelligent même avec erreurs
+ * - navigation clavier ↑ ↓ Entrée Échap
  * ============================================================ */
 
 (() => {
   "use strict";
 
   /* -----------------------------------------------
-   * 1) Injection du CSS .active-item dans le <head>
+   * 1) Injection CSS pour la sélection clavier
    * ----------------------------------------------- */
   const style = document.createElement("style");
   style.textContent = `
@@ -22,18 +27,29 @@
       z-index: 10;
       transition: background-color 0.15s ease, outline 0.15s ease;
     }
+
+    mark.hl {
+      background-color: #ffd27d;
+      padding: 0 2px;
+      border-radius: 3px;
+    }
   `;
   document.head.appendChild(style);
 
   /* ------------------------
-   * 2) Normalisation & utils
+   * 2) Outils & normalisation
    * ------------------------ */
-const normalize = (str) =>
-  (str || "")
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")   // supprime accents
-    .replace(/[^a-z0-9]/g, "")        // 🔥 supprime espaces, tirets, apostrophes, points
-    .toLowerCase();
+
+  // Normalisation FORTE :
+  // - accents supprimés
+  // - ponctuation supprimée
+  // - casse ignorée
+  const normalize = (str) =>
+    (str || "")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^a-z0-9]/gi, "") // ⬅️ g + i = ignore MAJ
+      .toLowerCase();
 
   const escapeHtml = (s) =>
     s.replace(/[&<>"']/g, (m) => ({
@@ -48,16 +64,17 @@ const normalize = (str) =>
     if (!a.length) return b.length;
     if (!b.length) return a.length;
 
-    const dp = Array.from({ length: b.length + 1 }, (_, i) =>
+    const dp = Array.from({ length: b.length + 1 }, () =>
       Array(a.length + 1).fill(0)
     );
+
     for (let j = 0; j <= a.length; j++) dp[0][j] = j;
     for (let i = 0; i <= b.length; i++) dp[i][0] = i;
 
     for (let i = 1; i <= b.length; i++) {
       for (let j = 1; j <= a.length; j++) {
         dp[i][j] =
-          b[i - 1] === a[j - 1]
+          b[i - 1].toLowerCase() === a[j - 1].toLowerCase()
             ? dp[i - 1][j - 1]
             : 1 + Math.min(
                 dp[i - 1][j],
@@ -69,20 +86,42 @@ const normalize = (str) =>
     return dp[b.length][a.length];
   };
 
+  /* ----------------------------------------------------
+   * 3) Highlight fuzzy (insensible MAJ/min)
+   * ---------------------------------------------------- */
   const highlight = (label, query) => {
     if (!query) return escapeHtml(label);
 
-    const nLabel = normalize(label);
-    const nQ = normalize(query);
+    const rawLabel = label;
+    const rawQuery = query.trim();
+    if (!rawQuery) return escapeHtml(label);
 
-    const idx = nLabel.indexOf(nQ);
-    if (idx === -1) return escapeHtml(label);
+    const nLabel = normalize(rawLabel);
+    const nQuery = normalize(rawQuery);
 
-    // ⚠️ approximation, mais suffisant visuellement
+    let bestIndex = -1;
+    let bestScore = Infinity;
+
+    for (let i = 0; i <= nLabel.length - nQuery.length; i++) {
+      const slice = nLabel.slice(i, i + nQuery.length + 1);
+      const dist = levenshtein(slice, nQuery);
+      if (dist < bestScore) {
+        bestScore = dist;
+        bestIndex = i;
+      }
+    }
+
+    if (bestIndex === -1 || bestScore > 2) {
+      return escapeHtml(label);
+    }
+
+    const start = bestIndex;
+    const end = start + rawQuery.length;
+
     return (
-      escapeHtml(label.slice(0, idx)) +
-      `<mark class="hl">${escapeHtml(label.slice(idx, idx + query.length))}</mark>` +
-      escapeHtml(label.slice(idx + query.length))
+      escapeHtml(rawLabel.slice(0, start)) +
+      `<mark class="hl">${escapeHtml(rawLabel.slice(start, end))}</mark>` +
+      escapeHtml(rawLabel.slice(end))
     );
   };
 
@@ -90,7 +129,7 @@ const normalize = (str) =>
   const $$ = (s, p = document) => [...p.querySelectorAll(s)];
 
   /* ------------------------
-   * 3) Références DOM
+   * 4) Références DOM
    * ------------------------ */
   const input = $("#ville-search");
   const btn = $("#ville-search-btn");
@@ -100,7 +139,9 @@ const normalize = (str) =>
   const noResults = $("#no-results");
 
   for (const a of cards) {
-    if (!a.dataset.label) a.dataset.label = a.textContent.trim();
+    if (!a.dataset.label) {
+      a.dataset.label = a.textContent.trim();
+    }
   }
 
   let lastQuery = "";
@@ -108,7 +149,7 @@ const normalize = (str) =>
   let visibleCards = [];
 
   /* -----------------------------------------
-   * 4) Matching (multi-mots + fuzzy)
+   * 5) Matching (insensible MAJ/min)
    * ----------------------------------------- */
   const matches = (label, query) => {
     const base = normalize(label);
@@ -130,7 +171,7 @@ const normalize = (str) =>
   };
 
   /* ------------------------
-   * 5) Filtrage principal
+   * 6) Filtrage
    * ------------------------ */
   const applyFilter = (query) => {
     if (query === lastQuery) return;
@@ -138,16 +179,16 @@ const normalize = (str) =>
 
     visibleCards = [];
     keyboardIndex = -1;
-
     let visible = 0;
 
     for (const a of cards) {
       const label = a.dataset.label;
+
       if (matches(label, query)) {
         a.hidden = false;
+        a.innerHTML = highlight(label, query);
         visibleCards.push(a);
         visible++;
-        a.innerHTML = highlight(label, query);
       } else {
         a.hidden = true;
         a.textContent = label;
@@ -158,14 +199,16 @@ const normalize = (str) =>
       count.textContent =
         !query.trim()
           ? `Toutes les ${cards.length} villes`
-          : `${visible} résultat(s) sur ${cards.length}`;
+          : `${visible} résultat(s) pour « ${query} »`;
     }
 
-    if (noResults) noResults.hidden = visible > 0;
+    if (noResults) {
+      noResults.hidden = visible > 0;
+    }
   };
 
   /* ------------------------
-   * 6) Navigation clavier
+   * 7) Navigation clavier
    * ------------------------ */
   const updateKeyboardSelection = () => {
     visibleCards.forEach((a) => a.classList.remove("active-item"));
@@ -176,7 +219,6 @@ const normalize = (str) =>
   };
 
   input?.addEventListener("keydown", (e) => {
-    // ÉCHAP : doit toujours marcher, même sans résultat
     if (e.key === "Escape") {
       input.value = "";
       applyFilter("");
@@ -184,7 +226,7 @@ const normalize = (str) =>
     }
 
     const total = visibleCards.length;
-    if (!total) return; // si aucune ville visible, on ignore ↑ ↓ Entrée
+    if (!total) return;
 
     if (e.key === "ArrowDown") {
       e.preventDefault();
@@ -198,14 +240,12 @@ const normalize = (str) =>
       e.preventDefault();
       const target =
         keyboardIndex >= 0 ? visibleCards[keyboardIndex] : visibleCards[0];
-      if (target) {
-        window.location.href = target.href;
-      }
+      if (target) window.location.href = target.href;
     }
   });
 
   /* ------------------------
-   * 7) Events classiques
+   * 8) Events
    * ------------------------ */
   input?.addEventListener("input", () => applyFilter(input.value));
   btn?.addEventListener("click", () => applyFilter(input.value));
@@ -216,10 +256,12 @@ const normalize = (str) =>
     applyFilter("");
   });
 
-  // Init : tout afficher
   applyFilter("");
 })();
-/* STYLE POUR LE COMPTEUR DE RÉSULTATS */
+
+/* -----------------------------------------------
+ * STYLE POUR LE COMPTEUR
+ * ----------------------------------------------- */
 const styleCount = document.createElement("style");
 styleCount.textContent = `
   #search-count {
