@@ -1,183 +1,244 @@
+<!-- =========================================
+# File: ./sommaireVilleB.html
+# HTML complet incluant la barre de recherche + liens CSS/JS
+========================================= -->
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8" />
-        <title>Le Postillon</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="../../css/nba.css" />
-        <link rel="stylesheet" href="../../css/table.css" />
-        <link rel="stylesheet" href="../../css/dropdown.css" />
-        <link rel="stylesheet" href="../../css/modale.css" />
-        <link rel="stylesheet" href="../../css/bootstrap.min.css" />
-        <script src="../../JS/bootstrap.bundle.min.js" defer></script>        
-        <script src="../../JS/script.js" defer></script>
-        <link rel="icon" type="image/x-icon" href="../../icones/books_library_1768.ico">
-        <script src="https://kit.fontawesome.com/50786edb2e.js" crossorigin="anonymous" defer></script>      
-    </head> 
-<body>
-    <header id="mainHeader" class="d-flex justify-content-between align-items-center py-3 px-5">       
-         <a href="../Villes A/sommaireVilleA.html"><img id="logoImg" src="../../icones/books_library_1768.ico"></a>      
-        <h1 id="h1" style="margin: 0 50px 0 -35px;">Le Postillon</h1> 
-               
-        <a class="div a title-tip" href="../Villes A/sommaireVilleA.html" title="lien vers les villes avec le nom A">A</a>
-        <a class="div a title-tip" href="../Villes B/B_sommaire.html" title="lien vers les villes avec le nom B">B</a>
-        <a class="div a title-tip" href="../Villes C/C_sommaire.html" title="lien vers les villes avec le nom C">C</a>
-        <a class="div a title-tip" href="../Villes D/D_sommaire.html" title="lien vers les villes avec le nom D">D</a>
-        <a class="div a title-tip" href="../Villes E/E_sommaire.html" title="lien vers les villes avec le nom E">E</a>
-        <a class="div a title-tip" href="../Villes F/F_sommaire.html" title="lien vers les villes avec le nom F">F</a>
-        <a class="div a title-tip  active" href="../Villes G/G_sommaire.html" title="lien vers les villes avec le nom G">G</a>
-        <a class="div a title-tip" href="../Villes H/H_sommaire.html" title="lien vers les villes avec le nom H">H</a>
-        <a class="div a title-tip" href="../Villes I/I_sommaire.html" title="lien vers les villes avec le nom I">I</a>
-        <a class="div a title-tip" href="../Villes J/J_sommaire.html" title="lien vers les villes avec le nom J">J</a>
-        <a class="div a title-tip" href="../Villes K/K_sommaire.html" title="lien vers les villes avec le nom K">K</a>
-        <a class="div a title-tip" href="../Villes L/L_sommaire.html" title="lien vers les villes avec le nom L">L</a>
-        <a class="div a title-tip" href="../Villes M/M_sommaire.html" title="lien vers les villes avec le nom M">M</a>
-        <a class="div a title-tip" href="../Villes N/N_sommaire.html" title="lien vers les villes avec le nom N">N</a>
-        <a class="div a title-tip" href="../Villes O/O_sommaire.html" title="lien vers les villes avec le nom O">O</a>
-        <a class="div a title-tip" href="../Villes P/P_sommaire.html" title="lien vers les villes avec le nom P">P</a>
-        <a class="div a title-tip" href="../Villes Q/Q_sommaire.html" title="lien vers les villes avec le nom Q">Q</a>
-        <a class="div a title-tip" href="../Villes R/R_sommaire.html" title="lien vers les villes avec le nom R">R</a>
-        <a class="div a title-tip" href="../Villes S/S_sommaire.html" title="lien vers les villes avec le nom S">S</a>
-        <a class="div a title-tip" href="../Villes T/T_sommaire.html" title="lien vers les villes avec le nom T">T</a>
-        <a class="div a title-tip" href="../Villes U/U_sommaire.html" title="lien vers les villes avec le nom U">U</a>
-        <a class="div a title-tip" href="../Villes V/V_sommaire.html" title="lien vers les villes avec le nom V">V</a>
-        <a class="div a title-tip" href="../Villes W/W_sommaire.html" title="lien vers les villes avec le nom W">W</a>
-        <a class="div a title-tip" href="../Villes X/X_sommaire.html" title="lien vers les villes avec le nom X">X</a>
-        <a class="div a title-tip" href="../Villes Y/Y_sommaire.html" title="lien vers les villes avec le nom Y">Y</a>
-        <a class="div a title-tip" href="../Villes Z/Z_sommaire.html" title="lien vers les villes avec le nom Z">Z</a> 
-        <ul class="pagination justify-content-center">
-            <li class="page-item">
-                <div class="dropdown" style="margin: 20px 50px 0 0;">
-                    <a href="../../index.html" class="div a title-tip page-link">
-                        Accueil <i class="fas fa-caret-down"></i>
-                    </a>
-                     <!-- <div class="dropdown-content">
-                         <a href="../../video.html">Video</a>
-                        <a href="../../pdf.html">PDF</a>
-                        <a href="../../blog.html">Blog</a>
-                        <a href="../../Articles.html">Articles</a>
-                        <a href="../../contact.html">Contact</a>
-                    </div>  -->
-                </div> 
-            </li>       
-        </ul>
-    </header>        
-        <h2 id="h2">La poste de l'ancienne France</h2>
-        <p>Catalogue de description et cotations des marques postales des origines à 1791<br>Villes comencent par la lettre <span><strong id="taille">G</strong></span></p>
-<!--Boite de recherche-->           
-            <div class="wrap">
-                <div class="search">
-                    <input type="text" id="champRecherche" placeholder="Rechercher une ville">       
-                  <button type="submit" class="searchButton">
-                    <i class="fa fa-search"></i>
-                  </button>
-                </div>
-              </div>     
-<!--Fin Boite de recherche-->
-        </nav>
-<table style="margin: 30px 0 0 0px;">
-    <!--Commentaire-->   
-    <tr>             
-        <th colspan="7" style="color: black;">Pour trouve la ville que vous recherchée faite sur votre clavier – CTRL + F – et dans la fenêtre qui s’ affiche en bas ou en haut de page, tapée le nom de la ville elle s’affichera dans le tableau en vert, cliques dessus et la page de la ville s’affichera.</th>         
-    </tr>
-<!--Fin Commentaire-->  
-    <tr>  
-        <td class="div a active"><a href="../Villes G/Gace/gace.html">Gacé</a></td>
-        <td class="div a active"><a href="../Villes G/Gaillac/gaillac.html">Gaillac</a></td>
-        <td class="div a active"><a href="../Villes G/Gaillon/gaillon.html">Gaillon</a></td>
-        <td class="div a active"><a href="../Villes G/Gallardon/gallardon.html">Gallardon</a></td>
-        <td class="div a active"><a href="../Villes G/Gandelu/gandelu.html">Gandelu</a></td>
-        <td class="div a active"><a href="../Villes G/Ganges/ganges.html">Ganges</a></td>
-        <td class="div a active"><a href="../Villes G/Gap/gap.html">Gap</a></td>
-    </tr>    
-    <tr>  
-        <td class="div a active"><a href="../Villes G/Gavray/gavray.html">Gavray</a</td>
-        <td class="div a active"><a href="../Villes G/Genlis/genlis.html">Genlis</a></td>
-        <td class="div a active"><a href="../Villes G/Genolhac/genolhac.html">Génolhac</a></td>
-        <td class="div a active"><a href="../Villes G/Genouillat/genouillat.html">Genouillat</a></td>
-        <td class="div a active"><a href="../Villes G/Gerberoy/gerberoy.html">Gerberoy</a></td>
-        <td class="div a active"><a href="../Villes G/Gex/gex.html">Gex</a></td>
-        <td class="div a active"><a href="../Villes G/Gien/gien.html">Gien</a></td>
-    </tr>    
-    <tr>  
-        <td class="div a active"><a href="../Villes G/Gignac/gignac.html">Gignac</a></td>
-        <td class="div a active"><a href="../Villes G/Gimont/gimont.html">Gimont</a></td>
-        <td class="div a active"><a href="../Villes G/Gisors/gisors.html">Gisors</a></td>
-        <td class="div a active"><a href="../Villes G/Givet/givet.html">Givet</a></td>
-        <td class="div a active"><a href="../Villes G/Givry/givry.html">Givry</a></td>
-        <td class="div a active"><a href="../Villes G/Goderville/godeville.html">Goderville</a</td>
-        <td class="div a active"><a href="../Villes G/Gondrecourt/gondrecourt.html">Gondrecourt</a</td>
-    </tr>    
-    <tr>
-        <td class="div a active"><a href="../Villes G/Gonesse/gonesse.html">Gonesse</a></td> 
-        <td class="div a active"><a href="../Villes G/Gonfaron/gonfaron.html">Gonfaron</a></td>
-        <td class="div a active"><a href="../Villes G/Gourdon/gourdon.html">Gourdon</a></td>
-        <td class="div a active"><a href="../Villes G/GournayEnBray/gournayEnBray.html">Gournay En Bray</a></td>
-        <td class="div a active"><a href="../Villes G/GranceyLeChateau/garnceyLeChateau.html">Grancey Le Château</a></td>
-        <td class="div a active"><a href="../Villes G/GrandPre/granPre.html">Grand Pre</a></td>
-        <td class="div a active"><a href="../Villes G/Granges/granges.html">Les Granges</a></td>
-    </tr>    
-    <tr>
-        <td class="div a active"><a href="../Villes G/Granville/granville.html">Granville</a></td> 
-        <td class="div a active"><a href="../Villes G/Grandvilliers/grandvilliers.html">Grandvilliers</a></td>
-        <td class="div a active"><a href="../Villes G/Grasse/grasse.html">grasse</a></td>
-        <td class="div a active"><a href="../Villes G/Grave/grave.html">Grave</a</td>
-        <td class="div a active"><a href="../Villes G/Gravelines/gravelines.html">Gravellines</a></td>
-        <td class="div a active"><a href="../Villes G/Gray/gray.html">Gray</a></td>
-        <td class="div a active"><a href="../Villes G/Grenade/grenade.html">Grenade</a></td>
-    </tr>    
-    <tr>
-        <td class="div a active"><a href="../Villes G/GrenadeSurLadour/grenadeSurLadour.html">Grende sous L'Adour</a></td> 
-        <td class="div a active"><a href="../Villes G/Grenoble/grenoble.html">Grenoble</a></td>
-        <td class="div a active"><a href="../Villes G/Grignan/grignan.html">Grignan</a></td>
-        <td class="div a active"><a href="../Villes G/Grignols/grignols.html">Grignols</a></td>
-        <td class="div a active"><a href="../Villes G/Grisolles/grisolles.html">Grisolles</a></td>
-        <td class="div a active"><a href="../Villes G/Grolle/grolles.html">La Grolle</a></td>
-        <td class="div a active"><a href="../Villes G/GueCharroux/gueCharroux.html">Le Gue Charroux</a></td>
-    </tr>    
-    <tr>
-        <td class="div a active"><a href="../Villes G/Guemene/guemene.html">Guemene</a></td>
-        <td class="div a active"><a href="../Villes G/Guerande/guerande.html">Guerande</a></td>
-        <td class="div a active"><a href="../Villes G/Guerche/guerche.html">Guerche</a></td>
-        <td class="div a active"><a href="../Villes G/Gueret/gueret.html">Gueret</a></td>
-        <td class="div a active"><a href="../Villes G/Guingamp/guingamp.html">Guincamp</a></td>
-        <td class="div a active"><a href="../Villes G/GuinesEnBrie/guinesEnBrie.html">Guines En Brie</a></td>
-        <td class="div a active"><a href="../Villes G/Guiscard/guiscard.html">Guiscard</a></td> 
-    </tr>    
-    <tr>
-        <td class="div a active"><a href="../Villes G/Guise/guise.html">Guise</a></td> 
-        <td class="div a active"><a href="../Villes G/GY/gy.html">Gy</a></td>
-        <td class="div a active"><a href="#"></a></td>
-        <td class="div a active"><a href="#"></a></td>
-        <td class="div a active"><a href="#"></a></td>
-        <td class="div a active"><a href="#"></a></td>
-        <td class="div a active"><a href="#"></a></td>
-    </tr>        
-       
-<!--Commentaire-->
-<tr>             
-    <th colspan="7"></th>         
-</tr> 
-</table>  
+<head>
+  <meta charset="utf-8">
+  <title>Le Postillon – Sommaire G</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<div class='News-footer'>
-    <div class='news'>
-        <span id='news-head'><b>COTE</b></span>
+  <!-- Styles -->
+  <link rel="stylesheet" href="../CSS/sommaire.css">
+  <link rel="stylesheet" href="../CSS/menu.css">
+  <!-- + Nouveau CSS recherche -->
+  <link rel="stylesheet" href="../CSS/recherches.css">
+
+  <!-- Scripts (defer) -->
+  <script defer src="../JS/menu.js"></script>
+  <script defer src="../JS/sommaire.js"></script>
+  <!-- + Nouveau JS recherche -->
+  <script defer src="../JS/recherches.js"></script>
+
+  <link rel="icon" type="image/x-icon" href="../icones/books_library_1768.ico">
+</head>
+
+<body id="scrollable"
+  style="
+    min-height:100vh;
+    margin:0;
+    background:url('../Resource/carrosseAvecPhoto.jpg')
+               center center / cover no-repeat fixed;">
+
+<!-- ================= HEADER ================= -->
+<header class="lp-header">
+
+
+  <!-- Logo cliquable -->
+  <a href="../index.html" class="logo" aria-label="Retour à l’accueil">
+    <img src="../Resource/books_library_1768.ico"
+         alt="Le Postillon — Marques postales anciennes">
+  </a>
+
+  <!-- Titre -->
+  <h1 class="titre-principal">Le Postillon</h1>
+
+  <!-- Bouton hamburger -->
+  <button id="hamburger"
+          class="hamburger"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false">
+    ☰
+  </button>
+
+  <!-- ===== MENU LATÉRAL SOMMAIRES ===== -->
+  <nav id="sideMenu" class="side-menu" aria-hidden="true">
+
+
+    <!-- Recherche -->
+    <input type="search"
+           id="menu-search"
+           placeholder="Rechercher un sommaire…"
+           aria-label="Rechercher un sommaire">
+
+    <!-- Liste A → Z -->
+    <ul id="menu-list">
+      <li><a href="../Villes_A/sommaireA.html">Sommaire A</a></li>
+      <li><a href="../Villes_B/sommaireB.html">Sommaire B</a></li>
+      <li><a href="../Villes_C/C_sommaire.html">Sommaire C</a></li>
+      <li><a href="../Villes_D/D_sommaire.html">Sommaire D</a></li>
+      <li><a href="../Villes_E/E_sommaire.html">Sommaire E</a></li>
+      <li><a href="../Villes_F/F_sommaire.html">Sommaire F</a></li>
+      <li><a href="../Villes_G/G_sommaire.html">Sommaire G</a></li>
+      <li><a href="../Villes_H/H_sommaire.html">Sommaire H</a></li>
+      <li><a href="../Villes_I/I_sommaire.html">Sommaire I</a></li>
+      <li><a href="../Villes_J/J_sommaire.html">Sommaire J</a></li>
+      <li><a href="../Villes_K/K_sommaire.html">Sommaire K</a></li>
+      <li><a href="../Villes_L/L_sommaire.html">Sommaire L</a></li>
+      <li><a href="../Villes_M/M_sommaire.html">Sommaire M</a></li>
+      <li><a href="../Villes_N/N_sommaire.html">Sommaire N</a></li>
+      <li><a href="../Villes_O/O_sommaire.html">Sommaire O</a></li>
+      <li><a href="../Villes_P/P_sommaire.html">Sommaire P</a></li>
+      <li><a href="../Villes_Q/Q_sommaire.html">Sommaire Q</a></li>
+      <li><a href="../Villes_R/R_sommaire.html">Sommaire R</a></li>
+      <li><a href="../Villes_S/S_sommaire.html">Sommaire S</a></li>
+      <li><a href="../Villes_T/T_sommaire.html">Sommaire T</a></li>
+      <li><a href="../Villes_U/U_sommaire.html">Sommaire U</a></li>
+      <li><a href="../Villes_V/V_sommaire.html">Sommaire V</a></li>
+      <li><a href="../Villes_W/W_sommaire.html">Sommaire W</a></li>
+      <li><a href="../Villes_X/X_sommaire.html">Sommaire X</a></li>
+      <li><a href="../Villes_Y/Y_sommaire.html">Sommaire Y</a></li>
+      <li><a href="../Villes_Z/Z_sommaire.html">Sommaire Z</a></li>
+    </ul>
+
+  </nav>
+
+  <!-- Overlay -->
+  <div id="menuOverlay" class="menu-overlay" hidden></div>
+
+</header>
+<!-- ================= FIN HEADER ================= -->
+
+
+  <!-- ===== MAIN ===== -->
+  <main style="max-width:1100px; margin:0 auto 80px;">
+    <!-- Titre (même style index) -->
+
+    <!-- ===== Barre de recherche (NOUVEAU) ===== -->
+    <section class="search-wrap" aria-label="Recherche de ville">
+        <h2 id="h12">
+          Sommaire — Lettre <strong><span>G</span></strong>
+      </h2>
+
+      <div class="search-box">
+        <input
+          id="ville-search"
+          class="search-input"
+          type="search"
+          inputmode="search"
+          placeholder="Rechercher une ville… (ex.: Aix, Arles, Ajaccio)"
+          autocomplete="off"
+          aria-label="Rechercher une ville"
+       >
+        <button id="ville-search-btn" class="search-btn" type="button" aria-label="Lancer la recherche" title="Rechercher">
+          <!-- Icône loupe SVG -->
+          <svg class="search-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M10.5 3a7.5 7.5 0 0 1 5.964 12.117l4.21 4.21-1.414 1.414-4.21-4.21A7.5 7.5 0 1 1 10.5 3Zm0 2a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11Z"/>
+          </svg>
+        </button>
+        <button id="ville-clear-btn" class="clear-btn" type="button" aria-label="Effacer la recherche" title="Effacer">×</button>
+      </div>
+      <p id="search-count" class="search-count" aria-live="polite"></p>
+    </section>
+
+    <!-- Grille de villes (même look que l’index) -->
+    <div class="table-letters">
+    
+      <div class="letters-grid" id="letters-grid">
+        <!-- Colle ici la liste des Villes_C (extrait de ton index) -->
+
+        <a class="letter-card" href="../Villes G/Gace/gace.html">Gacé</a>
+        <a class="letter-card" href="../Villes G/Gaillac/gaillac.html">Gaillac</a>
+        <a class="letter-card" href="../Villes G/Gaillon/gaillon.html">Gaillon</a>
+        <a class="letter-card" href="../Villes G/Gallardon/gallardon.html">Gallardon</a>
+        <a class="letter-card" href="../Villes G/Gandelu/gandelu.html">Gandelu</a>
+        <a class="letter-card" href="../Villes G/Ganges/ganges.html">Ganges</a>
+        <a class="letter-card" href="../Villes G/Gap/gap.html">Gap</a>
+       
+      
+        <a class="letter-card" href="../Villes G/Gavray/gavray.html">Gavray</a>
+        <a class="letter-card" href="../Villes G/Genlis/genlis.html">Genlis</a>
+        <a class="letter-card" href="../Villes G/Genolhac/genolhac.html">Génolhac</a>
+        <a class="letter-card" href="../Villes G/Genouillat/genouillat.html">Genouillat</a>
+        <a class="letter-card" href="../Villes G/Gerberoy/gerberoy.html">Gerberoy</a>
+        <a class="letter-card" href="../Villes G/Gex/gex.html">Gex</a>
+        <a class="letter-card" href="../Villes G/Gien/gien.html">Gien</a>
+       
+      
+        <a class="letter-card" href="../Villes G/Gignac/gignac.html">Gignac</a>
+        <a class="letter-card" href="../Villes G/Gimont/gimont.html">Gimont</a>
+        <a class="letter-card" href="../Villes G/Gisors/gisors.html">Gisors</a>
+        <a class="letter-card" href="../Villes G/Givet/givet.html">Givet</a>
+        <a class="letter-card" href="../Villes G/Givry/givry.html">Givry</a>
+        <a class="letter-card" href="../Villes G/Goderville/godeville.html">Goderville</a>
+        <a class="letter-card" href="../Villes G/Gondrecourt/gondrecourt.html">Gondrecourt</a>
+       
+    
+        <a class="letter-card" href="../Villes G/Gonesse/gonesse.html">Gonesse</a>
+        <a class="letter-card" href="../Villes G/Gonfaron/gonfaron.html">Gonfaron</a>
+        <a class="letter-card" href="../Villes G/Gourdon/gourdon.html">Gourdon</a>
+        <a class="letter-card" href="../Villes G/Gournay">Gournay En Bray</a>
+        <a class="letter-card" href="../Villes G/GranceyLeChateau/garnceyLeChateau.html">Grancey Le Château</a>
+        <a class="letter-card" href="../Villes G/GrandPre/granPre.html">Grand Pre</a>
+        <a class="letter-card" href="../Villes G/Granges/granges.html">Les Granges</a>
+       
+    
+        <a class="letter-card" href="../Villes G/Granville/granville.html">Granville</a>
+        <a class="letter-card" href="../Villes G/Grandvilliers/grandvilliers.html">Grandvilliers</a>
+        <a class="letter-card" href="../Villes G/Grasse/grasse.html">grasse</a>
+        <a class="letter-card" href="../Villes G/Grave/grave.html">Grave</a>
+        <a class="letter-card" href="../Villes G/Gravelines/gravelines.html">Gravellines</a>
+        <a class="letter-card" href="../Villes G/Gray/gray.html">Gray</a>
+        <a class="letter-card" href="../Villes G/Grenade/grenade.html">Grenade</a>
+       
+    
+        <a class="letter-card" href="../Villes G/GrenadeSurLadour/grenadeSurLadour.html">Grende sous L'Adour</a>
+        <a class="letter-card" href="../Villes G/Grenoble/grenoble.html">Grenoble</a>
+        <a class="letter-card" href="../Villes G/Grignan/grignan.html">Grignan</a>
+        <a class="letter-card" href="../Villes G/Grignols/grignols.html">Grignols</a>
+        <a class="letter-card" href="../Villes G/Grisolles/grisolles.html">Grisolles</a>
+        <a class="letter-card" href="../Villes G/Grolle/grolles.html">La Grolle</a>
+        <a class="letter-card" href="../Villes G/GueCharroux/gueCharroux.html">Le Gue Charroux</a>
+       
+    
+        <a class="letter-card" href="../Villes G/Guemene/guemene.html">Guemene</a>
+        <a class="letter-card" href="../Villes G/Guerande/guerande.html">Guerande</a>
+        <a class="letter-card" href="../Villes G/Guerche/guerche.html">Guerche</a>
+        <a class="letter-card" href="../Villes G/Gueret/gueret.html">Gueret</a>
+        <a class="letter-card" href="../Villes G/Guingamp/guingamp.html">Guincamp</a>
+        <a class="letter-card" href="../Villes G/GuinesEnBrie/guinesEnBrie.html">Guines En Brie</a>
+        <a class="letter-card" href="../Villes G/Guiscard/guiscard.html">Guiscard</a>
+       
+    
+        <a class="letter-card" href="../Villes G/Guise/guise.html">Guise</a>
+        <a class="letter-card" href="../Villes G/GY/gy.html">Gy</a>
+        <a class="letter-card" href="#"></a>
+    
+           
+        
+      <!-- Message aucun résultat -->
+      <div id="no-results" class="no-results" hidden>Aucune ville ne correspond à votre recherche.</div>
     </div>
-        <p class='N-text'>
-        <marquee direction='left'>
-            Celles-ci s'entendent pour de belles frappes.</a>
-            <span>• Pour les lettre en port paye:
-            </span>
-            <span>• Cote du PP sans plus value si la marque de port (dû) qui l'accompagne est d'un indice inférieur à 16.
-            </span>
-            <span>• Si la marque de port (dû) qui accompagne le (port payé) est d'un indice supérieur a 16, majorer de 2 indices la cote du port payé. 
-            <span>&copy; Copyright Tout droit réservé</span>
-            </span>
-        </marquee>
-        </p>
-  </div>    
-            <script src="https://kit.fontawesome.com/50786edb2e.js" crossorigin="anonymous"></script>
-            <script src="../../JS/script.js"></script>      
-  </body>
+  </main>
+    <!-- Bouton haut de page -->
+    <button id="scrollToTopButton" title="Haut de page">↑</button>
+
+
+<!-- ===== FOOTER FIXE ===== -->
+<footer class="News-footer">
+  <div class="news">
+    <span id="news-head">COTE</span>
+  </div>
+
+  <div class="N-text">
+    <div class="ticker">
+      <div class="ticker__track">
+        <span>• Celles-ci s'entendent pour de belles frappes.</span>
+        <span>• Pour les lettres en port payé :</span>
+        <span>• Cote du PP sans plus-value si la marque de port (dû) qui l'accompagne est d'un indice inférieur à 16.</span>
+        <span>• Si la marque de port (dû) est d'un indice supérieur à 16, majorer de 2 indices la cote du port payé.</span>
+        <span>• © Copyright Tout droit réservé.</span>
+
+        <!-- Duplique le contenu pour un défilement continu -->
+        <span>• Celles-ci s'entendent pour de belles frappes.</span>
+        <span>• Pour les lettres en port payé :</span>
+        <span>• Cote du PP sans plus-value si la marque de port (dû) qui l'accompagne est d'un indice inférieur à 16.</span>
+        <span>• Si la marque de port (dû) est d'un indice supérieur à 16, majorer de 2 indices la cote du port payé.</span>
+        <span>• © Copyright Tout droit réservé.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
 </html>
