@@ -532,4 +532,145 @@ document.addEventListener('click', (e) => {
   });
 
 })();
+/* ============================================================
+ * PAGER MOBILE — ALIGNEMENT FORCÉ EN LIGNE (JS UNIQUEMENT)
+ * Corrige les structures HTML verticales imbriquées
+ * ============================================================ */
 
+(() => {
+  "use strict";
+
+  const pager = document.querySelector("nav.pager");
+  if (!pager) return;
+
+  const mq = window.matchMedia("(max-width: 720px)");
+
+  let row = null;
+  let saved = [];
+
+  function enableMobile() {
+    if (row) return;
+
+    // Création de la ligne unique
+    row = document.createElement("div");
+    row.setAttribute("data-mobile-row", "true");
+
+    Object.assign(row.style, {
+      display: "flex",
+      alignItems: "center",
+      gap: "0px",
+      width: "100%",
+      padding: "8px",
+      boxSizing: "border-box"
+    });
+
+    // Sélection LARGE : boutons + input, même enfouis
+    const elements = pager.querySelectorAll(
+      "button, a, input#villeInput"
+    );
+
+    elements.forEach(el => {
+      // Sauvegarde position originale
+      saved.push({
+        el,
+        parent: el.parentNode,
+        next: el.nextSibling
+      });
+
+      // Neutralisation complète
+      el.style.display = "flex";
+      el.style.width = "auto";
+      el.style.margin = "0";
+
+      // Extraction
+      row.appendChild(el);
+    });
+
+    // Styles spécifiques
+    elements.forEach(el => {
+      if (el.id === "villeInput") {
+        Object.assign(el.style, {
+          flex: "1",
+          minWidth: "0",
+          height: "44px"
+        });
+      } else {
+        Object.assign(el.style, {
+          minWidth: "44px",
+          height: "44px",
+          padding: "0 12px",
+          alignItems: "center",
+          justifyContent: "center"
+        });
+      }
+    });
+
+    // Insertion en tête du pager
+    pager.prepend(row);
+  }
+
+  function disableMobile() {
+    if (!row) return;
+
+    // Restauration exacte
+    saved.forEach(item => {
+      item.parent.insertBefore(item.el, item.next);
+      item.el.removeAttribute("style");
+    });
+
+    row.remove();
+    row = null;
+    saved = [];
+  }
+
+  function apply() {
+    mq.matches ? enableMobile() : disableMobile();
+  }
+
+  apply();
+  mq.addEventListener("change", apply);
+})();
+
+/* ============================================================
+ * DROPDOWN VILLES — VISIBILITÉ FORCÉE SUR MOBILE (JS UNIQUEMENT)
+ * Empêche le tableau de masquer la liste des villes
+ * ============================================================ */
+
+(() => {
+  "use strict";
+
+  const mq = window.matchMedia("(max-width: 720px)");
+
+  function fixDropdown() {
+    const input = document.getElementById("villeInput");
+    const dropdown = document.getElementById("dropdownContent");
+
+    if (!input || !dropdown) return;
+
+    if (mq.matches) {
+      // Force la liste AU-DESSUS de tout
+      Object.assign(dropdown.style, {
+        position: "fixed",        // Sort du flux (clé du problème)
+        left: input.getBoundingClientRect().left + "px",
+        top: (input.getBoundingClientRect().bottom + 6) + "px",
+        width: input.offsetWidth + "px",
+        maxHeight: "50vh",
+        overflowY: "auto",
+        zIndex: "99999",
+        background: "#f7e7c2",
+        boxShadow: "0 8px 20px rgba(0,0,0,0.35)",
+        borderRadius: "10px"
+      });
+    } else {
+      // Desktop : on laisse le comportement normal
+      dropdown.removeAttribute("style");
+    }
+  }
+
+  // Repositionne à chaque ouverture / resize / scroll
+  document.addEventListener("click", fixDropdown);
+  window.addEventListener("scroll", fixDropdown, true);
+  window.addEventListener("resize", fixDropdown);
+  mq.addEventListener("change", fixDropdown);
+
+})();
