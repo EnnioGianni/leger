@@ -637,81 +637,143 @@ document.addEventListener('click', (e) => {
 
 
 /* ============================================================
- * PAGER VILLES — VERSION STABLE ET CENTRÉE
- * - Sans Bootstrap
- * - Sans largeur fixe
- * - Centré sur tous écrans
+ * NAV VILLES — HARMONISATION TOTALE (JS UNIQUEMENT)
+ * Compatible Bootstrap pagination
+ * Référence visuelle : 3e image
  * ============================================================ */
 
 (() => {
   "use strict";
 
-  function fixPager() {
+  const mq = window.matchMedia("(max-width: 720px)");
 
-    const pager = document.querySelector("nav.pager");
-    if (!pager) return;
+  /* ============================================================
+     1) HARMONISATION VISUELLE DE LA BARRE
+     ============================================================ */
 
-    const ul = pager.querySelector("ul.pagination");
-    if (!ul) return;
+  function harmoniseNavVilles() {
 
-    const input = document.getElementById("villeInput");
-    if (!input) return;
+    const nav = document.querySelector("nav");
+    const pagination = nav?.querySelector(".pagination");
+    if (!pagination) return;
 
-    /* ===== NAV : centre ===== */
-    Object.assign(pager.style, {
-      display: "flex",
-      justifyContent: "center",
-      width: "100%"
-    });
-
-    /* ===== UL : groupe compact ===== */
-    Object.assign(ul.style, {
+    // Force une seule ligne, centrée
+    Object.assign(pagination.style, {
       display: "flex",
       alignItems: "center",
+      justifyContent: "center",
       flexWrap: "nowrap",
-      gap: "0",
-      margin: "0",
-      padding: "0",
-      listStyle: "none",
-      maxWidth: "100%"
+      gap: "8px",
+      width: "100%",
+      margin: "0 auto"
     });
 
-    /* ===== LI ===== */
-    ul.querySelectorAll("li").forEach(li => {
+    // Tous les li.page-item
+    pagination.querySelectorAll(".page-item").forEach(li => {
       Object.assign(li.style, {
+        float: "none",
         margin: "0",
-        padding: "0",
-        flex: "0 0 auto"
+        flexShrink: "0"
       });
     });
 
-    /* ===== LIENS ===== */
-    ul.querySelectorAll("a").forEach(a => {
-      Object.assign(a.style, {
+    // Tous les liens type bouton
+    pagination.querySelectorAll(".page-link").forEach(link => {
+      Object.assign(link.style, {
+        height: "40px",
+        minWidth: "44px",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        height: "40px",
-        minWidth: "40px",
-        padding: "0",
-        margin: "0",
+        borderRadius: "8px",
+        fontSize: "16px",
         whiteSpace: "nowrap"
       });
     });
 
-    /* ===== INPUT : FLEXIBLE MAIS CONTRÔLÉ ===== */
-    Object.assign(input.style, {
-      height: "40px",
-      flex: "1 1 auto",        // 🔑 peut rétrécir
-      minWidth: "120px",       // 🔑 jamais trop petit
-      maxWidth: "260px",       // 🔑 jamais trop large
-      margin: "0",
-      padding: "0 10px",
-      boxSizing: "border-box"
-    });
+    // Bloc dropdown (ville)
+    const dropdown = pagination.querySelector(".dropdown");
+    if (dropdown) {
+      Object.assign(dropdown.style, {
+        display: "flex",
+        alignItems: "center",
+        gap: "6px"
+      });
+    }
+
+    // Champ input
+    const input = document.getElementById("villeInput");
+    if (input) {
+      Object.assign(input.style, {
+        height: "40px",
+        minWidth: "160px",
+        maxWidth: "420px",
+        flex: "1",
+        padding: "0 12px",
+        borderRadius: "10px",
+        fontSize: "15px"
+      });
+    }
+
+    // Lien "Elle s'affichera ici"
+    const villeLink = document.getElementById("villeLink");
+    if (villeLink) {
+      Object.assign(villeLink.style, {
+        height: "40px",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        whiteSpace: "nowrap"
+      });
+    }
   }
 
-  document.addEventListener("DOMContentLoaded", fixPager);
-  window.addEventListener("resize", fixPager);
+  /* ============================================================
+     2) DROPDOWN VILLES — VISIBILITÉ FORCÉE SUR MOBILE
+     ============================================================ */
+
+  function fixDropdown() {
+
+    const input = document.getElementById("villeInput");
+    const dropdown = document.getElementById("dropdownContent");
+    if (!input || !dropdown) return;
+
+    if (mq.matches) {
+      const rect = input.getBoundingClientRect();
+
+      Object.assign(dropdown.style, {
+        position: "fixed",
+        left: rect.left + "px",
+        top: (rect.bottom + 6) + "px",
+        width: rect.width + "px",
+        maxHeight: "50vh",
+        overflowY: "auto",
+        zIndex: "99999",
+        background: "#f7e7c2",
+        boxShadow: "0 8px 20px rgba(0,0,0,0.35)",
+        borderRadius: "10px"
+      });
+    } else {
+      dropdown.removeAttribute("style");
+    }
+  }
+
+  /* ============================================================
+     3) INITIALISATION
+     ============================================================ */
+
+  document.addEventListener("DOMContentLoaded", () => {
+    harmoniseNavVilles();
+    fixDropdown();
+  });
+
+  window.addEventListener("resize", () => {
+    harmoniseNavVilles();
+    fixDropdown();
+  });
+
+  document.addEventListener("click", fixDropdown);
+  window.addEventListener("scroll", fixDropdown, true);
+  mq.addEventListener("change", fixDropdown);
 
 })();
