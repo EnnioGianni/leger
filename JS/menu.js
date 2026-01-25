@@ -47,9 +47,3 @@
   }
 
 })();
-(function () {
-  const script = document.createElement("script");
-  script.src = "../../JS/app.js";
-  script.defer = true;
-  document.head.appendChild(script);
-})();
