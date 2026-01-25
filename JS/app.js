@@ -631,46 +631,87 @@ document.addEventListener('click', (e) => {
   mq.addEventListener("change", apply);
 })();
 
+
+
+
+
+
 /* ============================================================
- * DROPDOWN VILLES — VISIBILITÉ FORCÉE SUR MOBILE (JS UNIQUEMENT)
- * Empêche le tableau de masquer la liste des villes
+ * PAGER VILLES — VERSION STABLE ET CENTRÉE
+ * - Sans Bootstrap
+ * - Sans largeur fixe
+ * - Centré sur tous écrans
  * ============================================================ */
 
 (() => {
   "use strict";
 
-  const mq = window.matchMedia("(max-width: 720px)");
+  function fixPager() {
 
-  function fixDropdown() {
+    const pager = document.querySelector("nav.pager");
+    if (!pager) return;
+
+    const ul = pager.querySelector("ul.pagination");
+    if (!ul) return;
+
     const input = document.getElementById("villeInput");
-    const dropdown = document.getElementById("dropdownContent");
+    if (!input) return;
 
-    if (!input || !dropdown) return;
+    /* ===== NAV : centre ===== */
+    Object.assign(pager.style, {
+      display: "flex",
+      justifyContent: "center",
+      width: "100%"
+    });
 
-    if (mq.matches) {
-      // Force la liste AU-DESSUS de tout
-      Object.assign(dropdown.style, {
-        position: "fixed",        // Sort du flux (clé du problème)
-        left: input.getBoundingClientRect().left + "px",
-        top: (input.getBoundingClientRect().bottom + 6) + "px",
-        width: input.offsetWidth + "px",
-        maxHeight: "50vh",
-        overflowY: "auto",
-        zIndex: "99999",
-        background: "#f7e7c2",
-        boxShadow: "0 8px 20px rgba(0,0,0,0.35)",
-        borderRadius: "10px"
+    /* ===== UL : groupe compact ===== */
+    Object.assign(ul.style, {
+      display: "flex",
+      alignItems: "center",
+      flexWrap: "nowrap",
+      gap: "0",
+      margin: "0",
+      padding: "0",
+      listStyle: "none",
+      maxWidth: "100%"
+    });
+
+    /* ===== LI ===== */
+    ul.querySelectorAll("li").forEach(li => {
+      Object.assign(li.style, {
+        margin: "0",
+        padding: "0",
+        flex: "0 0 auto"
       });
-    } else {
-      // Desktop : on laisse le comportement normal
-      dropdown.removeAttribute("style");
-    }
+    });
+
+    /* ===== LIENS ===== */
+    ul.querySelectorAll("a").forEach(a => {
+      Object.assign(a.style, {
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "40px",
+        minWidth: "40px",
+        padding: "0",
+        margin: "0",
+        whiteSpace: "nowrap"
+      });
+    });
+
+    /* ===== INPUT : FLEXIBLE MAIS CONTRÔLÉ ===== */
+    Object.assign(input.style, {
+      height: "40px",
+      flex: "1 1 auto",        // 🔑 peut rétrécir
+      minWidth: "120px",       // 🔑 jamais trop petit
+      maxWidth: "260px",       // 🔑 jamais trop large
+      margin: "0",
+      padding: "0 10px",
+      boxSizing: "border-box"
+    });
   }
 
-  // Repositionne à chaque ouverture / resize / scroll
-  document.addEventListener("click", fixDropdown);
-  window.addEventListener("scroll", fixDropdown, true);
-  window.addEventListener("resize", fixDropdown);
-  mq.addEventListener("change", fixDropdown);
+  document.addEventListener("DOMContentLoaded", fixPager);
+  window.addEventListener("resize", fixPager);
 
 })();
