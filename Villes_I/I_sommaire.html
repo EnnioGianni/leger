@@ -1,173 +1,200 @@
+<!-- =========================================
+# File: ./sommaireVilleB.html
+# HTML complet incluant la barre de recherche + liens CSS/JS
+========================================= -->
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8" />
-        <title>Le Postillon</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="../../css/nba.css" />
-        <link rel="stylesheet" href="../../css/table.css" />
-        <link rel="stylesheet" href="../../css/dropdown.css" />
-        <link rel="stylesheet" href="../../css/modale.css" />
-        <link rel="stylesheet" href="../../css/bootstrap.min.css" />
-        <script src="../../JS/bootstrap.bundle.min.js" defer></script>        
-        <script src="../../JS/script.js" defer></script>
-        <link rel="icon" type="image/x-icon" href="../../icones/books_library_1768.ico">
-        <script src="https://kit.fontawesome.com/50786edb2e.js" crossorigin="anonymous" defer></script>      
-    </head> 
-<body>
-    <header id="mainHeader" class="d-flex justify-content-between align-items-center py-3 px-5">       
-         <a href="../Villes A/sommaireVilleA.html"><img id="logoImg" src="../../icones/books_library_1768.ico"></a>      
-        <h1 id="h1" style="margin: 0 50px 0 -35px;">Le Postillon</h1> 
-               
-        <a class="div a title-tip" href="../Villes A/sommaireVilleA.html" title="lien vers les villes avec le nom A">A</a>
-        <a class="div a title-tip" href="../Villes B/B_sommaire.html" title="lien vers les villes avec le nom B">B</a>
-        <a class="div a title-tip" href="../Villes C/C_sommaire.html" title="lien vers les villes avec le nom C">C</a>
-        <a class="div a title-tip" href="../Villes D/D_sommaire.html" title="lien vers les villes avec le nom D">D</a>
-        <a class="div a title-tip" href="../Villes E/E_sommaire.html" title="lien vers les villes avec le nom E">E</a>
-        <a class="div a title-tip" href="../Villes F/F_sommaire.html" title="lien vers les villes avec le nom F">F</a>
-        <a class="div a title-tip" href="../Villes G/G_sommaire.html" title="lien vers les villes avec le nom G">G</a>
-        <a class="div a title-tip" href="../Villes H/H_sommaire.html" title="lien vers les villes avec le nom H">H</a>
-        <a class="div a title-tip  active" href="../Villes I/I_sommaire.html" title="lien vers les villes avec le nom I">I</a>
-        <a class="div a title-tip" href="../Villes J/J_sommaire.html" title="lien vers les villes avec le nom J">J</a>
-        <a class="div a title-tip" href="../Villes K/K_sommaire.html" title="lien vers les villes avec le nom K">K</a>
-        <a class="div a title-tip" href="../Villes L/L_sommaire.html" title="lien vers les villes avec le nom L">L</a>
-        <a class="div a title-tip" href="../Villes M/M_sommaire.html" title="lien vers les villes avec le nom M">M</a>
-        <a class="div a title-tip" href="../Villes N/N_sommaire.html" title="lien vers les villes avec le nom N">N</a>
-        <a class="div a title-tip" href="../Villes O/O_sommaire.html" title="lien vers les villes avec le nom O">O</a>
-        <a class="div a title-tip" href="../Villes P/P_sommaire.html" title="lien vers les villes avec le nom P">P</a>
-        <a class="div a title-tip" href="../Villes Q/Q_sommaire.html" title="lien vers les villes avec le nom Q">Q</a>
-        <a class="div a title-tip" href="../Villes R/R_sommaire.html" title="lien vers les villes avec le nom R">R</a>
-        <a class="div a title-tip" href="../Villes S/S_sommaire.html" title="lien vers les villes avec le nom S">S</a>
-        <a class="div a title-tip" href="../Villes T/T_sommaire.html" title="lien vers les villes avec le nom T">T</a>
-        <a class="div a title-tip" href="../Villes U/U_sommaire.html" title="lien vers les villes avec le nom U">U</a>
-        <a class="div a title-tip" href="../Villes V/V_sommaire.html" title="lien vers les villes avec le nom V">V</a>
-        <a class="div a title-tip" href="../Villes W/W_sommaire.html" title="lien vers les villes avec le nom W">W</a>
-        <a class="div a title-tip" href="../Villes X/X_sommaire.html" title="lien vers les villes avec le nom X">X</a>
-        <a class="div a title-tip" href="../Villes Y/Y_sommaire.html" title="lien vers les villes avec le nom Y">Y</a>
-        <a class="div a title-tip" href="../Villes Z/Z_sommaire.html" title="lien vers les villes avec le nom Z">Z</a> 
-        <ul class="pagination justify-content-center">
-            <li class="page-item">
-                <div class="dropdown" style="margin: 20px 50px 0 0;">
-                    <a href="../../index.html" class="div a title-tip page-link">
-                        Accueil <i class="fas fa-caret-down"></i>
-                    </a>
-                     <!-- <div class="dropdown-content">
-                         <a href="../../video.html">Video</a>
-                        <a href="../../pdf.html">PDF</a>
-                        <a href="../../blog.html">Blog</a>
-                        <a href="../../Articles.html">Articles</a>
-                        <a href="../../contact.html">Contact</a>
-                    </div>  -->
-                </div> 
-            </li>       
-        </ul>
-    </header>        
-        <h2 id="h2">La poste de l'ancienne France</h2>
-        <p>Catalogue de description et cotations des marques postales des origines à 1791<br>Villes comencent par la lettre <span><strong id="taille">I</strong></span></p>
-<!--Boite de recherche-->           
-            <div class="wrap">
-                <div class="search">
-                    <input type="text" id="champRecherche" placeholder="Rechercher une ville">       
-                  <button type="submit" class="searchButton">
-                    <i class="fa fa-search"></i>
-                  </button>
-                </div>
-              </div>     
-<!--Fin Boite de recherche-->
-        </nav>
-<table style="margin: 10px 0 0 0px;">
-    <!--Commentaire-->   
-    <tr>             
-        <th colspan="7" style="color: black;">Pour trouve la ville que vous recherchée faite sur votre clavier – CTRL + F – et dans la fenêtre qui s’ affiche en bas ou en haut de page, tapée le nom de la ville elle s’affichera dans le tableau en vert, cliques dessus et la page de la ville s’affichera.</th>         
-    </tr>
-<!--Fin Commentaire-->     
-    <tr>
-        <td class="div a active"><a href="../Villes I/Ille/ille.html">Ille</a></td>
-        <td class="div a active"><a href="../Villes I/Illiers/illiers.html">Illiers</a></td>
-        <td class="div a active"><a href="../Villes I/Ingrande/ingrande.html">Ingrande</a></td>
-        <td class="div a active"><a href="../Villes I/Is_Sur_Tille/isSurTille.html">Is Sur Tille</a></td>
-        <td class="div a active"><a href="../Villes I/Isigny/isigny.html">Isigny</a></td>
-        <td class="div a active"><a href="../Villes I/Issoire/issoire.html">Issoire</a></td>
-        <td class="div a active"><a href="../Villes I/Issoudun/issoudun.html">Issoudun</a></td>
-    </tr>
+<head>
+  <meta charset="utf-8">
+  <title>Le Postillon – Sommaire G</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <tr>
-        <td class="div a active"><a href="../Villes I/Ivry_Petite_Ville/ivryPetiteVille.html">Ivry Petite Ville</a></td>
-        <td class="div a active"><a href="../Villes I/Lisle_Adam/lisleAdam.html">L'Isle Adam</a></td>
-        <td class="div a active"><a href="../Villes I/Lisle_Bouchard/lisleBouchard.html">L'Isle Bouchard</a></td>
-        <td class="div a active"><a href="../Villes I/Lisle_Daix/lisleDaix.html">L'Isle D'Aix</a></td>
-        <td class="div a active"><a href="../Villes I/Lisle_Dalby/lisleDalby.html">L'Isle D'Alby</a></td>
-        <td class="div a active"><a href="../Villes I/Lisle_En_Dodon/lisleEnDodon.html">L'Isle en Dodon</a></td>
-        <td class="div a active"><a href="../Villes I/Lisle_Jourdain/lisleJourdain.html">L'Isle Jourdain</a></td>    
-    </tr>       
-    <tr>
-        <td class="div a active"><a href="../Villes I/Lisle_Jourdain80/lisleJourdain80.html">L'Isle Jourdain 80</a></td>
-        <td class="div a active"><a href="../Villes I/Lisle_Rousse/lisleRousse.html">L'Isle Rousse</a></td>
-        <td class="div a active"><a href="../Villes I/Lisle_Sur_Le_Doubs/lisleSurLeDoubs.html">L'Isle sur le Doubs</a></td>
-        <td class="div a active"><a href=""></a></td>
-        <td class="div a active"><a href=""></a></td>
-        <td class="div a active"><a href=""></a></td>
-        <td class="div a active"><a href=""></a></td>
-    </tr>       
-<!--Commentaire-->
-<tr>             
-    <th colspan="7"></th>         
-</tr>  
-</table> 
+  <!-- Styles -->
+  <link rel="stylesheet" href="../CSS/sommaire.css">
+  <link rel="stylesheet" href="../CSS/menu.css">
+  <!-- + Nouveau CSS recherche -->
+  <link rel="stylesheet" href="../CSS/recherches.css">
 
- <!--Carrousel, On rajoute un bloc avec les boutons à gauche et à droite, ainsi que trois "indicateurs" en bas.  -->
+  <!-- Scripts (defer) -->
+  <script defer src="../JS/menu.js"></script>
+  <script defer src="../JS/sommaire.js"></script>
+  <!-- + Nouveau JS recherche -->
+  <script defer src="../JS/recherches.js"></script>
 
- <div class="row">
-    <div class="col-12 col-md-3" style="margin: 40px  730px;"> 
-        <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
-            <div class="carousel-inner">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="../../marquePostales/portDu/images/36 Amboise + Bleré.jpg" class="d-block w-100">
-            </div>
-            <div class="carousel-item">
-                <img src="../../marquePostales/PortPaye/images/Paris triangle rouge.jpg" class="d-block w-100">
-            </div>
-            <div class="carousel-item">
-                <img src="../../marquePostales/PortPaye/images/Rosoy sur Marne P73P.jpg" class="d-block w-100">
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev" style="margin: 200px  0px;" >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+  <link rel="icon" type="image/x-icon" href="../icones/books_library_1768.ico">
+</head>
+
+<body id="scrollable"
+  style="
+    min-height:100vh;
+    margin:0;
+    background:url('../Resource/carrosseAvecPhoto.jpg')
+               center center / cover no-repeat fixed;">
+
+<!-- ================= HEADER ================= -->
+<header class="lp-header">
+
+
+  <!-- Logo cliquable -->
+  <a href="../index.html" class="logo" aria-label="Retour à l’accueil">
+    <img src="../Resource/books_library_1768.ico"
+         alt="Le Postillon — Marques postales anciennes">
+  </a>
+
+  <!-- Titre -->
+  <h1 class="titre-principal">Le Postillon</h1>
+
+  <!-- Bouton hamburger -->
+  <button id="hamburger"
+          class="hamburger"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false">
+    ☰
+  </button>
+
+  <!-- ===== MENU LATÉRAL SOMMAIRES ===== -->
+  <nav id="sideMenu" class="side-menu" aria-hidden="true">
+
+
+    <!-- Recherche -->
+    <input type="search"
+           id="menu-search"
+           placeholder="Rechercher un sommaire…"
+           aria-label="Rechercher un sommaire">
+
+    <!-- Liste A → Z -->
+    <ul id="menu-list">
+      <li><a href="../Villes_A/sommaireA.html">Sommaire A</a></li>
+      <li><a href="../Villes_B/sommaireB.html">Sommaire B</a></li>
+      <li><a href="../Villes_C/C_sommaire.html">Sommaire C</a></li>
+      <li><a href="../Villes_D/D_sommaire.html">Sommaire D</a></li>
+      <li><a href="../Villes_E/E_sommaire.html">Sommaire E</a></li>
+      <li><a href="../Villes_F/F_sommaire.html">Sommaire F</a></li>
+      <li><a href="../Villes_G/G_sommaire.html">Sommaire G</a></li>
+      <li><a href="../Villes_H/H_sommaire.html">Sommaire H</a></li>
+      <li><a href="../Villes_I/I_sommaire.html">Sommaire I</a></li>
+      <li><a href="../Villes_J/J_sommaire.html">Sommaire J</a></li>
+      <li><a href="../Villes_K/K_sommaire.html">Sommaire K</a></li>
+      <li><a href="../Villes_L/L_sommaire.html">Sommaire L</a></li>
+      <li><a href="../Villes_M/M_sommaire.html">Sommaire M</a></li>
+      <li><a href="../Villes_N/N_sommaire.html">Sommaire N</a></li>
+      <li><a href="../Villes_O/O_sommaire.html">Sommaire O</a></li>
+      <li><a href="../Villes_P/P_sommaire.html">Sommaire P</a></li>
+      <li><a href="../Villes_Q/Q_sommaire.html">Sommaire Q</a></li>
+      <li><a href="../Villes_R/R_sommaire.html">Sommaire R</a></li>
+      <li><a href="../Villes_S/S_sommaire.html">Sommaire S</a></li>
+      <li><a href="../Villes_T/T_sommaire.html">Sommaire T</a></li>
+      <li><a href="../Villes_U/U_sommaire.html">Sommaire U</a></li>
+      <li><a href="../Villes_V/V_sommaire.html">Sommaire V</a></li>
+      <li><a href="../Villes_W/W_sommaire.html">Sommaire W</a></li>
+      <li><a href="../Villes_X/X_sommaire.html">Sommaire X</a></li>
+      <li><a href="../Villes_Y/Y_sommaire.html">Sommaire Y</a></li>
+      <li><a href="../Villes_Z/Z_sommaire.html">Sommaire Z</a></li>
+    </ul>
+
+  </nav>
+
+  <!-- Overlay -->
+  <div id="menuOverlay" class="menu-overlay" hidden></div>
+
+</header>
+<!-- ================= FIN HEADER ================= -->
+
+
+  <!-- ===== MAIN ===== -->
+  <main style="max-width:1100px; margin:0 auto 80px;">
+    <!-- Titre (même style index) -->
+
+    <!-- ===== Barre de recherche (NOUVEAU) ===== -->
+    <section class="search-wrap" aria-label="Recherche de ville">
+        <h2 id="h12">
+          Sommaire — Lettre <strong><span>G</span></strong>
+      </h2>
+
+      <div class="search-box">
+        <input
+          id="ville-search"
+          class="search-input"
+          type="search"
+          inputmode="search"
+          placeholder="Rechercher une ville… (ex.: Aix, Arles, Ajaccio)"
+          autocomplete="off"
+          aria-label="Rechercher une ville"
+       >
+        <button id="ville-search-btn" class="search-btn" type="button" aria-label="Lancer la recherche" title="Rechercher">
+          <!-- Icône loupe SVG -->
+          <svg class="search-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M10.5 3a7.5 7.5 0 0 1 5.964 12.117l4.21 4.21-1.414 1.414-4.21-4.21A7.5 7.5 0 1 1 10.5 3Zm0 2a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11Z"/>
+          </svg>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next" style="margin: 200px  0px;">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button> 
-        </div>
+        <button id="ville-clear-btn" class="clear-btn" type="button" aria-label="Effacer la recherche" title="Effacer">×</button>
+      </div>
+      <p id="search-count" class="search-count" aria-live="polite"></p>
+    </section>
+
+    <!-- Grille de villes (même look que l’index) -->
+    <div class="table-letters">
+    
+      <div class="letters-grid" id="letters-grid">
+        <!-- Colle ici la liste des Villes_C (extrait de ton index) -->
+   
+        <a class="letter-card" href="../Villes_I/Ille/ille.html">Ille</a>
+        <a class="letter-card" href="../Villes_I/Illiers/illiers.html">Illiers</a>
+        <a class="letter-card" href="../Villes_I/Ingrande/ingrande.html">Ingrande</a>
+        <a class="letter-card" href="../Villes_I/Is_Sur_Tille/isSurTille.html">Is Sur Tille</a>
+        <a class="letter-card" href="../Villes_I/Isigny/isigny.html">Isigny</a>
+        <a class="letter-card" href="../Villes_I/Issoire/issoire.html">Issoire</a>
+        <a class="letter-card" href="../Villes_I/Issoudun/issoudun.html">Issoudun</a>
+   
+
+   
+        <a class="letter-card" href="../Villes_I/Ivry_Petite_Ville/ivryPetiteVille.html">Ivry Petite Ville</a>
+        <a class="letter-card" href="../Villes_I/Lisle_Adam/lisleAdam.html">L'Isle Adam</a>
+        <a class="letter-card" href="../Villes_I/Lisle_Bouchard/lisleBouchard.html">L'Isle Bouchard</a>
+        <a class="letter-card" href="../Villes_I/Lisle_Daix/lisleDaix.html">L'Isle D'Aix</a>
+        <a class="letter-card" href="../Villes_I/Lisle_Dalby/lisleDalby.html">L'Isle D'Alby</a>
+        <a class="letter-card" href="../Villes_I/Lisle_En_Dodon/lisleEnDodon.html">L'Isle en Dodon</a>
+        <a class="letter-card" href="../Villes_I/Lisle_Jourdain/lisleJourdain.html">L'Isle Jourdain</a>    
+          
+   
+        <a class="letter-card" href="../Villes_I/Lisle_Jourdain80/lisleJourdain80.html">L'Isle Jourdain 80</a>
+        <a class="letter-card" href="../Villes_I/Lisle_Rousse/lisleRousse.html">L'Isle Rousse</a>
+        <a class="letter-card" href="../Villes_I/Lisle_Sur_Le_Doubs/lisleSurLeDoubs.html">L'Isle sur le Doubs</a>
+        <a class="letter-card" href=""></a>
+          
+      <!-- Message aucun résultat -->
+      <div id="no-results" class="no-results" hidden>Aucune ville ne correspond à votre recherche.</div>
     </div>
 </div>
-</div>
-<div class='News-footer' >
-    <div class='news'>
-        <span id='news-head'><b>COTE</b></span>
+  </main>
+    <!-- Bouton haut de page -->
+    <button id="scrollToTopButton" title="Haut de page">↑</button>
+
+
+<!-- ===== FOOTER FIXE ===== -->
+<footer class="News-footer">
+  <div class="news">
+    <span id="news-head">COTE</span>
+  </div>
+
+  <div class="N-text">
+    <div class="ticker">
+      <div class="ticker__track">
+        <span>• Celles-ci s'entendent pour de belles frappes.</span>
+        <span>• Pour les lettres en port payé :</span>
+        <span>• Cote du PP sans plus-value si la marque de port (dû) qui l'accompagne est d'un indice inférieur à 16.</span>
+        <span>• Si la marque de port (dû) est d'un indice supérieur à 16, majorer de 2 indices la cote du port payé.</span>
+        <span>• © Copyright Tout droit réservé.</span>
+
+        <!-- Duplique le contenu pour un défilement continu -->
+        <span>• Celles-ci s'entendent pour de belles frappes.</span>
+        <span>• Pour les lettres en port payé :</span>
+        <span>• Cote du PP sans plus-value si la marque de port (dû) qui l'accompagne est d'un indice inférieur à 16.</span>
+        <span>• Si la marque de port (dû) est d'un indice supérieur à 16, majorer de 2 indices la cote du port payé.</span>
+        <span>• © Copyright Tout droit réservé.</span>
+      </div>
     </div>
-        <p class='N-text'>
-            <marquee direction='left'>
-                Celles-ci s'entendent pour de belles frappes.</a>
-                <span>• Pour les lettre en port paye:
-                </span>
-                <span>• Cote du PP sans plus value si la marque de port (dû) qui l'accompagne est d'un indice inférieur à 16.
-                </span>
-                <span>• Si la marque de port (dû) qui accompagne le (port payé) est d'un indice supérieur a 16, majorer de 2 indices la cote du port payé. 
-                <span>&copy; Copyright Tout droit réservé</span>
-                </span>
-            </marquee>
-                  
-        </p>
-  </div>  
-            <script src="https://kit.fontawesome.com/50786edb2e.js" crossorigin="anonymous"></script>
-            <script src="../../JS/script.js"></script>      
-  </body>
+  </div>
+</footer>
+</body>
 </html>
