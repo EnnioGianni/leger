@@ -1,17 +1,24 @@
 /* =========================================================
    File: /JS/pub_popup.js
-   Feature: Fenêtre publicitaire rotative
+   Feature: Fenêtre publicitaire rotative (persistante)
    ========================================================= */
 
 (function () {
   "use strict";
 
-  /* =========================
-     CONFIGURATION DES PUBLICITÉS
-     ========================= */
+  /* =========================================================
+     0) VÉRIFICATION : PUB DÉJÀ FERMÉE ?
+     ========================================================= */
+  if (localStorage.getItem("pubClosed") === "true") {
+    return; // ⛔ Ne rien afficher, jamais
+  }
+
+  /* =========================================================
+     1) CONFIGURATION DES PUBLICITÉS
+     ========================================================= */
   const ads = [
     {
-image: '/Resource/Timbre_Magazine.png',
+      image: '/Resource/Timbre_Magazine.png',
       title: 'Vente à prix nets !',
       d1: "📅 Vente à prix net – Paris",
       d2: "Collection exceptionnelle de lettres anciennes et timbres.",
@@ -19,7 +26,7 @@ image: '/Resource/Timbre_Magazine.png',
       link: 'https://www.letimbreclassique.com/ltc-parcourir-lots/vpn-2024/vpn-2024/'
     },
     {
-image: '/Resource/Timbre_Magazine.png',
+      image: '/Resource/Timbre_Magazine.png',
       title: 'Yvert & Tellier',
       d1: "Le site officiel de référence",
       d2: "Catalogues, timbres, monnaies",
@@ -27,7 +34,7 @@ image: '/Resource/Timbre_Magazine.png',
       link: 'https://www.yvert.com/'
     },
     {
-image: '/Resource/Timbre_Magazine.png',
+      image: '/Resource/Timbre_Magazine.png',
       title: "L'Écho de la Timbrologie",
       d1: "Le journal philatélique de référence",
       d2: "Actualités, interviews, analyses",
@@ -35,7 +42,7 @@ image: '/Resource/Timbre_Magazine.png',
       link: 'http://www.echo-de-la-timbrologie.com/store/'
     },
     {
-image: '/Resource/Timbre_Magazine.png',
+      image: '/Resource/Timbre_Magazine.png',
       title: 'Fête du Timbre 2025',
       d1: "📅 8–9 mars 2025",
       d2: "📍 Montpellier – Salle Nougaret",
@@ -43,19 +50,18 @@ image: '/Resource/Timbre_Magazine.png',
       link: 'https://www.asso-philatelique-montpellier.fr/evenement/fete-du-timbre/8/'
     },
     {
-image: '/Resource/Timbre_Magazine.png',
+      image: '/Resource/Timbre_Magazine.png',
       title: 'Timbres Magazine',
       d1: "Mensuel philatélique français",
       d2: "Actualités & études",
       d3: "Numéro de décembre",
       link: 'https://timbresmag.fr/'
     }
-    // 👉 Tu peux ajouter jusqu’à 10 pubs ou plus ici
   ];
 
-  /* =========================
-     INDEX SAUVEGARDÉ
-     ========================= */
+  /* =========================================================
+     2) INDEX SAUVEGARDÉ
+     ========================================================= */
   let currentIndex = parseInt(localStorage.getItem("pubIndex"), 10);
   if (isNaN(currentIndex)) currentIndex = 0;
 
@@ -63,66 +69,69 @@ image: '/Resource/Timbre_Magazine.png',
     localStorage.setItem("pubIndex", currentIndex);
   }
 
-  /* =========================
-     CRÉATION DE LA POPUP
-     ========================= */
+  /* =========================================================
+     3) CRÉATION DE LA POPUP
+     ========================================================= */
   const popup = document.createElement("div");
   popup.id = "pubPopup";
-popup.style.cssText = `
-  position:fixed;
-  bottom:20px;
-  right:80px;
-  width:200px;
-  background:#f9a15d;
-  border-radius:10px;
-  box-shadow:0 10px 30px rgba(0,0,0,.35);
-  padding:16px;
-  z-index:9999;
-  display:none;
-  height:auto;              /* ← hauteur automatique */
-  box-sizing:border-box;
-`;
+  popup.style.cssText = `
+    position:fixed;
+    bottom:20px;
+    right:80px;
+    width:200px;
+    background:#f9a15d;
+    border-radius:10px;
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+    padding:16px;
+    z-index:9999;
+    box-sizing:border-box;
+  `;
   document.body.appendChild(popup);
 
-  /* Bouton fermer */
+  /* =========================================================
+     4) BOUTON FERMER (FERMETURE DÉFINITIVE)
+     ========================================================= */
   const closeBtn = document.createElement("span");
   closeBtn.textContent = "×";
-  closeBtn.title = "Fermer";
+  closeBtn.title = "Fermer définitivement";
   closeBtn.style.cssText = `
     position:absolute;
     top:6px;
-    right:auto;
-    font-size:30px;
+    right:10px;
+    font-size:28px;
     cursor:pointer;
     font-weight:bold;
   `;
   popup.appendChild(closeBtn);
 
   closeBtn.addEventListener("click", () => {
+    localStorage.setItem("pubClosed", "true"); // 🔒 verrouillage
     popup.remove();
     stopRotation();
   });
 
-  /* Image */
-/* Image cliquable */
-const imgLink = document.createElement("a");
-imgLink.target = "_blank";
-imgLink.rel = "noopener";
+  /* =========================================================
+     5) IMAGE CLIQUABLE
+     ========================================================= */
+  const imgLink = document.createElement("a");
+  imgLink.target = "_blank";
+  imgLink.rel = "noopener";
 
-const img = document.createElement("img");
-img.style.cssText = `
-  width:80%;
-  display:block;
-  margin:0 0 10px auto;
-  border-radius:6px;
-  cursor:pointer;
-`;
+  const img = document.createElement("img");
+  img.style.cssText = `
+    width:80%;
+    display:block;
+    margin:0 auto 10px;
+    border-radius:6px;
+    cursor:pointer;
+  `;
 
-imgLink.appendChild(img);
-popup.appendChild(imgLink);
-  popup.appendChild(img);
+  imgLink.appendChild(img);
+  popup.appendChild(imgLink);
 
-  /* Textes */
+  /* =========================================================
+     6) TEXTES
+     ========================================================= */
   const title = document.createElement("h3");
   const p1 = document.createElement("p");
   const p2 = document.createElement("p");
@@ -135,7 +144,9 @@ popup.appendChild(imgLink);
 
   popup.append(title, p1, p2, p3);
 
-  /* Lien */
+  /* =========================================================
+     7) LIEN
+     ========================================================= */
   const link = document.createElement("a");
   link.textContent = "➡ En savoir plus";
   link.target = "_blank";
@@ -150,7 +161,9 @@ popup.appendChild(imgLink);
   `;
   popup.appendChild(link);
 
-  /* Flèches */
+  /* =========================================================
+     8) FLÈCHES DE NAVIGATION
+     ========================================================= */
   const prev = document.createElement("span");
   const next = document.createElement("span");
 
@@ -171,20 +184,15 @@ popup.appendChild(imgLink);
   prev.style.left = "8px";
   next.style.right = "8px";
 
-  /* =========================
-     RENDU DE LA PUB
-     ========================= */
+  /* =========================================================
+     9) RENDU
+     ========================================================= */
   function render() {
     const ad = ads[currentIndex];
 
-    /* Image spécifique à chaque pub */
-    if (ad.image) {
-      img.src = ad.image;
-      img.alt = ad.title || "Publicité philatélique";
-      img.style.display = "block";
-    } else {
-      img.style.display = "none";
-    }
+    img.src = ad.image;
+    img.alt = ad.title || "Publicité philatélique";
+    imgLink.href = ad.link;
 
     title.textContent = ad.title || "";
     p1.textContent = ad.d1 || "";
@@ -195,9 +203,9 @@ popup.appendChild(imgLink);
     saveIndex();
   }
 
-  /* =========================
-     NAVIGATION MANUELLE
-     ========================= */
+  /* =========================================================
+     10) NAVIGATION
+     ========================================================= */
   prev.addEventListener("click", () => {
     currentIndex = (currentIndex - 1 + ads.length) % ads.length;
     render();
@@ -208,9 +216,9 @@ popup.appendChild(imgLink);
     render();
   });
 
-  /* =========================
-     ROTATION AUTOMATIQUE
-     ========================= */
+  /* =========================================================
+     11) ROTATION AUTO
+     ========================================================= */
   let timer = null;
 
   function startRotation() {
@@ -230,13 +238,10 @@ popup.appendChild(imgLink);
   popup.addEventListener("mouseenter", stopRotation);
   popup.addEventListener("mouseleave", startRotation);
 
-  /* =========================
-     OUVERTURE APRÈS 5s
-     ========================= */
-  setTimeout(() => {
-    popup.style.display = "block";
-    render();
-    startRotation();
-  }, 5000);
+  /* =========================================================
+     12) AFFICHAGE IMMÉDIAT
+     ========================================================= */
+  render();
+  startRotation();
 
 })();
