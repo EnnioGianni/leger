@@ -777,3 +777,11 @@ document.addEventListener('click', (e) => {
   mq.addEventListener("change", fixDropdown);
 
 })();
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("input, textarea, select").forEach((el, i) => {
+    if (!el.id && !el.name) {
+      el.id = "auto-field-" + i;
+      el.name = "auto-field-" + i;
+    }
+  });
+});

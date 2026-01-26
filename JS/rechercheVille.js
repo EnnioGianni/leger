@@ -731,7 +731,7 @@
         { name: 'Harfleur', url: '../../Villes_H/Harfleur/harfleur.html' },
         { name: 'Hautefort', url: '../../Villes_H/Hautefort/hautefort.html' },
         { name: 'Le-Havre', url: '../../Villes_H/Le-Havre/leHavre.html' },
-        { name: 'La-Haye', url: '../../Villes_H/Haye/LaHaye.html' },
+        { name: 'La-Haye', url: '../../Villes_H/La-Haye/laHaye.html' },
         { name: 'La-Haye-Du-Puits', url: '../../Villes_H/La-Haye-Du-Puits/laHayeDuPuits.html' },
         { name: 'Hazebrouck', url: '../../Villes_H/Hazebrouck/hazebrouck.html' },
         { name: 'Hede', url: '../../Villes_H/Hede/hede.html' },
