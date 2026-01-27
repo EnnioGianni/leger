@@ -765,7 +765,7 @@
         { name: 'Lisle-Dalby', url: '../../Villes_I/Lisle_Dalby/lisleDalby.html' },
         { name: 'Lisle-En-Dodon', url: '../../Villes_I/Lisle_En_Dodon/lisleEnDodon.html' },
         { name: 'Lisle-Jourdain', url: '../../Villes_I/Lisle_Jourdain/lisleJourdain.html' },
-        { name: 'Lisle-Jourdain (80)', url: '../../Villes_I/Lisle_Jourdain80/lisleJourdain80.html' },
+        { name: 'Lisle_Jourdain80', url: '../../Villes_I/Lisle_Jourdain80/lisleJourdain80.html' },
         { name: 'Lisle-Rousse', url: '../../Villes_I/Lisle_Rousse/lisleRousse.html' },
         { name: 'Lisle-Sur-Le-Doubs', url: '../../Villes_I/Lisle_Sur_Le_Doubs/lisleSurLeDoubs.html' },
         { name: '', url: '../../Villes_I//.html' },
