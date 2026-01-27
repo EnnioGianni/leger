@@ -788,11 +788,7 @@
         { name: 'Jussey', url: '../../Villes_J/Jussey/jussey.html' },
         { name: 'Juvisy', url: '../../Villes_J/Juvisy/juvisy.html' },
         { name: 'Juzennecour', url: '../../Villes_J/Juzennecour/juzennecour.html' },
-  
-// Ajoutez d'autres villes ici
-
     ], K: [
-
     ], L: [
         { name: 'Lagny', url: '../../Villes_T/Lagny/lagny.html' },
         { name: 'Laignes', url: '../../Villes_T/Laignes/laignes.html' },
