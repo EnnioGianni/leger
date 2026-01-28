@@ -24,7 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
       { href: "https://gallica.bnf.fr/", title: "Gallica", src: "../../Resource/gallica.png", "data-width": 50, "data-height": 50 },
       { href: "https://unionmarcophile.fr/", title: "Union Marcophile", src: "../../Resource/unionMarcophile.png", "data-width": 50, "data-height": 50 },
       { href: "https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal", title: "Wikipédia", src: "../../Resource/Wikipedia.png", "data-width": 50, "data-height": 50 },
-      { href: "https://museedelaposte.fr/fr", title: "Musée de la Poste", src: "../../Resource/museeDeLaPoste.png", "data-width": 50, "data-height": 50 }
+      { href: "https://museedelaposte.fr/fr", title: "Musée de la Poste", src: "../../Resource/museeDeLaPoste.png", "data-width": 50, "data-height": 50 },
+      { href: "https://marcophilie.org/index.html", title: "Marques Postales", src: "../../logo/MarquesPostales.png", "data-width": 250, "data-height": 50 }
     ];
 
     logos.forEach((logo) => {

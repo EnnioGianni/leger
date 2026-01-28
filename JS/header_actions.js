@@ -94,6 +94,7 @@
 
   header.appendChild(actions);
 })();
+
 /* =========================
    Tooltips desktop + mobile
    ========================= */
