@@ -799,7 +799,7 @@
         { name: 'Lambesc', url: '../../Villes_L/Lambesc/lambesc.html' },
         { name: 'Landau', url: '../../Villes_L/Landau/landau.html' },
         { name: 'Landernau', url: '../../Villes_L/Landernau/landernau.html' },
-        { name: 'Landivisiau', url: '../../Villes_L/Landivisiau/landivisiau/.html' },
+        { name: 'Landivisiau', url: '../../Villes_L/Landivisiau/landivisiau.html' },
         { name: 'Landrecies', url: '../../Villes_L/Landrecies/landrecies.html' },
         { name: 'Landser', url: '../../Villes_L/Landser/landser.html' },
         { name: 'Langeac', url: '../../Villes_L/Langeac/langeac/.html' },
